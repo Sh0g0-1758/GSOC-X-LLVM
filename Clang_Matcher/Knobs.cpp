@@ -16,33 +16,22 @@ static cl::extrahelp CommonHelp(CommonOptionsParser::HelpMessage);
 static cl::extrahelp MoreHelp("\nMore help text...\n");
 
 DeclarationMatcher GlobalConstKnobMatcher =
-  varDecl(
-    hasType(isConstQualified()),
-    hasGlobalStorage(),
-    hasInitializer(
-      ignoringImpCasts(
-        integerLiteral()
-      )
-    )
-  ).bind("knobVar");
+    varDecl(hasType(isConstQualified()), hasGlobalStorage(),
+            hasInitializer(ignoringImpCasts(integerLiteral())))
+        .bind("knobVar");
 
-DeclarationMatcher ConstructorWithFunctionInitMatcher = 
-  varDecl(
-      has(exprWithCleanups(
-          has(cxxConstructExpr(
-              has(materializeTemporaryExpr(
-                  has(implicitCastExpr(
-                      has(callExpr(
-                          callee(functionDecl(
-                              hasName("init"),
-                              hasDeclContext(namespaceDecl(hasName("cl")))
-                          ))
-                      ))
-                  ))
-              ))
-          ))
-      ))
-  ).bind("knobVar");
+DeclarationMatcher ConstructorWithFunctionInitMatcher =
+    varDecl(
+        has(exprWithCleanups(has(cxxConstructExpr(has(materializeTemporaryExpr(
+            has(implicitCastExpr(has(callExpr(callee(functionDecl(
+                hasName("init"),
+                hasDeclContext(namespaceDecl(hasName("cl"))))))))))))))))
+        .bind("knobVar");
+
+DeclarationMatcher EnumConstantMatcher =
+    enumConstantDecl(
+        has(implicitCastExpr(has(constantExpr(has(integerLiteral()))))))
+        .bind("enumConst");
 
 class KnobPrinter : public MatchFinder::MatchCallback {
 public:
@@ -60,6 +49,23 @@ public:
   }
 };
 
+class EnumConstantPrinter : public MatchFinder::MatchCallback {
+public:
+  virtual void run(const MatchFinder::MatchResult &Result) {
+    ASTContext *Context = Result.Context;
+    const EnumConstantDecl *EC =
+        Result.Nodes.getNodeAs<EnumConstantDecl>("enumConst");
+    if (!EC ||
+        !Context->getSourceManager().isWrittenInMainFile(EC->getLocation()))
+      return;
+    outs() << "Potential knob discovered at "
+           << EC->getLocation().printToString(Context->getSourceManager())
+           << "\n";
+    outs() << "Name: " << EC->getNameAsString() << "\n";
+    outs() << "Type: " << EC->getType().getAsString() << "\n";
+  }
+};
+
 int main(int argc, const char **argv) {
   auto ExpectedParser = CommonOptionsParser::create(argc, argv, MyToolCategory);
   if (!ExpectedParser) {
@@ -71,9 +77,12 @@ int main(int argc, const char **argv) {
                  OptionsParser.getSourcePathList());
 
   KnobPrinter Printer;
+  EnumConstantPrinter EnumPrinter;
+
   MatchFinder Finder;
   Finder.addMatcher(GlobalConstKnobMatcher, &Printer);
   Finder.addMatcher(ConstructorWithFunctionInitMatcher, &Printer);
+  Finder.addMatcher(EnumConstantMatcher, &EnumPrinter);
 
   return Tool.run(newFrontendActionFactory(&Finder).get());
 }
