@@ -1,47 +1,79 @@
+#include "clang/ASTMatchers/ASTMatchFinder.h"
+#include "clang/ASTMatchers/ASTMatchers.h"
 #include "clang/Frontend/FrontendActions.h"
 #include "clang/Tooling/CommonOptionsParser.h"
 #include "clang/Tooling/Tooling.h"
 #include "llvm/Support/CommandLine.h"
-#include "clang/ASTMatchers/ASTMatchers.h"
-#include "clang/ASTMatchers/ASTMatchFinder.h"
 
 using namespace clang::tooling;
 using namespace llvm;
 using namespace clang;
 using namespace clang::ast_matchers;
 
-static llvm::cl::OptionCategory MyToolCategory("my-tool options");
+static cl::OptionCategory MyToolCategory("my-tool options");
 
-DeclarationMatcher KnobMatcher = declaratorDecl(hasTypeLoc(loc(asString("const int")))).bind("knobVar");
+static cl::extrahelp CommonHelp(CommonOptionsParser::HelpMessage);
+static cl::extrahelp MoreHelp("\nMore help text...\n");
+
+DeclarationMatcher GlobalConstKnobMatcher =
+  varDecl(
+    hasType(isConstQualified()),
+    hasGlobalStorage(),
+    hasInitializer(
+      ignoringImpCasts(
+        integerLiteral()
+      )
+    )
+  ).bind("knobVar");
+
+DeclarationMatcher ConstructorWithFunctionInitMatcher = 
+  varDecl(
+      has(exprWithCleanups(
+          has(cxxConstructExpr(
+              has(materializeTemporaryExpr(
+                  has(implicitCastExpr(
+                      has(callExpr(
+                          callee(functionDecl(
+                              hasName("init"),
+                              hasDeclContext(namespaceDecl(hasName("cl")))
+                          ))
+                      ))
+                  ))
+              ))
+          ))
+      ))
+  ).bind("knobVar");
 
 class KnobPrinter : public MatchFinder::MatchCallback {
-public :
+public:
   virtual void run(const MatchFinder::MatchResult &Result) {
     ASTContext *Context = Result.Context;
-    const VarDecl *FS = Result.Nodes.getNodeAs<VarDecl>("knobVar");
-    // We do not want to convert header files!
-    if (!FS || !Context->getSourceManager().isWrittenInMainFile(FS->getLocation()))
+    const VarDecl *KV = Result.Nodes.getNodeAs<VarDecl>("knobVar");
+    if (!KV ||
+        !Context->getSourceManager().isWrittenInMainFile(KV->getLocation()))
       return;
-    llvm::outs() << "Potential knob discovered at " << FS->getLocation().printToString(Context->getSourceManager()) << "\n";
-    llvm::outs() << "Name: " << FS->getNameAsString() << "\n";
-    llvm::outs() << "Type: " << FS->getType().getAsString() << "\n";
-    llvm::outs() << "QualType: " << FS->getType().getQualifiers().getAsString() << "\n";
+    outs() << "Potential knob discovered at "
+           << KV->getLocation().printToString(Context->getSourceManager())
+           << "\n";
+    outs() << "Name: " << KV->getNameAsString() << "\n";
+    outs() << "Type: " << KV->getType().getAsString() << "\n";
   }
 };
 
 int main(int argc, const char **argv) {
   auto ExpectedParser = CommonOptionsParser::create(argc, argv, MyToolCategory);
   if (!ExpectedParser) {
-    llvm::errs() << ExpectedParser.takeError();
+    errs() << ExpectedParser.takeError();
     return 1;
   }
-  CommonOptionsParser& OptionsParser = ExpectedParser.get();
+  CommonOptionsParser &OptionsParser = ExpectedParser.get();
   ClangTool Tool(OptionsParser.getCompilations(),
                  OptionsParser.getSourcePathList());
 
   KnobPrinter Printer;
   MatchFinder Finder;
-  Finder.addMatcher(KnobMatcher, &Printer);
+  Finder.addMatcher(GlobalConstKnobMatcher, &Printer);
+  Finder.addMatcher(ConstructorWithFunctionInitMatcher, &Printer);
 
   return Tool.run(newFrontendActionFactory(&Finder).get());
 }
