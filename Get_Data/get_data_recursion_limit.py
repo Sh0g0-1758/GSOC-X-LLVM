@@ -4,7 +4,7 @@ import os
 
 ds = load_dataset('llvm-ml/ComPile', split='train', streaming=True)
 
-directory_name = "cl_limit"
+directory_name = "recursion_limit"
 
 if os.path.exists(directory_name):
     os.system(f'rm -rf {directory_name}')
@@ -22,7 +22,7 @@ for i in range(1000):
     bitcode_module = next(dataset_iterator)['content']
     IR_module = None
     dis_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/llvm-dis', '-']
+        './../../dev/Compilers/build_recursion_limit/bin/llvm-dis', '-']
     with subprocess.Popen(
             dis_command_vector,
             stdout=subprocess.PIPE,
@@ -31,7 +31,7 @@ for i in range(1000):
         IR_module = dis_process.communicate(
             input=bitcode_module)[0].decode('utf-8')
 
-    as_command_vector = ['./../dev/Compilers/build_cl_limit/bin/llvm-as',
+    as_command_vector = ['./../../dev/Compilers/build_recursion_limit/bin/llvm-as',
                          '-', '--o', f'test_{directory_name}.bc']
     with subprocess.Popen(
             as_command_vector,
@@ -42,17 +42,17 @@ for i in range(1000):
             input=IR_module.encode('utf-8'))
 
     opt_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-stats', f'test_{directory_name}.bc']
     opt_O1_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-O1', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-O1', '-stats', f'test_{directory_name}.bc']
     opt_O2_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-O2', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-O2', '-stats', f'test_{directory_name}.bc']
     opt_O3_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-O3', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-O3', '-stats', f'test_{directory_name}.bc']
     opt_Os_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-Os', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-Os', '-stats', f'test_{directory_name}.bc']
     opt_Oz_command_vector = [
-        './../dev/Compilers/build_cl_limit/bin/opt', '-Oz', '-stats', f'test_{directory_name}.bc']
+        './../../dev/Compilers/build_recursion_limit/bin/opt', '-Oz', '-stats', f'test_{directory_name}.bc']
 
     output_string = ""
     output_string += "PLAIN STATS> \n"
