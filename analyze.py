@@ -1,13 +1,9 @@
 import sys
 from tabulate import tabulate
-import matplotlib.pyplot as plt
-import numpy as np
-
 import re
 
 tabulate_array = []
 data = {}
-
 
 def add_numbers_in_strings(str1, str2):
     num1, suffix1 = str1.split(maxsplit=1)
@@ -114,7 +110,5 @@ comparison_table = tabulate(
              "Compiler with recursion limit=6"],
     tablefmt="grid",
 )
-# print(len(diff_values_alter))
-# print(counter)
 print("#### Comparison Table ####")
 print(comparison_table)
