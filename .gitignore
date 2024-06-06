@@ -5,3 +5,5 @@ diff/
 all_knobs.txt
 result.txt
 build
+cl_limit_*
+test_cl_limit_*
