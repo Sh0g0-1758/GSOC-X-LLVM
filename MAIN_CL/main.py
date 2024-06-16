@@ -175,7 +175,6 @@ def get_identifier_and_init_val(extracted_data):
     
     return result_dict
 
-
 if __name__ == "__main__":
     extracted_data = process_file('knobs.txt')
 
@@ -191,7 +190,12 @@ if __name__ == "__main__":
         os.environ['KNOB_NAME'] = result
         values = generate_values(convert_to_appropriate_type({'string_identifier': result,'init_value': result_dict[result]}))
 
+        with open('directory_name.txt', 'w') as file:
+            pass
+
         for val in values:
+            with open('directory_name.txt', 'a') as file:
+                file.write(f"./stats/{result}_{val}\n")
             os.environ['KNOB_VAL'] = str(val)
             os.system("python get_data.py")
             print(Fore.GREEN + f"Successfully updated knob value to {val} and generated data for {result}_{val} directory." + Fore.RESET)
