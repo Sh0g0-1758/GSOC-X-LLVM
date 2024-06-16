@@ -111,8 +111,7 @@ for i in range(1000):
         index += 1
 
     with open(f'./{directory_name}/stats_{index}.txt', 'a') as f:
-        f.write(f"====================================  STATS FOR FILE : {
-                i} ====================================\n")
+        f.write(f"====================================  STATS FOR FILE : {i} ====================================\n")
         f.write(output_string)
 
     print(Fore.CYAN + "Wrote Stats for Iteration: ", i)

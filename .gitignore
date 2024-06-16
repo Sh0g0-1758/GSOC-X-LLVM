@@ -7,3 +7,7 @@ result.txt
 build
 cl_limit_*
 test_cl_limit_*
+STATS
+bitcode
+help.c
+a.out
