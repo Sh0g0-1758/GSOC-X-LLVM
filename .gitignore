@@ -11,3 +11,5 @@ STATS
 bitcode
 help.c
 a.out
+help.cpp
+stats

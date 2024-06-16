@@ -90,7 +90,6 @@ llvm/lib/Transforms/Utils/GuardUtils.cpp:25:26	PredicatePassBranchWeight
 llvm/lib/Transforms/Utils/LoopPeel.cpp:67:26	UnrollPeelMaxCount
 llvm/lib/Transforms/Utils/LoopPeel.cpp:71:26	UnrollForcePeelCount
 llvm/lib/Transforms/Utils/Debugify.cpp:41:19	DebugifyFunctionsLimit
-llvm/lib/Transforms/Utils/Debugify.cpp:51:16	DebugifyLevel
 llvm/lib/Transforms/Utils/Local.cpp:109:26	PHICSENumPHISmallSize
 llvm/lib/Transforms/Utils/MisExpect.cpp:63:26	MisExpectTolerance
 llvm/lib/Transforms/Utils/UnifyLoopExits.cpp:34:26	MaxBooleansInControlFlowHub
@@ -160,11 +159,9 @@ llvm/lib/Transforms/Vectorize/LoopVectorize.cpp:334:26	MaxNestedScalarReductionI
 llvm/lib/Transforms/Vectorize/VectorCombine.cpp:58:26	MaxInstrsToScan
 llvm/lib/Transforms/InstCombine/InstCombineCalls.cpp:86:26	GuardWideningWindow
 llvm/lib/Transforms/InstCombine/InstCombineLoadStoreAlloca.cpp:34:26	MaxCopiedFromConstantUsers
-llvm/lib/Transforms/InstCombine/InstCombineNegator.cpp:92:5	NegatorMaxDepth
 llvm/lib/Transforms/InstCombine/InstCombinePHI.cpp:31:1	MaxNumPhis
 llvm/lib/Transforms/InstCombine/InstructionCombining.cpp:137:26	MaxSinkNumUsers
 llvm/lib/Transforms/InstCombine/InstructionCombining.cpp:142:1	MaxArraySize
-llvm/lib/Transforms/InstCombine/InstructionCombining.cpp:152:26	ShouldLowerDbgDeclare
 llvm/lib/Transforms/Instrumentation/DataFlowSanitizer.cpp:242:21	ClInstrumentWithCallThreshold
 llvm/lib/Transforms/Instrumentation/DataFlowSanitizer.cpp:254:21	ClTrackOrigins
 llvm/lib/Transforms/Instrumentation/HWAddressSanitizer.cpp:137:24	ClMaxLifetimes
@@ -415,7 +412,6 @@ llvm/lib/CodeGen/AggressiveAntiDepBreaker.cpp:50:1	DebugMod
 llvm/lib/CodeGen/MachineFunction.cpp:85:26	AlignAllFunctions
 llvm/lib/CodeGen/BranchFolding.cpp:78:1	TailMergeThreshold
 llvm/lib/CodeGen/BranchFolding.cpp:85:1	TailMergeSize
-llvm/lib/CodeGen/MIRCanonicalizerPass.cpp:41:5	CanonicalizeFunctionNumber
 llvm/lib/CodeGen/TargetLoweringBase.cpp:73:26	MinimumJumpTableEntries
 llvm/lib/CodeGen/TargetLoweringBase.cpp:77:26	MaximumJumpTableSize
 llvm/lib/CodeGen/TargetLoweringBase.cpp:83:5	JumpTableDensity
@@ -427,7 +423,6 @@ llvm/lib/CodeGen/TailDuplicator.cpp:60:26	TailDuplicateSize
 llvm/lib/CodeGen/TailDuplicator.cpp:65:26	TailDupIndirectBranchSize
 llvm/lib/CodeGen/TailDuplicator.cpp:72:5	TailDupPredSize
 llvm/lib/CodeGen/TailDuplicator.cpp:78:5	TailDupSuccSize
-llvm/lib/CodeGen/TailDuplicator.cpp:88:26	TailDupLimit
 llvm/lib/CodeGen/ImplicitNullChecks.cpp:62:21	PageSize
 llvm/lib/CodeGen/ImplicitNullChecks.cpp:66:26	MaxInstsToConsider
 llvm/lib/CodeGen/IfConversion.cpp:61:21	IfCvtFnStart
@@ -435,7 +430,6 @@ llvm/lib/CodeGen/IfConversion.cpp:62:21	IfCvtFnStop
 llvm/lib/CodeGen/IfConversion.cpp:63:21	IfCvtLimit
 llvm/lib/CodeGen/HardwareLoops.cpp:66:1	LoopDecrement
 llvm/lib/CodeGen/HardwareLoops.cpp:70:1	CounterBitWidth
-llvm/lib/CodeGen/MachineScheduler.cpp:141:26	MISchedCutoff
 llvm/lib/CodeGen/MachineScheduler.cpp:152:26	ReadyListLimit
 llvm/lib/CodeGen/MachineScheduler.cpp:170:5	FastClusterThreshold
 llvm/lib/CodeGen/MachineScheduler.cpp:179:5	HeaderColWidth
@@ -455,11 +449,9 @@ llvm/lib/CodeGen/MachineBlockPlacement.cpp:189:26	TailDupProfilePercentThreshold
 llvm/lib/CodeGen/MachineBlockPlacement.cpp:197:26	TriangleChainCount
 llvm/lib/CodeGen/PeepholeOptimizer.cpp:126:26	RewritePHILimit
 llvm/lib/CodeGen/PeepholeOptimizer.cpp:132:26	MaxRecurrenceChain
-llvm/lib/CodeGen/TargetPassConfig.cpp:134:29	EnableMachineOutliner
 llvm/lib/CodeGen/LiveDebugValues/LiveDebugValues.cpp:52:26	InputBBLimit
 llvm/lib/CodeGen/LiveDebugValues/LiveDebugValues.cpp:56:26	InputDbgValueLimit
 llvm/lib/CodeGen/LiveDebugValues/InstrRefBasedImpl.cpp:155:5	StackWorkingSetLimit
-llvm/lib/CodeGen/AsmPrinter/DwarfDebug.cpp:130:30	DwarfOpConvert
 llvm/lib/CodeGen/GlobalISel/CombinerHelper.cpp:1095:26	PostIndexUseThreshold
 llvm/lib/CodeGen/SelectionDAG/ResourcePriorityQueue.cpp:39:21	RegPressureThreshold
 llvm/lib/CodeGen/SelectionDAG/ScheduleDAGSDNodes.cpp:45:21	HighLatencyCycles
