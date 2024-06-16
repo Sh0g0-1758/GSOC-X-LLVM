@@ -39,8 +39,12 @@ def generate_values(number):
         
         # Exceptional values for experimentation.
         # 200% and 1000%
-        values.append(2 * number)
-        values.append(10 * number)
+        max_val = max(values)
+        mult = max_val / number
+        mult+=1
+        values.append(number * mult)
+        mult+=9
+        values.append(number * mult)
         values = sorted(values)
         return values
 
@@ -73,8 +77,12 @@ def generate_values(number):
         values.append(20)
         values.append(100)
     else:
-        values.append(2 * number)
-        values.append(10 * number)
+        max_val = max(values)
+        mult = round(max_val / number)
+        mult+=1
+        values.append(number * mult)
+        mult+=9
+        values.append(number * mult)
 
     values = sorted(values)
     return values
@@ -176,11 +184,11 @@ def get_identifier_and_init_val(extracted_data):
     return result_dict
 
 if __name__ == "__main__":
-    extracted_data = process_file('knobs.txt')
+    knob_data = process_file('knobs.txt')
 
     print(Fore.GREEN + "Successfully extracted Location and function name from knobs" + Fore.RESET)
 
-    result_dict = get_identifier_and_init_val(extracted_data)
+    result_dict = get_identifier_and_init_val(knob_data)
 
     print(Fore.GREEN + "Extracted string identifier and init val of the command line knobs" + Fore.RESET)
 

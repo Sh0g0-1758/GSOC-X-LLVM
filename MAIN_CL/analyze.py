@@ -93,6 +93,8 @@ if __name__ == "__main__":
     try:
         with open(directory_path, 'r') as file:
             for line in file:
+                if(line == '\n'):
+                    continue
                 directories.append(line.rstrip('\n'))
     except FileNotFoundError:
         print(f"Error: The file '{directory_path}' was not found.")
