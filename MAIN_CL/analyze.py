@@ -1,60 +1,66 @@
+import json
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import numpy as np
+from yellowbrick.features import ParallelCoordinates
+from collections import defaultdict
+import sys
+import re
+import os
 from colorama import init, Fore, Back, Style
 init()
-import os
-import re
-import sys
-from collections import defaultdict
-from yellowbrick.features import ParallelCoordinates
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import json
 
 # Constant for the pattern of the line
 line_pattern = re.compile(r'^\s*(\d+)\s+(\S+)\s+-\s+(.*)$')
 
 # Making a dict of important stats
+
+
 def process_imp_stats_file_to_dict(file_path):
     result_dict = {}
 
     with open(file_path, 'r') as file:
         lines = file.readlines()
-    
+
     for line in lines:
         parts = line.strip().split('#')
         first_value = parts[0].strip()
         second_value = parts[1].strip()
         third_value = parts[2].strip()
-        
+
         key = f"{first_value} ({second_value})"
-        
+
         value = 1 if third_value == "More is Better" else 0
-        
+
         result_dict[key] = value
-    
+
     return result_dict
 
 # Making a dict of ambiguous and ignore stats
+
+
 def process_rest_stats_file_to_dict(file_path):
     result_dict = {}
 
     with open(file_path, 'r') as file:
         lines = file.readlines()
-    
+
     for line in lines:
         parts = line.strip().split('#')
         first_value = parts[0].strip()
         second_value = parts[1].strip()
-        
+
         key = f"{first_value} ({second_value})"
-        
+
         value = -1
-        
+
         result_dict[key] = value
-    
+
     return result_dict
 
 # Process a single file and update the stats dictionary
+
+
 def process_file(file_path, stats_dict):
     with open(file_path, 'r') as file:
         for line in file:
@@ -67,6 +73,8 @@ def process_file(file_path, stats_dict):
                 stats_dict[key] += value
 
 # Collect stats for all files present in one directory
+
+
 def process_directory(directory_path):
     directory_stats_dict = defaultdict(int)
     for root, dirs, files in os.walk(directory_path):
@@ -74,7 +82,6 @@ def process_directory(directory_path):
             file_path = os.path.join(root, file)
             process_file(file_path, directory_stats_dict)
     return dict(directory_stats_dict)
-
 
 
 if __name__ == "__main__":
@@ -93,7 +100,7 @@ if __name__ == "__main__":
     try:
         with open(directory_path, 'r') as file:
             for line in file:
-                if(line == '\n'):
+                if (line == '\n'):
                     continue
                 directories.append(line.rstrip('\n'))
     except FileNotFoundError:
@@ -105,7 +112,8 @@ if __name__ == "__main__":
 
     for directory in directories:
         directory_stats_dict = process_directory(directory)
-        print(Fore.GREEN + f"Successfully collected stats for directory {directory}:" + Fore.RESET)
+        print(
+            Fore.GREEN + f"Successfully collected stats for directory {directory}:" + Fore.RESET)
         directory_dict.append(directory_stats_dict)
 
     merged_dict = {}
@@ -128,18 +136,20 @@ if __name__ == "__main__":
         while len(merged_dict[key]) < num_directories:
             merged_dict[key].append(0)
 
-    print(Fore.BLUE + f"Successfully merged dictionaries for the knob : {knob_name} " + Fore.RESET)
+    print(Fore.BLUE +
+          f"Successfully merged dictionaries for the knob : {knob_name} " + Fore.RESET)
 
-    filtered_dict = {key: values for key, values in merged_dict.items() 
-                    if len(set(values)) > 1}
+    filtered_dict = {key: values for key, values in merged_dict.items()
+                     if len(set(values)) > 1}
 
     final_dict = {}
 
     for key, values in filtered_dict.items():
-        if(key in imp_stats_dict):
+        if (key in imp_stats_dict):
             final_dict[key] = values
-        elif(not key in amb_stats_dict and not key in ignore_stats_dict):
-            print(Fore.RED + f"ERROR: STAT {key} not found in any of the known STATS" + Fore.RESET)
+        elif (not key in amb_stats_dict and not key in ignore_stats_dict):
+            print(
+                Fore.RED + f"ERROR: STAT {key} not found in any of the known STATS" + Fore.RESET)
             sys.exit(1)
 
     print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
@@ -149,4 +159,5 @@ if __name__ == "__main__":
     with open(file_path, 'w') as file:
         json.dump(final_dict, file)
 
-    print(Fore.BLUE + f"Successfully saved final dictionary to {file_path}." + Fore.RESET)
+    print(Fore.BLUE +
+          f"Successfully saved final dictionary to {file_path}." + Fore.RESET)
