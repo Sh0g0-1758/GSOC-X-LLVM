@@ -130,7 +130,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     iteration = 0
-    index = 0
+    index = 1
 
     dataset_iterator = iter(ds)
 
@@ -223,12 +223,14 @@ if __name__ == "__main__":
                 output_string += str(stderr_data)[222:-1]
 
             output_string = output_string.replace('\\n', '\n')
-
-            if (iteration % 10 == 0):
-                index += 1
+            
+            print(iteration, index)
 
             with open(f'./stats/{knob_name}_{val}/stats_{index}.txt', 'a') as f:
                 f.write(f"====================================  STATS FOR FILE : {i} ====================================\n")
                 f.write(output_string)
 
             print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {val} for Iteration {i}" + Fore.RESET)
+
+        if (iteration % 10 == 0):
+            index += 1
