@@ -4,89 +4,6 @@ import re
 import sys
 import os
 
-def generate_values(number):
-    # Some Exceptional Values
-    if number == 18446744073709551615 or number == 65535 or number == 4294967295 or number == 8388608:
-        values = []
-        step = round(number * 0.1)
-        count = 1
-        values.append(number * 0.2)
-        values.append(number * 0.3)
-        while(count <= 11):
-            values.append(number)
-            number-=step
-            count+=1
-        values = sorted(values)
-        return values
-
-    # Handling of Floating Point Numbers
-    if(type(number) == float):
-        step = number * 0.1
-        count = 1
-        values = []
-        temp = number
-
-        while count <= 6:
-            values.append(temp)
-            temp-=step
-            count+=1
-        
-        temp = number + step
-        while count <= 11:
-            values.append(temp)
-            temp+=step
-            count+=1
-        
-        # Exceptional values for experimentation.
-        # 200% and 1000%
-        max_val = max(values)
-        mult = max_val / number
-        mult+=1
-        values.append(number * mult)
-        mult+=9
-        values.append(number * mult)
-        values = sorted(values)
-        return values
-
-    # Standard Values ranging from 50% to 150% of the original number 
-    # with gaps of 10%
-    step = round(number * 0.1)
-
-    if step == 0:
-        step = 1
-    
-    count = 1
-    values = []
-    temp = number
-
-    while temp >= 0 and count <= 6:
-        values.append(temp)
-        temp-=step
-        count+=1
-    
-    temp = number + step
-    while count <= 11:
-        values.append(temp)
-        temp+=step
-        count+=1
-    
-    # Exceptional values for experimentation.
-    # 200% and 1000% 
-    # Take care that number is not zero
-    if number == 0:
-        values.append(20)
-        values.append(100)
-    else:
-        max_val = max(values)
-        mult = round(max_val / number)
-        mult+=1
-        values.append(number * mult)
-        mult+=9
-        values.append(number * mult)
-
-    values = sorted(values)
-    return values
-
 def convert_to_appropriate_type(data):
     s = data['init_value']
     if s is None or s == '':
@@ -102,10 +19,6 @@ def convert_to_appropriate_type(data):
         return float(s)
     except ValueError:
         pass
-
-    
-    print(Fore.RED + f"Invalid value: {data}" + Fore.RESET)
-    exit(0)
 
 # This Function reads a given set of lines from the cpp file
 # The starting line and 10 lines ahead of it
@@ -184,7 +97,7 @@ def get_identifier_and_init_val(extracted_data):
     return result_dict
 
 if __name__ == "__main__":
-    knob_data = process_file('knobs.txt')
+    knob_data = process_file('prelim_knobs.txt')
 
     print(Fore.GREEN + "Successfully extracted Location and function name from knobs" + Fore.RESET)
 
@@ -196,21 +109,15 @@ if __name__ == "__main__":
         print(Fore.BLUE + f"##  Analyzing {result}" + Fore.RESET)
 
         os.environ['KNOB_NAME'] = result
-        values = generate_values(convert_to_appropriate_type({'string_identifier': result,'init_value': result_dict[result]}))
+        os.environ['KNOB_VAL'] = str(convert_to_appropriate_type({'string_identifier': result,'init_value': result_dict[result]}))
 
         with open('directory_name.txt', 'w') as file:
             pass
 
-        for val in values:
-            with open('directory_name.txt', 'a') as file:
-                file.write(f"./stats/{result}_{val}\n")
-            os.environ['KNOB_VAL'] = str(val)
-            os.system("python get_data.py")
-            print(Fore.GREEN + f"Successfully updated knob value to {val} and generated data for {result}_{val} directory." + Fore.RESET)
+        os.system("python get_data.py")
     
         print(Fore.BLUE + f"Successfully generated data for all {result} directories." + Fore.RESET)
 
         os.system("python analyze.py")
 
         print(Fore.GREEN + f"##  Successfully analyzed {result}" + Fore.RESET)
-    
