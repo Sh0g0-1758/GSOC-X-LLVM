@@ -1,9 +1,10 @@
+import sys
+import os
+import subprocess
+from datasets import load_dataset
 from colorama import init, Fore, Back, Style
 init()
-from datasets import load_dataset
-import subprocess
-import os
-import sys
+
 
 def generate_values(number):
     # Some Exceptional Values
@@ -13,15 +14,15 @@ def generate_values(number):
         count = 1
         values.append(number * 0.2)
         values.append(number * 0.3)
-        while(count <= 11):
+        while (count <= 11):
             values.append(number)
-            number-=step
-            count+=1
+            number -= step
+            count += 1
         values = sorted(values)
         return values
 
     # Handling of Floating Point Numbers
-    if(type(number) == float):
+    if (type(number) == float):
         step = number * 0.1
         count = 1
         values = []
@@ -29,50 +30,50 @@ def generate_values(number):
 
         while count <= 6:
             values.append(temp)
-            temp-=step
-            count+=1
-        
+            temp -= step
+            count += 1
+
         temp = number + step
         while count <= 11:
             values.append(temp)
-            temp+=step
-            count+=1
-        
+            temp += step
+            count += 1
+
         # Exceptional values for experimentation.
         # 200% and 1000%
         max_val = max(values)
         mult = max_val / number
-        mult+=1
+        mult += 1
         values.append(number * mult)
-        mult+=9
+        mult += 9
         values.append(number * mult)
         values = sorted(values)
         return values
 
-    # Standard Values ranging from 50% to 150% of the original number 
+    # Standard Values ranging from 50% to 150% of the original number
     # with gaps of 10%
     step = round(number * 0.1)
 
     if step == 0:
         step = 1
-    
+
     count = 1
     values = []
     temp = number
 
     while temp >= 0 and count <= 6:
         values.append(temp)
-        temp-=step
-        count+=1
-    
+        temp -= step
+        count += 1
+
     temp = number + step
     while count <= 11:
         values.append(temp)
-        temp+=step
-        count+=1
-    
+        temp += step
+        count += 1
+
     # Exceptional values for experimentation.
-    # 200% and 1000% 
+    # 200% and 1000%
     # Take care that number is not zero
     if number == 0:
         values.append(20)
@@ -80,33 +81,34 @@ def generate_values(number):
     else:
         max_val = max(values)
         mult = round(max_val / number)
-        mult+=1
+        mult += 1
         values.append(number * mult)
-        mult+=9
+        mult += 9
         values.append(number * mult)
 
     values = sorted(values)
     return values
 
+
 def convert_to_appropriate_type(data, s):
     if s is None or s == '':
         return None
-    
+
     try:
         return int(s)
     except ValueError:
         pass
 
     try:
-        if(s[-1] == 'f'):
+        if (s[-1] == 'f'):
             return float(s[:-1])
         return float(s)
     except ValueError:
         pass
 
-    
     print(Fore.RED + f"Invalid value: {data} set to {s}" + Fore.RESET)
     exit(0)
+
 
 if __name__ == "__main__":
 
@@ -139,7 +141,7 @@ if __name__ == "__main__":
     for val in values:
         with open('directory_name.txt', 'a') as file:
             file.write(f"./stats/{knob_name}_{val}\n")
-        
+
         directory_name = f"{knob_name}_{val}"
 
         if not os.path.exists(f"./stats/{directory_name}"):
@@ -160,7 +162,7 @@ if __name__ == "__main__":
                 input=bitcode_module)[0].decode('utf-8')
 
         as_command_vector = ['./build/bin/llvm-as',
-                            '-', '--o', f'./bitcode/test_{knob_name}.bc']
+                             '-', '--o', f'./bitcode/test_{knob_name}.bc']
 
         with subprocess.Popen(
                 as_command_vector,
@@ -169,7 +171,7 @@ if __name__ == "__main__":
                 stdin=subprocess.PIPE) as as_process:
             as_process.communicate(
                 input=IR_module.encode('utf-8'))
-        
+
         for val in values:
 
             opt_command_vector = [
@@ -223,14 +225,16 @@ if __name__ == "__main__":
                 output_string += str(stderr_data)[222:-1]
 
             output_string = output_string.replace('\\n', '\n')
-            
+
             print(iteration, index)
 
             with open(f'./stats/{knob_name}_{val}/stats_{index}.txt', 'a') as f:
-                f.write(f"====================================  STATS FOR FILE : {i} ====================================\n")
+                f.write(f"====================================  STATS FOR FILE : {
+                        i} ====================================\n")
                 f.write(output_string)
 
-            print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {val} for Iteration {i}" + Fore.RESET)
+            print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {
+                  val} for Iteration {i}" + Fore.RESET)
 
         if (iteration % 10 == 0):
             index += 1

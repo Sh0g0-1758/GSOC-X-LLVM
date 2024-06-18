@@ -1,0 +1,13 @@
+./stats/capture-tracking-max-uses-to-explore_50
+./stats/capture-tracking-max-uses-to-explore_60
+./stats/capture-tracking-max-uses-to-explore_70
+./stats/capture-tracking-max-uses-to-explore_80
+./stats/capture-tracking-max-uses-to-explore_90
+./stats/capture-tracking-max-uses-to-explore_100
+./stats/capture-tracking-max-uses-to-explore_110
+./stats/capture-tracking-max-uses-to-explore_120
+./stats/capture-tracking-max-uses-to-explore_130
+./stats/capture-tracking-max-uses-to-explore_140
+./stats/capture-tracking-max-uses-to-explore_150
+./stats/capture-tracking-max-uses-to-explore_300
+./stats/capture-tracking-max-uses-to-explore_1200
