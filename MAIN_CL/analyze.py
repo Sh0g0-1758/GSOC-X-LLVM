@@ -155,8 +155,10 @@ if __name__ == "__main__":
                 Fore.RED + f"ERROR: STAT {key} not found in any of the known STATS" + Fore.RESET)
             # sys.exit(1)
     
-    with open("missing_stats.txt", 'a') as file:
-        file.write(missing_stats_string)
+    if missing_stats_string != "":
+        with open("missing_stats.txt", 'a') as file:
+            file.write(f"Missing stats for knob {knob_name}:\n")
+            file.write(missing_stats_string)
 
     print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
 
