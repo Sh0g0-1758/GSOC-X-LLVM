@@ -14,3 +14,10 @@ Number of phis propagated	#	correlated-value-propagation
 Number of reassociations	#	instcombine
 Number of fully cached non-local ptr responses	#	memdep
 Number of uncached non-local ptr responses	#	memdep
+Number of function returns marked noundef	#	function-attrs
+Number of functions that do not access memory 	#	globalsmodref-aa
+Number of functions that only read memory 	#	globalsmodref-aa
+Number of loops analyzed for vectorization 	#	loop-vectorize
+Number of load instructions with unsolved size and offset 	#	memory-builtins
+Number of function returns marked noalias 	#	function-attrs
+Number of arguments with unsolved size and offset 	#	memory-builtins

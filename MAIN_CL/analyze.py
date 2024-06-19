@@ -144,13 +144,19 @@ if __name__ == "__main__":
 
     final_dict = {}
 
+    missing_stats_string = ""
+
     for key, values in filtered_dict.items():
         if (key in imp_stats_dict):
             final_dict[key] = values
         elif (not key in amb_stats_dict and not key in ignore_stats_dict):
+            missing_stats_string += key + "\n"
             print(
                 Fore.RED + f"ERROR: STAT {key} not found in any of the known STATS" + Fore.RESET)
-            sys.exit(1)
+            # sys.exit(1)
+    
+    with open("missing_stats.txt", 'a') as file:
+        file.write(missing_stats_string)
 
     print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
 

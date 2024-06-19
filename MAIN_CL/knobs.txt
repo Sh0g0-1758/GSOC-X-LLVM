@@ -1,3 +1,4 @@
+<-- llvm/lib/Analysis/CaptureTracking.cpp:47:5	DefaultMaxUsesToExplore -->
 llvm/lib/Passes/PassBuilderPipelines.cpp:245:21	PreInlineThreshold
 llvm/lib/ProfileData/ProfileSummaryBuilder.cpp:33:14	ProfileSummaryCutoffHot
 llvm/lib/ProfileData/ProfileSummaryBuilder.cpp:38:14	ProfileSummaryCutoffCold
@@ -48,7 +49,6 @@ llvm/lib/Analysis/CFGPrinter.cpp:43:24	HideColdPaths
 llvm/lib/Analysis/Loads.cpp:450:7	DefMaxInstsToScan
 llvm/lib/Analysis/MemorySSA.cpp:75:26	MaxCheckLimit
 llvm/lib/Analysis/StackSafetyAnalysis.cpp:62:21	StackSafetyMaxIterations
-llvm/lib/Analysis/CaptureTracking.cpp:47:5	DefaultMaxUsesToExplore
 llvm/lib/Analysis/VectorUtils.cpp:37:26	MaxInterleaveGroupFactor
 llvm/lib/Analysis/AliasSetTracker.cpp:38:26	SaturationThreshold
 llvm/lib/Analysis/MemoryDependenceAnalysis.cpp:73:26	BlockScanLimit

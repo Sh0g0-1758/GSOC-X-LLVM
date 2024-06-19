@@ -53,3 +53,16 @@ Number of unread args replaced with poison	#	deadargelim	#	More is Better
 Number of comparisons propagated	#	correlated-value-propagation	#	More is Better
 Number of insts reassociated	#	reassociate	#	More is Better
 Number of shuffles moved after bitcast	#	vector-combine	#	More is Better
+Number of exit values replaced 	#	indvars	#	More is Better
+Number of geps reassociated and hoisted out of the loop 	#	licm	#	More is Better
+Number of loops unrolled with run-time trip counts 	#	loop-unroll	#	More is Better
+Number of loops unrolled (completely or otherwise)	#	loop-unroll	#	More is Better
+Number of value comparisons folded into predecessor basic blocks 	#	simplifycfg	#	More is Better
+Number of loops vectorized 	#	loop-vectorize	#	More is Better
+Number of nested loops split out 	#	loop-simplify	#	More is Better
+Number of other instrs removed 	#	dse	#	More is Better
+Number of factorizations 	#	instcombine	#	More is Better
+Number of vector instructions generated	#	SLP	#	More is Better
+Number of phis deleted via common incoming value 	#	correlated-value-propagation	#	More is Better
+Number of stores modified	#	dse	#	More is Better
+Number of redundant stores deleted 	#	dse	#	More is Better
