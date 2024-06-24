@@ -162,7 +162,7 @@ if __name__ == "__main__":
 
     print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
 
-    file_path = f"./results/{knob_name}_result.json"
+    file_path = f"./results/Batch2/{knob_name}_result.json"
 
     with open(file_path, 'w') as file:
         json.dump(final_dict, file)

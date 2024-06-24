@@ -1,4 +1,5 @@
-<-- llvm/lib/Analysis/CaptureTracking.cpp:47:5	DefaultMaxUsesToExplore -->
+=Batch1 [done]
+llvm/lib/Analysis/CaptureTracking.cpp:47:5	DefaultMaxUsesToExplore
 llvm/lib/Passes/PassBuilderPipelines.cpp:245:21	PreInlineThreshold
 llvm/lib/ProfileData/ProfileSummaryBuilder.cpp:33:14	ProfileSummaryCutoffHot
 llvm/lib/ProfileData/ProfileSummaryBuilder.cpp:38:14	ProfileSummaryCutoffCold
@@ -19,6 +20,7 @@ llvm/lib/Analysis/MemoryProfileInfo.cpp:23:16	MemProfLifetimeAccessDensityColdTh
 llvm/lib/Analysis/MemoryProfileInfo.cpp:31:19	MemProfAveLifetimeColdThreshold
 llvm/lib/Analysis/MemoryProfileInfo.cpp:38:19	MemProfMinAveLifetimeAccessDensityHotThreshold
 llvm/lib/Analysis/InlineCost.cpp:57:5	DefaultThreshold
+=Batch2 [processing]
 llvm/lib/Analysis/InlineCost.cpp:74:21	InlineThreshold
 llvm/lib/Analysis/InlineCost.cpp:78:21	HintThreshold
 llvm/lib/Analysis/InlineCost.cpp:83:5	ColdCallSiteThreshold
@@ -39,6 +41,7 @@ llvm/lib/Analysis/DependenceAnalysis.cpp:119:26	MIVMaxLevelThreshold
 llvm/lib/Analysis/MLInlineAdvisor.cpp:82:23	SizeIncreaseThreshold
 llvm/lib/Analysis/BlockFrequencyInfoImpl.cpp:54:19	IterativeBFIMaxIterationsPerBlock
 llvm/lib/Analysis/BlockFrequencyInfoImpl.cpp:59:17	IterativeBFIPrecision
+=Batch3 [not started]
 llvm/lib/Analysis/InlineAdvisor.cpp:56:5	InlineDeferralScale
 llvm/lib/Analysis/LoopAccessAnalysis.cpp:87:32	RuntimeMemoryCheckThreshold
 llvm/lib/Analysis/LoopAccessAnalysis.cpp:95:26	MemoryCheckMergeThreshold

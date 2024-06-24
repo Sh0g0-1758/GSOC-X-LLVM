@@ -50,6 +50,32 @@ def generate_values(number):
         values = sorted(values)
         return values
 
+    # Handling of negative numbers
+    if number < 0:
+        step = round(number * 0.1)
+        if(step == 0):
+            step = 1
+        if(step < 0):
+            step = -step
+        count = 1
+        values = []
+        temp = number
+        while count <= 6:
+            values.append(temp)
+            temp -= step
+            count += 1
+        temp = number + step
+        while count <= 11:
+            values.append(temp)
+            temp += step
+            count += 1
+        max_val = max(values)
+        min_val = min(values)
+        values.append(max_val * 2)
+        values.append(min_val * 2)
+        values = sorted(values)
+        return values
+
     # Standard Values ranging from 50% to 150% of the original number
     # with gaps of 10%
     step = round(number * 0.1)
