@@ -1,10 +1,3 @@
-llvm/lib/Analysis/InlineCost.cpp:74:21	InlineThreshold
-llvm/lib/Analysis/InlineCost.cpp:78:21	HintThreshold
-llvm/lib/Analysis/InlineCost.cpp:83:5	ColdCallSiteThreshold
-llvm/lib/Analysis/InlineCost.cpp:94:21	InlineSavingsMultiplier
-llvm/lib/Analysis/InlineCost.cpp:101:21	InlineSavingsProfitableMultiplier
-llvm/lib/Analysis/InlineCost.cpp:107:5	InlineSizeAllowance
-llvm/lib/Analysis/InlineCost.cpp:114:21	ColdThreshold
 llvm/lib/Analysis/InlineCost.cpp:119:5	HotCallSiteThreshold
 llvm/lib/Analysis/InlineCost.cpp:122:21	LocallyHotCallSiteThreshold
 llvm/lib/Analysis/InlineCost.cpp:126:21	ColdCallSiteRelFreq
