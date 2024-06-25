@@ -1,9 +1,117 @@
 import sys
 import os
 import subprocess
+import re
 # from datasets import load_dataset
 from colorama import init, Fore, Back, Style
 init()
+
+def convert_to_appropriate_type_main(data):
+    s = data['init_value']
+    if s is None or s == '':
+        return None
+
+    try:
+        return int(s)
+    except ValueError:
+        pass
+    try:
+        if (s[-1] == 'f'):
+            return float(s[:-1])
+        return float(s)
+    except ValueError:
+        pass
+
+# This Function reads a given set of lines from the cpp file
+# The starting line and 10 lines ahead of it
+
+
+def read_lines_around(file_path, start_line, num_lines=10):
+    lines = []
+    with open(file_path, 'r') as file:
+        for i, line in enumerate(file):
+            if start_line - 1 <= i <= start_line + num_lines:
+                lines.append(line)
+            if i > start_line + num_lines:
+                break
+    return lines
+
+# This Function extracts the string identifier and the init value
+# from the snippet
+
+
+def extract_init_value_and_string(snippet, function_name):
+    pattern = rf'{
+        function_name}\s*\(\s*"([^"]+)"(?:.*?)cl::init\s*\(\s*([^)]+)\s*\)'
+
+    match = re.search(pattern, snippet, re.DOTALL)
+    if match:
+        return {
+            'string_identifier': match.group(1),
+            'init_value': match.group(2)
+        }
+    else:
+        return None
+
+# This Function processes the input lines, ie. take care of newlines
+
+
+def process_multiline_from_file(file_path, line_number, function_name):
+    lines = read_lines_around(file_path, line_number)
+    snippet = ''.join(line.strip() for line in lines)
+    snippet = snippet.replace(';', ';\n')
+    return extract_init_value_and_string(snippet, function_name)
+
+# this function converts the knob information from the sheet
+# Into useful information that can be used to study them
+
+
+def extract_info(line):
+    pattern = r'(.+?):(\d+):(\d+)\s+(\w+)'
+    match = re.match(pattern, line.strip())
+    if match:
+        return {
+            'file_path': match.group(1),
+            'line_number': int(match.group(2)),
+            'function_name': match.group(4)
+        }
+    else:
+        print(Fore.RED + f"Invalid line: {line.strip()}" + Fore.RESET)
+        sys.exit(1)
+
+# This Function is an extension of the above function
+# It just helps in reading the lines
+
+
+def process_file(file_path):
+    extracted_data = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            info = extract_info(line)
+            if info:
+                extracted_data.append(info)
+    return extracted_data
+
+# Function to get init val and its identifier from the cpp file
+
+
+def get_identifier_and_init_val(extracted_data):
+    result_dict = {}
+
+    for entry in extracted_data:
+        file_path = "./../../dev/llvm-project/" + entry['file_path']
+        line_number = int(entry['line_number'])
+        function_name = entry['function_name']
+        data = process_multiline_from_file(
+            file_path, line_number, function_name)
+        if data:
+            result_dict[data['string_identifier']] = (data['init_value'])
+        else:
+            print(
+                Fore.RED + f"File Path : {file_path} =!= Function Name : {function_name}" + Fore.RESET)
+            sys.exit(1)
+
+    return result_dict
 
 
 def generate_values(number):
@@ -138,40 +246,54 @@ def convert_to_appropriate_type(data, s):
 
 if __name__ == "__main__":
 
-    # if not os.path.exists("bitcode"):
-    #     os.mkdir("bitcode")
+    if not os.path.exists("bitcode"):
+        os.mkdir("bitcode")
 
-    # if not os.path.exists("stats"):
-    #     os.mkdir("stats")
+    if not os.path.exists("stats"):
+        os.mkdir("stats")
+    
+    if not os.path.exists("directories"):
+        os.mkdir("directories")
 
     # ds = load_dataset('llvm-ml/ComPile', split='train', streaming=True)
 
-    knob_name = os.environ.get('KNOB_NAME')
+    # knob_name = os.environ.get('KNOB_NAME')
 
-    value = os.environ.get('KNOB_VAL')
+    # value = os.environ.get('KNOB_VAL')
 
-    if value is not None:
-        value = convert_to_appropriate_type(knob_name, value)
-        print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
-    else:
-        print(Fore.RED + "Environment variable not set." + Fore.RESET)
-        sys.exit(1)
+    # if value is not None:
+    #     value = convert_to_appropriate_type(knob_name, value)
+    #     print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
+    # else:
+    #     print(Fore.RED + "Environment variable not set." + Fore.RESET)
+    #     sys.exit(1)
+
+    # iteration = 0
+    # index = 1
+
+    # # dataset_iterator = iter(ds)
+
+    # values = generate_values(value)
+
+    # for val in values:
+    #     with open('directory_name.txt', 'a') as file:
+    #         file.write(f"./stats/{knob_name}_{val}\n")
+
+    #     directory_name = f"{knob_name}_{val}"
+
+    #     if not os.path.exists(f"./stats/{directory_name}"):
+    #         os.mkdir(f"./stats/{directory_name}")
+
+    knob_data = process_file('prelim_knobs.txt')
+
+    print(Fore.GREEN + "Successfully extracted Location and function name from knobs" + Fore.RESET)
+
+    result_dict = get_identifier_and_init_val(knob_data)
+
+    print(Fore.GREEN + "Extracted string identifier and init val of the command line knobs" + Fore.RESET)
 
     iteration = 0
     index = 1
-
-    # dataset_iterator = iter(ds)
-
-    values = generate_values(value)
-
-    for val in values:
-        with open('directory_name.txt', 'a') as file:
-            file.write(f"./stats/{knob_name}_{val}\n")
-
-        directory_name = f"{knob_name}_{val}"
-
-        if not os.path.exists(f"./stats/{directory_name}"):
-            os.mkdir(f"./stats/{directory_name}")
 
     for i in range(1000):
         iteration = iteration + 1
@@ -200,69 +322,99 @@ if __name__ == "__main__":
         
         # print(Fore.CYAN + f"Generated Bitcode for Iteration {i+1}" + Fore.RESET)
 
-        for val in values:
+        for result in result_dict:
+            
+            knob_name = result
 
-            opt_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-stats', f'./bitcode/test_{(i+1)}.bc']
-            opt_O1_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{(i+1)}.bc']
-            opt_O2_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{(i+1)}.bc']
-            opt_O3_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{(i+1)}.bc']
-            opt_Os_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{(i+1)}.bc']
-            opt_Oz_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{(i+1)}.bc']
+            value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
 
-            output_string = ""
-            output_string += "PLAIN STATS> \n"
-            with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
-                stdout_data, stderr_data = opt_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+            if value is not None:
+                value = convert_to_appropriate_type(knob_name, value)
+                print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
+            else:
+                print(Fore.RED + "No Value found for knob" + Fore.RESET)
+                sys.exit(1)
 
-            output_string += "O1 STATS> \n"
-            with subprocess.Popen(opt_O1_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O1_process:
-                stdout_data, stderr_data = opt_O1_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+            # dataset_iterator = iter(ds)
 
-            output_string += "O2 STATS> \n"
-            with subprocess.Popen(opt_O2_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O2_process:
-                stdout_data, stderr_data = opt_O2_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+            values = generate_values(value)
 
-            output_string += "O3 STATS> \n"
-            with subprocess.Popen(opt_O3_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O3_process:
-                stdout_data, stderr_data = opt_O3_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+            if i == 0:
+                with open(f'./directories/{knob_name}.txt', 'w') as file:
+                    pass
+                for val in values:
+                    with open(f'./directories/{knob_name}.txt', 'a') as file:
+                        file.write(f"./stats/{knob_name}_{val}\n")
 
-            output_string += "Os STATS> \n"
-            with subprocess.Popen(opt_Os_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Os_process:
-                stdout_data, stderr_data = opt_Os_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+                    directory_name = f"{knob_name}_{val}"
 
-            output_string += "Oz STATS> \n"
-            with subprocess.Popen(opt_Oz_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Oz_process:
-                stdout_data, stderr_data = opt_Oz_process.communicate()
-                stderr_str = stderr_data.decode('utf-8')
-                output_string += str(stderr_data)[222:-1]
+                    if not os.path.exists(f"./stats/{directory_name}"):
+                        os.mkdir(f"./stats/{directory_name}")
 
-            output_string = output_string.replace('\\n', '\n')
+            for val in values:
 
-            print(iteration, index)
+                opt_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-stats', f'./bitcode/test_{(i+1)}.bc']
+                opt_O1_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{(i+1)}.bc']
+                opt_O2_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{(i+1)}.bc']
+                opt_O3_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{(i+1)}.bc']
+                opt_Os_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{(i+1)}.bc']
+                opt_Oz_command_vector = [
+                    './build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{(i+1)}.bc']
 
-            with open(f'./stats/{knob_name}_{val}/stats_{index}.txt', 'a') as f:
-                f.write(f"====================================  STATS FOR FILE : {
-                        i} ====================================\n")
-                f.write(output_string)
+                output_string = ""
+                output_string += "PLAIN STATS> \n"
+                with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
+                    stdout_data, stderr_data = opt_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
 
-            print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {
-                  val} for Iteration {i}" + Fore.RESET)
+                output_string += "O1 STATS> \n"
+                with subprocess.Popen(opt_O1_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O1_process:
+                    stdout_data, stderr_data = opt_O1_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
+
+                output_string += "O2 STATS> \n"
+                with subprocess.Popen(opt_O2_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O2_process:
+                    stdout_data, stderr_data = opt_O2_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
+
+                output_string += "O3 STATS> \n"
+                with subprocess.Popen(opt_O3_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O3_process:
+                    stdout_data, stderr_data = opt_O3_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
+
+                output_string += "Os STATS> \n"
+                with subprocess.Popen(opt_Os_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Os_process:
+                    stdout_data, stderr_data = opt_Os_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
+
+                output_string += "Oz STATS> \n"
+                with subprocess.Popen(opt_Oz_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Oz_process:
+                    stdout_data, stderr_data = opt_Oz_process.communicate()
+                    stderr_str = stderr_data.decode('utf-8')
+                    output_string += str(stderr_data)[222:-1]
+
+                output_string = output_string.replace('\\n', '\n')
+
+                print(iteration, index)
+
+                with open(f'./stats/{knob_name}_{val}/stats_{index}.txt', 'a') as f:
+                    f.write(f"====================================  STATS FOR FILE : {i} ====================================\n")
+                    f.write(output_string)
+
+                print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {val} for Iteration {i}" + Fore.RESET)
 
         if (iteration % 10 == 0):
             index += 1
+    
+    os.system("python analyze.py")
+    print(Fore.GREEN + f"##  Successfully analyzed All Knobs" + Fore.RESET)

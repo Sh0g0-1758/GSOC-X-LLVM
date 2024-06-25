@@ -5,7 +5,7 @@ from colorama import init, Fore, Back, Style
 init()
 
 
-def convert_to_appropriate_type(data):
+def convert_to_appropriate_type_main(data):
     s = data['init_value']
     if s is None or s == '':
         return None
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         print(Fore.BLUE + f"##  Analyzing {result}" + Fore.RESET)
 
         os.environ['KNOB_NAME'] = result
-        os.environ['KNOB_VAL'] = str(convert_to_appropriate_type(
+        os.environ['KNOB_VAL'] = str(convert_to_appropriate_type_main(
             {'string_identifier': result, 'init_value': result_dict[result]}))
 
         with open('directory_name.txt', 'w') as file:
