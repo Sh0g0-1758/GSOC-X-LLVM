@@ -1,0 +1,13 @@
+./stats/inline-memaccess-cost_0
+./stats/inline-memaccess-cost_1
+./stats/inline-memaccess-cost_2
+./stats/inline-memaccess-cost_3
+./stats/inline-memaccess-cost_4
+./stats/inline-memaccess-cost_5
+./stats/inline-memaccess-cost_6
+./stats/inline-memaccess-cost_7
+./stats/inline-memaccess-cost_8
+./stats/inline-memaccess-cost_9
+./stats/inline-memaccess-cost_10
+./stats/inline-memaccess-cost_20
+./stats/inline-memaccess-cost_100
