@@ -1,7 +1,7 @@
 import sys
 import os
 import subprocess
-from datasets import load_dataset
+# from datasets import load_dataset
 from colorama import init, Fore, Back, Style
 init()
 
@@ -138,13 +138,13 @@ def convert_to_appropriate_type(data, s):
 
 if __name__ == "__main__":
 
-    if not os.path.exists("bitcode"):
-        os.mkdir("bitcode")
+    # if not os.path.exists("bitcode"):
+    #     os.mkdir("bitcode")
 
-    if not os.path.exists("stats"):
-        os.mkdir("stats")
+    # if not os.path.exists("stats"):
+    #     os.mkdir("stats")
 
-    ds = load_dataset('llvm-ml/ComPile', split='train', streaming=True)
+    # ds = load_dataset('llvm-ml/ComPile', split='train', streaming=True)
 
     knob_name = os.environ.get('KNOB_NAME')
 
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     iteration = 0
     index = 1
 
-    dataset_iterator = iter(ds)
+    # dataset_iterator = iter(ds)
 
     values = generate_values(value)
 
@@ -175,43 +175,45 @@ if __name__ == "__main__":
 
     for i in range(1000):
         iteration = iteration + 1
-        bitcode_module = next(dataset_iterator)['content']
-        IR_module = None
-        dis_command_vector = [
-            './build/bin/llvm-dis', '-']
-        with subprocess.Popen(
-                dis_command_vector,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                stdin=subprocess.PIPE) as dis_process:
-            IR_module = dis_process.communicate(
-                input=bitcode_module)[0].decode('utf-8')
+        # bitcode_module = next(dataset_iterator)['content']
+        # IR_module = None
+        # dis_command_vector = [
+        #     './build/bin/llvm-dis', '-']
+        # with subprocess.Popen(
+        #         dis_command_vector,
+        #         stdout=subprocess.PIPE,
+        #         stderr=subprocess.STDOUT,
+        #         stdin=subprocess.PIPE) as dis_process:
+        #     IR_module = dis_process.communicate(
+        #         input=bitcode_module)[0].decode('utf-8')
 
-        as_command_vector = ['./build/bin/llvm-as',
-                             '-', '--o', f'./bitcode/test_{knob_name}.bc']
+        # as_command_vector = ['./build/bin/llvm-as',
+        #                      '-', '--o', f'./bitcode/test_{(i+1)}.bc']
 
-        with subprocess.Popen(
-                as_command_vector,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                stdin=subprocess.PIPE) as as_process:
-            as_process.communicate(
-                input=IR_module.encode('utf-8'))
+        # with subprocess.Popen(
+        #         as_command_vector,
+        #         stdout=subprocess.PIPE,
+        #         stderr=subprocess.STDOUT,
+        #         stdin=subprocess.PIPE) as as_process:
+        #     as_process.communicate(
+        #         input=IR_module.encode('utf-8'))
+        
+        # print(Fore.CYAN + f"Generated Bitcode for Iteration {i+1}" + Fore.RESET)
 
         for val in values:
 
             opt_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-stats', f'./bitcode/test_{(i+1)}.bc']
             opt_O1_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{(i+1)}.bc']
             opt_O2_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{(i+1)}.bc']
             opt_O3_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{(i+1)}.bc']
             opt_Os_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{(i+1)}.bc']
             opt_Oz_command_vector = [
-                './build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{knob_name}.bc']
+                './build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{(i+1)}.bc']
 
             output_string = ""
             output_string += "PLAIN STATS> \n"

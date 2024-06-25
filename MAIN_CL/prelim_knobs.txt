@@ -1,8 +1,4 @@
-llvm/lib/Analysis/InlineCost.cpp:119:5	HotCallSiteThreshold
-llvm/lib/Analysis/InlineCost.cpp:122:21	LocallyHotCallSiteThreshold
-llvm/lib/Analysis/InlineCost.cpp:126:21	ColdCallSiteRelFreq
-llvm/lib/Analysis/InlineCost.cpp:132:26	HotCallSiteRelFreq
-llvm/lib/Analysis/InlineCost.cpp:139:5	InstrCost
+llvm/lib/Target/PowerPC/PPCMergeStringPool.cpp:39:5	MaxStringsPooled
 llvm/lib/Analysis/InlineCost.cpp:143:5	MemAccessCost
 llvm/lib/Analysis/InlineCost.cpp:146:21	CallPenalty
 llvm/lib/Analysis/InlineCost.cpp:151:5	StackSizeThreshold
