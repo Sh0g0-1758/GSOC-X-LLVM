@@ -1,0 +1,23 @@
+Number of terminators folded	#	jump-threading
+Number of block queries that were completely cached	#	memdep
+Number of PHI nodes inserted	#	mem2reg
+Number of cached, but dirty, non-local ptr responses	#	memdep
+Number of insts combined	#	instcombine
+Number of stores remaining after DSE	#	dse
+Number of alloca partition uses rewritten	#	sroa
+Number of reassociations	#	instsimplify
+Negator: Total number of values visited during attempts to sink negation	#	instcombine
+Number of insts scanned while updating ibt	#	ipt
+Negator: Number of negations attempted to be sinked	#	instcombine
+Number of pointers maybe captured before	#	capture-tracking
+Number of phis propagated	#	correlated-value-propagation
+Number of reassociations	#	instcombine
+Number of fully cached non-local ptr responses	#	memdep
+Number of uncached non-local ptr responses	#	memdep
+Number of function returns marked noundef	#	function-attrs
+Number of functions that do not access memory 	#	globalsmodref-aa
+Number of functions that only read memory 	#	globalsmodref-aa
+Number of loops analyzed for vectorization 	#	loop-vectorize
+Number of load instructions with unsolved size and offset 	#	memory-builtins
+Number of function returns marked noalias 	#	function-attrs
+Number of arguments with unsolved size and offset 	#	memory-builtins

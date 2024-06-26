@@ -68,9 +68,12 @@ def process_file(file_path, stats_dict):
 
 # Collect stats for all files present in one directory
 def process_directory(directory_path):
+    valid_files = ['stats_3.txt','stats_8.txt','stats_1.txt','stats_4.txt','stats_6.txt','stats_9.txt','stats_2.txt','stats_10.txt','stats_7.txt','stats_5.txt']
     directory_stats_dict = defaultdict(int)
-    for root, dirs, files in os.walk(directory_path):
+    for root, _, files in os.walk(directory_path):
         for file in files:
+            if file not in valid_files:
+                continue
             file_path = os.path.join(root, file)
             process_file(file_path, directory_stats_dict)
     return dict(directory_stats_dict)
@@ -166,7 +169,7 @@ if __name__ == "__main__":
 
         print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
 
-        file_path = f"./results/Batch2/{knob_name}_result.json"
+        file_path = f"./Batch2_Results/{knob_name}_result.json"
 
         with open(file_path, 'w') as file:
             json.dump(final_dict, file)
