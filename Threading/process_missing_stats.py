@@ -1,5 +1,18 @@
+import re
+
+def separate_knob_value(line):
+    # Use regular expression to match the last value in parentheses
+    match = re.search(r'\(([^)]+)\)$', line)
+    if match:
+        value = match.group(1)  # Extract the value
+        knob_name = line[:match.start()].strip()  # Get the rest of the string
+        return knob_name, value
+    else:
+        # If no match found, return the line and None
+        return line.strip(), None
+
 def process_file(file_path):
-    missing_stats = []
+    missing_stats = {}
     metadata_dict = {}
 
     with open(file_path, 'r') as file:
@@ -7,20 +20,20 @@ def process_file(file_path):
             line = line.strip()
             if line.startswith("Missing"):
                 value = line.split("Missing stats for knob")[-1].split(":")[0].strip()
-                missing_stats.append(value)
+                missing_stats[value] = True
             else:
-                parts = line.split("(", 1)
-                if len(parts) == 2:
-                    key = parts[0].strip()
-                    value = parts[1].rstrip(")").strip()
-                    metadata_dict[key] = value
+                key, value = separate_knob_value(line)
+                metadata_dict[key] = value
 
     return missing_stats, metadata_dict
 
 file_path = 'missing_stats.txt'
 missing_stats, metadata_dict = process_file(file_path)
 
-print("Missing Stats:", missing_stats)
+# print("Missing Stats:", missing_stats)
+
+# for k in missing_stats:
+#     print(k)
 
 for key, value in metadata_dict.items():
-    print(key, ":", value)
+    print(value)
