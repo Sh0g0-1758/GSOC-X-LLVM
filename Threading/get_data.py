@@ -364,7 +364,7 @@ if __name__ == "__main__":
 
     result_dict = get_identifier_and_init_val(knob_data)
 
-    chunk_size = 20
+    chunk_size = 3
     split_dicts = split_dict(result_dict, chunk_size)
 
     Thread_name = "THREAD"

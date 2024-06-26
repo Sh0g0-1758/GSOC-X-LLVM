@@ -170,7 +170,7 @@ def json_to_dict_with_arrays(file_path):
 
 # Helper function to run the correlation analysis
 def run_analyzer(knob_name, knob_value):
-    file_path = f'./Batch2_Results/{knob_name}_result.json'
+    file_path = f'./Batch3_Results/{knob_name}_result.json'
     converted_dict = json_to_dict_with_arrays(file_path)
 
     x = generate_values(convert_to_appropriate_type(knob_name, knob_value))
@@ -250,7 +250,7 @@ if __name__ == '__main__':
     file_path = 'knobs_decoded.txt'
     master_stats_dict = read_key_value_file(file_path)
 
-    directory_path = './Batch2_Results'
+    directory_path = './Batch3_Results'
     empty_files, processed_files_data = read_json_files(directory_path)
 
     useless_knobs = ""
