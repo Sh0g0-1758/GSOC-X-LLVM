@@ -174,34 +174,34 @@ def run_analyzer(knob_name):
     data = json_to_dict_with_arrays(file_path)
 
     # Extract keys (categories) and values
-    categories = list(data.keys())
-    values1 = [data[cat][0] for cat in categories]
-    values2 = [data[cat][1] for cat in categories]
+    relative_differece_dict = {}
+    for key, values in data.items():
+        relative_differece_dict[key] = ((data[key][1] - data[key][0]) / data[key][0]) * 100
 
-    # Set the positions and width for the bars
-    positions = np.arange(len(categories))
-    width = 0.35
+    
+    keys = list(relative_differece_dict.keys())
+    values = list(relative_differece_dict.values())
 
-    # Create the bar plot
     fig, ax = plt.subplots()
 
-    # Bars for the first value
-    bars1 = ax.bar(positions - width / 2, values1, width, label='False')
+    bars = ax.bar(keys, values)
 
-    # Bars for the second value
-    bars2 = ax.bar(positions + width / 2, values2, width, label='True')
+    ax.set_xlabel('Knobs')
+    ax.set_ylabel('Values')
+    ax.set_title(f'comparing stats value obtained from boolean knob {knob_name}')
+
+    # Set the positions and width for the bars
+    positions = np.arange(len(keys))
+    width = 0.35
 
     # Add some text for labels, title, and axes ticks
-    ax.set_xlabel('Categories')
-    ax.set_ylabel('Values')
-    ax.set_title('Side by Side Bar Graph')
     ax.set_xticks(positions)
-    ax.set_xticklabels(categories, rotation=45, ha='right')
-    ax.legend()  # Default legend
+    ax.set_xticklabels(keys, rotation=45, ha='right')
+    ax.legend(["Relative difference on changing knob from false to true"])  # Default legend
     
     bar_width = 0.35
     # Adding vertical lines
-    for i in range(len(categories)):
+    for i in range(len(keys)):
         plt.axvline(x=i + bar_width / 2, color='gray', linestyle='--', linewidth=0.5)
 
     ax.yaxis.grid(True, color='gray', linestyle='--', linewidth=0.5)
@@ -214,6 +214,7 @@ def run_analyzer(knob_name):
     new_width, new_height = 22, 18  # New size in inches
     fig.set_size_inches(new_width, new_height)
 
+    # plt.show()
     # Save the figure as a PNG with adjusted size
     plt.savefig(f'./correlation_analysis/{knob_name}.png', format='png', dpi=fig.dpi, bbox_inches='tight')
 
@@ -257,8 +258,8 @@ if __name__ == '__main__':
         print(Fore.BLUE + f"{file}" + Fore.RESET)
     print(Fore.RED + "#################" + Fore.RESET)
 
-    with open('useless_knobs.txt', 'a') as file:
-        file.write(useless_knobs)
+    # with open('useless_knobs.txt', 'a') as file:
+    #     file.write(useless_knobs)
 
     useful_knobs = ""
     for key, value in processed_files_data.items():
@@ -267,5 +268,5 @@ if __name__ == '__main__':
         # Only for boolean knobs
         run_analyzer(key)
     
-    with open('useful_knobs.txt', 'a') as file:
-        file.write(useful_knobs)
+    # with open('useful_knobs.txt', 'a') as file:
+    #     file.write(useful_knobs)
