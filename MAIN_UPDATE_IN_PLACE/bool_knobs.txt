@@ -1,0 +1,8 @@
+llvm/lib/Analysis/LoopAccessAnalysis.cpp:143:28	HoistRuntimeChecks
+llvm/lib/Analysis/ObjCARCAnalysisUtils.cpp:24:28	EnableARCOptimizations
+llvm/lib/IR/BasicBlock.cpp:48:21	WriteNewDbgInfoFormatToBitcode2
+llvm/lib/Transforms/Scalar/LoopIdiomRecognize.cpp:111:5	DisableLIRPAll
+llvm/lib/Transforms/Scalar/LoopIdiomRecognize.cpp:118:5	DisableLIRPMemset
+llvm/lib/Transforms/Scalar/LoopIdiomRecognize.cpp:126:5	DisableLIRPMemcpy
+llvm/lib/CodeGen/RegisterCoalescer.cpp:90:1	EnableGlobalCopies
+llvm/lib/CodeGen/BranchFolding.cpp:73:35	FlagEnableTailMerge

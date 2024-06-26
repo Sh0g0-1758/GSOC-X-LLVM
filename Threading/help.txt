@@ -1,0 +1,7 @@
+static cl::opt<unsigned> SampleProfileProfiCostBlockDec(
+    "sample-profile-profi-cost-block-dec", cl::init(20), cl::Hidden,
+    cl::desc("The cost of decreasing a block's count by one."));
+
+static cl::opt<unsigned> SampleProfileProfiCostBlockEntryInc(
+    "sample-profile-profi-cost-block-entry-inc", cl::init(40), cl::Hidden,
+    cl::desc("The cost of increasing the entry block's count by one."));

@@ -1,27 +1,32 @@
-llvm/lib/Target/NVPTX/NVPTXLowerAggrCopies.cpp:50:25	MaxAggrCopySize
-llvm/lib/Analysis/LazyValueInfo.cpp:49:23	MaxProcessedPerValue
-llvm/lib/Analysis/MemoryDependenceAnalysis.cpp:84:27	NumResultsLimit
-llvm/lib/Analysis/InstructionSimplify.cpp:51:8	RecursionLimit
-llvm/lib/Transforms/Utils/PredicateInfo.cpp:43:23	MaxCondsPerBranch
-llvm/lib/Transforms/Utils/Local.cpp:117:23	BitPartRecursionMaxDepth
-llvm/lib/Transforms/Utils/SCCPSolver.cpp:37:23	MaxNumRangeExtensions
-llvm/lib/Transforms/Utils/SampleProfileInference.cpp:524:29	MaxDfsCalls
-llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:204:23	AliasedCheckLimit
-llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:208:22	UsesLimit
-llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:213:23	MaxMemDepDistance
-llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:217:18	MinScheduleRegionSize
-llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:220:23	MaxPHINumOperands
-llvm/lib/Transforms/Vectorize/LoopVectorizationLegality.cpp:82:23	MaxInterleaveFactor
-llvm/lib/Transforms/Vectorize/LoadStoreVectorizer.cpp:260:25	MaxDepthVectorize
-llvm/lib/Transforms/InstCombine/InstCombineMulDivRem.cpp:1345:23	MaxDepth
-llvm/lib/Transforms/InstCombine/InstCombineVectorOps.cpp:1088:20	PredCountLimit
-llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:139:23	MaxIVUsers
-llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:145:23	MaxSCEVSalvageExpressionSize
-llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:2001:25	MaxChains
-llvm/lib/Transforms/Scalar/LoopInterchange.cpp:70:23	MaxMemInstrCount
-llvm/lib/Transforms/Scalar/LoopInterchange.cpp:73:23	MaxLoopNestDepth
+<done> llvm/lib/Target/NVPTX/NVPTXLowerAggrCopies.cpp:50:25	MaxAggrCopySize
+<done> llvm/lib/Analysis/LazyValueInfo.cpp:49:23	MaxProcessedPerValue
+<done> llvm/lib/Analysis/MemoryDependenceAnalysis.cpp:84:27	NumResultsLimit
+<done> llvm/lib/Analysis/InstructionSimplify.cpp:51:8	RecursionLimit
+<done> llvm/lib/Transforms/Utils/PredicateInfo.cpp:43:23	MaxCondsPerBranch
+<done> llvm/lib/Transforms/Utils/Local.cpp:117:23	BitPartRecursionMaxDepth
+<done> llvm/lib/Transforms/Utils/SCCPSolver.cpp:37:23	MaxNumRangeExtensions
+<done> llvm/lib/Transforms/Utils/SampleProfileInference.cpp:68:26	MaxDfsCalls
+<done> llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:204:23	AliasedCheckLimit
+<done> llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:208:22	UsesLimit
+<done> llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:213:23	MaxMemDepDistance
+<done> llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:217:18	MinScheduleRegionSize
+<done> llvm/lib/Transforms/Vectorize/SLPVectorizer.cpp:220:23	MaxPHINumOperands
+<done> llvm/lib/Transforms/Vectorize/LoopVectorizationLegality.cpp:82:23	MaxInterleaveFactor
+<done> llvm/lib/Transforms/Vectorize/LoadStoreVectorizer.cpp:127:26	MaxDepthVectorize
+<done> llvm/lib/Transforms/InstCombine/InstCombineMulDivRem.cpp:1345:23	MaxDepth
+<done> llvm/lib/Transforms/InstCombine/InstCombineVectorOps.cpp:53:26	PredCountLimit
+<done> llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:139:23	MaxIVUsers
+<done> llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:145:23	MaxSCEVSalvageExpressionSize
+<done> llvm/lib/Transforms/Scalar/LoopInterchange.cpp:70:23	MaxMemInstrCount
+<done> llvm/lib/Transforms/Scalar/LoopInterchange.cpp:73:23	MaxLoopNestDepth
 llvm/lib/Transforms/Scalar/StraightLineStrengthReduce.cpp:363:27	MaxNumIterations
 llvm/lib/Transforms/IPO/AttributorAttributes.cpp:9524:24	MaxNumChanges
 llvm/lib/Transforms/Coroutines/CoroFrame.cpp:50:8	SmallVectorThreshold
 llvm/lib/CodeGen/GlobalISel/LoadStoreOpt.cpp:50:16	MaxStoreSizeToForm
 llvm/lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp:154:23	MaxParallelChains
+llvm/lib/Transforms/InstCombine/InstCombineNegator.cpp:92:5	NegatorMaxDepth
+llvm/lib/CodeGen/RegAllocFast.cpp:496:25	Limit
+llvm/lib/CodeGen/RegAllocFast.cpp:525:25	Limit
+llvm/lib/CodeGen/RegAllocFast.cpp:828:25	ChainLengthLimit
+llvm/lib/CodeGen/RegAllocFast.cpp:847:25	DefLimit
+llvm/lib/CodeGen/TailDuplicator.cpp:88:26	TailDupLimit
