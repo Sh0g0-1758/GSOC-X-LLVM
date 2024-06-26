@@ -169,7 +169,7 @@ def json_to_dict_with_arrays(file_path):
     return result
 
 # Helper function to run the correlation analysis
-def run_analyzer(knob_name, knob_value):
+def run_analyzer(knob_name):
     file_path = f'./Batch5_Results/{knob_name}_result.json'
     data = json_to_dict_with_arrays(file_path)
 
@@ -186,35 +186,36 @@ def run_analyzer(knob_name, knob_value):
     fig, ax = plt.subplots()
 
     # Bars for the first value
-    bars1 = ax.bar(positions - width/2, values1, width, label='Value 1')
+    bars1 = ax.bar(positions - width / 2, values1, width, label='False')
 
     # Bars for the second value
-    bars2 = ax.bar(positions + width/2, values2, width, label='Value 2')
+    bars2 = ax.bar(positions + width / 2, values2, width, label='True')
 
-    # Add some text for labels, title and axes ticks
+    # Add some text for labels, title, and axes ticks
     ax.set_xlabel('Categories')
     ax.set_ylabel('Values')
     ax.set_title('Side by Side Bar Graph')
     ax.set_xticks(positions)
-    ax.set_xticklabels(categories)
-    ax.legend()
+    ax.set_xticklabels(categories, rotation=45, ha='right')
+    ax.legend()  # Default legend
+    
+    bar_width = 0.35
+    # Adding vertical lines
+    for i in range(len(categories)):
+        plt.axvline(x=i + bar_width / 2, color='gray', linestyle='--', linewidth=0.5)
 
-    # Function to add labels on the bars
-    def add_labels(bars):
-        for bar in bars:
-            height = bar.get_height()
-            ax.annotate(f'{height}',
-                        xy=(bar.get_x() + bar.get_width() / 2, height),
-                        xytext=(0, 3),  # 3 points vertical offset
-                        textcoords='offset points',
-                        ha='center', va='bottom')
+    ax.yaxis.grid(True, color='gray', linestyle='--', linewidth=0.5)
 
-    # Add labels to the bars
-    add_labels(bars1)
-    add_labels(bars2)
+    plt.subplots_adjust(bottom=0.30)
+    # Capture the current figure size in inches
+    fig_width, fig_height = fig.get_size_inches()
 
-    # Show the plot
-    plt.show()
+    # Set a new size if needed
+    new_width, new_height = 22, 18  # New size in inches
+    fig.set_size_inches(new_width, new_height)
+
+    # Save the figure as a PNG with adjusted size
+    plt.savefig(f'./correlation_analysis/{knob_name}.png', format='png', dpi=fig.dpi, bbox_inches='tight')
 
 
 def read_json_files(directory):
@@ -264,7 +265,7 @@ if __name__ == '__main__':
         useful_knobs += key + "\n"
         print(key)
         # Only for boolean knobs
-        run_analyzer(key, master_stats_dict[key])
+        run_analyzer(key)
     
     with open('useful_knobs.txt', 'a') as file:
         file.write(useful_knobs)

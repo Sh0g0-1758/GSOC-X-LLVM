@@ -87,3 +87,7 @@ num-results-limit
 aliased-check-limit
 instcombine-negator-max-depth
 recursion-limit
+disable-loop-idiom-all
+disable-loop-idiom-memcpy
+hoist-runtime-checks
+disable-loop-idiom-memset

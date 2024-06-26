@@ -391,3 +391,7 @@ max-loop-nest-depth
 max-num-range-extensions
 min-schedule-region-size
 max-store-size-to-form
+enable-objc-arc-opts
+write-experimental-debuginfo-iterators-to-bitcode
+join-globalcopies
+enable-tail-merge
