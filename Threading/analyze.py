@@ -160,6 +160,7 @@ if __name__ == "__main__":
                 missing_stats_string += key + "\n"
                 print(
                     Fore.RED + f"ERROR: STAT {key} not found in any of the known STATS" + Fore.RESET)
+                final_dict[key] = values
                 # sys.exit(1)
         
         if missing_stats_string != "":
@@ -169,7 +170,7 @@ if __name__ == "__main__":
 
         print(Fore.BLUE + "Successfully generated final dictionary." + Fore.RESET)
 
-        file_path = f"./Batch3_Results/{knob_name}_result.json"
+        file_path = f"./Batch5_Results/{knob_name}_result.json"
 
         with open(file_path, 'w') as file:
             json.dump(final_dict, file)

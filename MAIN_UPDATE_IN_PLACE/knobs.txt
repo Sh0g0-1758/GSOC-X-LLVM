@@ -19,14 +19,13 @@
 <done> llvm/lib/Transforms/Scalar/LoopStrengthReduce.cpp:145:23	MaxSCEVSalvageExpressionSize
 <done> llvm/lib/Transforms/Scalar/LoopInterchange.cpp:70:23	MaxMemInstrCount
 <done> llvm/lib/Transforms/Scalar/LoopInterchange.cpp:73:23	MaxLoopNestDepth
-llvm/lib/Transforms/Scalar/StraightLineStrengthReduce.cpp:363:27	MaxNumIterations
-llvm/lib/Transforms/IPO/AttributorAttributes.cpp:9524:24	MaxNumChanges
-llvm/lib/Transforms/Coroutines/CoroFrame.cpp:50:8	SmallVectorThreshold
-llvm/lib/CodeGen/GlobalISel/LoadStoreOpt.cpp:50:16	MaxStoreSizeToForm
-llvm/lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp:154:23	MaxParallelChains
-llvm/lib/Transforms/InstCombine/InstCombineNegator.cpp:92:5	NegatorMaxDepth
-llvm/lib/CodeGen/RegAllocFast.cpp:496:25	Limit
-llvm/lib/CodeGen/RegAllocFast.cpp:525:25	Limit
-llvm/lib/CodeGen/RegAllocFast.cpp:828:25	ChainLengthLimit
-llvm/lib/CodeGen/RegAllocFast.cpp:847:25	DefLimit
-llvm/lib/CodeGen/TailDuplicator.cpp:88:26	TailDupLimit
+<done> llvm/lib/Transforms/Scalar/StraightLineStrengthReduce.cpp:97:26	MaxNumIterations
+<done> llvm/lib/Transforms/IPO/AttributorAttributes.cpp:83:26	MaxNumChanges
+<done> llvm/lib/CodeGen/GlobalISel/LoadStoreOpt.cpp:51:16	MaxStoreSizeToForm
+<done> llvm/lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp:154:23	MaxParallelChains
+<done> llvm/lib/Transforms/InstCombine/InstCombineNegator.cpp:92:5	NegatorMaxDepth
+<done> llvm/lib/CodeGen/RegAllocFast.cpp:68:26	Upper_Limit
+<done> llvm/lib/CodeGen/RegAllocFast.cpp:72:25	Lower_Limit
+<done> llvm/lib/CodeGen/RegAllocFast.cpp:60:26	ChainLengthLimit
+<done> llvm/lib/CodeGen/RegAllocFast.cpp:64:26	DefLimit
+<done> llvm/lib/CodeGen/TailDuplicator.cpp:88:26	TailDupLimit

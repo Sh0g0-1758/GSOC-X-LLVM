@@ -262,16 +262,16 @@ def thread_function(result_dict):
             
             knob_name = result
 
-            value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
+            # value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
 
-            if value is not None:
-                value = convert_to_appropriate_type(knob_name, value)
-                print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
-            else:
-                print(Fore.RED + "No Value found for knob" + Fore.RESET)
-                sys.exit(1)
+            # if value is not None:
+            #     value = convert_to_appropriate_type(knob_name, value)
+            #     print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
+            # else:
+            #     print(Fore.RED + "No Value found for knob" + Fore.RESET)
+            #     sys.exit(1)
 
-            values = generate_values(value)
+            values = [0,1] # generate_values(value)
 
             if i == 0:
                 with open(f'./directories/{knob_name}.txt', 'w') as file:
@@ -288,17 +288,17 @@ def thread_function(result_dict):
             for val in values:
 
                 opt_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
                 opt_O1_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
                 opt_O2_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
                 opt_O3_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
                 opt_Os_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
                 opt_Oz_command_vector = [
-                    './../MAIN_CL/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
 
                 output_string = ""
                 output_string += "PLAIN STATS> \n"
@@ -350,7 +350,6 @@ def thread_function(result_dict):
         if (iteration % 10 == 0):
             index += 1
 
-
 if __name__ == "__main__":
     if not os.path.exists("stats"):
         os.mkdir("stats")
@@ -364,7 +363,7 @@ if __name__ == "__main__":
 
     result_dict = get_identifier_and_init_val(knob_data)
 
-    chunk_size = 3
+    chunk_size = 1
     split_dicts = split_dict(result_dict, chunk_size)
 
     Thread_name = "THREAD"

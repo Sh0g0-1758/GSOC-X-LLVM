@@ -81,3 +81,9 @@ openmp-opt-shared-limit
 gvn-max-num-visited-insts
 unroll-threshold-aggressive
 callsite-splitting-duplication-threshold
+tail-dup-limit
+max-depth
+num-results-limit
+aliased-check-limit
+instcombine-negator-max-depth
+recursion-limit
