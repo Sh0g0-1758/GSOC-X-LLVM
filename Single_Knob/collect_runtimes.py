@@ -181,17 +181,17 @@ if __name__ == "__main__":
 
             perf_time_dict[knob][val] = []
             for i in range(100):
-                perf_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
-                perf_O1_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', '-O1', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_O1_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', '-O1', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
-                perf_O2_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', '-O2', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_O2_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', '-O2', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
-                perf_O3_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', '-O3', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_O3_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', '-O3', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
-                perf_Os_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', '-Os', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_Os_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', '-Os', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
-                perf_Oz_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-attributor-max-specializations-per-call-base={val}', '-Oz', f'./../MAIN_CL/bitcode/test_{i}.bc']
+                perf_Oz_command_vector = ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob}={val}', '-Oz', f'./../MAIN_CL/bitcode/test_{i}.bc']
 
                 commands = [perf_command_vector, perf_O1_command_vector, perf_O2_command_vector, perf_O3_command_vector, perf_Os_command_vector, perf_Oz_command_vector]
 
@@ -216,6 +216,11 @@ if __name__ == "__main__":
                 print(Fore.YELLOW + f"done with bitcode file {i}" + Fore.RESET)
             
             perf_time_dict[knob][val] = sum(perf_time_dict[knob][val]) / len(perf_time_dict[knob][val])
-    
-    with open("perf_time.json", "w") as f:
-        json.dump(perf_time_dict, f)
+
+    file_path = f"./perf_time.json"
+
+    print(perf_time_dict)
+
+    with open(file_path, 'w') as file:
+        json.dump(perf_time_dict, file)
+
