@@ -8,11 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const stats = jsonData.stats;
             const statsVal = jsonData.stats_val;
 
+            statsVal['COMPILE TIME'] = {
+                "normalized_values": jsonData.time_arr,
+                "min": jsonData.time_min,
+                "max": jsonData.time_max
+            };
+            stats.push('COMPILE TIME');
+
             const seriesData = stats.map(stat => {
                 return {
                     name: stat,
                     type: 'line',
-                    data: statsVal[stat] || [],
+                    data: statsVal[stat].normalized_values,
                     smooth: true,
                     lineStyle: {
                         width: 2
@@ -32,8 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     left: 'center'
                 },
                 tooltip: {
-                    trigger: "item"
-                  },
+                    trigger: "item",
+                    formatter: function(params) {
+                        return `<strong>${params.seriesName}</strong><br>` +
+                               `Knob Value: ${params.name}<br>` +
+                               `Value: ${((statsVal[params.seriesName].max - statsVal[params.seriesName].min) * params.value) + statsVal[params.seriesName].min}<br>`;
+                    }
+                },
                 legend: {
                     data: stats,
                     type: 'scroll',
@@ -70,24 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 series: seriesData,
             };
-
-            myChart.on('legendselectchanged', function(params) {
-                const selectedName = params.name;
-                myChart.dispatchAction({
-                    type: 'highlight',
-                    seriesName: selectedName
-                });
-
-                stats.forEach(name => {
-                    if (name !== selectedName) {
-                        myChart.dispatchAction({
-                            type: 'downplay',
-                            seriesName: name
-                        });
-                    }
-                });
-            });
-
             myChart.setOption(option);
 
             window.addEventListener('resize', function () {

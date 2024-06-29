@@ -169,11 +169,18 @@ def json_to_dict_with_arrays(file_path):
 def normalize(array):
     min_val = np.min(array)
     max_val = np.max(array)
-    return (array - min_val) / (max_val - min_val)
+    return (array - min_val) / (max_val - min_val) , min_val, max_val
 
 def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
     x = generate_values(convert_to_appropriate_type(knob_name, knob_val))
     x = np.array(x)
+
+    file_path = './perf_time.json'
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    time_arr = []
+    for _, value in data[knob_name].items():
+        time_arr.append(value)
 
     keys = []
     normalized_values_dict = {}
@@ -182,18 +189,28 @@ def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
         y = np.array(value)
         if len(set(y)) == 1 or len(set(y)) == 2:
             continue
-        y_normalized = normalize(y)
+        y_normalized, y_min, y_max = normalize(y)
+        # Change these values when studying overall performance, these represent the number of bitcode files
+        # That we are performing our experiments on
+        y_max = y_max / 100
+        y_min = y_min / 100
         keys.append(key)
-        normalized_values_dict[key] = list(y_normalized)
+        normalized_values_dict[key] = {"normalized_values" : list(y_normalized), "min" : y_min, "max" : y_max}
     
     keys = list(keys)
+
+    time_arr = np.array(time_arr)
+    time_arr, time_min, time_max = normalize(time_arr)
 
     json_data = {
         "knob_name": knob_name,
         "original_val": knob_val,
         "knob_values": x.tolist(),
         "stats": keys,
-        "stats_val": normalized_values_dict
+        "stats_val": normalized_values_dict,
+        "time_arr": list(time_arr),
+        "time_min": time_min,
+        "time_max": time_max,
     }
 
     with open('plot.json', 'w') as file:
