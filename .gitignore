@@ -14,3 +14,6 @@ a.out
 help.cpp
 stats
 directories
+node_modules
+*.xopp
+Meet2.pdf
