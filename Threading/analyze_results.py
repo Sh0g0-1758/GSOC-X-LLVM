@@ -15,11 +15,13 @@ def generate_values(number):
         values = []
         step = round(number * 0.1)
         count = 1
-        values.append(number * 0.2)
-        values.append(number * 0.3)
+        values.append(round(number * 0.2))
+        values.append(round(number * 0.3))
         while (count <= 11):
             values.append(number)
             number -= step
+            if(number < 0):
+                break
             count += 1
         values = sorted(values)
         return values
@@ -169,22 +171,26 @@ def json_to_dict_with_arrays(file_path):
     return result
 
 # Helper function to run the correlation analysis
-def run_analyzer(knob_name, knob_value):
-    file_path = f'./Batch5_Results/{knob_name}_result.json'
-    converted_dict = json_to_dict_with_arrays(file_path)
-
+def run_analyzer(knob_name, knob_value, converted_dict):
     x = generate_values(convert_to_appropriate_type(knob_name, knob_value))
     x = np.array(x)
 
-    keys = list(converted_dict.keys())
     Pearson_correlation_coefficients = []
     P_Value = []
+    keys = []
 
     for key, value in converted_dict.items():
         y = np.array(value)
+        temp = set(y)
+        if len(temp) == 1 or len(temp) == 2:
+            continue
+        keys.append(key)
         correlation_coefficient, p_value = pearsonr(x, y)
         Pearson_correlation_coefficients.append(correlation_coefficient)
         P_Value.append(p_value)
+
+    if(len(keys) == 0):
+        return
 
     # Plotting
     fig, ax = plt.subplots()
@@ -250,7 +256,7 @@ if __name__ == '__main__':
     file_path = 'knobs_decoded.txt'
     master_stats_dict = read_key_value_file(file_path)
 
-    directory_path = './Batch5_Results'
+    directory_path = './Batch4_Results'
     empty_files, processed_files_data = read_json_files(directory_path)
 
     useless_knobs = ""
@@ -270,7 +276,7 @@ if __name__ == '__main__':
         useful_knobs += key + "\n"
         print(key)
         # Only for boolean knobs
-        run_analyzer(key, master_stats_dict[key])
+        run_analyzer(key, master_stats_dict[key], value)
     
     with open('useful_knobs.txt', 'a') as file:
         file.write(useful_knobs)

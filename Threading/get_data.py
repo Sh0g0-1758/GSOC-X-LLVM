@@ -120,11 +120,13 @@ def generate_values(number):
         values = []
         step = round(number * 0.1)
         count = 1
-        values.append(number * 0.2)
-        values.append(number * 0.3)
+        values.append(round(number * 0.2))
+        values.append(round(number * 0.3))
         while (count <= 11):
             values.append(number)
             number -= step
+            if(number < 0):
+                break
             count += 1
         values = sorted(values)
         return values
