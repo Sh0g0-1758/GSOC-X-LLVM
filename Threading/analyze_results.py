@@ -182,7 +182,7 @@ def run_analyzer(knob_name, knob_value, converted_dict):
     for key, value in converted_dict.items():
         y = np.array(value)
         temp = set(y)
-        if len(temp) == 1 or len(temp) == 2:
+        if len(temp) == 1:
             continue
         keys.append(key)
         correlation_coefficient, p_value = pearsonr(x, y)
