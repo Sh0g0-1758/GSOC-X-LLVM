@@ -290,17 +290,17 @@ def thread_function(result_dict):
             for val in values:
 
                 opt_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./bitcode/test_{(i+1)}.bc']
                 opt_O1_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{(i+1)}.bc']
                 opt_O2_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{(i+1)}.bc']
                 opt_O3_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{(i+1)}.bc']
                 opt_Os_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{(i+1)}.bc']
                 opt_Oz_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{(i+1)}.bc']
 
                 output_string = ""
                 output_string += "PLAIN STATS> \n"
