@@ -264,16 +264,16 @@ def thread_function(result_dict):
             
             knob_name = result
 
-            # value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
+            value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
 
-            # if value is not None:
-            #     value = convert_to_appropriate_type(knob_name, value)
-            #     print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
-            # else:
-            #     print(Fore.RED + "No Value found for knob" + Fore.RESET)
-            #     sys.exit(1)
+            if value is not None:
+                value = convert_to_appropriate_type(knob_name, value)
+                print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
+            else:
+                print(Fore.RED + "No Value found for knob" + Fore.RESET)
+                sys.exit(1)
 
-            values = [0,1] # generate_values(value)
+            values = generate_values(value)
 
             if i == 0:
                 with open(f'./directories/{knob_name}.txt', 'w') as file:

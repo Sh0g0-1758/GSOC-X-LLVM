@@ -10,7 +10,7 @@ compile-time-mem-idiom-threshold : 64
 hlir-simplify-limit : 10000
 hexagon-vlcr-iteration-lim : 2
 hexagon-small-data-threshold : 8
-ppc-max-strings-pooled : -1
+ppc-max-strings-pooled : 0
 ppc-min-strings-before-pool : 2
 max-devirt-iterations : 4
 predictable-branch-threshold : 99
