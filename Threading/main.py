@@ -314,13 +314,14 @@ def thread_function(queue, data_chunk, knob_name, values):
     for data in data_chunk:
         for i,val in enumerate(values):
             opt_command_vectors = [
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
+                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
+                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
+                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
+                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
+                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
 
             for opt_command_vector in opt_command_vectors:
+                t1 = time.perf_counter(), time.process_time()
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
                     _, stderr_data = opt_process.communicate()
                     if "value invalid for" in stderr_data.decode('utf-8'):
@@ -328,14 +329,13 @@ def thread_function(queue, data_chunk, knob_name, values):
                             file.write(f'{knob_name}\n')
                     output_string = stderr_data.decode('utf-8')[216:-2]
                     process_stat(output_string.split('\n'), result[i])
-                    elapsed_time_match = re.search(r'\s+(\d+\.\d+) seconds time elapsed', output_string)
-                    if elapsed_time_match:
-                        elapsed_time = elapsed_time_match.group(1)
-                        key = 'compile-time (seconds)'
-                        if key in result[i]:
-                            result[i][key] += float(elapsed_time)
-                        else:
-                            result[i][key] = float(elapsed_time)
+                t2 = time.perf_counter(), time.process_time()
+                compile_time = t2[1] - t1[1]
+                key = 'compile-time (seconds)'
+                if key in result[i]:
+                    result[i][key] += float(compile_time)
+                else:
+                    result[i][key] = float(compile_time)
             print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
             
     queue.put(result)
@@ -358,7 +358,7 @@ if __name__ == "__main__":
     ### ============================================================================================== ###
 
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
-    with open('useful_knobs.txt', 'r') as file:
+    with open('run_knobs_with_new_arch.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
@@ -367,7 +367,7 @@ if __name__ == "__main__":
     # The change in design is that now we are going to send knobs sequentially and doing the data processing 
     # in parallel for each knob. This will help in reducing the time taken to process the data.
 
-    start_time = time.time()
+    t1 = time.perf_counter(), time.process_time()
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
@@ -376,7 +376,7 @@ if __name__ == "__main__":
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         value = convert_to_appropriate_type(knob, knob_val)
-        values = generate_values(value)
+        values = generate_values(knob, value)
 
         Thread_array = []
 
@@ -450,8 +450,8 @@ if __name__ == "__main__":
 
         print(Fore.GREEN + f"##  Successfully collected all stats for {knob}" + Fore.RESET)
 
+    t2 = time.perf_counter(), time.process_time()
     print(Fore.GREEN + "##  Successfully collected stats for all knobs" + Fore.RESET)
 
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    print(Fore.LIGHTYELLOW_EX + f"Elapsed time: {elapsed_time} seconds" + Fore.RESET)
+    print(Fore.YELLOW + f" Real time: {t2[0] - t1[0]:.2f} seconds" + Fore.RESET)
+    print(Fore.YELLOW + f" CPU time: {t2[1] - t1[1]:.2f} seconds" + Fore.RESET)

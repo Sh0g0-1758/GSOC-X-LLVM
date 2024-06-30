@@ -17,3 +17,4 @@ directories
 node_modules
 *.xopp
 Meet2.pdf
+perf.data
