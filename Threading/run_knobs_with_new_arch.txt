@@ -1,1 +1,2 @@
 inlinedefault-threshold
+inline-cold-callsite-threshold
