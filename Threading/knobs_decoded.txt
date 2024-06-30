@@ -495,4 +495,11 @@ lower-limit : 8
 chain-length-limit : 3
 def-limit : 3
 tail-dup-limit : 4294967295
-
+hoist-runtime-checks : true
+enable-objc-arc-opts : true
+write-experimental-debuginfo-iterators-to-bitcode : true
+disable-loop-idiom-all : true
+disable-loop-idiom-memset : true
+disable-loop-idiom-memcpy : true
+join-globalcopies : true
+enable-tail-merge : true

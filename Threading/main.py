@@ -3,129 +3,40 @@ import os
 import subprocess
 import re
 import threading
+import queue
+import json
 # from datasets import load_dataset
 from colorama import init, Fore, Back, Style
 init()
 
-def convert_to_appropriate_type_main(data):
-    s = data['init_value']
-    if s is None or s == '':
-        return None
+# Helper function to read knob names and their values from a file
+def read_key_value_file(file_path):
+    config_dict = {}
 
-    try:
-        return int(s)
-    except ValueError:
-        pass
-    try:
-        if (s[-1] == 'f'):
-            return float(s[:-1])
-        return float(s)
-    except ValueError:
-        pass
-
-# This Function reads a given set of lines from the cpp file
-# The starting line and 10 lines ahead of it
-
-
-def read_lines_around(file_path, start_line, num_lines=10):
-    lines = []
-    with open(file_path, 'r') as file:
-        for i, line in enumerate(file):
-            if start_line - 1 <= i <= start_line + num_lines:
-                lines.append(line)
-            if i > start_line + num_lines:
-                break
-    return lines
-
-# This Function extracts the string identifier and the init value
-# from the snippet
-
-
-def extract_init_value_and_string(snippet, function_name):
-    pattern = rf'{function_name}\s*\(\s*"([^"]+)"(?:.*?)cl::init\s*\(\s*([^)]+)\s*\)'
-
-    match = re.search(pattern, snippet, re.DOTALL)
-    if match:
-        return {
-            'string_identifier': match.group(1),
-            'init_value': match.group(2)
-        }
-    else:
-        return None
-
-# This Function processes the input lines, ie. take care of newlines
-
-
-def process_multiline_from_file(file_path, line_number, function_name):
-    lines = read_lines_around(file_path, line_number)
-    snippet = ''.join(line.strip() for line in lines)
-    snippet = snippet.replace(';', ';\n')
-    return extract_init_value_and_string(snippet, function_name)
-
-# this function converts the knob information from the sheet
-# Into useful information that can be used to study them
-
-
-def extract_info(line):
-    pattern = r'(.+?):(\d+):(\d+)\s+(\w+)'
-    match = re.match(pattern, line.strip())
-    if match:
-        return {
-            'file_path': match.group(1),
-            'line_number': int(match.group(2)),
-            'function_name': match.group(4)
-        }
-    else:
-        print(Fore.RED + f"Invalid line: {line.strip()}" + Fore.RESET)
-        sys.exit(1)
-
-# This Function is an extension of the above function
-# It just helps in reading the lines
-
-
-def process_file(file_path):
-    extracted_data = []
     with open(file_path, 'r') as file:
         for line in file:
-            info = extract_info(line)
-            if info:
-                extracted_data.append(info)
-    return extracted_data
+            line = line.strip()
+            if ':' in line:
+                key, value = line.split(':', 1)
+                key = key.strip()
+                value = value.strip()
+                config_dict[key] = value
 
-# Function to get init val and its identifier from the cpp file
-
-
-def get_identifier_and_init_val(extracted_data):
-    result_dict = {}
-
-    for entry in extracted_data:
-        file_path = "./../../dev/llvm-project/" + entry['file_path']
-        line_number = int(entry['line_number'])
-        function_name = entry['function_name']
-        data = process_multiline_from_file(
-            file_path, line_number, function_name)
-        if data:
-            result_dict[data['string_identifier']] = (data['init_value'])
-        else:
-            print(
-                Fore.RED + f"File Path : {file_path} =!= Function Name : {function_name}" + Fore.RESET)
-            sys.exit(1)
-
-    return result_dict
-
+    return config_dict
 
 def generate_values(number):
     # Some Exceptional Values
-    if number == 18446744073709551615 or number == 65535 or number == 4294967295 or number == 8388608:
+    if number == 18446744073709551615 or number == 65535 or number == 4294967295 or number == 8388608 or number == 2147483647:
         values = []
-        step = round(number * 0.1)
+        step = round(number * 0.10)
         count = 1
-        values.append(round(number * 0.2))
-        values.append(round(number * 0.3))
+        values.append(round(number * 0.05))
+        values.append(round(number * 0.65))
         while (count <= 11):
             values.append(number)
             number -= step
             if(number < 0):
+                values.append(0)
                 break
             count += 1
         values = sorted(values)
@@ -134,6 +45,8 @@ def generate_values(number):
     # Handling of Floating Point Numbers
     if (type(number) == float):
         step = number * 0.1
+        if step == 0.0:
+            step = 1.0
         count = 1
         values = []
         temp = number
@@ -250,142 +163,122 @@ def convert_to_appropriate_type(data, s):
     print(Fore.RED + f"Invalid value: {data} set to {s}" + Fore.RESET)
     exit(0)
 
-def split_dict(input_dict, chunk_size):
-    items = list(input_dict.items())
-    return [dict(items[i:i + chunk_size]) for i in range(0, len(items), chunk_size)]
+def divide_into_chunks(a, b):
+    numbers = list(range(1, a + 1))
 
-def thread_function(result_dict):
-    iteration = 0
-    index = 1
+    chunks = []
 
-    for i in range(100):
-        iteration = iteration + 1
-        for result in result_dict:
-            
-            knob_name = result
+    for i in range(0, len(numbers), b):
+        chunks.append(numbers[i:i + b])
+    
+    return chunks
 
-            value = str(convert_to_appropriate_type_main({'string_identifier': result, 'init_value': result_dict[result]}))
+def thread_function(queue, data_chunk, knob_name, knob_value):
+    result = {}
 
-            if value is not None:
-                value = convert_to_appropriate_type(knob_name, value)
-                print(Fore.GREEN + f"Value Set: {value}" + Fore.RESET)
-            else:
-                print(Fore.RED + "No Value found for knob" + Fore.RESET)
-                sys.exit(1)
+    for data in data_chunk:
+        value = convert_to_appropriate_type(knob_name, knob_value)
+        values = generate_values(value)
 
-            values = generate_values(value)
+        for val in values:
 
-            if i == 0:
-                with open(f'./directories/{knob_name}.txt', 'w') as file:
-                    pass
-                for val in values:
-                    with open(f'./directories/{knob_name}.txt', 'a') as file:
-                        file.write(f"./stats/{knob_name}_{val}\n")
+            opt_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
+            opt_O1_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
+            opt_O2_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
+            opt_O3_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
+            opt_Os_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
+            opt_Oz_command_vector = [
+                './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']
 
-                    directory_name = f"{knob_name}_{val}"
+            with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
+                _, stderr_data = opt_process.communicate()
+                output_string = str(stderr_data)[222:-1]
 
-                    if not os.path.exists(f"./stats/{directory_name}"):
-                        os.mkdir(f"./stats/{directory_name}")
+            with subprocess.Popen(opt_O1_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O1_process:
+                _, stderr_data = opt_O1_process.communicate()
+                output_string = str(stderr_data)[222:-1]
 
-            for val in values:
+            with subprocess.Popen(opt_O2_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O2_process:
+                _, stderr_data = opt_O2_process.communicate()
+                output_string = str(stderr_data)[222:-1]
 
-                opt_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
-                opt_O1_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
-                opt_O2_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
-                opt_O3_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
-                opt_Os_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
-                opt_Oz_command_vector = [
-                    './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{(i+1)}.bc']
+            with subprocess.Popen(opt_O3_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O3_process:
+                _, stderr_data = opt_O3_process.communicate()
+                output_string = str(stderr_data)[222:-1]
 
-                output_string = ""
-                output_string += "PLAIN STATS> \n"
-                with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
-                    _, stderr_data = opt_process.communicate()
+            with subprocess.Popen(opt_Os_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Os_process:
+                _, stderr_data = opt_Os_process.communicate()
+                output_string = str(stderr_data)[222:-1]
 
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string += "O1 STATS> \n"
-                with subprocess.Popen(opt_O1_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O1_process:
-                    _, stderr_data = opt_O1_process.communicate()
-
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string += "O2 STATS> \n"
-                with subprocess.Popen(opt_O2_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O2_process:
-                    _, stderr_data = opt_O2_process.communicate()
-
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string += "O3 STATS> \n"
-                with subprocess.Popen(opt_O3_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_O3_process:
-                    _, stderr_data = opt_O3_process.communicate()
-
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string += "Os STATS> \n"
-                with subprocess.Popen(opt_Os_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Os_process:
-                    _, stderr_data = opt_Os_process.communicate()
-
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string += "Oz STATS> \n"
-                with subprocess.Popen(opt_Oz_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Oz_process:
-                    _, stderr_data = opt_Oz_process.communicate()
-
-                    output_string += str(stderr_data)[222:-1]
-
-                output_string = output_string.replace('\\n', '\n')
-
-                print(iteration, index)
-
-                with open(f'./stats/{knob_name}_{val}/stats_{index}.txt', 'a') as f:
-                    f.write(f"====================================  STATS FOR FILE : {i} ====================================\n")
-                    f.write(output_string)
-
-                print(Fore.CYAN + f"Wrote Stats for knob {knob_name} with value {val} for Iteration {i}" + Fore.RESET)
-
-        if (iteration % 10 == 0):
-            index += 1
+            with subprocess.Popen(opt_Oz_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_Oz_process:
+                _, stderr_data = opt_Oz_process.communicate()
+                output_string = str(stderr_data)[222:-1]
+    
+    queue.put(result)
 
 if __name__ == "__main__":
-    if not os.path.exists("stats"):
-        os.mkdir("stats")
-    
-    if not os.path.exists("directories"):
-        os.mkdir("directories")
 
-    knob_data = process_file('prelim_knobs.txt')
+    # This is after the initial study on 100 bitcode files where we found the knobs that are useful
+    file_path = 'knobs_decoded.txt'
+    master_stats_dict = read_key_value_file(file_path)
 
-    print(Fore.GREEN + "Successfully extracted Location and function name from knobs" + Fore.RESET)
+    to_process_stats_dict = {}
 
-    result_dict = get_identifier_and_init_val(knob_data)
+    with open('useful_knobs.txt', 'r') as file:
+        for line in file:
+            to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
-    chunk_size = 1
-    split_dicts = split_dict(result_dict, chunk_size)
+    # The change in design is that now we are going to send knobs sequentially and doing the data processing 
+    # in parallel for each knob. This will help in reducing the time taken to process the data.
+    for knob, knob_val in to_process_stats_dict.items():
+        # These Figures need to be changed according to the number of bitcode files
+        chunk_size = 10
+        total_files = 100
+        data_chunks = divide_into_chunks(total_files, chunk_size)
 
-    Thread_name = "THREAD"
+        Thread_array = []
 
-    Thread_array = []
+        q = queue.Queue()
 
-    for i, d in enumerate(split_dicts):
-        Thread_to_use = Thread_name + str((i+1))
-        Thread_to_use = threading.Thread(target=thread_function, args=(d,))
-        Thread_array.append(Thread_to_use)
-    
-    for i in range(len(Thread_array)):
-        Thread_array[i].start()
+        # This returns a dictionary which contains stat as key and value as summation over all the stats
+        for i, d in enumerate(data_chunks):
+            thread = threading.Thread(target=thread_function, args=(q,d,knob,knob_val))
+            thread.start()
+            Thread_array.append(thread)
+        
+        for i in range(len(Thread_array)):
+            Thread_array[i].join()
+        
+        stats_dict_array = []
 
-    print(Fore.GREEN + f"##  Successfully started all threads" + Fore.RESET)
+        while True:
+            try:
+                stat_dict = q.get(block=False)
+                stats_dict_array.append(stat_dict)
+            except queue.Empty:
+                break
 
-    for i in range(len(Thread_array)):
-        Thread_array[i].join()
+        # Here we merge the results obtained over all the threads
+        all_stats_dict = {}
+        for stat_dict in stats_dict_array:
+            for key, value in stat_dict.items():
+                if key in all_stats_dict:
+                    all_stats_dict[key] += value
+                else:
+                    all_stats_dict[key] = value
+        
+        for key, val in all_stats_dict.items():
+            all_stats_dict[key] = val / total_files
 
-    os.system("python analyze.py")
-    print(Fore.GREEN + f"##  Successfully analyzed All Knobs" + Fore.RESET)
+        # And finally store them in a json file
+        with open(f'./results/{knob}.json', 'w') as file:
+            json.dump(all_stats_dict, file)
 
-    sys.exit(0)
+        print(Fore.GREEN + f"##  Successfully collected all stats for {knob}" + Fore.RESET)
+
+    print(Fore.GREEN + "##  Successfully collected stats for all knobs" + Fore.RESET)
