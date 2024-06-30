@@ -121,7 +121,24 @@ def read_key_value_file(file_path):
 
     return config_dict
 
-def generate_values(number):
+def generate_values(knob,number):
+    # Handling three special knobs which although unsigned
+    # have a range of 0 to 255
+    if(knob == 'cold-new-hint-value' or knob == 'notcold-new-hint-value' or knob == 'hot-new-hint-value'):
+        step = 25
+        number = 25
+        values = []
+        while number <= 250:
+            values.append(number)
+            number += step
+        values.append(254)
+        values.append(128)
+        values.append(1)
+        values = sorted(values)
+        return values
+    # Boolean Knobs
+    if number == 'true':
+        return [0,1]
     # Some Exceptional Values
     if number == 18446744073709551615 or number == 65535 or number == 4294967295 or number == 8388608 or number == 2147483647:
         values = []
@@ -242,9 +259,8 @@ def generate_values(number):
 
 
 def convert_to_appropriate_type(data, s):
-    if s is None or s == '':
-        return None
-
+    if s == 'true':
+        return 'true'
     try:
         return int(s)
     except ValueError:
@@ -342,7 +358,7 @@ if __name__ == "__main__":
     ### ============================================================================================== ###
 
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
-    with open('run_knobs_with_new_arch.txt', 'r') as file:
+    with open('useful_knobs.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
