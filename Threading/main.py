@@ -298,11 +298,11 @@ def thread_function(queue, data_chunk, knob_name, values):
     for data in data_chunk:
         for i,val in enumerate(values):
             opt_command_vectors = [
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../MAIN_CL/bitcode/test_{data}.bc']]
+                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
 
             for opt_command_vector in opt_command_vectors:
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
