@@ -1,9 +1,0 @@
-llvm/lib/Target/PowerPC/PPCMergeStringPool.cpp:39:5	MaxStringsPooled
-llvm/lib/Analysis/InlineCost.cpp:143:5	MemAccessCost
-llvm/lib/Analysis/InlineCost.cpp:146:21	CallPenalty
-llvm/lib/Analysis/InlineCost.cpp:151:5	StackSizeThreshold
-llvm/lib/Analysis/InlineCost.cpp:156:24	RecurStackSizeThreshold
-llvm/lib/Analysis/DependenceAnalysis.cpp:119:26	MIVMaxLevelThreshold
-llvm/lib/Analysis/MLInlineAdvisor.cpp:82:23	SizeIncreaseThreshold
-llvm/lib/Analysis/BlockFrequencyInfoImpl.cpp:54:19	IterativeBFIMaxIterationsPerBlock
-llvm/lib/Analysis/BlockFrequencyInfoImpl.cpp:59:17	IterativeBFIPrecision

@@ -1,1 +1,0 @@
-python knobs.py ./../../dev/llvm-project/build/bin/knobs ./../../dev/llvm-project/llvm/lib/ > all_knobs.txt

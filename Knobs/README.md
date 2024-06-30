@@ -1,1 +1,0 @@
-This contains code that helps to collect potential knobs by running the knobs binary on each and every file in the specified folder. 

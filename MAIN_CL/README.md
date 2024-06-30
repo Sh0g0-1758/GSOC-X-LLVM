@@ -1,1 +1,0 @@
-Main folder that is an integration of codes from all the different folders, including data collection, cleaning and running analysis by correlation cofficient and relative difference. 
