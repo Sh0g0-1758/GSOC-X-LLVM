@@ -1,4 +1,5 @@
 import sys
+import time
 import os
 import subprocess
 import re
@@ -243,7 +244,7 @@ def thread_function(queue, data_chunk, knob_name, values):
                             result[i][key] += float(elapsed_time)
                         else:
                             result[i][key] = float(elapsed_time)
-        print(Fore.GREEN + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
+            print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
             
     queue.put(result)
 
@@ -257,7 +258,7 @@ if __name__ == "__main__":
 
     to_process_stats_dict = {}
 
-    with open('useful_knobs.txt', 'r') as file:
+    with open('run_knobs_with_new_arch.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
@@ -265,6 +266,9 @@ if __name__ == "__main__":
 
     # The change in design is that now we are going to send knobs sequentially and doing the data processing 
     # in parallel for each knob. This will help in reducing the time taken to process the data.
+
+    start_time = time.time()
+
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
         chunk_size = 10
@@ -301,7 +305,6 @@ if __name__ == "__main__":
                             stats_dict_array[i][key] += value
                         else:
                             stats_dict_array[i][key] = value
-                stats_dict_array.append(stat_dict)
             except queue.Empty:
                 break
 
@@ -323,12 +326,6 @@ if __name__ == "__main__":
         for key in all_stats_dict.keys():
             while len(all_stats_dict[key]) < len(values):
                 all_stats_dict[key].append(0)
-        
-        # Now we average out the values
-        for key in all_stats_dict:
-            for i, val in enumerate(all_stats_dict[key]):
-                # We do total_files * 5 since we are adding the data for the 5 optimization levels over all the files
-                all_stats_dict[key][i] = val / (total_files * 5)
         
         # Filter the dict and remove the stats that have the same value for all the files
         filtered_all_stats_dict = {key: values for key, values in all_stats_dict.items() if len(set(values)) > 1}
@@ -354,3 +351,7 @@ if __name__ == "__main__":
         print(Fore.GREEN + f"##  Successfully collected all stats for {knob}" + Fore.RESET)
 
     print(Fore.GREEN + "##  Successfully collected stats for all knobs" + Fore.RESET)
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(Fore.LIGHTYELLOW_EX + f"Elapsed time: {elapsed_time} seconds" + Fore.RESET)
