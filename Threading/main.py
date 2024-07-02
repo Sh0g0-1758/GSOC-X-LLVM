@@ -370,7 +370,6 @@ def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
 
     iter = 0
     for i, val in enumerate(x):
-        print(val, knob_val)
         if val == knob_val:
             iter = i
             break
