@@ -322,8 +322,10 @@ def thread_function(queue, data_chunk, knob_name, values):
 
             for opt_command_vector in opt_command_vectors:
                 t1 = time.perf_counter(), time.process_time()
+                bitcode_size = 0
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
-                    _, stderr_data = opt_process.communicate()
+                    stdout_data, stderr_data = opt_process.communicate()
+                    bitcode_size = len(stdout_data)
                     if "value invalid for" in stderr_data.decode('utf-8'):
                         with open('invalid_knobs.txt', 'a') as file:
                             file.write(f'{knob_name}\n')
@@ -336,9 +338,74 @@ def thread_function(queue, data_chunk, knob_name, values):
                     result[i][key] += float(compile_time)
                 else:
                     result[i][key] = float(compile_time)
+                key = 'bitcode-size (bytes)'
+                if key in result[i]:
+                    result[i][key] += bitcode_size
+                else:
+                    result[i][key] = bitcode_size
             print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
             
     queue.put(result)
+
+def convert_to_percentage(stat_values, iter, range):
+    val = stat_values[iter]
+    if val == 0:
+        for i, stat in enumerate(stat_values):
+            stat_values[i] = stat + 1.0
+        val = 1.0
+    # Converting other stats as a percentage of the original value
+    for i, stat in enumerate(stat_values):
+        stat_values[i] = ((stat - val) / val) * 100
+        if stat_values[i] < range[0]:
+            range[0] = stat_values[i]
+        if stat_values[i] > range[1]:
+            range[1] = stat_values[i]
+    
+    return stat_values
+
+
+def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
+    knob_val = convert_to_appropriate_type(knob_name, knob_val)
+    x = generate_values(knob, knob_val)
+
+    iter = 0
+    for i, val in enumerate(x):
+        print(val, knob_val)
+        if val == knob_val:
+            iter = i
+            break
+
+    keys = []
+    # To store the min and max values across the y axis
+    # First represents the min value and second represents the max value
+    range = [0,0]
+
+    for key, value in stats_values_dict.items():
+        y = convert_to_percentage(value, iter,range)
+        # To remove redundant statistics
+        if key == 'compile-time (seconds)' or key == 'bitcode-size (bytes)':
+            keys.append(key)
+            stats_values_dict[key] = y
+            continue
+        if len(set(y)) == 1:
+            continue
+        keys.append(key)
+        stats_values_dict[key] = y
+
+    keys = list(keys)
+
+    json_data = {
+        "knob_name": knob_name,
+        "original_val": knob_val,
+        "y_min": range[0],
+        "y_max": range[1],
+        "knob_values": x,
+        "stats": keys,
+        "stats_val": stats_values_dict,
+    }
+
+    with open(f'./results/{knob_name}.json', 'w') as file:
+        json.dump(json_data, file, indent=4)
 
 if __name__ == "__main__":
     if not os.path.exists("results"):
@@ -358,7 +425,7 @@ if __name__ == "__main__":
     ### ============================================================================================== ###
 
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
-    with open('useful_knobs.txt', 'r') as file:
+    with open('run_knobs_with_new_arch.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
@@ -375,8 +442,8 @@ if __name__ == "__main__":
         total_files = 100
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
-        value = convert_to_appropriate_type(knob, knob_val)
-        values = generate_values(knob, value)
+        corrected_value = convert_to_appropriate_type(knob, knob_val)
+        values = generate_values(knob, corrected_value)
 
         Thread_array = []
 
@@ -428,7 +495,7 @@ if __name__ == "__main__":
                 all_stats_dict[key].append(0)
         
         # Filter the dict and remove the stats that have the same value for all the files
-        filtered_all_stats_dict = {key: values for key, values in all_stats_dict.items() if len(set(values)) > 1}
+        filtered_all_stats_dict = {key: all_stats_values for key, all_stats_values in all_stats_dict.items() if len(set(all_stats_values)) > 1}
 
         # If compile-time is not present in the stats, then add it
         # Though this is not necessary since compile-time is most likely to change across 
@@ -438,15 +505,14 @@ if __name__ == "__main__":
             filtered_all_stats_dict[time_key] = all_stats_dict[time_key]
 
         final_all_stats_dict = {}
-        for key, values in filtered_all_stats_dict.items():
+        for key, filtered_all_stats_values in filtered_all_stats_dict.items():
             if (key in ignore_stats_dict):
                 continue
             else:
-                final_all_stats_dict[key] = values
+                final_all_stats_dict[key] = filtered_all_stats_values
 
-        # And finally store them in a json file
-        with open(f'./results/{knob}.json', 'w') as file:
-            json.dump(final_all_stats_dict, file)
+        # Converting into appropriate format for plotting the graph
+        generate_step_function_graph(knob, knob_val, final_all_stats_dict)
 
         print(Fore.GREEN + f"##  Successfully collected all stats for {knob}" + Fore.RESET)
 

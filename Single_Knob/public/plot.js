@@ -8,18 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const stats = jsonData.stats;
             const statsVal = jsonData.stats_val;
 
-            statsVal['COMPILE TIME'] = {
-                "normalized_values": jsonData.time_arr,
-                "min": jsonData.time_min,
-                "max": jsonData.time_max
-            };
-            stats.push('COMPILE TIME');
-
             const seriesData = stats.map(stat => {
                 return {
                     name: stat,
                     type: 'line',
-                    data: statsVal[stat].normalized_values,
+                    data: statsVal[stat],
                     smooth: true,
                     lineStyle: {
                         width: 2
@@ -40,21 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 tooltip: {
                     trigger: "item",
-                    formatter: function(params) {
-                        return `<strong>${params.seriesName}</strong><br>` +
-                               `Knob Value: ${params.name}<br>` +
-                               `Value: ${((statsVal[params.seriesName].max - statsVal[params.seriesName].min) * params.value) + statsVal[params.seriesName].min}<br>`;
-                    }
                 },
                 legend: {
                     data: stats,
                     type: 'scroll',
-                    top: 'bottom',
+                    orient: 'horizontal', 
+                    bottom: '6%',
+                    left: 'center',
                     width: '80%',
                     textStyle: {
                         fontSize: 10
-                    }
+                    },
                 },
+
                 toolbox: {
                     feature: {
                         saveAsImage: {}
@@ -63,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 grid: {
                     left: '3%',
                     right: '4%',
-                    bottom: '3%',
+                    bottom: '9%',
                     containLabel: true
                 },
                 xAxis: {
@@ -77,10 +68,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 yAxis: {
                     type: 'value',
-                    min: 0,
-                    max: 1,
+                    min: jsonData.y_min,
+                    max: jsonData.y_max,
                 },
                 series: seriesData,
+                dataZoom: [
+                    {
+                        type: 'inside',
+                        start: 0,
+                        end: 100
+                    },
+                    {
+                        type: 'slider',
+                        start: 0,
+                        end: 100,
+                        bottom: '2%',
+                        height: 20
+                    }
+                ]
             };
             myChart.setOption(option);
 
