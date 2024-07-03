@@ -502,6 +502,11 @@ if __name__ == "__main__":
         time_key = 'compile-time (seconds)'
         if time_key not in filtered_all_stats_dict:
             filtered_all_stats_dict[time_key] = all_stats_dict[time_key]
+        
+        # Same for bitcode-size
+        bitcode_key = 'bitcode-size (bytes)'
+        if bitcode_key not in filtered_all_stats_dict:
+            filtered_all_stats_dict[bitcode_key] = all_stats_dict[bitcode_key]
 
         final_all_stats_dict = {}
         for key, filtered_all_stats_values in filtered_all_stats_dict.items():
