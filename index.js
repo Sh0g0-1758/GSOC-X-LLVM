@@ -1,9 +1,3 @@
-async function fetchJsonFiles() {
-    const response = await fetch('content/filelist.json');
-    const fileList = await response.json();
-    return fileList;
-}
-
 function populateTable(filenames) {
     const tableBody = document.getElementById('jsonTable').getElementsByTagName('tbody')[0];
     filenames.forEach(filename => {
@@ -18,8 +12,11 @@ function populateTable(filenames) {
     });
 }
 
-fetchJsonFiles().then(filenames => {
-    populateTable(filenames);
-}).catch(error => {
-    console.error('Error fetching JSON files:', error);
-});
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('content/filelist.json')
+        .then(response => response.json())
+        .then(data => {
+            populateTable(data);
+        })
+    }
+);
