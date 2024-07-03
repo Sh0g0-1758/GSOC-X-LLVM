@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     data: stats,
                     type: 'scroll',
                     orient: 'horizontal', 
-                    bottom: '6%',
+                    bottom: '5%',
                     left: 'center',
                     width: '80%',
                     textStyle: {
@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 },
                 grid: {
-                    left: '3%',
-                    right: '4%',
+                    left: '2%',
+                    right: '2%',
                     bottom: '9%',
                     containLabel: true
                 },
@@ -67,6 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     type: 'category',
                     boundaryGap: false,
                     data: knobValues,
+                    name: "KNOB VALUE",
+                    nameLocation: 'middle',
+                    nameGap: 20, 
+                    nameTextStyle: {
+                        fontSize: 12,
+                        fontWeight: 'bold', 
+                        align: 'center'
+                    },
                     axisLabel: {
                         rotate: 45,
                         interval: 0
@@ -74,6 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 yAxis: {
                     type: 'value',
+                    name: "Percentage Increase/Decrease from Original Stats Value",
+                    nameLocation: 'middle',
+                    nameRotate: 90, 
+                    nameGap: 50, 
+                    nameTextStyle: {
+                        fontSize: 12, 
+                        fontWeight: 'bold', 
+                        align: 'center'
+                    },
                     min: jsonData.y_min,
                     max: jsonData.y_max,
                 },
