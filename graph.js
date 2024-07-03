@@ -39,6 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 tooltip: {
                     trigger: "item",
+                    formatter: function (params) {
+                        let data_string = ""
+                        if(params.value > 0) {
+                            data_string = `<b style="color:green;"> Increase: ${params.value} % </b> <br/>`;
+                        } else if (params.value < 0){
+                            data_string = `<b style="color:red;"> Decrease: ${params.value} % </b> <br/>`;
+                        } else {
+                            data_string = `<b style="color:blue;"> No Change: ${params.value} % </b> <br/>`;
+                        }
+                        return `
+                            <b style="color:black;"> Stat Name: ${params.seriesName}</b><br/>
+                            ${data_string}
+                            <b> Knob Value: ${params.name}</b><br/>
+                        `;
+                    }
                 },
                 legend: {
                     data: stats,
