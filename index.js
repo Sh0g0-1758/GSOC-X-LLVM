@@ -1,5 +1,5 @@
 async function fetchJsonFiles() {
-    const response = await fetch('/results/');
+    const response = await fetch('./content/');
     const text = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, 'text/html');
