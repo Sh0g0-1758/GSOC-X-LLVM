@@ -5,7 +5,7 @@ function getQueryParam(param) {
 
 document.addEventListener("DOMContentLoaded", function () {
     const jsonFileName = getQueryParam('file');
-    fetch('./content/' + jsonFileName)
+    fetch('https://sh0g0-1758.github.io/GSOC-X-LLVM/content/' + jsonFileName)
         .then(response => response.json())
         .then(data => {
             jsonData = data;
