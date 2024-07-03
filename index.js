@@ -1,14 +1,7 @@
 async function fetchJsonFiles() {
-    const response = await fetch('https://sh0g0-1758.github.io/GSOC-X-LLVM/content/');
-    const text = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, 'text/html');
-    const links = Array.from(doc.querySelectorAll('a'));
-    const jsonFiles = links
-        .map(link => link.href.split('/').pop())
-        .filter(file => file.endsWith('.json'));
-
-    return jsonFiles;
+    const response = await fetch('content/filelist.json');
+    const fileList = await response.json();
+    return fileList;
 }
 
 function populateTable(filenames) {
