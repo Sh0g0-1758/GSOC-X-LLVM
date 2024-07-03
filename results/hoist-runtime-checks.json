@@ -1,0 +1,84 @@
+{
+    "knob_name": "hoist-runtime-checks",
+    "original_val": "true",
+    "y_min": -29.900701170794925,
+    "y_max": 0.04624226543060357,
+    "knob_values": [
+        0,
+        1
+    ],
+    "stats": [
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (seconds)",
+        "bitcode-size (bytes)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of instructions sunk (instcombine)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of NoAlias results (aa)",
+        "Number of factorizations (instcombine)",
+        "Number of branches folded into predecessor basic block (simplifycfg)"
+    ],
+    "stats_val": {
+        "Number of insts combined (instcombine)": [
+            0.0,
+            0.007312614259597807
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            0.0,
+            0.04624226543060357
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.0,
+            0.004770821654759491
+        ],
+        "compile-time (seconds)": [
+            0.0,
+            -29.900701170794925
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.0020872302042597457
+        ],
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+            0.0,
+            -0.11644832605531297
+        ],
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            0.0,
+            -0.128068303094984
+        ],
+        "Number of instructions sunk (instcombine)": [
+            0.0,
+            -0.3215434083601286
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.0,
+            -0.04351459469616429
+        ],
+        "Number of instructions hoisted out of loop (licm)": [
+            0.0,
+            0.03484320557491289
+        ],
+        "Number of loop exits with predictable exit counts (scalar-evolution)": [
+            0.0,
+            -0.029794418512265372
+        ],
+        "Number of NoAlias results (aa)": [
+            0.0,
+            0.0016052051452175586
+        ],
+        "Number of factorizations (instcombine)": [
+            0.0,
+            -1.935483870967742
+        ],
+        "Number of branches folded into predecessor basic block (simplifycfg)": [
+            0.0,
+            -0.11389521640091116
+        ]
+    }
+}
