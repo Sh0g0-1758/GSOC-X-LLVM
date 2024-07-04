@@ -1,0 +1,309 @@
+{
+    "knob_name": "disable-loop-idiom-memset",
+    "original_val": "true",
+    "y_min": -100.0,
+    "y_max": 60.0,
+    "knob_values": [
+        0,
+        1
+    ],
+    "stats": [
+        "Number of MayAlias results (aa)",
+        "Number of functions marked as willreturn (function-attrs)",
+        "Number of globals deleted (globalopt)",
+        "Number of functions that do not access memory (globalsmodref-aa)",
+        "Number of functions that only read memory (globalsmodref-aa)",
+        "Negator: Maximal traversal depth ever reached while attempting to sink negation (instcombine)",
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of loops analyzed for vectorization (loop-vectorize)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of loops vectorized (loop-vectorize)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of insts reassociated (reassociate)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of reassociations (instcombine)",
+        "Number of instructions sunk (instcombine)",
+        "Number of pointers not captured before (capture-tracking)",
+        "Number of jumps threaded (jump-threading)",
+        "Number of loop exit tests replaced (indvars)",
+        "Number of loops deleted (loop-delete)",
+        "Number of common instruction 'blocks' sunk down to the end block (simplifycfg)",
+        "Number of common instructions sunk down to the end block (simplifycfg)",
+        "Number of blocks merged (gvn)",
+        "Number of load instructions with unsolved size and offset (memory-builtins)",
+        "Number of memset's formed from loop stores (loop-idiom)",
+        "Number of MustAlias results (aa)",
+        "Number of terminators folded (jump-threading)",
+        "Number of instructions removed (unused) (bdce)",
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-signed-wrap deductions (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions (correlated-value-propagation)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of zext/uitofp non-negative deductions (correlated-value-propagation)",
+        "Number of exit values replaced (indvars)",
+        "Number of no-unsigned-wrap deductions for sub (correlated-value-propagation)",
+        "Number of no-wrap deductions for sub (correlated-value-propagation)",
+        "Number of loops completely unrolled (loop-unroll)",
+        "Number of memsets inferred (memcpyopt)",
+        "Number of epilogues vectorized (loop-vectorize)",
+        "Number of no-unsigned-wrap deductions for shl (correlated-value-propagation)",
+        "Number of no-wrap deductions for shl (correlated-value-propagation)"
+    ],
+    "stats_val": {
+        "Number of MayAlias results (aa)": [
+            0.0,
+            0.14956762050822622
+        ],
+        "Number of functions marked as willreturn (function-attrs)": [
+            0.0,
+            -0.2965159377316531
+        ],
+        "Number of globals deleted (globalopt)": [
+            0.0,
+            0.19582245430809397
+        ],
+        "Number of functions that do not access memory (globalsmodref-aa)": [
+            0.0,
+            -0.21265284423179162
+        ],
+        "Number of functions that only read memory (globalsmodref-aa)": [
+            0.0,
+            -0.12965964343598055
+        ],
+        "Negator: Maximal traversal depth ever reached while attempting to sink negation (instcombine)": [
+            0.0,
+            4.761904761904762
+        ],
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+            0.0,
+            2.70935960591133
+        ],
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+            0.0,
+            0.4663363450888954
+        ],
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            0.0,
+            0.4808719811925625
+        ],
+        "Number of insts combined (instcombine)": [
+            0.0,
+            0.4874719703617042
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            0.0,
+            0.5810626403134216
+        ],
+        "Number of redundant instructions removed (instsimplify)": [
+            0.0,
+            0.19411193788417988
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.0,
+            0.32156990725403034
+        ],
+        "Number of loops analyzed for vectorization (loop-vectorize)": [
+            0.0,
+            2.4715356845320744
+        ],
+        "Number of loop exits with predictable exit counts (scalar-evolution)": [
+            0.0,
+            3.854559904629445
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.0,
+            0.593938960249025
+        ],
+        "compile-time (instructions)": [
+            0.0,
+            0.09614756316757891
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.1837901443182501
+        ],
+        "Number of NoAlias results (aa)": [
+            0.0,
+            0.12359881216725968
+        ],
+        "Number of stores remaining after DSE (dse)": [
+            0.0,
+            0.2969078137446593
+        ],
+        "Number of loops vectorized (loop-vectorize)": [
+            0.0,
+            29.613733905579398
+        ],
+        "Number of fully cached non-local ptr responses (memdep)": [
+            0.0,
+            0.20542755749498148
+        ],
+        "Number of uncached non-local ptr responses (memdep)": [
+            0.0,
+            0.21514549447917952
+        ],
+        "Number of block queries that were completely cached (memdep)": [
+            0.0,
+            0.05073051948051947
+        ],
+        "Number of pointers maybe captured (capture-tracking)": [
+            0.0,
+            -0.06254343293954136
+        ],
+        "Number of instructions hoisted out of loop (licm)": [
+            0.0,
+            0.06966213862765587
+        ],
+        "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+            0.0,
+            3.089887640449438
+        ],
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+            0.0,
+            2.661064425770308
+        ],
+        "Number of insts reassociated (reassociate)": [
+            0.0,
+            -0.06827686267815994
+        ],
+        "Number of loop exits without predictable exit counts (scalar-evolution)": [
+            0.0,
+            0.014864730948369834
+        ],
+        "Number of reassociations (instcombine)": [
+            0.0,
+            2.0671834625323
+        ],
+        "Number of instructions sunk (instcombine)": [
+            0.0,
+            -0.15053763440860216
+        ],
+        "Number of pointers not captured before (capture-tracking)": [
+            0.0,
+            -0.07861635220125787
+        ],
+        "Number of jumps threaded (jump-threading)": [
+            0.0,
+            -0.0228675966155957
+        ],
+        "Number of loop exit tests replaced (indvars)": [
+            0.0,
+            3.922567498726439
+        ],
+        "Number of loops deleted (loop-delete)": [
+            0.0,
+            -62.17948717948718
+        ],
+        "Number of common instruction 'blocks' sunk down to the end block (simplifycfg)": [
+            0.0,
+            0.1392757660167131
+        ],
+        "Number of common instructions sunk down to the end block (simplifycfg)": [
+            0.0,
+            0.0708215297450425
+        ],
+        "Number of blocks merged (gvn)": [
+            0.0,
+            -7.947805456702254
+        ],
+        "Number of load instructions with unsolved size and offset (memory-builtins)": [
+            0.0,
+            5.693296602387512
+        ],
+        "Number of memset's formed from loop stores (loop-idiom)": [
+            0.0,
+            -100.0
+        ],
+        "Number of MustAlias results (aa)": [
+            0.0,
+            0.11031907671418874
+        ],
+        "Number of terminators folded (jump-threading)": [
+            0.0,
+            -0.14691478942213515
+        ],
+        "Number of instructions removed (unused) (bdce)": [
+            0.0,
+            -1.1984021304926764
+        ],
+        "Number of geps reassociated and hoisted out of the loop (licm)": [
+            0.0,
+            1.4084507042253522
+        ],
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+            0.0,
+            -0.8287292817679558
+        ],
+        "Number of no-unsigned-wrap deductions for add (correlated-value-propagation)": [
+            0.0,
+            1.8633540372670807
+        ],
+        "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+            0.0,
+            -0.8042895442359249
+        ],
+        "Number of no-unsigned-wrap deductions (correlated-value-propagation)": [
+            0.0,
+            1.675977653631285
+        ],
+        "Number of pointers not captured (capture-tracking)": [
+            0.0,
+            -0.16682554814108674
+        ],
+        "Number of zext/uitofp non-negative deductions (correlated-value-propagation)": [
+            0.0,
+            -9.090909090909092
+        ],
+        "Number of exit values replaced (indvars)": [
+            0.0,
+            -8.080808080808081
+        ],
+        "Number of no-unsigned-wrap deductions for sub (correlated-value-propagation)": [
+            0.0,
+            -23.076923076923077
+        ],
+        "Number of no-wrap deductions for sub (correlated-value-propagation)": [
+            0.0,
+            -17.647058823529413
+        ],
+        "Number of loops completely unrolled (loop-unroll)": [
+            0.0,
+            2.346041055718475
+        ],
+        "Number of memsets inferred (memcpyopt)": [
+            0.0,
+            3.9603960396039604
+        ],
+        "Number of epilogues vectorized (loop-vectorize)": [
+            0.0,
+            60.0
+        ],
+        "Number of no-unsigned-wrap deductions for shl (correlated-value-propagation)": [
+            0.0,
+            60.0
+        ],
+        "Number of no-wrap deductions for shl (correlated-value-propagation)": [
+            0.0,
+            42.857142857142854
+        ]
+    }
+}
