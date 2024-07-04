@@ -289,12 +289,12 @@ def divide_into_chunks(a, b):
     return chunks
 
 # Constant for the pattern of the line
-line_pattern = re.compile(r'^\s*(\d+)\s+(\S+)\s+-\s+(.*)$')
+stat_pattern = re.compile(r'^\s*(\d+)\s+(\S+)\s+-\s+(.*)$')
 
 # Process a single file and update the stats dictionary
 def process_stat(stat_blob,stats_dict):
     for line in stat_blob:
-        match = line_pattern.match(line)
+        match = stat_pattern.match(line)
         if match:
             value = int(match.group(1))
             component = match.group(2)
@@ -314,35 +314,65 @@ def thread_function(queue, data_chunk, knob_name, values):
     for data in data_chunk:
         for i,val in enumerate(values):
             opt_command_vectors = [
-                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
-                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
-                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
-                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
-                ['./../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
 
             for opt_command_vector in opt_command_vectors:
-                t1 = time.perf_counter(), time.process_time()
-                bitcode_size = 0
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
                     stdout_data, stderr_data = opt_process.communicate()
-                    bitcode_size = len(stdout_data)
                     if "value invalid for" in stderr_data.decode('utf-8'):
                         with open('invalid_knobs.txt', 'a') as file:
                             file.write(f'{knob_name}\n')
+                    # opt stats
                     output_string = stderr_data.decode('utf-8')[216:-2]
                     process_stat(output_string.split('\n'), result[i])
-                t2 = time.perf_counter(), time.process_time()
-                compile_time = t2[1] - t1[1]
-                key = 'compile-time (seconds)'
-                if key in result[i]:
-                    result[i][key] += float(compile_time)
-                else:
-                    result[i][key] = float(compile_time)
-                key = 'bitcode-size (bytes)'
-                if key in result[i]:
-                    result[i][key] += bitcode_size
-                else:
-                    result[i][key] = bitcode_size
+                    # No. of Instructions
+                    instructions_pattern = r'([\d,]+)\s+cpu_\w+/instructions/'
+                    matches = re.findall(instructions_pattern, output_string)
+                    instruction_counts = [int(count.replace(',', '')) for count in matches]
+                    total_instructions = max(instruction_counts)
+                    key = 'compile-time (instructions)'
+                    if key in result[i]:
+                        result[i][key] += float(total_instructions)
+                    else:
+                        result[i][key] = float(total_instructions)
+                    # bitcode-size stat = (.data + .text) segment size
+                    object_code = None
+                    llc_command_vector = ['./../../dev/llvm-project/build/bin/llc', '-filetype=obj', '-']
+                    with subprocess.Popen(
+                        llc_command_vector,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT,
+                        stdin=subprocess.PIPE) as llc_process:
+                        object_code = llc_process.communicate(
+                            input=stdout_data)[0]
+                    llvm_size_output = None
+                    llvm_size_command_vector = ['./../../dev/llvm-project/build/bin/llvm-size', '-']
+                    with subprocess.Popen(
+                        llvm_size_command_vector,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT,
+                        stdin=subprocess.PIPE) as llvm_size_process:
+                        llvm_size_output = llvm_size_process.communicate(
+                            input=object_code)[0].decode('utf-8')
+
+                    llvm_size_pattern = r'\btext\s+data\s+bss\s+dec\s+hex\s+filename\s+(\d+)\s+(\d+)\s+\d+\s+\d+\s+\w+\s+\S+'
+                    match = re.search(llvm_size_pattern, llvm_size_output)
+                    total_bitcode_size = 0
+                    if match:
+                        text_value = int(match.group(1))
+                        data_value = int(match.group(2))
+                        total_bitcode_size = text_value + data_value
+                    else:
+                        print(Fore.RED + 'No match found for bitcode size' + Fore.RESET)
+                    key = 'bitcode-size (bytes)'
+                    if key in result[i]:
+                        result[i][key] += total_bitcode_size
+                    else:
+                        result[i][key] = total_bitcode_size
             print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
             
     queue.put(result)
@@ -438,7 +468,7 @@ if __name__ == "__main__":
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
         chunk_size = 10
-        total_files = 100
+        total_files = 200
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
