@@ -412,7 +412,7 @@ def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
     for key, value in stats_values_dict.items():
         y = convert_to_percentage(value, iter,range)
         # To remove redundant statistics
-        if key == 'compile-time (seconds)' or key == 'bitcode-size (bytes)':
+        if key == 'compile-time (instructions)' or key == 'bitcode-size (bytes)':
             keys.append(key)
             stats_values_dict[key] = y
             continue
@@ -529,7 +529,7 @@ if __name__ == "__main__":
         # If compile-time is not present in the stats, then add it
         # Though this is not necessary since compile-time is most likely to change across 
         # changes in knob value
-        time_key = 'compile-time (seconds)'
+        time_key = 'compile-time (instructions)'
         if time_key not in filtered_all_stats_dict:
             filtered_all_stats_dict[time_key] = all_stats_dict[time_key]
         
