@@ -2,7 +2,7 @@
     "knob_name": "slp-min-reg-size",
     "original_val": 128,
     "y_min": -70.29950083194676,
-    "y_max": 48.295310206793644,
+    "y_max": 3.176229212156879,
     "knob_values": [
         63,
         76,
@@ -19,33 +19,36 @@
         1536
     ],
     "stats": [
-        "Number of insts combined (instcombine)",
-        "Number of dead inst eliminated (instcombine)",
-        "Number of blocks simplified (simplifycfg)",
-        "compile-time (seconds)",
-        "bitcode-size (bytes)",
+        "Number of MayAlias results (aa)",
         "Negator: Total number of values visited during attempts to sink negation (instcombine)",
         "Negator: Number of negations attempted to be sinked (instcombine)",
-        "Number of instructions sunk (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
         "Number of redundant instructions removed (instsimplify)",
         "Number of insts scanned while updating ibt (ipt)",
-        "Number of instructions hoisted out of loop (licm)",
         "Number of loop exits with predictable exit counts (scalar-evolution)",
-        "Number of loop exits without predictable exit counts (scalar-evolution)",
-        "Number of MayAlias results (aa)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
         "Number of NoAlias results (aa)",
         "Number of arguments with unsolved size and offset (memory-builtins)",
         "Number of pointers maybe captured (capture-tracking)",
+        "Number of instructions hoisted out of loop (licm)",
         "Number of loops unrolled with run-time trip counts (loop-unroll)",
         "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of instructions sunk (instcombine)",
         "Number of functions removed (globaldce)",
-        "Number of pointers not captured (capture-tracking)",
         "Number of vector instructions generated (SLP)",
         "Number of MustAlias results (aa)",
-        "Number of geps reassociated and hoisted out of the loop (licm)"
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of pointers not captured (capture-tracking)"
     ],
     "stats_val": {
-        "Number of insts combined (instcombine)": [
+        "Number of MayAlias results (aa)": [
+            0.0022776795001252723,
+            0.0022776795001252723,
+            0.0022776795001252723,
             0.0,
             0.0,
             0.0,
@@ -53,72 +56,9 @@
             0.0,
             0.0,
             0.0,
-            0.0,
-            -0.016086575021936236,
-            -0.016086575021936236,
-            -0.014624159110851126,
-            -0.10334405771668129,
-            -0.12089304864970264
-        ],
-        "Number of dead inst eliminated (instcombine)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            -0.11885372188229079,
-            -0.12105471673196284,
-            -0.12105471673196284
-        ],
-        "Number of blocks simplified (simplifycfg)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            -0.003577945543668825,
-            -0.011926485145562752,
-            -0.011926485145562752
-        ],
-        "compile-time (seconds)": [
-            47.19039846062782,
-            48.295310206793644,
-            16.018323613003528,
-            3.6620227181193803,
-            0.7647269575302249,
-            0.0,
-            2.4194292846185994,
-            -4.196265604554825,
-            -11.390582690890984,
-            -18.798204957389938,
-            -19.399028088897538,
-            -22.95574017117981,
-            -28.1814425494138
-        ],
-        "bitcode-size (bytes)": [
-            0.000849436423202817,
-            0.0,
-            0.000849436423202817,
-            0.0015775247859480888,
-            0.0015775247859480888,
-            0.0,
-            0.0,
-            0.000849436423202817,
-            0.00798470237810648,
-            0.00798470237810648,
-            0.05790729445034061,
-            0.11054808307682376,
-            0.13035208654349514
+            -0.3029313735166612,
+            -1.1919856050655593,
+            -1.1919856050655593
         ],
         "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
             0.0,
@@ -150,7 +90,22 @@
             -0.005343022013250694,
             -0.005343022013250694
         ],
-        "Number of instructions sunk (instcombine)": [
+        "Number of insts combined (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.016086575021936236,
+            -0.016086575021936236,
+            -0.014624159110851126,
+            -0.10334405771668129,
+            -0.12089304864970264
+        ],
+        "Number of dead inst eliminated (instcombine)": [
             0.0,
             0.0,
             0.0,
@@ -161,9 +116,9 @@
             0.0,
             0.0,
             0.0,
-            0.12903225806451613,
-            0.12903225806451613,
-            0.12903225806451613
+            -0.11885372188229079,
+            -0.12105471673196284,
+            -0.12105471673196284
         ],
         "Number of redundant instructions removed (instsimplify)": [
             0.0,
@@ -181,34 +136,19 @@
             1.0514396635393077
         ],
         "Number of insts scanned while updating ibt (ipt)": [
-            -0.07630719331265513,
-            -0.03955448465450806,
-            -0.08158112459992287,
-            0.021260535501798083,
-            -0.05718919239630956,
+            -0.06180276184182119,
+            -0.1173428438170045,
+            -0.05207912731204132,
+            -0.037576079199827285,
+            -0.04219068541734993,
             0.0,
-            -0.06114464086176037,
-            -0.006592414109084676,
-            -0.023073449381796368,
-            -0.011866345396352417,
-            0.016810655978165924,
-            0.031149156665425098,
-            0.02290863902906925
-        ],
-        "Number of instructions hoisted out of loop (licm)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            -0.13932427725531174,
-            -0.13932427725531174,
-            -0.2786485545106235
+            -0.06971351535757431,
+            -0.05092547575766066,
+            -0.006592294596460927,
+            -0.1094320903012514,
+            -0.0006592294596460927,
+            -0.06081391765235205,
+            0.1216278353047041
         ],
         "Number of loop exits with predictable exit counts (scalar-evolution)": [
             0.0,
@@ -225,7 +165,7 @@
             -0.009934432743890324,
             -0.009934432743890324
         ],
-        "Number of loop exits without predictable exit counts (scalar-evolution)": [
+        "Number of blocks simplified (simplifycfg)": [
             0.0,
             0.0,
             0.0,
@@ -236,14 +176,26 @@
             0.0,
             0.0,
             0.0,
-            -0.14864730948369834,
-            -0.32702408086413637,
-            -0.3418888118125062
+            -0.003577945543668825,
+            -0.011926485145562752,
+            -0.011926485145562752
         ],
-        "Number of MayAlias results (aa)": [
-            0.0022776795001252723,
-            0.0022776795001252723,
-            0.0022776795001252723,
+        "compile-time (instructions)": [
+            -1.372115479786453,
+            3.176229212156879,
+            -0.947085214057024,
+            -2.325954082296499,
+            -1.6058957637557623,
+            0.0,
+            0.10987663254798354,
+            1.0870197352384317,
+            -0.058966983639581125,
+            -0.39950878264902207,
+            -0.9269668189893465,
+            -0.9957621445914296,
+            -0.8386722469215195
+        ],
+        "bitcode-size (bytes)": [
             0.0,
             0.0,
             0.0,
@@ -251,9 +203,12 @@
             0.0,
             0.0,
             0.0,
-            -0.3029313735166612,
-            -1.1919856050655593,
-            -1.1919856050655593
+            0.0,
+            -0.0026931488365251753,
+            -0.0026931488365251753,
+            0.07499383683247025,
+            0.10458394648506096,
+            0.14694924933655312
         ],
         "Number of NoAlias results (aa)": [
             -0.029695818507718238,
@@ -300,6 +255,21 @@
             0.20847810979847115,
             0.20847810979847115
         ],
+        "Number of instructions hoisted out of loop (licm)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.13932427725531174,
+            -0.13932427725531174,
+            -0.2786485545106235
+        ],
         "Number of loops unrolled with run-time trip counts (loop-unroll)": [
             0.0,
             0.0,
@@ -330,6 +300,36 @@
             -0.1400560224089636,
             -0.1400560224089636
         ],
+        "Number of loop exits without predictable exit counts (scalar-evolution)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.14864730948369834,
+            -0.32702408086413637,
+            -0.3418888118125062
+        ],
+        "Number of instructions sunk (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.12903225806451613,
+            0.12903225806451613,
+            0.12903225806451613
+        ],
         "Number of functions removed (globaldce)": [
             0.0,
             0.0,
@@ -344,21 +344,6 @@
             0.0,
             0.0,
             -8.823529411764707
-        ],
-        "Number of pointers not captured (capture-tracking)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            -0.14299332697807435,
-            -0.14299332697807435
         ],
         "Number of vector instructions generated (SLP)": [
             -0.24958402662229617,
@@ -404,6 +389,21 @@
             -1.4084507042253522,
             -1.4084507042253522,
             -1.4084507042253522
+        ],
+        "Number of pointers not captured (capture-tracking)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.14299332697807435,
+            -0.14299332697807435
         ]
     }
 }

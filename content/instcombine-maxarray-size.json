@@ -1,8 +1,8 @@
 {
     "knob_name": "instcombine-maxarray-size",
     "original_val": 1024,
-    "y_min": -32.489982703495244,
-    "y_max": 38.45637238363309,
+    "y_min": -3.720028113536031,
+    "y_max": 6.409086786697037,
     "knob_values": [
         514,
         616,
@@ -19,16 +19,31 @@
         11264
     ],
     "stats": [
-        "Number of insts combined (instcombine)",
-        "Number of blocks simplified (simplifycfg)",
-        "compile-time (seconds)",
-        "bitcode-size (bytes)",
-        "Number of insts scanned while updating ibt (ipt)",
         "Number of MayAlias results (aa)",
+        "Number of insts combined (instcombine)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
         "Number of fully cached non-local ptr responses (memdep)",
         "Number of uncached non-local ptr responses (memdep)"
     ],
     "stats_val": {
+        "Number of MayAlias results (aa)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.00303690600016703
+        ],
         "Number of insts combined (instcombine)": [
             0.0,
             0.0,
@@ -43,6 +58,21 @@
             0.0,
             0.0,
             0.002437359851808521
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.07488363347265428,
+            0.008247096197428886,
+            0.013360295839834793,
+            0.004618373870560175,
+            0.06152333763281948,
+            0.0,
+            0.024576346668338078,
+            0.014679831231423416,
+            0.010556283132708974,
+            0.01599936662301204,
+            -0.020452798569623634,
+            0.06350264072020242,
+            0.0024741288592286656
         ],
         "Number of blocks simplified (simplifycfg)": [
             0.0,
@@ -59,20 +89,20 @@
             0.0,
             -0.005963242572781376
         ],
-        "compile-time (seconds)": [
-            38.45637238363309,
-            38.374303187129925,
-            13.325301113773493,
-            0.7121581800388838,
-            -6.377739367184522,
+        "compile-time (instructions)": [
+            6.409086786697037,
+            1.8929680145863523,
+            -3.6571308639653766,
+            -2.735778708495053,
+            -0.4155040345165612,
             0.0,
-            0.6072090789278124,
-            1.9685521525952556,
-            -12.734991778072006,
-            -17.453561737439106,
-            -21.002224836965333,
-            -26.778788602776437,
-            -32.489982703495244
+            -2.090453307862235,
+            0.6525481954636673,
+            -1.016212885644792,
+            -1.2280294933792348,
+            -2.156469242956799,
+            -3.720028113536031,
+            -2.4185836010153805
         ],
         "bitcode-size (bytes)": [
             0.0,
@@ -87,37 +117,7 @@
             0.0,
             0.0,
             0.0,
-            0.0006067403022877265
-        ],
-        "Number of insts scanned while updating ibt (ipt)": [
-            -0.015336285155960125,
-            -0.020448380207946835,
-            -0.013357409651965269,
-            -0.012532878191967415,
-            -0.020118567623947693,
-            0.0,
-            0.10455058912772817,
-            -0.04518432400788252,
-            -0.019623848747948976,
-            0.07239386218781177,
-            -0.010059283811973846,
-            0.029023507391924542,
-            0.00791550201597942
-        ],
-        "Number of MayAlias results (aa)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.00303690600016703
+            -0.0016573223609385693
         ],
         "Number of fully cached non-local ptr responses (memdep)": [
             0.0,
