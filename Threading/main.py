@@ -342,6 +342,11 @@ def thread_function(queue, data_chunk, knob_name, values):
                     exec_command_vector = ['python', 'mass_input_gen.py', '--verbose', '--data_dir', execution_time_data_dir, '--language', 'c', '--outdir', './execution_time_results']
                     exec_result = subprocess.run(exec_command_vector, capture_output=True, text=True)
                     exec_time = process_exec_time_from_stdout(exec_result.stdout)
+                    # Check which bitcode files work and which not
+                    # if (exec_time == 0):
+                    #     print(Fore.RED + f'{knob_name} : {val} || {data}' + Fore.RESET)
+                    # else:
+                    #     print(Fore.GREEN + f'{knob_name} : {val} || {data}' + Fore.RESET)
                     key = 'execution-time (seconds)'
                     if key in result[i]:
                         result[i][key] += exec_time
