@@ -46,7 +46,7 @@ def add_option_args(parser):
     parser.add_argument('--dataset', default='llvm-ml/ComPile')
     parser.add_argument('--language', required=True)
     parser.add_argument('--outdir', required=True)
-
+    parser.add_argument('--data_dir', required=True)
     parser.add_argument('--start', type=int, default=0)
     parser.add_argument('--end', type=int, default=10)
     # Number of cores available by default
@@ -58,9 +58,6 @@ def add_option_args(parser):
     parser.set_defaults(precompile_rts=True)
 
     igm.add_option_args(parser)
-
-def thread_function(module, args, language, i):
-    igm.handle_single_module((i, module), args)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('MassInputGen')
@@ -77,22 +74,6 @@ if __name__ == '__main__':
     global_outdir = args.outdir
     igm_args = vars(args)
 
-    Thread_array = []
+    data_dir = args.data_dir
 
-    language = "c"
-
-    bitcode_module = None
-    with open("updated_mod.bc", "rb") as f:
-        bitcode_module = f.read()
-
-    thread_function(bitcode_module, args, language, 0)
-
-    # for i in range(10):
-    #     module = next(dataset_iterator)['content']
-    #     thread = threading.Thread(target=thread_function, args=(module, args, language, i))
-    #     thread.start()
-    #     Thread_array.append(thread)
-    #     print(i)
-    
-    # for i in range(len(Thread_array)):
-    #     Thread_array[i].join()
+    igm.handle_single_module(data_dir, args)

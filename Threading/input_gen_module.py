@@ -526,23 +526,18 @@ class InputGenModule:
 
 
 def handle_single_module(task, args):
-    (i, module) = task
-
     global_outdir = args.outdir
     igm_args = copy.deepcopy(vars(args))
-    igm_args['outdir'] = os.path.join(global_outdir, str(i))
+    igm_args['outdir'] = os.path.join(global_outdir, task)
     os.makedirs(igm_args['outdir'], exist_ok=True)
-    with open(igm_args['outdir'] +"/mod.bc", 'wb') as module_file:
-        module_file.write(module)
-        module_file.flush()
 
-    igm_args['input_module'] = module_file.name
+    igm_args['input_module'] = igm_args['outdir'] +"/mod.bc"
 
     igm = InputGenModule(**igm_args)
-
+    
     igm.generate_and_run_inputs()
-    print(f'Total Execution Time : {sum(TIMES)}')
-    subprocess.run(['rm', '-rf', igm_args['outdir']])
+    
+    # subprocess.run(['rm', '-rf', igm_args['outdir']])
 
 if __name__ == '__main__':
     print("Unsupported currently, look at the above function and restore if needed")

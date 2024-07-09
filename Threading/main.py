@@ -305,6 +305,12 @@ def process_stat(stat_blob,stats_dict):
             else:
                 stats_dict[key] += value
 
+def process_exec_time_from_stdout(stdout):
+    pattern = r"Time for IRRun: (\d+)"
+    matches = re.findall(pattern, stdout)
+
+    return sum(int(match) for match in matches)
+
 def thread_function(queue, data_chunk, knob_name, values):
     result = []
 
@@ -314,26 +320,39 @@ def thread_function(queue, data_chunk, knob_name, values):
     for data in data_chunk:
         for i,val in enumerate(values):
             opt_command_vectors = [
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./bitcode/test_{data}.bc']]
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../bitcode/test_{data}.bc']]
 
             for opt_command_vector in opt_command_vectors:
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
                     stdout_data, stderr_data = opt_process.communicate()
-                    # Store the updated bitcode file
-                    with open(f'./bitcode/updated_test_{data}.bc', 'wb') as module_file:
-                        module_file.write(stdout_data)
-                        module_file.flush()
-                    
                     if "value invalid for" in stderr_data.decode('utf-8'):
                         with open('invalid_knobs.txt', 'a') as file:
                             file.write(f'{knob_name}\n')
+
+                    # Execution time
+                    execution_time_data_dir = f'{knob_name}/{val}/{data}'
+                    os.makedirs(f'./execution_time_results/{execution_time_data_dir}', exist_ok=True)
+                    with open(f'./execution_time_results/{execution_time_data_dir}' +"/mod.bc", 'wb') as module_file:
+                        module_file.write(stdout_data)
+                        module_file.flush()
+                    exec_command_vector = ['python', 'mass_input_gen.py', '--verbose', '--data_dir', execution_time_data_dir, '--language', 'c', '--outdir', './execution_time_results']
+                    exec_result = subprocess.run(exec_command_vector, capture_output=True, text=True)
+                    print(exec_result)
+                    exec_time = process_exec_time_from_stdout(exec_result.stdout)
+                    key = 'execution-time (seconds)'
+                    if key in result[i]:
+                        result[i][key] += exec_time
+                    else:
+                        result[i][key] = exec_time
+
                     # opt stats
                     output_string = stderr_data.decode('utf-8')[216:-2]
                     process_stat(output_string.split('\n'), result[i])
+
                     # No. of Instructions
                     instructions_pattern = r'([\d,]+)\s+cpu_\w+/instructions/'
                     matches = re.findall(instructions_pattern, output_string)
@@ -344,6 +363,7 @@ def thread_function(queue, data_chunk, knob_name, values):
                         result[i][key] += float(total_instructions)
                     else:
                         result[i][key] = float(total_instructions)
+
                     # bitcode-size stat = (.data + .text) segment size
                     object_code = None
                     llc_command_vector = ['./../../dev/llvm-project/build/bin/llc', '-filetype=obj', '-']
@@ -438,12 +458,12 @@ def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
         "stats_val": stats_values_dict,
     }
 
-    with open(f'./results/{knob_name}.json', 'w') as file:
+    with open(f'./temp_results/{knob_name}.json', 'w') as file:
         json.dump(json_data, file, indent=4)
 
 if __name__ == "__main__":
-    if not os.path.exists("results"):
-        os.mkdir("results")
+    if not os.path.exists("temp_results"):
+        os.mkdir("temp_results")
 
     to_process_stats_dict = {}
 
@@ -459,7 +479,7 @@ if __name__ == "__main__":
     ### ============================================================================================== ###
 
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
-    with open('useful_knobs.txt', 'r') as file:
+    with open('run_knobs_with_new_arch.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
@@ -472,8 +492,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 5
-        total_files = 100
+        chunk_size = 1
+        total_files = 10
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
@@ -542,6 +562,11 @@ if __name__ == "__main__":
         bitcode_key = 'bitcode-size (bytes)'
         if bitcode_key not in filtered_all_stats_dict:
             filtered_all_stats_dict[bitcode_key] = all_stats_dict[bitcode_key]
+
+        # Same for execution-time
+        exec_key = 'execution-time (seconds)'
+        if exec_key not in filtered_all_stats_dict:
+            filtered_all_stats_dict[exec_key] = all_stats_dict[exec_key]
 
         final_all_stats_dict = {}
         for key, filtered_all_stats_values in filtered_all_stats_dict.items():

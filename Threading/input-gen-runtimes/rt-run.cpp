@@ -144,7 +144,7 @@ int main(int argc, char **argv) {
     }
   }
 
-  printf("Replay %s\n", InputName);
+  // printf("Replay %s\n", InputName);
 
   INPUTGEN_TIMER_START(IRInitialization);
 
