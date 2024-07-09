@@ -323,6 +323,11 @@ def thread_function(queue, data_chunk, knob_name, values):
             for opt_command_vector in opt_command_vectors:
                 with subprocess.Popen(opt_command_vector, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as opt_process:
                     stdout_data, stderr_data = opt_process.communicate()
+                    # Store the updated bitcode file
+                    with open(f'./bitcode/updated_test_{data}.bc', 'wb') as module_file:
+                        module_file.write(stdout_data)
+                        module_file.flush()
+                    
                     if "value invalid for" in stderr_data.decode('utf-8'):
                         with open('invalid_knobs.txt', 'a') as file:
                             file.write(f'{knob_name}\n')
