@@ -341,7 +341,6 @@ def thread_function(queue, data_chunk, knob_name, values):
                         module_file.flush()
                     exec_command_vector = ['python', 'mass_input_gen.py', '--verbose', '--data_dir', execution_time_data_dir, '--language', 'c', '--outdir', './execution_time_results']
                     exec_result = subprocess.run(exec_command_vector, capture_output=True, text=True)
-                    print(exec_result)
                     exec_time = process_exec_time_from_stdout(exec_result.stdout)
                     key = 'execution-time (seconds)'
                     if key in result[i]:
