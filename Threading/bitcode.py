@@ -9,7 +9,7 @@ if __name__ == '__main__':
     ds = load_dataset('llvm-ml/ComPile', split='train', streaming=True)
     dataset_iterator = iter(ds)
 
-    for i in range(200):
+    for i in range(10000):
         bitcode_module = next(dataset_iterator)['content']
         with open(f'./bitcode/test_{(i+1)}.bc', 'wb') as module_file:
             module_file.write(bitcode_module)

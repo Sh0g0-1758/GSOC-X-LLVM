@@ -334,24 +334,25 @@ def thread_function(queue, data_chunk, knob_name, values):
                             file.write(f'{knob_name}\n')
 
                     # Execution time
-                    execution_time_data_dir = f'{knob_name}/{val}/{data}'
-                    os.makedirs(f'./execution_time_results/{execution_time_data_dir}', exist_ok=True)
-                    with open(f'./execution_time_results/{execution_time_data_dir}' +"/mod.bc", 'wb') as module_file:
-                        module_file.write(stdout_data)
-                        module_file.flush()
-                    exec_command_vector = ['python', 'mass_input_gen.py', '--verbose', '--data_dir', execution_time_data_dir, '--language', 'c', '--outdir', './execution_time_results']
-                    exec_result = subprocess.run(exec_command_vector, capture_output=True, text=True)
-                    exec_time = process_exec_time_from_stdout(exec_result.stdout)
-                    # Check which bitcode files work and which not
+                    # execution_time_data_dir = f'{knob_name}/{val}/{data}'
+                    # os.makedirs(f'./execution_time_results/{execution_time_data_dir}', exist_ok=True)
+                    # with open(f'./execution_time_results/{execution_time_data_dir}' +"/mod.bc", 'wb') as module_file:
+                    #     module_file.write(stdout_data)
+                    #     module_file.flush()
+                    # exec_command_vector = ['python', 'mass_input_gen.py', '--verbose', '--data_dir', execution_time_data_dir, '--language', 'c', '--outdir', './execution_time_results']
+                    # exec_result = subprocess.run(exec_command_vector, capture_output=True, text=True)
+                    # exec_time = process_exec_time_from_stdout(exec_result.stdout)
+                    # # Check which bitcode files work and which not
                     # if (exec_time == 0):
                     #     print(Fore.RED + f'{knob_name} : {val} || {data}' + Fore.RESET)
+                    #     print(exec_result.stderr)
                     # else:
                     #     print(Fore.GREEN + f'{knob_name} : {val} || {data}' + Fore.RESET)
-                    key = 'execution-time (seconds)'
-                    if key in result[i]:
-                        result[i][key] += exec_time
-                    else:
-                        result[i][key] = exec_time
+                    # key = 'execution-time (seconds)'
+                    # if key in result[i]:
+                    #     result[i][key] += exec_time
+                    # else:
+                    #     result[i][key] = exec_time
 
                     # opt stats
                     output_string = stderr_data.decode('utf-8')[216:-2]
@@ -462,12 +463,12 @@ def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
         "stats_val": stats_values_dict,
     }
 
-    with open(f'./temp_results/{knob_name}.json', 'w') as file:
+    with open(f'./extended_results/{knob_name}.json', 'w') as file:
         json.dump(json_data, file, indent=4)
 
 if __name__ == "__main__":
-    if not os.path.exists("temp_results"):
-        os.mkdir("temp_results")
+    if not os.path.exists("extended_results"):
+        os.mkdir("extended_results")
 
     to_process_stats_dict = {}
 
@@ -496,8 +497,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 1
-        total_files = 10
+        chunk_size = 500
+        total_files = 10000
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
@@ -568,9 +569,9 @@ if __name__ == "__main__":
             filtered_all_stats_dict[bitcode_key] = all_stats_dict[bitcode_key]
 
         # Same for execution-time
-        exec_key = 'execution-time (seconds)'
-        if exec_key not in filtered_all_stats_dict:
-            filtered_all_stats_dict[exec_key] = all_stats_dict[exec_key]
+        # exec_key = 'execution-time (seconds)'
+        # if exec_key not in filtered_all_stats_dict:
+        #     filtered_all_stats_dict[exec_key] = all_stats_dict[exec_key]
 
         final_all_stats_dict = {}
         for key, filtered_all_stats_values in filtered_all_stats_dict.items():
