@@ -6,6 +6,7 @@ bonus-inst-threshold
 capture-tracking-max-uses-to-explore
 scev-cheap-expansion-budget
 force-target-instruction-cost
+==done==
 unroll-force-peel-count
 force-target-max-vector-interleave
 epilogue-vectorization-force-VF
