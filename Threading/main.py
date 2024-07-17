@@ -484,7 +484,7 @@ if __name__ == "__main__":
     ### ============================================================================================== ###
 
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
-    with open('run_knobs_with_new_arch.txt', 'r') as file:
+    with open('cloud.txt', 'r') as file:
         for line in file:
             to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
 
