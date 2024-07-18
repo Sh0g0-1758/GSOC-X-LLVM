@@ -4,7 +4,7 @@ function populateTable(filenames) {
         const row = document.createElement('tr');
         const cell = document.createElement('td');
         const link = document.createElement('a');
-        link.href = `graph.html?file=${filename}`;
+        link.href = `graph100.html?file=${filename}`;
         link.textContent = filename.replace('.json', '');
         cell.appendChild(link);
         row.appendChild(cell);

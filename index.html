@@ -3,34 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KNOBS</title>
+    <title>Shogo</title>
     <style>
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
+        /* Basic reset and box sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        th, td {
-            border: 1px solid black;
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Heading styles */
+        h1 {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
             padding: 10px;
-            text-align: left;
+            margin: 0;
+            border-bottom: 2px solid black;
+            color: black; /* Text color for the heading */
+            z-index: 1000;
         }
-        th {
-            background-color: #f2f2f2;
+
+        /* Subheading styles */
+        h3 {
+            margin: 40px 20px 20px 20px; /* Reduced top margin to bring closer to the heading */
+            padding: 10px;
+            text-align: center;
+            color: black; /* Text color for the subheading */
+            width: calc(100% - 40px); /* Width adjusted for margin */
+        }
+
+        /* Button container styles */
+        .button-container {
+            margin-top: 20px; /* Space above the buttons */
+            text-align: center;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: black; /* Button text color */
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <table id="jsonTable">
-        <thead>
-            <tr>
-                <th>Knobs</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
-    <script src="index.js"></script>
+    <h1>The 1001 Thresholds in LLVM</h1>
+    <h3>LLVM has lots of thresholds and flags to avoid costly cases. However, it is unclear if these thresholds are useful, their
+        value is reasonable, and what impact they really have. This work explores these thresholds, when they are hit,
+        what it means if they are hit, how we should select their values, and if we need different profiles.</h3>
+    <div class="button-container">
+        <a href="100.html" class="button">Study with 100 bitcode files</a>
+        <a href="10000.html" class="button">Study with 10000 bitcode files</a>
+    </div>
 </body>
 </html>
