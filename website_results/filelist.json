@@ -1,0 +1,10 @@
+[
+    "bonus-inst-threshold.json",
+    "force-target-instruction-cost.json",
+    "inline-memaccess-cost.json",
+    "scev-cheap-expansion-budget.json",
+    "capture-tracking-max-uses-to-explore.json",
+    "inlinehint-threshold.json",
+    "jump-threading-threshold.json",
+    "unswitch-threshold.json"
+]
