@@ -1,6 +1,7 @@
-# LEARN CPP basics
-
-Some cpp basics that I learn along the way : 
+<div align="center">
+  <h1>C++</h1>
+  <h2>The King of programming languages</h2>
+</div>
 
 1. **virtual Keyword** : In general, an object of derived class with a pointer of base class will run functions of the base class. But if you add a virtual keyword in front of any function then no matter what the pointer, the function corresponding to the object will be called. Further a class is called abstract if it has at least one pure virtual function. The syntax for it is : `virtual void foo() = 0;`, the main point to note here is the assignment to 0 in the declaration. Virtual functions are implemented using V-Table which is basically just a map for all functions marked as virtual so that we can point to the correct function to call at runtime. So there is a little overhead involved in memory to store the pointers in the V table and in time since you will have to traverse through them to actually find the function to which it is pointing to. Also Starting from C++14, there is a keyword `override` which you can append after the function declaration to kind of indicate that it is going to override some virtual function that is present in the base class. 
 
@@ -650,8 +651,89 @@ int main() {
     helper(full);
     // This would not work if the function did not have a const since only const lvalue reference can take r values. 
     helper(first + second);
-
 }
 ```
 
-28. **Move semantics** : 
+28. **Move semantics** : Move semantics state that its better to just transfer the ownership of data that is being copied and is never going to be used again. Move constructors typically “steal” the resource of the source (original) object rather than making several copies of them, and leaves the source object in a “valid but unspecified state”. C++11 introduced the move assignment operator and move copy constructor. 
+
+*Example* : 
+
+```cpp
+class shogo {
+public:
+    int *x;
+    int y;
+    string name;
+
+    // Default constructor
+    shogo() {
+        cout << "Default constructor" << endl;
+        x = new int[100];
+        for(int i = 0; i < 100; i++) {
+            x[i] = i;
+        }
+    }
+
+    // Copy constructor takes an L value reference
+    shogo(const shogo& other) {
+        cout << "Copy constructor" << endl;
+        x = new int[100];
+        for(int i = 0; i < 100; i++) {
+            x[i] = other.x[i];
+        }
+    }
+
+    // Copy Assignment operator also takes an L value reference
+    shogo& operator = (const shogo& other) {
+        cout << "Copy Assignment operator" << endl;
+        // To ensure that if it is self assignment, we don't delete the memory
+        if(this != &other) {
+            x = new int[100];
+            for(int i = 0; i < 100; i++) {
+                x[i] = other.x[i];
+            }
+        }
+        return *this;
+    }
+
+    // Move constructor takes an R value reference
+    shogo(shogo&& other) {
+        cout << "Move constructor" << endl;
+        x = other.x;
+        other.x = nullptr;
+    }
+
+    // Move Assignment operator also takes an R value reference
+    shogo& operator = (shogo&& other) {
+        cout << "Move Assignment operator" << endl;
+        // To ensure that if it is self assignment, we don't delete the memory
+        if(this != &other) {
+            x = other.x;
+            other.x = nullptr;
+        }
+        return *this;
+    }
+};
+
+int main() {
+    vector<int> v1 = {1,2,3,4,5};
+    vector<int> v2 = {10,11,12,13,14};
+    
+    v1 = v2;
+    print(v1);
+    print(v2);
+    // this will print both v1 and v2
+    // However it is possible that we dont need v2 anymore
+    v1 = std::move(v2);
+    // So if you use std::move, it will transfer the ownership of data owned by v2 to v1 
+    // and thus if you do print(v2), then nothing gets printed. 
+
+    shogo s1;
+    shogo s2(s1); // Copy constructor
+    s2 = s1; // Copy Assignment operator
+    cout << s1.x[45] << " " << s2.x[45] << endl;
+    shogo s3(move(s1)); // Move constructor
+    s3 = move(s2); // Move Assignment operator
+    cout << s1.x[45] << " " << s3.x[45] << endl; // This gives seg fault as move has transfered ownership to s3. 
+}
+```
