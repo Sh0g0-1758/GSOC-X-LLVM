@@ -437,7 +437,7 @@ int main() {
 }
 ```
 
-20. **copy constructor** : When you want to copy an object of a class from another object. Simply writing `shogo newobj = oldobj` will lead to a shallow copy. To do a depp copy, define a copy constructor like `shogo(const shogo& other) {}` and then do a deep copy inside it. 
+20. **copy constructor** : When you want to copy an object of a class from another object. Simply writing `shogo newobj = oldobj` will lead to a shallow copy. This can lead to errors if the object has data allocated on the heap as then only the address will get copied. As such now both the objects will modify the same data in memory which can lead to nasty errors.  To do a depp copy, define a copy constructor like `shogo(const shogo& other) {}` and then do a deep copy inside it. Or you can also create a copy assigment operator and then do a deep copy in it just the way we did it for the copy constructor. For more details on advantages and disadvantages, refer move semantics at the end. 
 
 21. **emplace_back** : when you do push_back, a copy of the element is created. First the element is created on the stack and then a copy of it is created to be stored in place at the vector position. emplace_back ensures that such copy does not take place and that it is created and stored only and only at the vector position. Now when dealing with vectors, there are copies involved when you wish to add more elements in your vector. In order to prevent that, simply reserve space for your vector so that the copy during resize does not take place. 
 
