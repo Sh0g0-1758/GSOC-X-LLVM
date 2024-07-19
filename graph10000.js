@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             stats = stats.filter(stat => stat !== "compile-time (instructions)" && stat !== "bitcode-size (bytes)");
 
+            // Flatten all the values from statsVal into a single array
+            let allValues = stats.flatMap(stat => statsVal[stat]);
+
+            // Find min and max values from the flattened array
+            let minVal = Math.min(...allValues);
+            let maxVal = Math.max(...allValues);
+
             const seriesData = stats.map(stat => {
                 return {
                     name: stat,
@@ -108,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         fontWeight: 'bold', 
                         align: 'center'
                     },
-                    min: jsonData.y_min,
-                    max: jsonData.y_max,
+                    min: minVal,
+                    max: maxVal,
                 },
                 series: seriesData,
                 dataZoom: [
@@ -130,6 +137,15 @@ document.addEventListener("DOMContentLoaded", function () {
             myChart.setOption(option);
 
             const selectedStats = ["compile-time (instructions)", "bitcode-size (bytes)"];
+            
+            // Flatten all the values from statsVal into a single array
+            allValues = selectedStats.flatMap(stat => statsVal[stat]);
+
+            // Find min and max values from the flattened array
+            minVal = Math.min(...allValues);
+            maxVal = Math.max(...allValues);
+
+
             const newSeriesData = selectedStats.map(stat => {
                 return {
                     name: stat,
@@ -218,8 +234,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         fontWeight: 'bold', 
                         align: 'center'
                     },
-                    min: jsonData.y_min,
-                    max: jsonData.y_max,
+                    min: minVal,
+                    max: maxVal,
                 },
                 series: newSeriesData,
                 dataZoom: [
