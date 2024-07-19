@@ -170,9 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     formatter: function (params) {
                         let data_string = "";
                         if(params.value > 0) {
-                            data_string = `<b style="color:green;"> Increase: ${params.value} % </b> <br/>`;
+                            data_string = `<b style="color:red;"> Increase: ${params.value} % </b> <br/>`;
                         } else if (params.value < 0){
-                            data_string = `<b style="color:red;"> Decrease: ${params.value} % </b> <br/>`;
+                            data_string = `<b style="color:green;"> Decrease: ${params.value} % </b> <br/>`;
                         } else {
                             data_string = `<b style="color:blue;"> No Change: ${params.value} % </b> <br/>`;
                         }
