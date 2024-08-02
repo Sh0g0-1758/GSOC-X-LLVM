@@ -16,7 +16,7 @@ stats
 directories
 node_modules
 *.xopp
-Meet2.pdf
+*.pdf
 perf.data
 results
 __pycache__/
