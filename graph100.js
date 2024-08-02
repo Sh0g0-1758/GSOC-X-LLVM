@@ -1,3 +1,21 @@
+function calculateCorrelation(x, y) {
+    let n = x.length;
+    let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0, sumY2 = 0;
+    
+    for (let i = 0; i < n; i++) {
+        sumX += x[i];
+        sumY += y[i];
+        sumXY += x[i] * y[i];
+        sumX2 += x[i] * x[i];
+        sumY2 += y[i] * y[i];
+    }
+    
+    let numerator = (n * sumXY) - (sumX * sumY);
+    let denominator = Math.sqrt((n * sumX2 - sumX * sumX) * (n * sumY2 - sumY * sumY));
+    
+    return numerator / denominator;
+}
+
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -259,6 +277,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 myChart.resize();
                 newChart.resize();
             });
+
+            // Calculate and display correlation coefficients
+            const correlations = stats.map(stat => {
+                return {
+                    stat,
+                    correlation: calculateCorrelation(knobValues, statsVal[stat])
+                };
+            });
+
+            const correlationTableBody = document.getElementById('correlationTableBody');
+            correlations.forEach(({ stat, correlation }) => {
+                const row = document.createElement('tr');
+                const statCell = document.createElement('td');
+                const correlationCell = document.createElement('td');
+                statCell.textContent = stat;
+                correlationCell.textContent = correlation.toFixed(2);
+                row.appendChild(statCell);
+                row.appendChild(correlationCell);
+                correlationTableBody.appendChild(row);
+            });
+
         })
         .catch(error => console.error('Error loading JSON:', error));
 });
