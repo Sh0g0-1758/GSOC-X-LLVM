@@ -458,14 +458,8 @@ def convert_to_percentage(stat_values, iter, range):
     return stat_values
 
 
-def generate_step_function_graph(knob_name, knob_val, final_results_arr, all_stats):
-    knob_val = convert_to_appropriate_type(knob_name, knob_val)
-    x = generate_values(knob, knob_val)
-
+def generate_step_function_graph(knob_name, final_results_arr, all_stats):
     json_data = {
-        "knob_name": knob_name,
-        "original_val": knob_val,
-        "knob_values": x,
         "stats": all_stats,
         "stats_per_knob_val": final_results_arr,
     }
@@ -523,8 +517,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 5
-        total_files = 100
+        chunk_size = 500
+        total_files = 10000
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
@@ -656,7 +650,7 @@ if __name__ == "__main__":
                     break
             if flag:
                 filtered_stats[stat] = True
-        
+
         final_filtered_results_arr = []
         for i in range(len(values)):
             final_filtered_results_arr.append({})
@@ -668,7 +662,7 @@ if __name__ == "__main__":
                     final_filtered_results_arr[i][key] = value
 
         # # Converting into appropriate format for plotting the graph
-        generate_step_function_graph(knob, knob_val, final_filtered_results_arr, list(filtered_stats.keys()))
+        generate_step_function_graph(knob, final_filtered_results_arr, list(filtered_stats.keys()))
 
         print(Fore.GREEN +
               f"##  Successfully collected all stats for {knob}" + Fore.RESET)
