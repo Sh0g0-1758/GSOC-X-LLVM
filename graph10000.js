@@ -297,7 +297,49 @@ document.addEventListener("DOMContentLoaded", function () {
                 row.appendChild(correlationCell);
                 correlationTableBody.appendChild(row);
             });
+
+            const headerRow = document.getElementById('header-row');
+            const subHeaderRow = document.getElementById('sub-header-row');
+            const tableBody = document.getElementById('table-body');
+
+            // Create header rows
+            knobValues.forEach(knob => {
+                const th = document.createElement('th');
+                th.colSpan = 6; // Each knob value has 6 sub-columns
+                th.textContent = `Knob Value: ${knob}`;
+                headerRow.appendChild(th);
+
+                const subHeaders = ["No. of files which shows an increment", "No. of files which show a decrement", "No. of files which show no change", "Average % change over all the files", "Average % increase for files which showed an increment", "Average % decrease for files which showed a decrement"];
+                subHeaders.forEach(subHeader => {
+                    const thSub = document.createElement('th');
+                    thSub.textContent = subHeader;
+                    subHeaderRow.appendChild(thSub);
+                });
+            });
             
+            fetch('website_files_results/' + jsonFileName)
+            .then(response => response.json())
+            .then(data => {
+                stat_files_info = data.stats_per_knob_val
+
+                data.stats.forEach(stat => {
+                    const tr = document.createElement('tr');
+                    const statCell = document.createElement('td');
+                    statCell.textContent = stat;
+                    tr.appendChild(statCell);
+
+                    knobValues.forEach((knob, i) => {
+                        const statData = stat_files_info[i][stat]; // Get the data for the specific stat and knob value
+                        statData.forEach(value => {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            tr.appendChild(td);
+                        });
+                    });
+
+                    tableBody.appendChild(tr);
+                });
+            });
         })
         .catch(error => console.error('Error loading JSON:', error));
 });
