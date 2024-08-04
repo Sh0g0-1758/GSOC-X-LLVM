@@ -18,10 +18,10 @@
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
-            border: 1px solid #ddd;
+            border: 2px solid #444; /* Bold border */
         }
         #correlationTable th, #correlationTable td {
-            border: 1px solid #ddd;
+            border: 2px solid #444; /* Bold border */
             padding: 8px;
             text-align: center; /* Center text in table cells */
         }
@@ -37,12 +37,34 @@
             margin: 20px 0;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 2px solid #444; /* Bold border */
             padding: 8px;
             text-align: center;
         }
         th {
             background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+            z-index: 2; /* Ensure the main header row is above sub-header row */
+        }
+        #sub-header-row th {
+            background-color: #e0e0e0;
+            position: sticky;
+            top: 28px; /* Adjust based on the height of the main header row */
+            z-index: 1; /* Ensure the sub-header row is above the table body */
+        }
+        .sticky-first-column {
+            position: sticky;
+            left: 0;
+            background-color: #fff;
+            z-index: 3; /* Ensure it stays above the table body */
+            font-weight: bold;
+        }
+        .sticky-first-column-header {
+            position: sticky;
+            left: 0;
+            background-color: #f2f2f2;
+            z-index: 4; /* Ensure it stays above the sticky first column cells */
         }
     </style>
 </head>
@@ -52,10 +74,10 @@
     <table id="data-table">
         <thead>
             <tr id="header-row">
-                <th>Stat Name</th>
+                <th class="sticky-first-column-header">Stat Name</th>
             </tr>
             <tr id="sub-header-row">
-                <th></th>
+                <th class="sticky-first-column-header"></th>
             </tr>
         </thead>
         <tbody id="table-body">

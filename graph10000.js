@@ -325,6 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.stats.forEach(stat => {
                     const tr = document.createElement('tr');
                     const statCell = document.createElement('td');
+                    statCell.classList.add('sticky-first-column');
                     statCell.textContent = stat;
                     tr.appendChild(statCell);
 
