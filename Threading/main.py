@@ -651,6 +651,8 @@ if __name__ == "__main__":
                     break
             if flag:
                 filtered_stats[stat] = True
+            else:
+                filtered_stats[stat] = False
 
         final_filtered_results_arr = []
         for i in range(len(values)):
@@ -659,7 +661,7 @@ if __name__ == "__main__":
         # Remove those stats from the final results also
         for i, stats_dict in enumerate(final_results_arr):
             for key, value in stats_dict.items():
-                if key in filtered_stats:
+                if filtered_stats[key] == True:
                     final_filtered_results_arr[i][key] = value
 
         # # Converting into appropriate format for plotting the graph
