@@ -518,8 +518,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 5
-        total_files = 100
+        chunk_size = 500
+        total_files = 10000
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
