@@ -646,7 +646,7 @@ if __name__ == "__main__":
         for stat in all_stats:
             flag = False
             for i, stats_dict in enumerate(final_results_arr):
-                if stats_dict[stat][3] != total_files:
+                if stats_dict[stat][2] != total_files:
                     flag = True
                     break
             if flag:
