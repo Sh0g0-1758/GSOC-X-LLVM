@@ -6,6 +6,7 @@ import re
 import threading
 import queue
 import json
+import copy
 from collections import defaultdict
 # from datasets import load_dataset
 from colorama import init, Fore, Back, Style
@@ -517,8 +518,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 500
-        total_files = 10000
+        chunk_size = 5
+        total_files = 100
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
@@ -594,7 +595,7 @@ if __name__ == "__main__":
         base_stats = {}
         for i, stats_dict in enumerate(stats_dict_array):
             if values[i] == corrected_value:
-                base_stats = stats_dict
+                base_stats = copy.deepcopy(stats_dict)
                 break
 
         # Calculating the percentage change
@@ -637,7 +638,7 @@ if __name__ == "__main__":
                 if num_neg != 0:
                     average_neg = neg / num_neg
                 final_results_arr[i][key] = [
-                    num_pos, num_neg, num_zero, average_tot / len(value), average_pos, average_neg]
+                    num_pos, num_neg, num_zero, average_tot / total_files, average_pos, average_neg]
         
         filtered_stats = {}
 
