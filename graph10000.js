@@ -286,11 +286,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             });
 
+            correlations.sort((a, b) => Math.abs(b.correlation) - Math.abs(a.correlation));
+
             const correlationTableBody = document.getElementById('correlationTableBody');
             correlations.forEach(({ stat, correlation }) => {
                 const row = document.createElement('tr');
                 const statCell = document.createElement('td');
                 const correlationCell = document.createElement('td');
+
+                // Apply styles based on correlation strength
+                if (Math.abs(correlation) >= 0.5) {
+                    row.style.backgroundColor = '#d0f0c0'; // Strong correlation
+                } else if (Math.abs(correlation) >= 0.3) {
+                    row.style.backgroundColor = '#fffacd'; // Moderate correlation
+                } else {
+                    row.style.backgroundColor = '#e0ffff '; // Weak correlation
+                }
+
                 statCell.textContent = stat;
                 correlationCell.textContent = correlation.toFixed(2);
                 row.appendChild(statCell);
