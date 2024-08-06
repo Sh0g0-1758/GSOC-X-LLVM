@@ -1,0 +1,4442 @@
+{
+    "stats": [
+        "Number of MayAlias results (aa)",
+        "Number of arguments marked nocapture (function-attrs)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "Number of alloca partition uses rewritten (sroa)",
+        "Number of instructions deleted (sroa)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of instructions deleted (gvn)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of load instructions CSE'd (early-cse)",
+        "Number of function pointer arguments marked non-null (correlated-value-propagation)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of pointers maybe captured before (capture-tracking)",
+        "Number of pointers not captured before (capture-tracking)",
+        "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)",
+        "Number of common instructions hoisted up to the begin block (simplifycfg)",
+        "Number of MustAlias results (aa)",
+        "Number iterations check for reads in getDomMemoryDef (dse)",
+        "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)",
+        "Number of stores deleted (dse)",
+        "Number of times a valid candidate is returned from getDomMemoryDef (dse)",
+        "Number of loads deleted (gvn)",
+        "Number of loads PRE'd (gvn)",
+        "Number of loads moved to predecessor of a critical edge in PRE (gvn)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of memcpy instructions deleted (memcpyopt)",
+        "Number of phis propagated (correlated-value-propagation)",
+        "Number of stack-move optimizations performed (memcpyopt)"
+    ],
+    "stats_per_knob_val": [
+        {
+            "Number of MayAlias results (aa)": [
+                3,
+                1,
+                96,
+                -0.01722270091832357,
+                0.3877861683570887,
+                -2.885628596903623
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                5,
+                95,
+                -0.7645300192829362,
+                0,
+                -15.290600385658724
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                1,
+                0,
+                99,
+                0.0020329335230737954,
+                0.20329335230737955,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                1,
+                0,
+                99,
+                0.0021934634788330775,
+                0.21934634788330776,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.0006554412928014465,
+                0.06554412928014465,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                1,
+                0,
+                99,
+                0.0005584408331937231,
+                0.05584408331937231,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                0.028331893710881132,
+                0.888805751467364,
+                -0.24996451377160717
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                0.0014916682546740351,
+                0.2380952380952381,
+                -0.08892841262783459
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.0008403361344537816,
+                0.08403361344537816,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.0002246282402623658,
+                0.022462824026236578,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                -0.21947115168021208,
+                3.311866624040501,
+                -3.7508089274009255
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                4.544985980381305e-05,
+                0.07030741919041007,
+                -0.06576243321002877
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                4,
+                95,
+                -0.02987363233963506,
+                0.0693721817551162,
+                -0.7641838539296556
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                4,
+                0,
+                96,
+                0.5595351996597072,
+                13.98837999149268,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0025517637498871488,
+                0.016385719845154946,
+                -0.27156209483386984
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00022187375689587145,
+                0.1986837203526636,
+                -0.22087109604225075
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                1.1780746775794422,
+                39.269155919314734,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.046153846153846156,
+                0,
+                -4.615384615384616
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.0625,
+                0,
+                -6.25
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.020202020202020204,
+                2.0202020202020203,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.01818181818181818,
+                1.8181818181818181,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                3,
+                0,
+                97,
+                1.283739029640669,
+                42.7913009880223,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.7088751374017832,
+                0,
+                -23.629171246726106
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.005376344086021506,
+                0,
+                -0.5376344086021506
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.0018115942028985507,
+                0,
+                -0.18115942028985507
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.20670985811028444,
+                0,
+                -6.890328603676148
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.4117945000502779,
+                0,
+                -20.589725002513894
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.364984947760588,
+                0,
+                -12.166164925352932
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.05128205128205128,
+                0,
+                -5.128205128205128
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.011575853696660572,
+                0.38586178988868575,
+                0
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                4,
+                96,
+                -0.6317378114907284,
+                0,
+                -15.79344528726821
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                1,
+                0,
+                99,
+                0.0010164667615368977,
+                0.10164667615368977,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                1,
+                0,
+                99,
+                0.0010967317394165387,
+                0.10967317394165388,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00033902135834557577,
+                0.033902135834557576,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                1,
+                0,
+                99,
+                0.00027922041659686155,
+                0.027922041659686155,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                -0.02827437861667009,
+                0.38952684154403133,
+                -0.6604058437799178
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                0,
+                98,
+                0.0026032734125219677,
+                0.13016367062609838,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.0004201680672268908,
+                0.04201680672268908,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                8.985129610494633e-05,
+                0.008985129610494632,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                0.12540409821219575,
+                4.381277475596015,
+                -4.130469279171624
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                -0.00030608723614823733,
+                0.035153709595205036,
+                -0.06576243321002877
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.002312450463067395,
+                0.0693721817551162,
+                -0.15030861403092785
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                3,
+                0,
+                97,
+                0.5542034597187625,
+                18.473448657292085,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                9.290273186787803e-05,
+                0.016385719845154946,
+                -0.007095446658367144
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                0.0019297856289031765,
+                0.1986837203526636,
+                -0.005705157462345961
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.837338168736099,
+                27.9112722912033,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.046153846153846156,
+                0,
+                -4.615384615384616
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.0625,
+                0,
+                -6.25
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.010101010101010102,
+                1.0101010101010102,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.00909090909090909,
+                0.9090909090909091,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.8290942208974996,
+                27.636474029916656,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.5903228433008997,
+                0,
+                -19.67742811002999
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.005376344086021506,
+                0,
+                -0.5376344086021506
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.0018115942028985507,
+                0,
+                -0.18115942028985507
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.12461341609622295,
+                0,
+                -4.153780536540765
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.29777777777777775,
+                0,
+                -29.777777777777775
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.2612932198863295,
+                0,
+                -8.709773996210982
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.05128205128205128,
+                0,
+                -5.128205128205128
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.011224606770071179,
+                0.3741535590023726,
+                0
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                3,
+                97,
+                -0.09969337457326474,
+                0,
+                -3.3231124857754915
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                9,
+                85,
+                -0.02745501259236019,
+                0.27536492614286684,
+                -0.4886323128992467
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                0,
+                98,
+                0.0024550593914755767,
+                0.12275296957377883,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                -0.32672484198230495,
+                3.6881888814454737,
+                -4.505512594937749
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.0006576243321002877,
+                0,
+                -0.06576243321002877
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.002140247546214911,
+                0.0693721817551162,
+                -0.14169846818830364
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                3,
+                0,
+                97,
+                0.5539834155265538,
+                18.46611385088513,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.00016385719845154946,
+                0.016385719845154946,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.001986837203526636,
+                0.1986837203526636,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.5248813142525359,
+                26.244065712626796,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.046153846153846156,
+                0,
+                -4.615384615384616
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.0625,
+                0,
+                -6.25
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                1,
+                0,
+                99,
+                0.7272727272727273,
+                72.72727272727273,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.5714285714285714,
+                0,
+                -57.14285714285714
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.12418730999580394,
+                0,
+                -4.1395769998601315
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.29777777777777775,
+                0,
+                -29.777777777777775
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.19154868574212933,
+                0,
+                -9.577434287106467
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.05128205128205128,
+                0,
+                -5.128205128205128
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.00932617297794968,
+                0.466308648897484,
+                0
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                3,
+                97,
+                -0.09324176167003895,
+                0,
+                -3.1080587223346314
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                8,
+                85,
+                -0.020121279155344656,
+                0.2818992399370125,
+                -0.4981778243866941
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                0,
+                98,
+                0.0024550593914755767,
+                0.12275296957377883,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                0.7129276132453749,
+                4.300148180737383,
+                -3.1732280015376335
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.0006576243321002877,
+                0,
+                -0.06576243321002877
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                0.0006583981422993703,
+                0.0693721817551162,
+                -0.0035323675251791578
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.006220001729505522,
+                0.3110000864752761,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.00016385719845154946,
+                0.016385719845154946,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.001986837203526636,
+                0.1986837203526636,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                1,
+                0,
+                99,
+                0.5217391304347826,
+                52.17391304347826,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.046153846153846156,
+                0,
+                -4.615384615384616
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.0625,
+                0,
+                -6.25
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                1,
+                0,
+                99,
+                0.7272727272727273,
+                72.72727272727273,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.5714285714285714,
+                0,
+                -57.14285714285714
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.03785637474400539,
+                0,
+                -1.8928187372002694
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.18867924528301888,
+                0,
+                -18.867924528301888
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.05128205128205128,
+                0,
+                -5.128205128205128
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                2,
+                98,
+                -0.03836650652024708,
+                0,
+                -1.918325326012354
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                -0.010320789071239192,
+                0.49839254681167866,
+                -0.6897014785536284
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                0.4730844035152162,
+                4.7876963874853375,
+                -3.353080940760175
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.002055700477754806,
+                0.14297497937860873,
+                -0.3485450271540893
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                2,
+                0,
+                98,
+                0.011527755035205502,
+                0.5763877517602751,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0001394700139470014,
+                0,
+                -0.01394700139470014
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.00032679738562091496,
+                0.0326797385620915,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                -0.029374743638488052,
+                0.34600515539749804,
+                -0.6339461785587545
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.00037053505261597745,
+                0,
+                -0.037053505261597744
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                53,
+                47,
+                0,
+                -0.42970187641969043,
+                2.703847157633334,
+                -3.963278446734804
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.032087873994772094,
+                1.6043936997386046,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                2,
+                98,
+                -0.00269031417490734,
+                0,
+                -0.134515708745367
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.00043103448275862074,
+                0.04310344827586207,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00038846490396517386,
+                0.10112732095490717,
+                -0.13997381135142456
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                0.0001806927115286247,
+                0.2527957496036677,
+                -0.23472647845080521
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.10512008122352565,
+                0,
+                -5.256004061176283
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                2,
+                0,
+                98,
+                0.004321985909672943,
+                0.21609929548364715,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.07834357744325648,
+                3.917178872162824,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.029850746268656712,
+                2.9850746268656714,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0084985835694051,
+                0,
+                -0.84985835694051
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.16666666666666663,
+                0,
+                -16.666666666666664
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.09956441376814404,
+                4.978220688407202,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                11,
+                83,
+                0.001986065708838874,
+                0.5926611947414538,
+                -0.30521459977862136
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                1.7363560255600954,
+                5.57755683427143,
+                -3.355468302266557
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                -0.013918656382855117,
+                0.39136318684764004,
+                -0.6142667899892841
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                0.7588662486079913,
+                5.387276516871955,
+                -3.869544019655973
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                -0.008510488724314442,
+                0.41432098883765334,
+                -0.6542768245671892
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                43,
+                57,
+                0,
+                -0.009509322140649454,
+                4.54378884864579,
+                -3.4444535562426997
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                0.006945526064833363,
+                0.49701002039434533,
+                -0.36461417296349174
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                -0.23114948302064725,
+                3.9857775263971704,
+                -3.8233465651173075
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.004803520836736659,
+                0.16497113005224084,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.08023056903657817,
+                2.6743523012192725,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                3,
+                11,
+                86,
+                -0.058398302062745044,
+                0.3949547423953293,
+                -0.6386085848600448
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                -0.06865230386368523,
+                4.154340035607548,
+                -4.126037100610557
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.034678009295333226,
+                1.1559336431777743,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.08145217008981849,
+                0,
+                -4.072608504490924
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.1269775678866588,
+                6.34887839433294,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.004803520836736659,
+                0.16497113005224084,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.08023056903657817,
+                2.6743523012192725,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                8,
+                85,
+                -0.013914826597617053,
+                0.2520813553063359,
+                -0.39450651836325706
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                -0.3610192021186186,
+                4.154633719569009,
+                -4.05564431986304
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.034678009295333226,
+                1.1559336431777743,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.08145217008981849,
+                0,
+                -4.072608504490924
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.1269775678866588,
+                6.34887839433294,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        }
+    ]
+}

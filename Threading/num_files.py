@@ -6,9 +6,12 @@ import re
 import threading
 import queue
 import json
+import copy
+from collections import defaultdict
 # from datasets import load_dataset
 from colorama import init, Fore, Back, Style
 init()
+
 
 def read_lines_around(file_path, start_line, num_lines=10):
     lines = []
@@ -22,8 +25,11 @@ def read_lines_around(file_path, start_line, num_lines=10):
 
 # This Function extracts the string identifier and the init value
 # from the snippet
+
+
 def extract_init_value_and_string(snippet, function_name):
-    pattern = rf'{function_name}\s*\(\s*"([^"]+)"(?:.*?)cl::init\s*\(\s*([^)]+)\s*\)'
+    pattern = rf'{
+        function_name}\s*\(\s*"([^"]+)"(?:.*?)cl::init\s*\(\s*([^)]+)\s*\)'
 
     match = re.search(pattern, snippet, re.DOTALL)
     if match:
@@ -35,6 +41,8 @@ def extract_init_value_and_string(snippet, function_name):
         return None
 
 # This Function processes the input lines, ie. take care of newlines
+
+
 def process_multiline_from_file(file_path, line_number, function_name):
     lines = read_lines_around(file_path, line_number)
     snippet = ''.join(line.strip() for line in lines)
@@ -43,6 +51,8 @@ def process_multiline_from_file(file_path, line_number, function_name):
 
 # this function converts the knob information from the sheet
 # Into useful information that can be used to study them
+
+
 def extract_info(line):
     pattern = r'(.+?):(\d+):(\d+)\s+(\w+)'
     match = re.match(pattern, line.strip())
@@ -58,6 +68,8 @@ def extract_info(line):
 
 # This Function is an extension of the above function
 # It just helps in reading the lines
+
+
 def process_file(file_path):
     extracted_data = []
     with open(file_path, 'r') as file:
@@ -68,6 +80,8 @@ def process_file(file_path):
     return extracted_data
 
 # Function to get init val and its identifier from the cpp file
+
+
 def get_identifier_and_init_val(extracted_data):
     result_dict = {}
 
@@ -87,6 +101,8 @@ def get_identifier_and_init_val(extracted_data):
     return result_dict
 
 # Making a dict of ambiguous and ignore stats
+
+
 def process_stats_file_to_dict(file_path):
     result_dict = {}
 
@@ -107,6 +123,8 @@ def process_stats_file_to_dict(file_path):
     return result_dict
 
 # Helper function to read knob names and their values from a file
+
+
 def read_key_value_file(file_path):
     config_dict = {}
 
@@ -121,10 +139,11 @@ def read_key_value_file(file_path):
 
     return config_dict
 
-def generate_values(knob,number):
+
+def generate_values(knob, number):
     # Handling three special knobs which although unsigned
     # have a range of 0 to 255
-    if(knob == 'cold-new-hint-value' or knob == 'notcold-new-hint-value' or knob == 'hot-new-hint-value'):
+    if (knob == 'cold-new-hint-value' or knob == 'notcold-new-hint-value' or knob == 'hot-new-hint-value'):
         step = 25
         number = 25
         values = []
@@ -138,7 +157,7 @@ def generate_values(knob,number):
         return values
     # Boolean Knobs
     if number == 'true':
-        return [0,1]
+        return [0, 1]
     # Some Exceptional Values
     if number == 18446744073709551615 or number == 65535 or number == 4294967295 or number == 8388608 or number == 2147483647:
         values = []
@@ -149,7 +168,7 @@ def generate_values(knob,number):
         while (count <= 11):
             values.append(number)
             number -= step
-            if(number < 0):
+            if (number < 0):
                 values.append(0)
                 break
             count += 1
@@ -195,9 +214,9 @@ def generate_values(knob,number):
     # Handling of negative numbers
     if number < 0:
         step = round(number * 0.1)
-        if(step == 0):
+        if (step == 0):
             step = 1
-        if(step < 0):
+        if (step < 0):
             step = -step
         count = 1
         values = []
@@ -276,8 +295,10 @@ def convert_to_appropriate_type(data, s):
     print(Fore.RED + f"Invalid value: {data} set to {s}" + Fore.RESET)
     exit(0)
 
-# Function to divide data files into chunks that 
+# Function to divide data files into chunks that
 # can be processed
+
+
 def divide_into_chunks(a, b):
     numbers = list(range(1, a + 1))
 
@@ -285,14 +306,17 @@ def divide_into_chunks(a, b):
 
     for i in range(0, len(numbers), b):
         chunks.append(numbers[i:i + b])
-    
+
     return chunks
+
 
 # Constant for the pattern of the line
 stat_pattern = re.compile(r'^\s*(\d+)\s+(\S+)\s+-\s+(.*)$')
 
 # Process a single file and update the stats dictionary
-def process_stat(stat_blob,stats_dict):
+
+
+def process_stat(stat_blob, stats_dict, data):
     for line in stat_blob:
         match = stat_pattern.match(line)
         if match:
@@ -301,9 +325,10 @@ def process_stat(stat_blob,stats_dict):
             description = match.group(3)
             key = f"{description} ({component})"
             if key not in stats_dict:
-                stats_dict[key] = value
+                stats_dict[key] = [(value, data)]
             else:
-                stats_dict[key] += value
+                stats_dict[key].append((value, data))
+
 
 def process_exec_time_from_stdout(stdout):
     pattern = r"Time for IRRun: (\d+)"
@@ -316,14 +341,17 @@ def thread_function(queue, data_chunk, knob_name, values):
 
     for _ in range(len(values)):
         result.append({})
-
     for data in data_chunk:
-        for i,val in enumerate(values):
+        for i, val in enumerate(values):
             opt_command_vectors = [
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O1', '-stats', f'./../bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O2', '-stats', f'./../bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-O3', '-stats', f'./../bitcode/test_{data}.bc'],
-                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Os', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt',
+                    f'-{knob_name}={val}', '-O1', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt',
+                    f'-{knob_name}={val}', '-O2', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt',
+                    f'-{knob_name}={val}', '-O3', '-stats', f'./../bitcode/test_{data}.bc'],
+                ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt',
+                    f'-{knob_name}={val}', '-Os', '-stats', f'./../bitcode/test_{data}.bc'],
                 ['sudo', 'perf', 'stat', '-e', 'instructions', './../../dev/llvm-project/build/bin/opt', f'-{knob_name}={val}', '-Oz', '-stats', f'./../bitcode/test_{data}.bc']]
 
             for opt_command_vector in opt_command_vectors:
@@ -356,36 +384,40 @@ def thread_function(queue, data_chunk, knob_name, values):
 
                     # opt stats
                     output_string = stderr_data.decode('utf-8')[216:-2]
-                    process_stat(output_string.split('\n'), result[i])
+                    process_stat(output_string.split('\n'), result[i], data)
 
                     # No. of Instructions
                     instructions_pattern = r'([\d,]+)\s+cpu_\w+/instructions/'
                     matches = re.findall(instructions_pattern, output_string)
-                    instruction_counts = [int(count.replace(',', '')) for count in matches]
+                    instruction_counts = [
+                        int(count.replace(',', '')) for count in matches]
                     total_instructions = max(instruction_counts)
                     key = 'compile-time (instructions)'
                     if key in result[i]:
-                        result[i][key] += float(total_instructions)
+                        result[i][key].append(
+                            (float(total_instructions), data))
                     else:
-                        result[i][key] = float(total_instructions)
+                        result[i][key] = [(float(total_instructions), data)]
 
                     # bitcode-size stat = (.data + .text) segment size
                     object_code = None
-                    llc_command_vector = ['./../../dev/llvm-project/build/bin/llc', '-filetype=obj', '-']
+                    llc_command_vector = [
+                        './../../dev/llvm-project/build/bin/llc', '-filetype=obj', '-']
                     with subprocess.Popen(
-                        llc_command_vector,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.STDOUT,
-                        stdin=subprocess.PIPE) as llc_process:
+                            llc_command_vector,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT,
+                            stdin=subprocess.PIPE) as llc_process:
                         object_code = llc_process.communicate(
                             input=stdout_data)[0]
                     llvm_size_output = None
-                    llvm_size_command_vector = ['./../../dev/llvm-project/build/bin/llvm-size', '-']
+                    llvm_size_command_vector = [
+                        './../../dev/llvm-project/build/bin/llvm-size', '-']
                     with subprocess.Popen(
-                        llvm_size_command_vector,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.STDOUT,
-                        stdin=subprocess.PIPE) as llvm_size_process:
+                            llvm_size_command_vector,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT,
+                            stdin=subprocess.PIPE) as llvm_size_process:
                         llvm_size_output = llvm_size_process.communicate(
                             input=object_code)[0].decode('utf-8')
 
@@ -397,15 +429,18 @@ def thread_function(queue, data_chunk, knob_name, values):
                         data_value = int(match.group(2))
                         total_bitcode_size = text_value + data_value
                     else:
-                        print(Fore.RED + 'No match found for bitcode size' + Fore.RESET)
+                        print(
+                            Fore.RED + 'No match found for bitcode size' + Fore.RESET)
                     key = 'bitcode-size (bytes)'
                     if key in result[i]:
-                        result[i][key] += total_bitcode_size
+                        result[i][key].append((total_bitcode_size, data))
                     else:
-                        result[i][key] = total_bitcode_size
-            print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {knob_name} with value {val} for data chunk {data}" + Fore.RESET)
-            
+                        result[i][key] = [(total_bitcode_size, data)]
+            print(Fore.LIGHTYELLOW_EX + f"##  Successfully collected stats for {
+                  knob_name} with value {val} for data chunk {data}" + Fore.RESET)
+
     queue.put(result)
+
 
 def convert_to_percentage(stat_values, iter, range):
     val = stat_values[iter]
@@ -420,55 +455,40 @@ def convert_to_percentage(stat_values, iter, range):
             range[0] = stat_values[i]
         if stat_values[i] > range[1]:
             range[1] = stat_values[i]
-    
+
     return stat_values
 
 
-def generate_step_function_graph(knob_name, knob_val, stats_values_dict):
-    knob_val = convert_to_appropriate_type(knob_name, knob_val)
-    x = generate_values(knob, knob_val)
-
-    iter = 0
-    for i, val in enumerate(x):
-        if val == knob_val:
-            iter = i
-            break
-
-    keys = []
-    # To store the min and max values across the y axis
-    # First represents the min value and second represents the max value
-    range = [0,0]
-
-    for key, value in stats_values_dict.items():
-        y = convert_to_percentage(value, iter,range)
-        # To remove redundant statistics
-        if key == 'compile-time (instructions)' or key == 'bitcode-size (bytes)':
-            keys.append(key)
-            stats_values_dict[key] = y
-            continue
-        if len(set(y)) == 1:
-            continue
-        keys.append(key)
-        stats_values_dict[key] = y
-
-    keys = list(keys)
-
+def generate_step_function_graph(knob_name, final_results_arr, all_stats):
     json_data = {
-        "knob_name": knob_name,
-        "original_val": knob_val,
-        "y_min": range[0],
-        "y_max": range[1],
-        "knob_values": x,
-        "stats": keys,
-        "stats_val": stats_values_dict,
+        "stats": all_stats,
+        "stats_per_knob_val": final_results_arr,
     }
 
-    with open(f'./results/{knob_name}.json', 'w') as file:
+    with open(f'./num_files_results/{knob_name}.json', 'w') as file:
         json.dump(json_data, file, indent=4)
 
+def sum_stats_for_same_file(arr):
+    # Dictionary to group pairs by their second element
+    grouped_pairs = defaultdict(list)
+
+    # Grouping pairs
+    for pair in arr:
+        grouped_pairs[pair[1]].append(pair[0])
+
+    result = []
+
+    # Summing the first elements for each group
+    for file_num, values in grouped_pairs.items():
+        group_sum = sum(values)
+        result.append((group_sum, file_num))
+
+    return result
+
+
 if __name__ == "__main__":
-    if not os.path.exists("results"):
-        os.mkdir("results")
+    if not os.path.exists("num_files_results"):
+        os.mkdir("num_files_results")
 
     to_process_stats_dict = {}
 
@@ -486,11 +506,12 @@ if __name__ == "__main__":
     master_stats_dict = read_key_value_file('knobs_decoded.txt')
     with open('cloud.txt', 'r') as file:
         for line in file:
-            to_process_stats_dict[line.strip()] = master_stats_dict[line.strip()]
+            to_process_stats_dict[line.strip(
+            )] = master_stats_dict[line.strip()]
 
     ignore_stats_dict = process_stats_file_to_dict("stats_ignore.txt")
 
-    # The change in design is that now we are going to send knobs sequentially and doing the data processing 
+    # The change in design is that now we are going to send knobs sequentially and doing the data processing
     # in parallel for each knob. This will help in reducing the time taken to process the data.
 
     t1 = time.perf_counter(), time.process_time()
@@ -510,13 +531,14 @@ if __name__ == "__main__":
 
         # This returns a dictionary which contains stat as key and value as summation over all the stats
         for i, d in enumerate(data_chunks):
-            thread = threading.Thread(target=thread_function, args=(q,d,knob,values))
+            thread = threading.Thread(
+                target=thread_function, args=(q, d, knob, values))
             thread.start()
             Thread_array.append(thread)
-        
+
         for i in range(len(Thread_array)):
             Thread_array[i].join()
-        
+
         stats_dict_array = []
 
         for _ in range(len(values)):
@@ -534,59 +556,121 @@ if __name__ == "__main__":
             except queue.Empty:
                 break
 
-        # Here we merge the results obtained over all the threads
-        all_stats_dict = {}
-        for idx, stats_dict in enumerate(stats_dict_array):
+        # Merge the stats for all the optimization levels (There are 5 optimization levels)
+        for i, stats_dict in enumerate(stats_dict_array):
             for key, value in stats_dict.items():
-                if key in all_stats_dict:
-                    while len(all_stats_dict[key]) < idx:
-                        all_stats_dict[key].append(0)
-                    all_stats_dict[key].append(value)
-                else:
-                    all_stats_dict[key] = []
-                    for _ in range(idx):
-                        all_stats_dict[key].append(0)
-                    all_stats_dict[key].append(value)
+                stats_dict[key] = sum_stats_for_same_file(value)
 
-        # Taking care of the case where some stats are not present in some files
-        for key in all_stats_dict.keys():
-            while len(all_stats_dict[key]) < len(values):
-                all_stats_dict[key].append(0)
+        all_stats = {}
+
+        # Suppose for a knob value a certain stat is not emitted for every file, so to maintain uniformity, we
+        # add a zero value for that file
+        for _, stats_dict in enumerate(stats_dict_array):
+            for key, value in stats_dict.items():
+                all_stats[key] = True
+                files = {pair[1] for pair in value}
+                for i in range(1, total_files + 1):
+                    if i not in files:
+                        stats_dict[key].append((0, i))
+
+        # Now there is also a possibility that a certain stat is not emitted for a certain knob value
+        # So to maintain uniformity, we add a zero value for that stat in that knob value dictionary
+        for _, stats_dict in enumerate(stats_dict_array):
+            for key, value in all_stats.items():
+                if key not in stats_dict:
+                    stats_dict[key] = [(0, j)
+                                       for j in range(1, total_files + 1)]
+
+        # Sorting the stats according to the file number
+        for _, stats_dict in enumerate(stats_dict_array):
+            for key, value in stats_dict.items():
+                stats_dict[key] = sorted(value, key=lambda x: x[1])
+
+        # Now there is no need to maintain the file number so remove that
+        for _, stats_dict in enumerate(stats_dict_array):
+            for key, value in stats_dict.items():
+                stats_dict[key] = [pair[0] for pair in value]
+
+        # Storing base stats separately in order to calculate the percentage change
+        base_stats = {}
+        for i, stats_dict in enumerate(stats_dict_array):
+            if values[i] == corrected_value:
+                base_stats = copy.deepcopy(stats_dict)
+                break
+
+        # Calculating the percentage change
+        for _, stats_dict in enumerate(stats_dict_array):
+            for key, value in stats_dict.items():
+                base_val = base_stats[key]
+                for j, val in enumerate(value):
+                    if (base_val[j] == 0):
+                        value[j] = (val) * 100
+                    else:
+                        value[j] = (val - base_val[j]) / base_val[j] * 100
+
+        final_results_arr = []
+        for i in range(len(values)):
+            final_results_arr.append({})
+
+        # Now we calculate the number of files for which the stat increases, decreases or remains the same
+        for i, stats_dict in enumerate(stats_dict_array):
+            for key, value in stats_dict.items():
+                num_pos = 0
+                num_neg = 0
+                num_zero = 0
+                average_pos = 0
+                average_neg = 0
+                average_tot = 0
+                pos = 0
+                neg = 0
+                for val in value:
+                    if val > 0:
+                        num_pos += 1
+                        pos += val
+                    elif val < 0:
+                        num_neg += 1
+                        neg += val
+                    else:
+                        num_zero += 1
+                    average_tot += val
+                if num_pos != 0:
+                    average_pos = pos / num_pos
+                if num_neg != 0:
+                    average_neg = neg / num_neg
+                final_results_arr[i][key] = [
+                    num_pos, num_neg, num_zero, average_tot / total_files, average_pos, average_neg]
         
-        # Filter the dict and remove the stats that have the same value for all the files
-        filtered_all_stats_dict = {key: all_stats_values for key, all_stats_values in all_stats_dict.items() if len(set(all_stats_values)) > 1}
+        filtered_stats = {}
 
-        # If compile-time is not present in the stats, then add it
-        # Though this is not necessary since compile-time is most likely to change across 
-        # changes in knob value
-        time_key = 'compile-time (instructions)'
-        if time_key not in filtered_all_stats_dict:
-            filtered_all_stats_dict[time_key] = all_stats_dict[time_key]
+        # Filter those stats which remain the same as base accross all files
+        for stat in all_stats:
+            flag = False
+            for i, stats_dict in enumerate(final_results_arr):
+                if stats_dict[stat][2] != total_files:
+                    flag = True
+                    break
+            if flag:
+                filtered_stats[stat] = True
+
+        final_filtered_results_arr = []
+        for i in range(len(values)):
+            final_filtered_results_arr.append({})
         
-        # Same for bitcode-size
-        bitcode_key = 'bitcode-size (bytes)'
-        if bitcode_key not in filtered_all_stats_dict:
-            filtered_all_stats_dict[bitcode_key] = all_stats_dict[bitcode_key]
+        # Remove those stats from the final results also
+        for i, stats_dict in enumerate(final_results_arr):
+            for key, value in stats_dict.items():
+                if key in filtered_stats:
+                    final_filtered_results_arr[i][key] = value
 
-        # Same for execution-time
-        # exec_key = 'execution-time (seconds)'
-        # if exec_key not in filtered_all_stats_dict:
-        #     filtered_all_stats_dict[exec_key] = all_stats_dict[exec_key]
+        # # Converting into appropriate format for plotting the graph
+        generate_step_function_graph(knob, final_filtered_results_arr, list(filtered_stats.keys()))
 
-        final_all_stats_dict = {}
-        for key, filtered_all_stats_values in filtered_all_stats_dict.items():
-            if (key in ignore_stats_dict):
-                continue
-            else:
-                final_all_stats_dict[key] = filtered_all_stats_values
-
-        # Converting into appropriate format for plotting the graph
-        generate_step_function_graph(knob, knob_val, final_all_stats_dict)
-
-        print(Fore.GREEN + f"##  Successfully collected all stats for {knob}" + Fore.RESET)
+        print(Fore.GREEN +
+              f"##  Successfully collected all stats for {knob}" + Fore.RESET)
 
     t2 = time.perf_counter(), time.process_time()
     print(Fore.GREEN + "##  Successfully collected stats for all knobs" + Fore.RESET)
 
-    print(Fore.YELLOW + f" Real time: {t2[0] - t1[0]:.2f} seconds" + Fore.RESET)
+    print(Fore.YELLOW +
+          f" Real time: {t2[0] - t1[0]:.2f} seconds" + Fore.RESET)
     print(Fore.YELLOW + f" CPU time: {t2[1] - t1[1]:.2f} seconds" + Fore.RESET)
