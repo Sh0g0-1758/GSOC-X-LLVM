@@ -1,1 +1,14 @@
 inline-memaccess-cost
+ppc-max-strings-pooled
+predictable-branch-threshold
+slp-threshold
+force-target-max-vector-interleave
+slp-max-vf
+unlikely-branch-weight
+opt-bisect-limit
+unswitch-siblings-toplevel-div
+slp-max-root-look-ahead-depth
+force-target-max-scalar-interleave
+inline-instr-cost
+slp-max-look-ahead-depth
+scev-cheap-expansion-budget
