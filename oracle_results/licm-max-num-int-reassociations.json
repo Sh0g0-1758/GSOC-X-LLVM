@@ -1,0 +1,1026 @@
+{
+    "knob_name": "licm-max-num-int-reassociations",
+    "original_val": 5,
+    "knob_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15,
+        60
+    ],
+    "graph_stats_dict": {
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            -0.02671511006625347,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of insts combined (instcombine)": [
+            -0.004874719703617042,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            -0.010973575629883242,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            -0.07915071285110761,
+            -0.09267229296317184,
+            0.0481500169844238,
+            0.013851374748943832,
+            0.055900190951094754,
+            0.0,
+            -0.08228376190146396,
+            0.02275582994469344,
+            -0.03875086983335477,
+            -0.013521580112064217,
+            -0.0349582315092392,
+            -0.051283066034780146,
+            -0.0481500169844238
+        ],
+        "compile-time (instructions)": [
+            1.5723634862639693,
+            -0.9184019095136652,
+            -2.1128038848042423,
+            -3.0011163201770734,
+            -2.3418573101303006,
+            0.0,
+            0.38804328192599497,
+            -0.44525044824375104,
+            0.881862867714975,
+            -0.7126815022800693,
+            -1.1840476756408091,
+            -2.749071444857648,
+            -1.7169425550296262
+        ],
+        "Number of instructions hoisted out of loop (licm)": [
+            -0.05805178218971323,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+            -100.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "graph_stats": [
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "compile-time (instructions)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of invariant int expressions reassociated and hoisted out of the loop (licm)",
+        "bitcode-size (bytes)"
+    ],
+    "table_stats": [
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "compile-time (instructions)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of invariant int expressions reassociated and hoisted out of the loop (licm)"
+    ],
+    "stats_per_file": [
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0010967317394165387,
+                0,
+                -0.10967317394165388
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.00022601423889705052,
+                0,
+                -0.02260142388970505
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.00027922041659686155,
+                0,
+                -0.027922041659686155
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                7,
+                85,
+                -0.034293467621792854,
+                0.34305827284198137,
+                -0.8819732778450194
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                -0.1853354625983827,
+                3.863455122071125,
+                -5.552336935299824
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.0034106412005457027,
+                0,
+                -0.34106412005457026
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                12,
+                83,
+                -0.05131914976912521,
+                0.23473867356362915,
+                -0.5254673620608888
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                -0.6945203018623275,
+                3.196867059899928,
+                -5.8528709907099685
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                8,
+                84,
+                0.008143953770767301,
+                0.5030168822522222,
+                -0.401217460117631
+            ],
+            "compile-time (instructions)": [
+                48,
+                52,
+                0,
+                -0.8682417519329438,
+                3.058616772360074,
+                -4.4930342358957285
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                8,
+                84,
+                -0.01710145131095122,
+                0.314834481921492,
+                -0.5286026233083823
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                -1.1758955620034288,
+                3.0034854221374405,
+                -5.525863525088823
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                0.010097716516866605,
+                0.4692092666694136,
+                -0.30487805351873865
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                -0.7730065454378959,
+                2.799272551565317,
+                -4.491092952522872
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                9,
+                85,
+                -0.0416760279683893,
+                0.19231723833523773,
+                -0.5912784696500396
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                0.03008319203437269,
+                4.8047239603710405,
+                -4.939440872969098
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                8,
+                85,
+                -0.011610899377920042,
+                0.7354869022998832,
+                -0.7886872817363982
+            ],
+            "compile-time (instructions)": [
+                54,
+                46,
+                0,
+                0.2858161092087781,
+                4.634495182239867,
+                -4.819154976523367
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                4,
+                12,
+                84,
+                -0.027153660802024093,
+                0.5231271242175689,
+                -0.40065621475605706
+            ],
+            "compile-time (instructions)": [
+                55,
+                45,
+                0,
+                0.4285170349475696,
+                4.528178421932534,
+                -4.58218021581183
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                -0.01879586166846402,
+                0.32567682573932555,
+                -0.6013346998125415
+            ],
+            "compile-time (instructions)": [
+                63,
+                37,
+                0,
+                0.12555681316810344,
+                3.5390406146116864,
+                -5.686591281181781
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                11,
+                84,
+                -0.026203029085939297,
+                0.4210861045018531,
+                -0.4296121301002904
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                0.3717930390250083,
+                5.300409273557646,
+                -4.967541215052015
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                3,
+                12,
+                85,
+                -0.045257586212392696,
+                0.294478311268435,
+                -0.4507661295870479
+            ],
+            "compile-time (instructions)": [
+                48,
+                52,
+                0,
+                -0.5434156018362786,
+                4.246349302870515,
+                -4.964737052334858
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                9,
+                84,
+                -0.03923909753077286,
+                0.3704420057295409,
+                -0.7241115325760079
+            ],
+            "compile-time (instructions)": [
+                53,
+                47,
+                0,
+                -0.5285999697131153,
+                4.017551446106567,
+                -5.655111140743818
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of invariant int expressions reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            9,
+            -50.87408093466118
+        ],
+        [
+            8,
+            -51.089051432303606
+        ],
+        [
+            7,
+            -23.2558190857509
+        ],
+        [
+            2,
+            -17.463317452338867
+        ],
+        [
+            5,
+            -22.56928345314468
+        ],
+        [
+            11,
+            0.0
+        ],
+        [
+            9,
+            -45.91809539742642
+        ],
+        [
+            7,
+            -22.41970311814453
+        ],
+        [
+            7,
+            -21.370958496574193
+        ],
+        [
+            3,
+            -1.4391147013769578
+        ],
+        [
+            8,
+            -44.54244320308628
+        ],
+        [
+            12,
+            -69.10169790566343
+        ],
+        [
+            12,
+            -69.1498039374984
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            100,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -439.19336911796944,
+    "bitcode_size_saving_file": 0.0
+}

@@ -1,0 +1,1010 @@
+{
+    "knob_name": "licm-mssa-optimization-cap",
+    "original_val": 100,
+    "knob_values": [
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150,
+        300,
+        1200
+    ],
+    "graph_stats_dict": {
+        "Number of MayAlias results (aa)": [
+            -0.2710438605149074,
+            -0.14045690250772513,
+            -0.0819964620045098,
+            -0.055423534503048294,
+            -0.0356836455019626,
+            0.0,
+            0.02960983350162854,
+            0.03188751300175381,
+            0.03340596600183733,
+            0.04251668400233842,
+            0.05314585500292302,
+            0.07895955600434278,
+            0.07895955600434278
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            -0.02325355111410897,
+            0.038261162116831775,
+            0.04139461935915852,
+            -0.008740696518069328,
+            -0.006431833286881204,
+            0.0,
+            -0.01401809818935647,
+            0.06101995682425758,
+            -0.08262431991608932,
+            0.025067657938613923,
+            -0.06217438843985164,
+            -0.005112482869059419,
+            -0.004782645264603972
+        ],
+        "compile-time (instructions)": [
+            4.12487093958002,
+            0.6591192345297178,
+            -4.114733287401737,
+            -4.471487098221189,
+            -0.47670664384184497,
+            0.0,
+            -0.01735600866958542,
+            -2.0441606073211673,
+            -1.189245573068918,
+            -0.2004701947519571,
+            -2.863883977048364,
+            -3.188062583531991,
+            -3.002618147394245
+        ],
+        "Number of NoAlias results (aa)": [
+            -1.6935980095775702,
+            -0.960432328312689,
+            -0.6916985473126622,
+            -0.4582787126461382,
+            -0.27288049439524864,
+            0.0,
+            0.18767222237084993,
+            0.39781695604483797,
+            0.5940501351025977,
+            0.7910859038497552,
+            1.0476470745605821,
+            4.192728537414056,
+            6.5356216057144385
+        ],
+        "Number of pointers maybe captured (capture-tracking)": [
+            -0.11118832522585129,
+            -0.006949270326615705,
+            -0.006949270326615705,
+            -0.006949270326615705,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of MustAlias results (aa)": [
+            -0.5176510522742702,
+            -0.5119936637248247,
+            -0.4016745870106359,
+            -0.26872595609866484,
+            -0.11880515953835709,
+            0.0,
+            0.11880515953835709,
+            0.23761031907671418,
+            0.36207286716451687,
+            0.4978501923512107,
+            0.6109979633401221,
+            2.336501470921023,
+            3.6094138945462775
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "compile-time (instructions)",
+        "Number of NoAlias results (aa)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of MustAlias results (aa)",
+        "bitcode-size (bytes)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "compile-time (instructions)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of MustAlias results (aa)"
+    ],
+    "stats_per_file": [
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.03304585398378466,
+                0,
+                -1.1015284661261553
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                11,
+                83,
+                -0.01217020574856217,
+                0.6837774074051225,
+                -0.4836077290260865
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                -0.008619579133719135,
+                4.542174831968739,
+                -4.380951464310591
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                5,
+                95,
+                -0.14541294896274892,
+                0,
+                -2.9082589792549784
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                5,
+                95,
+                -0.10779068387410662,
+                0,
+                -2.1558136774821324
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.006729740302239624,
+                0,
+                -0.3364870151119812
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.08089025866567212,
+                0,
+                -2.696341955522404
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.016423741122108114,
+                0,
+                -0.8211870561054058
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                0.02268133160611943,
+                0.45714639358404113,
+                -0.26374062594920394
+            ],
+            "compile-time (instructions)": [
+                58,
+                42,
+                0,
+                0.2813941184215983,
+                4.17134778974546,
+                -5.090446665787544
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.07838573221140559,
+                0,
+                -2.612857740380186
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.07782247285256022,
+                0,
+                -2.5940824284186736
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.0017513134851138354,
+                0,
+                -0.17513134851138354
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.07932275813966523,
+                0,
+                -2.6440919379888412
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.005938960681880671,
+                0,
+                -0.5938960681880671
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                0.008805793930953036,
+                0.3661217188241481,
+                -0.2275993730553202
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                -0.5871853075183393,
+                3.19542501025815,
+                -3.6820482947900115
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.05216605125885061,
+                0,
+                -2.6083025629425305
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                2,
+                98,
+                -0.052053600135849934,
+                0,
+                -2.6026800067924967
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.0017513134851138354,
+                0,
+                -0.17513134851138354
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.061136457159214924,
+                0,
+                -3.0568228579607464
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.004014297497937861,
+                0,
+                -0.4014297497937861
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                5,
+                86,
+                0.022333763683335294,
+                0.4377870767409849,
+                -0.34134146446706687
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                -1.3447153219754324,
+                2.239279931435984,
+                -4.277075074766591
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.034344370421865146,
+                0,
+                -1.7172185210932573
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                2,
+                98,
+                -0.036121023227353465,
+                0,
+                -1.806051161367673
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.0017513134851138354,
+                0,
+                -0.17513134851138354
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.0407340811908468,
+                0,
+                -2.0367040595423402
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.0025845477041517733,
+                0,
+                -0.25845477041517734
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                9,
+                85,
+                0.022359040879604483,
+                0.8223598637613608,
+                -0.2998061216230796
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                -0.37186381048634154,
+                2.6248960106838237,
+                -3.0293678028447895
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.020406946248852337,
+                0,
+                -1.0203473124426168
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                2,
+                98,
+                -0.019839107163829976,
+                0,
+                -0.9919553581914988
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.017714203925357375,
+                0,
+                -0.8857101962678688
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.002144624690679131,
+                0.2144624690679131,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                12,
+                83,
+                -0.00543176865252752,
+                0.7791946913806586,
+                -0.36992919351300374
+            ],
+            "compile-time (instructions)": [
+                60,
+                40,
+                0,
+                0.6848727455247098,
+                3.5690348951768955,
+                -3.6413704789535677
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.01428246872435341,
+                0.7141234362176705,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.01228334417974925,
+                0.6141672089874625,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.017714203925357375,
+                0.8857101962678688,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.002309595820731372,
+                0.2309595820731372,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                7,
+                83,
+                0.038159293512296126,
+                0.5878123378442098,
+                -0.2945991467446409
+            ],
+            "compile-time (instructions)": [
+                56,
+                44,
+                0,
+                0.7259234167493003,
+                4.234885629340448,
+                -3.7400284901848866
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.02984836924122936,
+                1.492418462061468,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.0253532242093185,
+                1.267661210465925,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.03542840785071475,
+                1.7714203925357377,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0024195765740995328,
+                0.2419576574099533,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                11,
+                83,
+                -0.015117884203892817,
+                0.4167540859280172,
+                -0.36475572145067137
+            ],
+            "compile-time (instructions)": [
+                56,
+                44,
+                0,
+                0.20993097859292476,
+                3.617369914631536,
+                -4.126809485456215
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.0445792611199865,
+                2.228963055999325,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.036817086221910635,
+                1.8408543110955318,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.05421788059327644,
+                2.7108940296638218,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.003079461094308496,
+                0.3079461094308496,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                9,
+                84,
+                0.008622199992121621,
+                0.4042432352539163,
+                -0.2186091830628058
+            ],
+            "compile-time (instructions)": [
+                55,
+                45,
+                0,
+                0.11818792677575668,
+                3.694636020408087,
+                -4.253026409885981
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.059431933428628556,
+                2.9715966714314277,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.05615205751395445,
+                2.8076028756977225,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.0745495858157551,
+                3.727479290787755,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0038493263678856197,
+                0.384932636788562,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                -0.011348188957663699,
+                0.46060053027438086,
+                -0.5355136819957129
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                0.49031122120480397,
+                4.305157907744574,
+                -3.4802434933569972
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.07890433228023921,
+                3.9452166140119607,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.07371000202902292,
+                3.685500101451146,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.09118852092390817,
+                4.559426046195409,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.005718999175144349,
+                0.5718999175144349,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                8,
+                84,
+                0.04006073727559982,
+                0.7761236570776093,
+                -0.2753644411326117
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                -0.4596539213106599,
+                2.946178192975214,
+                -3.865486035596534
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.3074363959569627,
+                15.371819797848135,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.2743048400383056,
+                13.715242001915279,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.3449322813232426,
+                17.24661406616213,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.005718999175144349,
+                0.5718999175144349,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                8,
+                84,
+                0.017622691875072614,
+                0.6739429396166888,
+                -0.453659291178281
+            ],
+            "compile-time (instructions)": [
+                60,
+                40,
+                0,
+                0.6531537177005191,
+                3.916552658871345,
+                -4.24194469405572
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.47671251463870623,
+                23.835625731935313,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                0,
+                98,
+                0.42426330635230025,
+                21.21316531761501,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.5321203012899648,
+                26.606015064498237,
+                0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            9,
+            -27.277189491066757
+        ],
+        [
+            10,
+            -80.18271760112286
+        ],
+        [
+            9,
+            -46.0299606039232
+        ],
+        [
+            9,
+            -18.91340391642871
+        ],
+        [
+            9,
+            -31.764397954127542
+        ],
+        [
+            6,
+            0.0
+        ],
+        [
+            5,
+            -15.321728738970465
+        ],
+        [
+            6,
+            -15.680854609707174
+        ],
+        [
+            6,
+            -17.502150224679045
+        ],
+        [
+            7,
+            -33.8138644381694
+        ],
+        [
+            6,
+            -29.455006195499088
+        ],
+        [
+            16,
+            -87.18408226703731
+        ],
+        [
+            2,
+            -0.5559807050688872
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            100,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -403.6813367458004,
+    "bitcode_size_saving_file": 0.0
+}

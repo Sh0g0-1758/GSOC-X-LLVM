@@ -1,0 +1,2761 @@
+{
+    "knob_name": "dse-memoryssa-samebb-cost",
+    "original_val": 1,
+    "knob_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        20
+    ],
+    "graph_stats_dict": {
+        "Number of MayAlias results (aa)": [
+            0.0045553590002505445,
+            0.0,
+            -0.013666077000751634,
+            -0.08351491500459332,
+            -0.09869944500542847,
+            -0.30596827951682826,
+            -0.3363373395184986,
+            -0.36974330552033585,
+            -0.4608504855253468,
+            -0.5732160075315269,
+            -0.8321122440457662,
+            -0.8381860560461002,
+            -2.3399360731286967
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.08713158850127067,
+            0.0,
+            0.14241394105416022,
+            0.13498795339780192,
+            0.09043202745965213,
+            -0.028383775042080596,
+            0.03564474075051982,
+            0.10313871744942077,
+            0.007756031552196443,
+            0.07805538136572164,
+            0.002640351166705172,
+            0.09257731278260008,
+            0.11881580250173274
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0047705940582251005
+        ],
+        "compile-time (instructions)": [
+            3.6446973880217213,
+            0.0,
+            -1.6509446573412585,
+            -1.017109456263722,
+            -1.022405752873741,
+            -1.5219239971725134,
+            0.008276013740433491,
+            0.19551084590387277,
+            0.6735162348093352,
+            1.7134700950625736,
+            -1.5245404390934152,
+            -2.7272942265406,
+            -1.3953379025585826
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0016573223609385693,
+            -0.0016573223609385693,
+            -0.0016573223609385693,
+            -0.0016573223609385693,
+            -0.0016573223609385693,
+            -0.0016573223609385693,
+            0.004971967082815708
+        ],
+        "Number of NoAlias results (aa)": [
+            0.014179084512694293,
+            0.0,
+            -0.16372829663714922,
+            -0.2583001150378555,
+            -0.4732603868482303,
+            -0.8946199737820703,
+            -1.0278498622221033,
+            -1.1925145134968833,
+            -1.438508253297306,
+            -1.7140640466572141,
+            -2.154685786136601,
+            -2.2072554107921563,
+            -4.135477139570347
+        ],
+        "Number of stores remaining after DSE (dse)": [
+            0.0,
+            0.0,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.010862480990658266,
+            0.2208704468100514
+        ],
+        "Number of arguments with unsolved size and offset (memory-builtins)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.14027704716815712,
+            -0.21041557075223566,
+            -0.21041557075223566,
+            -1.9288093985621604
+        ],
+        "Number of pointers maybe captured (capture-tracking)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02779708130646282
+        ],
+        "Number of GEP instructions CSE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0034463744141163496
+        ],
+        "Number of instructions sunk (instcombine)": [
+            0.0,
+            0.0,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            -0.06451612903225806,
+            0.0
+        ],
+        "Number of pointers maybe captured before (capture-tracking)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.09857072449482504,
+            -0.19714144898965008,
+            -0.19714144898965008,
+            -0.19714144898965008,
+            -1.2814194184327254
+        ],
+        "Number of pointers not captured before (capture-tracking)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.15723270440251574
+        ],
+        "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+            0.0,
+            0.0,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.10670460608216253,
+            0.0
+        ],
+        "Number of load instructions with unsolved size and offset (memory-builtins)": [
+            0.0,
+            0.0,
+            0.0,
+            -0.18365472910927455,
+            -0.18365472910927455,
+            -0.9182736455463728,
+            -0.9182736455463728,
+            -0.9182736455463728,
+            -1.285583103764922,
+            -1.285583103764922,
+            -2.203856749311295,
+            -2.203856749311295,
+            -7.7134986225895315
+        ],
+        "Number of MustAlias results (aa)": [
+            0.0,
+            0.0,
+            -0.03394433129667345,
+            -0.10466168816474315,
+            -0.11597646526363431,
+            -0.3394433129667346,
+            -0.36207286716451687,
+            -0.3649015614392397,
+            -0.4129893641095271,
+            -0.5459379950214981,
+            -0.8825526137135099,
+            -0.9306404163837971,
+            -2.4864222674813306
+        ],
+        "Number of other instrs removed (dse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -7.142857142857142
+        ],
+        "Number of stores deleted (dse)": [
+            0.0,
+            0.0,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -0.482315112540193,
+            -4.662379421221865
+        ]
+    },
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of arguments with unsolved size and offset (memory-builtins)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of instructions sunk (instcombine)",
+        "Number of pointers maybe captured before (capture-tracking)",
+        "Number of pointers not captured before (capture-tracking)",
+        "Number of common instructions hoisted up to the begin block (simplifycfg)",
+        "Number of load instructions with unsolved size and offset (memory-builtins)",
+        "Number of MustAlias results (aa)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of arguments with unsolved size and offset (memory-builtins)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of instructions sunk (instcombine)",
+        "Number of pointers maybe captured before (capture-tracking)",
+        "Number of pointers not captured before (capture-tracking)",
+        "Number of common instructions hoisted up to the begin block (simplifycfg)",
+        "Number of load instructions with unsolved size and offset (memory-builtins)",
+        "Number of MustAlias results (aa)",
+        "Number iterations check for reads in getDomMemoryDef (dse)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)",
+        "Number of times a valid candidate is returned from getDomMemoryDef (dse)"
+    ],
+    "stats_per_file": [
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.00016211396611818109,
+                0.01621139661181811,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                0.0342330583813273,
+                0.5203161289844206,
+                -0.17993418896100802
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                53,
+                47,
+                0,
+                -0.12220775604236389,
+                3.582317249075742,
+                -4.299650846920229
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                5,
+                0,
+                95,
+                0.0080225526383238,
+                0.160451052766476,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                3,
+                97,
+                -0.001438763993810963,
+                0,
+                -0.04795879979369877
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                11,
+                5,
+                84,
+                0.05785264401179702,
+                0.6547372595694338,
+                -0.283369090816814
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.005952380952380952,
+                0,
+                -0.5952380952380952
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                40,
+                60,
+                0,
+                -1.1313262738111098,
+                3.3630895388922823,
+                -4.127603482280038
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                16,
+                83,
+                -0.09875607430486993,
+                0.6990679094540613,
+                -0.660917208746316
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                4,
+                96,
+                -0.001652372996039016,
+                0,
+                -0.0413093249009754
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                2,
+                98,
+                -0.0722799511002445,
+                0,
+                -3.613997555012225
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                4,
+                96,
+                -0.7692391276894824,
+                0,
+                -19.23097819223706
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.1,
+                0,
+                -10.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                7,
+                93,
+                -0.009215663223056702,
+                0,
+                -0.1316523317579529
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                0.03535983357715889,
+                0.7033467925829773,
+                -0.34926722194136334
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                33,
+                67,
+                0,
+                -1.3479902625390583,
+                3.6988945504342037,
+                -3.833769349525889
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                22,
+                77,
+                -0.19539093714173145,
+                0.7190412782956058,
+                -0.9208243178394887
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                8,
+                92,
+                -0.019620826395803283,
+                0,
+                -0.24526032994754104
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.003508771929824561,
+                0,
+                -0.3508771929824561
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                6,
+                94,
+                -0.11058375674609945,
+                0,
+                -1.8430626124349907
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                6,
+                94,
+                -0.8130449654403082,
+                0,
+                -13.550749424005138
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.1,
+                0,
+                -10.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                7,
+                93,
+                -0.010245448936226184,
+                0,
+                -0.14636355623180264
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                11,
+                6,
+                83,
+                0.03968650441870643,
+                0.4837157351317311,
+                -0.22537044076306667
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                41,
+                59,
+                0,
+                -0.49020374586026394,
+                4.729240985045656,
+                -4.117275508015226
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                23,
+                76,
+                -0.2938412943699581,
+                0.7190412782956058,
+                -1.3088335093604964
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                8,
+                92,
+                -0.0592254861741225,
+                0,
+                -0.7403185771765313
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.003508771929824561,
+                0,
+                -0.3508771929824561
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                6,
+                94,
+                -0.12036370784634393,
+                0,
+                -2.0060617974390653
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                6,
+                94,
+                -1.199533051869197,
+                0,
+                -19.992217531153283
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.1,
+                0,
+                -10.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                9,
+                91,
+                -0.050259644373301986,
+                0,
+                -0.5584404930366887
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                4,
+                10,
+                86,
+                -0.03343614750225535,
+                0.35281499277609285,
+                -0.4754874721329907
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                36,
+                64,
+                0,
+                -1.575518582639015,
+                3.5485658197260133,
+                -4.457816058969343
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                29,
+                71,
+                -0.7529664242757806,
+                0,
+                -2.5964359457785537
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                13,
+                87,
+                -0.13494852285655862,
+                0,
+                -1.0380655604350664
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.017543859649122806,
+                0,
+                -1.7543859649122806
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                8,
+                92,
+                -0.2218020122774184,
+                0,
+                -2.77252515346773
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                10,
+                90,
+                -1.7122639441271104,
+                0,
+                -17.122639441271104
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.1277777777777778,
+                0,
+                -6.388888888888889
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                11,
+                89,
+                -0.07599806608708612,
+                0,
+                -0.6908915098826012
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                9,
+                84,
+                0.015699451140834472,
+                0.6188718264227282,
+                -0.3069064078750723
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                48,
+                52,
+                0,
+                -0.31453057052658695,
+                4.825282674471304,
+                -5.058973565909255
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                31,
+                69,
+                -0.831654712738062,
+                0,
+                -2.682757137864716
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                15,
+                85,
+                -0.19719835075018377,
+                0,
+                -1.3146556716678919
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.017543859649122806,
+                0,
+                -1.7543859649122806
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                8,
+                92,
+                -0.22898979305010486,
+                0,
+                -2.8623724131263106
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                11,
+                89,
+                -2.0905620032835213,
+                0,
+                -19.005109120759286
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.15555555555555556,
+                0,
+                -7.777777777777778
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                11,
+                89,
+                -0.10386455959511794,
+                0,
+                -0.9442232690465268
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                5,
+                85,
+                0.05147545345147487,
+                0.6178714805247969,
+                -0.2062338920200962
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                -0.5140133969259947,
+                4.098698608995543,
+                -5.126725402847533
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                32,
+                68,
+                -0.9350189040303851,
+                0,
+                -2.9219340750949536
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                16,
+                84,
+                -0.2888976186409855,
+                0,
+                -1.8056101165061593
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.017543859649122806,
+                0,
+                -1.7543859649122806
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                9,
+                91,
+                -0.2521760914624769,
+                0,
+                -2.801956571805299
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                12,
+                88,
+                -2.2408561440742556,
+                0,
+                -18.673801200618797
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.1763888888888889,
+                0,
+                -8.819444444444445
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                12,
+                88,
+                -0.16730177909784819,
+                0,
+                -1.3941814924820681
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                7,
+                85,
+                -0.003747314106021269,
+                0.25832242467280886,
+                -0.3487586868549425
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.016215106732348113,
+                0,
+                -0.8107553366174056
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                40,
+                60,
+                0,
+                -0.44498776218005714,
+                4.57220341469032,
+                -3.7897818800936434
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                34,
+                66,
+                -1.288031297029516,
+                0,
+                -3.7883273442044585
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                16,
+                84,
+                -0.3446947653660568,
+                0,
+                -2.154342283537855
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.014705882352941175,
+                0,
+                -1.4705882352941175
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.02456140350877193,
+                0,
+                -2.456140350877193
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                11,
+                89,
+                -0.31405348863460447,
+                0,
+                -2.855031714860041
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                12,
+                88,
+                -2.654914502607669,
+                0,
+                -22.124287521730576
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.23194444444444443,
+                0,
+                -11.597222222222221
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                12,
+                88,
+                -0.24084390684826848,
+                0,
+                -2.007032557068904
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                12,
+                5,
+                83,
+                0.04544428588169026,
+                0.5387902534719582,
+                -0.3842108906988943
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                4,
+                96,
+                -0.03038744233325514,
+                0,
+                -0.7596860583313785
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                41,
+                59,
+                0,
+                0.48371450650416675,
+                6.617146086647779,
+                -3.7785006593583463
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                35,
+                65,
+                -1.4719001204324464,
+                0,
+                -4.205428915521276
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                17,
+                83,
+                -0.4992036668340045,
+                0,
+                -2.9364921578470855
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.016,
+                0,
+                -1.6
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.02941176470588235,
+                0,
+                -2.941176470588235
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.02456140350877193,
+                0,
+                -2.456140350877193
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                13,
+                87,
+                -0.41151796048069395,
+                0,
+                -3.1655227729284148
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                13,
+                87,
+                -3.494455903165533,
+                0,
+                -26.880430024350254
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.23194444444444443,
+                0,
+                -11.597222222222221
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                16,
+                84,
+                -0.36792203760562975,
+                0,
+                -2.299512735035186
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                -0.008046346009977398,
+                0.3871444968523491,
+                -0.6127050103812689
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                5,
+                95,
+                -0.03652241165840851,
+                0,
+                -0.7304482331681703
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                -0.5588043781758284,
+                4.268299138071723,
+                -4.6707814475718905
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                37,
+                63,
+                -1.9015089912123353,
+                0,
+                -5.139213489763068
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                20,
+                80,
+                -0.6091313530568159,
+                0,
+                -3.0456567652840794
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.024,
+                0,
+                -2.4
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.02941176470588235,
+                0,
+                -2.941176470588235
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.042105263157894736,
+                0,
+                -4.2105263157894735
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                16,
+                84,
+                -0.49124426233276475,
+                0,
+                -3.0702766395797796
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                16,
+                84,
+                -4.237592131981885,
+                0,
+                -26.48495082488678
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.2875,
+                0,
+                -14.375
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                16,
+                84,
+                -0.36844686707335234,
+                0,
+                -2.302792919208452
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                7,
+                83,
+                0.032969334773715685,
+                0.5079975910606245,
+                -0.25472034760495393
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                5,
+                95,
+                -0.03652241165840851,
+                0,
+                -0.7304482331681703
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                39,
+                61,
+                0,
+                -0.7987941068587116,
+                4.351115395635704,
+                -4.091359198617437
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.00033056940580149306,
+                0,
+                -0.033056940580149304
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                37,
+                63,
+                -1.9240851553244758,
+                0,
+                -5.20023014952561
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                20,
+                80,
+                -0.6109616244914625,
+                0,
+                -3.0548081224573127
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.007575757575757576,
+                0.7575757575757576,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.024,
+                0,
+                -2.4
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17647058823529413,
+                0,
+                -17.647058823529413
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.02941176470588235,
+                0,
+                -2.941176470588235
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.04,
+                4.0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.042105263157894736,
+                0,
+                -4.2105263157894735
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                16,
+                84,
+                -0.4926724308480677,
+                0,
+                -3.0792026928004232
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                16,
+                84,
+                -4.24381495938697,
+                0,
+                -26.523843496168567
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.07894736842105263,
+                0,
+                -7.894736842105263
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                2,
+                98,
+                -0.2875,
+                0,
+                -14.375
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                23,
+                77,
+                -1.127395026294411,
+                0,
+                -4.901717505627874
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                6,
+                84,
+                0.029239469884131956,
+                0.5230967327703714,
+                -0.3845033898817531
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                9,
+                90,
+                -0.18275268197116973,
+                0.08151771157551504,
+                -2.0396428787436096
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.00017970259220989265,
+                0,
+                -0.017970259220989264
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                0.5937285500135082,
+                6.2781701007914945,
+                -4.867793724263382
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.001828896565738671,
+                0.1828896565738671,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                41,
+                59,
+                -3.547768210395587,
+                0,
+                -8.653093196086798
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                28,
+                71,
+                -1.9407920863042727,
+                0.3393665158371041,
+                -6.943520540938013
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                3,
+                0,
+                97,
+                0.020438459213867045,
+                0.6812819737955681,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                3,
+                97,
+                -0.2127413857818482,
+                0,
+                -7.0913795260616075
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                1,
+                0,
+                99,
+                0.005571030640668524,
+                0.5571030640668524,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0001026694045174538,
+                0.01026694045174538,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                5,
+                95,
+                -0.325926237191015,
+                0,
+                -6.518524743820299
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.003305785123966942,
+                0,
+                -0.3305785123966942
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions with unsolved size and offset (memory-builtins)": [
+                0,
+                1,
+                99,
+                -0.14736842105263157,
+                0,
+                -14.736842105263156
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                20,
+                80,
+                -1.2470445311346288,
+                0,
+                -6.235222655673144
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                22,
+                78,
+                -8.14679486200409,
+                0,
+                -37.030885736382224
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                3,
+                97,
+                -0.8094438223217617,
+                0,
+                -26.981460744058722
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                9,
+                91,
+                -3.9086055969120483,
+                0,
+                -43.42895107680054
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            4,
+            -22.285731708752003
+        ],
+        [
+            7,
+            0.0
+        ],
+        [
+            9,
+            -32.40334147729994
+        ],
+        [
+            6,
+            -38.418326643853895
+        ],
+        [
+            9,
+            -24.411433291713376
+        ],
+        [
+            6,
+            -25.379403056684883
+        ],
+        [
+            9,
+            -77.0737471603241
+        ],
+        [
+            8,
+            -45.050547479749184
+        ],
+        [
+            9,
+            -22.720874848709013
+        ],
+        [
+            5,
+            -35.76059001888829
+        ],
+        [
+            7,
+            -36.08711268478378
+        ],
+        [
+            11,
+            -49.729373293946274
+        ],
+        [
+            10,
+            -42.49300793095251
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            99,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            1,
+            -0.033056940580149304
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -451.8134895956571,
+    "bitcode_size_saving_file": -0.033056940580149304
+}

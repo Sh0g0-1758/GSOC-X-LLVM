@@ -1,0 +1,4270 @@
+{
+    "knob_name": "dom-conditions-max-uses",
+    "original_val": 20,
+    "knob_values": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        60,
+        240
+    ],
+    "graph_stats_dict": {
+        "Number of MayAlias results (aa)": [
+            0.0045553590002505445,
+            0.0045553590002505445,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of instructions simplified or DCE'd (early-cse)": [
+            -0.03246314080887326,
+            -0.002705261734072772,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.002705261734072772,
+            0.002705261734072772,
+            0.002705261734072772,
+            0.002705261734072772,
+            0.002705261734072772
+        ],
+        "Number of insts combined (instcombine)": [
+            -0.15940333430827727,
+            -0.10773130544993663,
+            -0.07409573949497904,
+            -0.04484742127327678,
+            -0.027298430340255437,
+            0.0,
+            0.001949887881446817,
+            0.03607292580676611,
+            0.03851028565857463,
+            0.051184556887978946,
+            0.05947158038412791,
+            0.07458321146534073,
+            0.07702057131714926
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            -0.02633658151171978,
+            -0.02633658151171978,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of reassociations (instsimplify)": [
+            0.04067520846044336,
+            0.04067520846044336,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            -0.17153252197297003,
+            -0.08897940621076256,
+            -0.11880398495918482,
+            -0.1390715163738585,
+            0.11732099485567211,
+            0.0,
+            -0.1499467771329517,
+            -0.018619764632992905,
+            -0.03855774269133044,
+            -0.1656005615589192,
+            -0.11072992772894895,
+            -0.150605883845624,
+            -0.041523722898355854
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.009541188116450201,
+            -0.0047705940582251005,
+            -0.0023852970291125502,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "compile-time (instructions)": [
+            1.8610972730755775,
+            4.13006230397717,
+            -1.7151845925699107,
+            -0.8597523792019637,
+            -1.7406970777620396,
+            0.0,
+            0.200562462363833,
+            -0.014566598902453343,
+            -0.6465614903010973,
+            0.4851279241712971,
+            -2.206629174680907,
+            -1.6706492903686536,
+            -0.5739539150005954
+        ],
+        "bitcode-size (bytes)": [
+            0.0011048815739590461,
+            0.0011048815739590461,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0016573223609385693,
+            0.0016573223609385693,
+            0.0016573223609385693,
+            0.0016573223609385693,
+            0.0016573223609385693,
+            0.0016573223609385693,
+            0.0016573223609385693
+        ],
+        "Number of NoAlias results (aa)": [
+            0.004280478343454882,
+            0.004280478343454882,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of stores remaining after DSE (dse)": [
+            0.014483307987544356,
+            0.014483307987544356,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of instructions deleted (gvn)": [
+            0.07427351220870856,
+            0.07427351220870856,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of instructions simplified (gvn)": [
+            0.06405124099279423,
+            0.06405124099279423,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of fully cached non-local ptr responses (memdep)": [
+            0.14424190982537355,
+            0.14111753632735102,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.17184054239123925,
+            0.17184054239123925,
+            0.17184054239123925,
+            0.17184054239123925,
+            0.17184054239123925,
+            0.17184054239123925,
+            0.17184054239123925
+        ],
+        "Number of uncached non-local ptr responses (memdep)": [
+            0.04115826850906043,
+            0.03217828265253816,
+            0.0029933286188407585,
+            0.0,
+            0.0,
+            0.0,
+            -0.0029933286188407585,
+            -0.0029933286188407585,
+            -0.0029933286188407585,
+            -0.0029933286188407585,
+            -0.0029933286188407585,
+            -0.0029933286188407585,
+            -0.0029933286188407585
+        ],
+        "Number of block queries that were completely cached (memdep)": [
+            0.14204545454545456,
+            0.14204545454545456,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.487012987012987,
+            0.487012987012987,
+            0.487012987012987,
+            0.487012987012987,
+            0.487012987012987,
+            0.487012987012987,
+            0.487012987012987
+        ],
+        "Number of instructions CSE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685
+        ],
+        "Number of instructions removed (sccp)": [
+            0.08360330233044205,
+            0.020900825582610513,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.041801651165221027,
+            0.041801651165221027,
+            0.041801651165221027,
+            0.041801651165221027,
+            0.041801651165221027,
+            0.041801651165221027,
+            0.041801651165221027
+        ],
+        "Number of equalities propagated (gvn)": [
+            1.75054704595186,
+            1.75054704595186,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of MustAlias results (aa)": [
+            0.03394433129667345,
+            0.03394433129667345,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of other instrs removed (dse)": [
+            1.7857142857142856,
+            1.7857142857142856,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of stores deleted (dse)": [
+            0.3215434083601286,
+            0.3215434083601286,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loads deleted (gvn)": [
+            0.2066115702479339,
+            0.2066115702479339,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loads PRE'd (gvn)": [
+            0.1762114537444934,
+            0.1762114537444934,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of basic blocks unreachable (sccp)": [
+            0.31821797931583135,
+            0.07955449482895784,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.15910898965791567,
+            0.15910898965791567,
+            0.15910898965791567,
+            0.15910898965791567,
+            0.15910898965791567,
+            0.15910898965791567,
+            0.15910898965791567
+        ],
+        "Number of instructions removed (constraint-elimination)": [
+            20.33898305084746,
+            13.559322033898304,
+            13.559322033898304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of dead stores eliminated (instcombine)": [
+            -11.11111111111111,
+            -11.11111111111111,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of reassociations (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of instructions removed (sccp)",
+        "Number of equalities propagated (gvn)",
+        "Number of MustAlias results (aa)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)",
+        "Number of loads deleted (gvn)",
+        "Number of loads PRE'd (gvn)",
+        "Number of basic blocks unreachable (sccp)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of dead stores eliminated (instcombine)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of reassociations (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of function pointer arguments marked non-null (correlated-value-propagation)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of instructions removed (sccp)",
+        "Number of Queries into an assume assume bundles (assume-queries)",
+        "Number of equalities propagated (gvn)",
+        "Number of MustAlias results (aa)",
+        "Number iterations check for reads in getDomMemoryDef (dse)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)",
+        "Number of times a valid candidate is returned from getDomMemoryDef (dse)",
+        "Number of loads deleted (gvn)",
+        "Number of loads PRE'd (gvn)",
+        "Number of basic blocks unreachable (sccp)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of dead stores eliminated (instcombine)"
+    ],
+    "stats_per_file": [
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.00016211396611818109,
+                0.01621139661181811,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                2,
+                98,
+                -0.008177544736150056,
+                0,
+                -0.40887723680750276
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                7,
+                92,
+                -0.028607229801631454,
+                0.16903789266093816,
+                -0.43282298183201195
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0006701289998324678,
+                0,
+                -0.06701289998324678
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                1,
+                97,
+                0.0034380801827905917,
+                0.19587332841086225,
+                -0.047938638542665384
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                2,
+                97,
+                -0.005520894095851858,
+                0.15060240963855423,
+                -0.35134590961187007
+            ],
+            "Number of reassociations (instsimplify)": [
+                1,
+                0,
+                99,
+                0.0004570383912248629,
+                0.04570383912248629,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                -0.069555726190964,
+                0.17950773498486555,
+                -1.0713927792450237
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                5,
+                95,
+                -0.01639963215497749,
+                0,
+                -0.3279926430995498
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                2,
+                97,
+                0.0013963896663364782,
+                0.17439325679407064,
+                -0.0173771450802114
+            ],
+            "compile-time (instructions)": [
+                43,
+                57,
+                0,
+                -0.9701391208654948,
+                3.692000304848328,
+                -4.487191670088203
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                4.6871612793606717e-05,
+                0.004687161279360671,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0001412947010071663,
+                0.014129470100716631,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                0,
+                99,
+                0.0002567182242433689,
+                0.02567182242433689,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.0003812428516965307,
+                0.03812428516965307,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.003448275862068966,
+                0.3448275862068966,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                1,
+                0,
+                99,
+                0.0029069767441860465,
+                0.29069767441860467,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                2,
+                0,
+                98,
+                0.004072793635470987,
+                0.20363968177354935,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                2,
+                0,
+                98,
+                0.0022010131012336737,
+                0.11005065506168368,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.0026325686348251222,
+                0.2632568634825122,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                5,
+                0,
+                95,
+                16.864333374432746,
+                337.2866674886549,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                2,
+                0,
+                98,
+                0.03505929364519239,
+                1.7529646822596197,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                0,
+                98,
+                0.006258427032626381,
+                0.31292135163131907,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                1,
+                0,
+                99,
+                0.062015503875969,
+                6.2015503875969,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0008522122008380087,
+                0.08522122008380087,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                5.402995961260519e-05,
+                0.005402995961260519,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                1,
+                0,
+                99,
+                0.02857142857142857,
+                2.857142857142857,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                1,
+                0,
+                99,
+                0.0070921985815602835,
+                0.7092198581560284,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                0.006993006993006993,
+                0.6993006993006993,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.014925373134328356,
+                1.4925373134328357,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                1,
+                0,
+                99,
+                0.0056657223796034,
+                0.56657223796034,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                2,
+                0,
+                98,
+                0.4318501170960187,
+                21.592505854800937,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                1,
+                0,
+                99,
+                0.75,
+                75.0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.1111111111111111,
+                0,
+                -11.11111111111111
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.00016211396611818109,
+                0.01621139661181811,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0015360983102918587,
+                0,
+                -0.15360983102918588
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                7,
+                93,
+                -0.014679231308132274,
+                0,
+                -0.20970330440188964
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0006701289998324678,
+                0,
+                -0.06701289998324678
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                2,
+                96,
+                -0.044041497422310026,
+                0.20284682910821233,
+                -2.4049217002237135
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                2,
+                96,
+                0.016879581245799958,
+                1.2116648411829136,
+                -0.36768577889291576
+            ],
+            "Number of reassociations (instsimplify)": [
+                1,
+                0,
+                99,
+                0.0004570383912248629,
+                0.04570383912248629,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                7,
+                86,
+                -0.03973446523138494,
+                0.22493350497089723,
+                -0.7925687225621108
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                4,
+                96,
+                -0.016392859482986296,
+                0,
+                -0.4098214870746574
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.00017970259220989265,
+                0,
+                -0.017970259220989264
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                -0.7214255847010174,
+                4.154040029310855,
+                -5.044951695239846
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                4.6871612793606717e-05,
+                0.004687161279360671,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0001412947010071663,
+                0.014129470100716631,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                0,
+                99,
+                0.0002567182242433689,
+                0.02567182242433689,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                1,
+                0,
+                99,
+                0.0003812428516965307,
+                0.03812428516965307,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.003448275862068966,
+                0.3448275862068966,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                1,
+                0,
+                99,
+                0.0029069767441860465,
+                0.29069767441860467,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.0034961200807590836,
+                0.34961200807590836,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.0007009193453739324,
+                0.07009193453739324,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.0026325686348251222,
+                0.2632568634825122,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                4,
+                0,
+                96,
+                16.247757657536592,
+                406.1939414384148,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0005765350245027386,
+                0.057653502450273855,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                1,
+                0,
+                99,
+                0.0017152658662092624,
+                0.17152658662092624,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                1,
+                0,
+                99,
+                0.062015503875969,
+                6.2015503875969,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0008522122008380087,
+                0.08522122008380087,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                5.402995961260519e-05,
+                0.005402995961260519,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                1,
+                0,
+                99,
+                0.02857142857142857,
+                2.857142857142857,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                1,
+                0,
+                99,
+                0.0070921985815602835,
+                0.7092198581560284,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                0.006993006993006993,
+                0.6993006993006993,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.014925373134328356,
+                1.4925373134328357,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                1,
+                0,
+                99,
+                0.0056657223796034,
+                0.56657223796034,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.0032786885245901635,
+                0.32786885245901637,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                1,
+                0,
+                99,
+                0.5,
+                50.0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.1111111111111111,
+                0,
+                -11.11111111111111
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                4,
+                96,
+                -0.009214798150150603,
+                0,
+                -0.23036995375376507
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                1,
+                97,
+                0.003577550196737593,
+                0.20284682910821233,
+                -0.047938638542665384
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                2,
+                97,
+                -0.0058476914814727735,
+                0.15060240963855423,
+                -0.36768577889291576
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.05432211805776893,
+                0.2480310917455912,
+                -0.692039835625044
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.00831982019849875,
+                0.022232103156958647,
+                -0.8542141230068337
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -8.985129610494633e-05,
+                0,
+                -0.008985129610494632
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                -0.8663503085978336,
+                3.4728501985658404,
+                -4.5627062961817035
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                6.520179956966813e-05,
+                0.006520179956966812,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                3,
+                0,
+                97,
+                0.22436077712064897,
+                7.478692570688299,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                1,
+                0,
+                99,
+                0.0017152658662092624,
+                0.17152658662092624,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                1,
+                0,
+                99,
+                0.5,
+                50.0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                3,
+                97,
+                -0.007794107373412866,
+                0,
+                -0.25980357911376223
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0029411764705882353,
+                0.29411764705882354,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.004739336492890996,
+                0,
+                -0.47393364928909953
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                7,
+                85,
+                -0.06922858690772993,
+                0.09361583345032676,
+                -1.095969336910801
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.008542141230068337,
+                0,
+                -0.8542141230068337
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                -0.3701659062202471,
+                3.1081502257977633,
+                -3.33317594460596
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                3,
+                0,
+                97,
+                0.21742836810851723,
+                7.247612270283908,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                1,
+                0,
+                99,
+                0.0005717552887364208,
+                0.05717552887364208,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.005431013109360421,
+                0,
+                -0.27155065546802104
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0005578800557880056,
+                0.05578800557880056,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0013071895424836598,
+                0,
+                -0.130718954248366
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                6,
+                84,
+                0.032411434733373164,
+                0.5049668247757669,
+                -0.3014207957367255
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.002847380410022779,
+                0,
+                -0.2847380410022779
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                44,
+                56,
+                0,
+                -0.6765587994331083,
+                3.911077387368617,
+                -4.281130089063036
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                2,
+                0,
+                98,
+                0.21396216360245138,
+                10.698108180122569,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                9.040569555882022e-05,
+                0.009040569555882021,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                4,
+                11,
+                85,
+                -0.07250591842547756,
+                0.22235701332215996,
+                -0.7400018087123996
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                0.4023885779212405,
+                5.990128989535207,
+                -4.1693990315810945
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                3,
+                0,
+                97,
+                0.01199233217630399,
+                0.39974440587679966,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.021897031662083278,
+                0.35050667776252165,
+                -0.4292743232783457
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                -0.32236128391593305,
+                3.3313946205536307,
+                -4.125250082445479
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                2,
+                98,
+                -0.5041459369817578,
+                0,
+                -25.207296849087893
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0013157894736842105,
+                0.13157894736842105,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.012442174731409706,
+                0.31105436828524263,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                7,
+                86,
+                -0.020332350839106738,
+                0.3596286523845866,
+                -0.6500908072289684
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                -0.27451699938379437,
+                5.041468030543011,
+                -4.623959296596637
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                2,
+                98,
+                -0.5041459369817578,
+                0,
+                -25.207296849087893
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0020161290322580645,
+                0,
+                -0.20161290322580644
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0013157894736842105,
+                0.13157894736842105,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.013029811752542036,
+                0.3257452938135509,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0006325110689437065,
+                0,
+                -0.06325110689437065
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.0024875621890547263,
+                0.24875621890547264,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                7,
+                85,
+                -0.06860748055004304,
+                0.1494553116031203,
+                -1.1509129354041807
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                0.05710142077716562,
+                4.91532831341501,
+                -3.9178114913810695
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                2,
+                98,
+                -0.5041459369817578,
+                0,
+                -25.207296849087893
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0020161290322580645,
+                0,
+                -0.20161290322580644
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0013157894736842105,
+                0.13157894736842105,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.014155073917112834,
+                0.35387684792782087,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.002593295382669197,
+                0,
+                -0.12966476913345984
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.0056471198509820564,
+                0.2823559925491028,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.04261529729108366,
+                0.39640802139526005,
+                -0.6639977857479927
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                -1.0569004074991273,
+                3.3143141850337963,
+                -4.933260517858513
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                2,
+                98,
+                -0.5041459369817578,
+                0,
+                -25.207296849087893
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0020161290322580645,
+                0,
+                -0.20161290322580644
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0013157894736842105,
+                0.13157894736842105,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.015866224364665255,
+                0.39665560911663134,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.004554079696394687,
+                0,
+                -0.22770398481973433
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.008806677512909387,
+                0.44033387564546933,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.05657398105649297,
+                0.3034975886028963,
+                -0.7478383637266675
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                42,
+                58,
+                0,
+                -0.8092880217815318,
+                4.561534138451536,
+                -4.698504068846859
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                3,
+                97,
+                -0.5570055556992622,
+                0,
+                -18.566851856642074
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0020161290322580645,
+                0,
+                -0.20161290322580644
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                1,
+                0,
+                99,
+                0.0013157894736842105,
+                0.13157894736842105,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.01597923148411378,
+                0.3994807871028445,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.004554079696394687,
+                0,
+                -0.22770398481973433
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.008806677512909387,
+                0.44033387564546933,
+                0
+            ],
+            "Number of reassociations (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                -0.006053304179779978,
+                0.27292750749614814,
+                -0.43738256934904735
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.014236902050113895,
+                1.4236902050113895,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                44,
+                56,
+                0,
+                -0.7180183040543908,
+                4.529531810058201,
+                -4.841093393714283
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                7.030741919041006e-05,
+                0.0070307419190410066,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores remaining after DSE (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.004257267995020286,
+                0.42572679950202863,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -6.520179956966813e-05,
+                0,
+                -0.006520179956966812
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.009025949605114705,
+                0.9025949605114705,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                3,
+                97,
+                -0.5570055556992622,
+                0,
+                -18.566851856642074
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.0020161290322580645,
+                0,
+                -0.20161290322580644
+            ],
+            "Number of instructions removed (sccp)": [
+                1,
+                0,
+                99,
+                0.0011530700490054772,
+                0.11530700490054771,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of equalities propagated (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of other instrs removed (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of basic blocks unreachable (sccp)": [
+                1,
+                0,
+                99,
+                0.006557377049180327,
+                0.6557377049180327,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead stores eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            7,
+            -39.864007203945796
+        ],
+        [
+            6,
+            -17.706371402748164
+        ],
+        [
+            10,
+            -28.873939025291754
+        ],
+        [
+            7,
+            -41.21542311812198
+        ],
+        [
+            7,
+            -36.18509005517639
+        ],
+        [
+            4,
+            0.0
+        ],
+        [
+            12,
+            -58.005115147595106
+        ],
+        [
+            3,
+            -8.98298712615295
+        ],
+        [
+            10,
+            -29.058133844878434
+        ],
+        [
+            7,
+            -14.604667515594585
+        ],
+        [
+            8,
+            -55.102775449548396
+        ],
+        [
+            9,
+            -73.4469712618834
+        ],
+        [
+            10,
+            -44.43234626269337
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            99,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            1,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -447.4778274136304,
+    "bitcode_size_saving_file": 0.0
+}

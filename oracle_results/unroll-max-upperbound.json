@@ -1,0 +1,3229 @@
+{
+    "knob_name": "unroll-max-upperbound",
+    "original_val": 8,
+    "knob_values": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        24,
+        96
+    ],
+    "graph_stats_dict": {
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.9852216748768473,
+            -0.9852216748768473
+        ],
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.01943068104537064,
+            -0.01943068104537064
+        ],
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.021372088053002777,
+            -0.021372088053002777
+        ],
+        "Number of insts combined (instcombine)": [
+            -0.029248318221702253,
+            -0.029248318221702253,
+            -0.023398654577361802,
+            -0.023398654577361802,
+            -0.023398654577361802,
+            0.0,
+            0.0063371356147021544,
+            0.0063371356147021544,
+            0.0063371356147021544,
+            0.0063371356147021544,
+            0.0063371356147021544,
+            0.03363556595495759,
+            0.1711026615969582
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.008778860503906593,
+            -0.008778860503906593
+        ],
+        "Number of redundant instructions removed (instsimplify)": [
+            0.19411193788417988,
+            0.19411193788417988,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.29116790682626986,
+            -1.8764153995470723
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.024906928909686817,
+            0.03810265283534871,
+            -0.011876151533095701,
+            0.05542204048777994,
+            0.01698949455428968,
+            0.0,
+            -0.04239126311118882,
+            0.06020549041083237,
+            0.11991614117445241,
+            0.022762623771766757,
+            -0.0049483964721232085,
+            -0.008412274002609453,
+            0.2650691043567332
+        ],
+        "Number of loop exits with predictable exit counts (scalar-evolution)": [
+            -0.009934432743890324,
+            -0.009934432743890324,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0397377309755613,
+            -0.0397377309755613
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            -0.0023852970291125502,
+            -0.0023852970291125502,
+            -0.0047705940582251005,
+            -0.0047705940582251005,
+            -0.0047705940582251005,
+            0.0,
+            0.0023852970291125502,
+            0.0023852970291125502,
+            0.0023852970291125502,
+            0.0023852970291125502,
+            0.0023852970291125502,
+            -0.003577945543668825,
+            0.17531933163977242
+        ],
+        "compile-time (instructions)": [
+            5.017145816389455,
+            5.874086736193068,
+            -1.0614672424138434,
+            -0.8713545252865669,
+            -0.16111280276627354,
+            0.0,
+            -0.11380623452509496,
+            1.196685691816223,
+            -0.4327779585966628,
+            0.8152493742127046,
+            0.025969862806832528,
+            -0.5246266137462451,
+            -0.7376528215449691
+        ],
+        "bitcode-size (bytes)": [
+            -0.06073395901856132,
+            -0.06073395901856132,
+            -0.03024613308712889,
+            -0.03024613308712889,
+            -0.03024613308712889,
+            0.0,
+            0.006940037386430259,
+            0.006940037386430259,
+            0.006940037386430259,
+            0.006940037386430259,
+            0.006940037386430259,
+            0.020474836667428574,
+            0.13027244307960878
+        ],
+        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+            -0.3389830508474576,
+            -0.3389830508474576,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.1235955056179776,
+            -1.1235955056179776
+        ],
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+            -1.400560224089636,
+            -1.400560224089636,
+            -0.5602240896358543,
+            -0.5602240896358543,
+            -0.5602240896358543,
+            0.0,
+            0.1400560224089636,
+            0.1400560224089636,
+            0.1400560224089636,
+            0.1400560224089636,
+            0.1400560224089636,
+            -0.2801120448179272,
+            6.582633053221289
+        ],
+        "Number of instructions sunk (instcombine)": [
+            -0.6021505376344086,
+            -0.6021505376344086,
+            -0.6021505376344086,
+            -0.6021505376344086,
+            -0.6021505376344086,
+            0.0,
+            0.17204301075268819,
+            0.17204301075268819,
+            0.17204301075268819,
+            0.17204301075268819,
+            0.17204301075268819,
+            0.17204301075268819,
+            0.946236559139785
+        ],
+        "Number of speculative executed instructions (simplifycfg)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.4555712270803953
+        ],
+        "Number of unreachable basic blocks removed (local)": [
+            -0.07092198581560284,
+            -0.07092198581560284,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            211.06382978723403
+        ],
+        "Number of loops completely unrolled (loop-unroll)": [
+            -2.932551319648094,
+            -2.932551319648094,
+            -1.1730205278592376,
+            -1.1730205278592376,
+            -1.1730205278592376,
+            0.0,
+            0.2932551319648094,
+            0.2932551319648094,
+            0.2932551319648094,
+            0.2932551319648094,
+            0.2932551319648094,
+            0.5865102639296188,
+            14.95601173020528
+        ],
+        "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+            -2.631578947368421,
+            -2.631578947368421,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.631578947368421,
+            2.631578947368421,
+            2.631578947368421,
+            2.631578947368421,
+            2.631578947368421,
+            2.631578947368421,
+            2.631578947368421
+        ],
+        "Number of global variables removed (globaldce)": [
+            -3.571428571428571,
+            -3.571428571428571,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of PHI's that got CSE'd (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            23.711340206185564
+        ]
+    },
+    "graph_stats": [
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of instructions sunk (instcombine)",
+        "Number of speculative executed instructions (simplifycfg)",
+        "Number of unreachable basic blocks removed (local)",
+        "Number of loops completely unrolled (loop-unroll)",
+        "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)",
+        "Number of global variables removed (globaldce)",
+        "Number of PHI's that got CSE'd (instcombine)"
+    ],
+    "table_stats": [
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of live out of a loop variables (lcssa)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of instructions sunk (instcombine)",
+        "Number of speculative executed instructions (simplifycfg)",
+        "Number of Queries into an assume assume bundles (assume-queries)",
+        "Number of unreachable basic blocks removed (local)",
+        "Number of loops completely unrolled (loop-unroll)",
+        "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)",
+        "Number of global variables removed (globaldce)",
+        "Number of PHI's that got CSE'd (instcombine)"
+    ],
+    "stats_per_file": [
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                3,
+                97,
+                -0.21623805295970097,
+                0,
+                -7.207935098656699
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.026143790849673203,
+                2.6143790849673203,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0851063829787234,
+                0,
+                -8.51063829787234
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                2,
+                0,
+                98,
+                0.1395097332372026,
+                6.9754866618601294,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                0.2058954876932677,
+                2.668043241178253,
+                -0.42785505015968806
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.3295474751066856,
+                0,
+                -16.47737375533428
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                2,
+                0,
+                98,
+                0.01819768658749936,
+                0.9098843293749679,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                1,
+                99,
+                -0.008620689655172414,
+                0,
+                -0.8620689655172413
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                2,
+                97,
+                -0.05339422604107352,
+                0.21331058020477817,
+                -2.7763665921560654
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                -0.15670324021659357,
+                3.9955754851209515,
+                -4.308981965554138
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                3,
+                97,
+                -0.23224833836139022,
+                0,
+                -7.741611278713008
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.1,
+                0,
+                -10.0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                3,
+                97,
+                -1.339080459770115,
+                0,
+                -44.63601532567049
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.6829268292682927,
+                0,
+                -68.29268292682927
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                1,
+                99,
+                -0.002537575639273863,
+                0,
+                -0.2537575639273863
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                1,
+                99,
+                -0.09090909090909091,
+                0,
+                -9.090909090909092
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                3,
+                97,
+                -1.6666666666666665,
+                0,
+                -55.55555555555555
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                1,
+                99,
+                -0.2,
+                0,
+                -20.0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                3,
+                97,
+                -0.21623805295970097,
+                0,
+                -7.207935098656699
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.026143790849673203,
+                2.6143790849673203,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0851063829787234,
+                0,
+                -8.51063829787234
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                2,
+                0,
+                98,
+                0.1395097332372026,
+                6.9754866618601294,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                11,
+                82,
+                0.20182751864216644,
+                3.2271562820390085,
+                -0.21884928273240145
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.3295474751066856,
+                0,
+                -16.47737375533428
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                2,
+                0,
+                98,
+                0.01819768658749936,
+                0.9098843293749679,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                1,
+                99,
+                -0.008620689655172414,
+                0,
+                -0.8620689655172413
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                2,
+                97,
+                -0.05339422604107352,
+                0.21331058020477817,
+                -2.7763665921560654
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                0.009309132131480427,
+                4.47639146443715,
+                -3.9520657663282646
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                3,
+                97,
+                -0.23224833836139022,
+                0,
+                -7.741611278713008
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.1,
+                0,
+                -10.0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                3,
+                97,
+                -1.339080459770115,
+                0,
+                -44.63601532567049
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.6829268292682927,
+                0,
+                -68.29268292682927
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                1,
+                99,
+                -0.002537575639273863,
+                0,
+                -0.2537575639273863
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                1,
+                99,
+                -0.09090909090909091,
+                0,
+                -9.090909090909092
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                3,
+                97,
+                -1.6666666666666665,
+                0,
+                -55.55555555555555
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                1,
+                99,
+                -0.2,
+                0,
+                -20.0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.21333333333333335,
+                0,
+                -21.333333333333336
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.026143790849673203,
+                2.6143790849673203,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0851063829787234,
+                0,
+                -8.51063829787234
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                0.19271360008246724,
+                2.557261928085951,
+                -0.4679996680658544
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.328125,
+                0,
+                -32.8125
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.05263157894736842,
+                0,
+                -5.263157894736842
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                -0.06624497282286244,
+                4.555483436841667,
+                -4.003272877351905
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.21246665049721078,
+                0,
+                -21.246665049721077
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.6829268292682927,
+                0,
+                -68.29268292682927
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.21333333333333335,
+                0,
+                -21.333333333333336
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.026143790849673203,
+                2.6143790849673203,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0851063829787234,
+                0,
+                -8.51063829787234
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                6,
+                84,
+                0.23943898558507926,
+                2.593416256142278,
+                -0.3317106671524757
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.328125,
+                0,
+                -32.8125
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.05263157894736842,
+                0,
+                -5.263157894736842
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                0.00952675104459956,
+                4.558376147155848,
+                -3.8654190308279452
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.21246665049721078,
+                0,
+                -21.246665049721077
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.6829268292682927,
+                0,
+                -68.29268292682927
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.21333333333333335,
+                0,
+                -21.333333333333336
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.026143790849673203,
+                2.6143790849673203,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0851063829787234,
+                0,
+                -8.51063829787234
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                10,
+                82,
+                0.19345684210970343,
+                2.8678956765401056,
+                -0.3597481201350498
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.328125,
+                0,
+                -32.8125
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.05263157894736842,
+                0,
+                -5.263157894736842
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                -0.13620277360546987,
+                3.235170035805951,
+                -3.788523317134508
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                1,
+                99,
+                -0.21246665049721078,
+                0,
+                -21.246665049721077
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                1,
+                99,
+                -0.6829268292682927,
+                0,
+                -68.29268292682927
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.057777777777777775,
+                5.777777777777778,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                11,
+                82,
+                -0.07040507116106598,
+                0.2426606537704373,
+                -0.7944665174999689
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.125,
+                12.5,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.02631578947368421,
+                2.631578947368421,
+                0
+            ],
+            "compile-time (instructions)": [
+                53,
+                47,
+                0,
+                0.34590423774559176,
+                3.8791767384406297,
+                -3.6384243268679586
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.04875090953189425,
+                4.875090953189425,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.057777777777777775,
+                5.777777777777778,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                -0.04867760616224467,
+                0.3394716283064722,
+                -0.8426148491862494
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.125,
+                12.5,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.02631578947368421,
+                2.631578947368421,
+                0
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                0.9223393675697636,
+                4.613345862135746,
+                -3.9703901717386305
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.04875090953189425,
+                4.875090953189425,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.057777777777777775,
+                5.777777777777778,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                7,
+                83,
+                0.005281899378306829,
+                0.6955400420218215,
+                -0.9181729260553616
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.125,
+                12.5,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.02631578947368421,
+                2.631578947368421,
+                0
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                -0.016536430903092456,
+                4.604408021104311,
+                -4.637480882910496
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.04875090953189425,
+                4.875090953189425,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.057777777777777775,
+                5.777777777777778,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                10,
+                83,
+                -0.0438685489216452,
+                0.5675216232548407,
+                -0.8359506254948403
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.125,
+                12.5,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.02631578947368421,
+                2.631578947368421,
+                0
+            ],
+            "compile-time (instructions)": [
+                44,
+                56,
+                0,
+                0.0778530862131312,
+                5.207197401894768,
+                -3.9523460189652995
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.04875090953189425,
+                4.875090953189425,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.057777777777777775,
+                5.777777777777778,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                11,
+                82,
+                -0.05872107853654932,
+                0.26512908762432186,
+                -0.7025464970022895
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                0,
+                99,
+                0.125,
+                12.5,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.02631578947368421,
+                2.631578947368421,
+                0
+            ],
+            "compile-time (instructions)": [
+                56,
+                44,
+                0,
+                0.4634493353185229,
+                4.537979855186376,
+                -4.722316780876923
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                0.04875090953189425,
+                4.875090953189425,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                1,
+                0,
+                99,
+                0.25,
+                25.0,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of insts combined (instcombine)": [
+                2,
+                0,
+                98,
+                0.19436314363143634,
+                9.718157181571817,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.09090909090909091,
+                0,
+                -9.090909090909092
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.2571428571428571,
+                0,
+                -25.71428571428571
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                12,
+                81,
+                -0.08771835382266198,
+                0.40607533949204627,
+                -0.967863563225877
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                0,
+                98,
+                0.2438118811881188,
+                12.19059405940594,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.1005586592178771,
+                0,
+                -10.05586592178771
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                1,
+                99,
+                -0.04395604395604396,
+                0,
+                -4.395604395604396
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.0005659309564233173,
+                2.631578947368421,
+                -2.6881720430107525
+            ],
+            "compile-time (instructions)": [
+                48,
+                52,
+                0,
+                0.20387766802727683,
+                4.241618874660633,
+                -3.523268061172743
+            ],
+            "bitcode-size (bytes)": [
+                2,
+                0,
+                98,
+                0.09968646046744518,
+                4.9843230233722595,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                1,
+                99,
+                -0.36363636363636365,
+                0,
+                -36.36363636363637
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                1,
+                1,
+                98,
+                -0.022727272727272697,
+                25.0,
+                -27.27272727272727
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.1951219512195122,
+                19.51219512195122,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                2,
+                0,
+                98,
+                1.25,
+                62.5,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of insts combined (instcombine)": [
+                4,
+                0,
+                96,
+                0.26216406011047066,
+                6.554101502761767,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.09090909090909091,
+                0,
+                -9.090909090909092
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006535947712418301,
+                0,
+                -0.6535947712418301
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                1,
+                0,
+                99,
+                0.02127659574468085,
+                2.127659574468085,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                3,
+                97,
+                -0.6558289069052279,
+                0,
+                -21.860963563507596
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                10,
+                81,
+                -0.010723257594636302,
+                1.0919237374672566,
+                -1.089963939666894
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                0,
+                98,
+                0.2438118811881188,
+                12.19059405940594,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                3,
+                97,
+                -0.14986855103586608,
+                0,
+                -4.995618367862202
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                1,
+                99,
+                -0.04395604395604396,
+                0,
+                -4.395604395604396
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                3,
+                1,
+                96,
+                0.07162565466662879,
+                3.2835791698912105,
+                -2.6881720430107525
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                0.3207141249068563,
+                4.157069855330324,
+                -3.3651962827549062
+            ],
+            "bitcode-size (bytes)": [
+                4,
+                0,
+                96,
+                0.15604688479446022,
+                3.9011721198615055,
+                0
+            ],
+            "Number of value comparisons folded into predecessor basic blocks (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                1,
+                99,
+                -0.36363636363636365,
+                0,
+                -36.36363636363637
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                3,
+                1,
+                96,
+                2.538071275367101,
+                93.69328493647913,
+                -27.27272727272727
+            ],
+            "Number of instructions sunk (instcombine)": [
+                2,
+                0,
+                98,
+                0.537979094076655,
+                26.89895470383275,
+                0
+            ],
+            "Number of speculative executed instructions (simplifycfg)": [
+                2,
+                0,
+                98,
+                48.016949152542374,
+                2400.8474576271187,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of unreachable basic blocks removed (local)": [
+                1,
+                0,
+                99,
+                15.261538461538462,
+                1526.1538461538462,
+                0
+            ],
+            "Number of loops completely unrolled (loop-unroll)": [
+                4,
+                0,
+                96,
+                3.8763157894736846,
+                96.90789473684211,
+                0
+            ],
+            "Number of loops unrolled without a conditional latch (completely or otherwise) (loop-unroll)": [
+                1,
+                0,
+                99,
+                1.0,
+                100.0,
+                0
+            ],
+            "Number of global variables removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of PHI's that got CSE'd (instcombine)": [
+                1,
+                0,
+                99,
+                23.0,
+                2300.0,
+                0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            6,
+            -26.85226038321579
+        ],
+        [
+            4,
+            -6.690234683879487
+        ],
+        [
+            8,
+            -43.67995209580638
+        ],
+        [
+            12,
+            -38.725803136650924
+        ],
+        [
+            4,
+            -22.006847109513945
+        ],
+        [
+            7,
+            0.0
+        ],
+        [
+            10,
+            -23.58669326768073
+        ],
+        [
+            7,
+            -41.81254044356152
+        ],
+        [
+            10,
+            -54.82812610482839
+        ],
+        [
+            8,
+            -57.70719549883678
+        ],
+        [
+            7,
+            -21.575970507909886
+        ],
+        [
+            11,
+            -64.9071956772373
+        ],
+        [
+            6,
+            -16.817583944631853
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            100,
+            -23.224833836139023
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -419.19040285375286,
+    "bitcode_size_saving_file": -23.224833836139023
+}
