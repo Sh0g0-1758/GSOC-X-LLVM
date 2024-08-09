@@ -639,7 +639,7 @@ if __name__ == "__main__":
                     average_neg = neg / num_neg
                 final_results_arr[i][key] = [
                     num_pos, num_neg, num_zero, average_tot / total_files, average_pos, average_neg]
-        
+
         filtered_stats = {}
 
         # Filter those stats which remain the same as base accross all files
@@ -655,7 +655,7 @@ if __name__ == "__main__":
         final_filtered_results_arr = []
         for i in range(len(values)):
             final_filtered_results_arr.append({})
-        
+
         # Remove those stats from the final results also
         for i, stats_dict in enumerate(final_results_arr):
             for key, value in stats_dict.items():
@@ -663,7 +663,8 @@ if __name__ == "__main__":
                     final_filtered_results_arr[i][key] = value
 
         # # Converting into appropriate format for plotting the graph
-        generate_step_function_graph(knob, final_filtered_results_arr, list(filtered_stats.keys()))
+        generate_step_function_graph(
+            knob, final_filtered_results_arr, list(filtered_stats.keys()))
 
         print(Fore.GREEN +
               f"##  Successfully collected all stats for {knob}" + Fore.RESET)
