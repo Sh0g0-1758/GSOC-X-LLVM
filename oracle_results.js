@@ -350,6 +350,153 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 tableBody.appendChild(tr);
             });
+            
+            function createHistogram(containerId, data, title) {
+                const chartDom = document.getElementById(containerId);
+                const myChart = echarts.init(chartDom);
+            
+                const option = {
+                    title: {
+                        text: title,
+                        left: 'center',
+                        textStyle: {
+                            fontSize: 16,
+                            fontWeight: 'bold',
+                            color: '#333'
+                        }
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: knobValues,
+                        name: "Knob Value",
+                        nameLocation: 'middle',
+                        nameGap: 20,
+                        nameTextStyle: {
+                            fontSize: 12,
+                            fontWeight: 'bold',
+                            align: 'center'
+                        },
+                        axisLabel: {
+                            rotate: 45,
+                            interval: 0,
+                            fontSize: 12,
+                            color: '#555'
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: '#aaa'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: "Percentage Change",
+                        nameLocation: 'middle',
+                        nameRotate: 90,
+                        nameGap: 50,
+                        nameTextStyle: {
+                            fontSize: 12,
+                            fontWeight: 'bold',
+                            align: 'center'
+                        },
+                        axisLabel: {
+                            fontSize: 12,
+                            color: '#555'
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: '#aaa'
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                type: 'dashed',
+                                color: '#ddd'
+                            }
+                        }
+                    },
+                    grid: {
+                        left: '5%',
+                        right: '5%',
+                        bottom: '20%',
+                        containLabel: true
+                    },
+                    series: [
+                        {
+                            name: 'Cumulative % improvement (reduction)',
+                            data: data.map(item => 0 - item[1]),
+                            type: 'bar',
+                            barWidth: '35%',
+                            itemStyle: {
+                                color: 'green'
+                            }
+                        },
+                        {
+                            name: 'Number of files which favor the knob value',
+                            data: data.map(item => item[0]),
+                            type: 'bar',
+                            barWidth: '35%',
+                            itemStyle: {
+                                color: 'blue'
+                            }
+                        }
+                    ]
+                };
+            
+                myChart.setOption(option);
+            }
+            
+        
+            // Render histograms
+            const compileTimeData = jsonData.compile_time_knobs_file;
+            const bitcodeSizeData = jsonData.bitcode_size_knobs_file;
+        
+            createHistogram('histogram1', compileTimeData, 'Improvement (reduction) in Compile Time by applying Oracle-recommended knob values on a per file basis');
+            createHistogram('histogram2', bitcodeSizeData, 'Improvement (reduction) in Bitcode Size by applying Oracle-recommended knob values on a per file basis');
+            
+            window.addEventListener('resize', function () {
+                myChart.resize();
+                newChart.resize();
+                echarts.init(document.getElementById('histogram1')).resize();
+                echarts.init(document.getElementById('histogram2')).resize();
+            });
+
+            // Add summary for oracle values
+
+            // Add data to the summary table
+            const summaryTableBody = document.getElementById('summaryTableBody');
+
+            // Values from JSON
+            const compileTimeSaving = 0 - jsonData.compile_time_saving_file;
+            const bitcodeSizeSaving = 0 - jsonData.bitcode_size_saving_file;
+
+            // Create rows for the summary table
+            const compileTimeRow = document.createElement('tr');
+            const compileTimeMetricCell = document.createElement('td');
+            const compileTimeValueCell = document.createElement('td');
+            compileTimeMetricCell.textContent = 'Compile Time';
+            compileTimeValueCell.textContent = compileTimeSaving.toFixed(2) + " %";
+            compileTimeRow.appendChild(compileTimeMetricCell);
+            compileTimeRow.appendChild(compileTimeValueCell);
+
+            const bitcodeSizeRow = document.createElement('tr');
+            const bitcodeSizeMetricCell = document.createElement('td');
+            const bitcodeSizeValueCell = document.createElement('td');
+            bitcodeSizeMetricCell.textContent = 'Bitcode Size';
+            bitcodeSizeValueCell.textContent = bitcodeSizeSaving.toFixed(2) + " %";
+            bitcodeSizeRow.appendChild(bitcodeSizeMetricCell);
+            bitcodeSizeRow.appendChild(bitcodeSizeValueCell);
+
+            // Append rows to the summary table
+            summaryTableBody.appendChild(compileTimeRow);
+            summaryTableBody.appendChild(bitcodeSizeRow);
+
         })
         .catch(error => console.error('Error loading JSON:', error));
 });

@@ -10,25 +10,25 @@
             margin: 0;
             padding: 0;
         }
-        #main, #secondary {
+        #main, #secondary, #histogram1, #histogram2 {
             width: 100%;
             height: 100vh;
         }
-        #correlationTable {
+        #correlationTable, #summaryTable {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
             border: 2px solid #444; /* Bold border */
         }
-        #correlationTable th, #correlationTable td {
+        #correlationTable th, #correlationTable td, #summaryTable th, #summaryTable td {
             border: 2px solid #444; /* Bold border */
             padding: 8px;
             text-align: center; /* Center text in table cells */
         }
-        #correlationTable th {
+        #correlationTable th, #summaryTable th {
             background-color: #f2f2f2;
         }
-        #correlationTable tbody tr:nth-child(even) {
+        #correlationTable tbody tr:nth-child(even), #summaryTable tbody tr:nth-child(even) {
             background-color: #f9f9f9;
         }
         table {
@@ -71,6 +71,18 @@
 <body>
     <div id="main"></div>
     <div id="secondary"></div>
+    <div id="histogram1"></div>
+    <div id="histogram2"></div>
+    <table id="summaryTable">
+        <thead>
+            <tr>
+                <th>Overall improvement (reduction) in Metric by applying Oracle-recommended knob values</th>
+                <th>Improvement</th>
+            </tr>
+        </thead>
+        <tbody id="summaryTableBody">
+        </tbody>
+    </table>
     <table id="data-table">
         <thead>
             <tr id="header-row">
