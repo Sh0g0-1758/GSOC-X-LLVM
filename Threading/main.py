@@ -442,7 +442,7 @@ def thread_function(queue, data_chunk, knob_name, values):
     queue.put(result)
 
 
-def convert_to_percentage(stat_values, iter, range):
+def convert_to_percentage(stat_values, iter):
     val = stat_values[iter]
     if val == 0:
         for i, stat in enumerate(stat_values):
@@ -451,10 +451,6 @@ def convert_to_percentage(stat_values, iter, range):
     # Converting other stats as a percentage of the original value
     for i, stat in enumerate(stat_values):
         stat_values[i] = ((stat - val) / val) * 100
-        if stat_values[i] < range[0]:
-            range[0] = stat_values[i]
-        if stat_values[i] > range[1]:
-            range[1] = stat_values[i]
 
     return stat_values
 
@@ -469,12 +465,9 @@ def generate_step_function_graph(knob_name, final_results_arr, all_stats, compil
             break
 
     keys = []
-    # To store the min and max values across the y axis
-    # First represents the min value and second represents the max value
-    range = [0,0]
 
     for key, value in final_graph_all_stats_dict.items():
-        y = convert_to_percentage(value, iter,range)
+        y = convert_to_percentage(value, iter)
         # To remove redundant statistics
         if key == 'compile-time (instructions)' or key == 'bitcode-size (bytes)':
             keys.append(key)
@@ -490,8 +483,6 @@ def generate_step_function_graph(knob_name, final_results_arr, all_stats, compil
     json_data = {
         "knob_name": knob_name,
         "original_val": knob_val,
-        "y_min_graph": range[0],
-        "y_max_graph": range[1],
         "knob_values": x,
         "graph_stats_dict": final_graph_all_stats_dict,
         "graph_stats": keys,
