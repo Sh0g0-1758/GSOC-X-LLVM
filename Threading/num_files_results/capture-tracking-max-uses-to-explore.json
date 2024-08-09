@@ -111,11 +111,11 @@
             ],
             "Number of insts scanned while updating ibt (ipt)": [
                 6,
-                10,
-                84,
-                0.028331893710881132,
-                0.888805751467364,
-                -0.24996451377160717
+                11,
+                83,
+                -0.022903489471403728,
+                0.5266083419977788,
+                -0.4954544544660951
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -158,12 +158,12 @@
                 0
             ],
             "compile-time (instructions)": [
-                50,
-                50,
+                46,
+                54,
                 0,
-                -0.21947115168021208,
-                3.311866624040501,
-                -3.7508089274009255
+                -0.23353096979079802,
+                5.07830629999846,
+                -4.758429384796462
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -448,12 +448,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                8,
+                7,
                 9,
-                83,
-                -0.02827437861667009,
-                0.38952684154403133,
-                -0.6604058437799178
+                84,
+                -0.003001049938411903,
+                0.5899124243266866,
+                -0.49216577379199955
             ],
             "Number of renumberings across all blocks (ir)": [
                 2,
@@ -496,12 +496,12 @@
                 0
             ],
             "compile-time (instructions)": [
-                50,
-                50,
+                51,
+                49,
                 0,
-                0.12540409821219575,
-                4.381277475596015,
-                -4.130469279171624
+                0.14487240763474568,
+                4.229780438465717,
+                -4.106766563230141
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -786,12 +786,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                6,
+                8,
                 9,
-                85,
-                -0.02745501259236019,
-                0.27536492614286684,
-                -0.4886323128992467
+                83,
+                -0.03679195460811577,
+                0.2214356863140804,
+                -0.6056312168138022
             ],
             "Number of renumberings across all blocks (ir)": [
                 2,
@@ -834,12 +834,12 @@
                 0
             ],
             "compile-time (instructions)": [
-                51,
-                49,
+                47,
+                53,
                 0,
-                -0.32672484198230495,
-                3.6881888814454737,
-                -4.505512594937749
+                -0.9435767456358518,
+                3.068122121470948,
+                -4.501121024013578
             ],
             "bitcode-size (bytes)": [
                 0,
@@ -1125,11 +1125,11 @@
             ],
             "Number of insts scanned while updating ibt (ipt)": [
                 7,
-                8,
-                85,
-                -0.020121279155344656,
-                0.2818992399370125,
-                -0.4981778243866941
+                10,
+                83,
+                -0.025998403291036518,
+                0.25590706284423337,
+                -0.43911897690132856
             ],
             "Number of renumberings across all blocks (ir)": [
                 2,
@@ -1172,12 +1172,12 @@
                 0
             ],
             "compile-time (instructions)": [
-                52,
-                48,
+                54,
+                46,
                 0,
-                0.7129276132453749,
-                4.300148180737383,
-                -3.1732280015376335
+                -0.6576702635458542,
+                2.4917334695896063,
+                -4.354796385052701
             ],
             "bitcode-size (bytes)": [
                 0,
@@ -1465,9 +1465,9 @@
                 9,
                 8,
                 83,
-                -0.010320789071239192,
-                0.49839254681167866,
-                -0.6897014785536284
+                0.007011866154405213,
+                0.4414929010252694,
+                -0.40903118672336286
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -1510,12 +1510,12 @@
                 0
             ],
             "compile-time (instructions)": [
-                47,
-                53,
+                57,
+                43,
                 0,
-                0.4730844035152162,
-                4.7876963874853375,
-                -3.353080940760175
+                0.8506212668355576,
+                4.711099441340196,
+                -4.2667567784380305
             ],
             "bitcode-size (bytes)": [
                 0,
@@ -2138,12 +2138,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                8,
-                9,
-                83,
-                -0.029374743638488052,
-                0.34600515539749804,
-                -0.6339461785587545
+                5,
+                11,
+                84,
+                -0.03794375792774779,
+                0.28057649993171874,
+                -0.47247802658485205
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -2186,12 +2186,12 @@
                 -0.015603058199407084
             ],
             "compile-time (instructions)": [
-                53,
-                47,
+                48,
+                52,
                 0,
-                -0.42970187641969043,
-                2.703847157633334,
-                -3.963278446734804
+                -0.03163745595289301,
+                3.469016346799084,
+                -3.263010196954719
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -2476,12 +2476,688 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                12,
+                83,
+                -0.03681895545013176,
+                0.4705905465138313,
+                -0.502904023131861
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                56,
+                44,
+                0,
+                0.4783994841067779,
+                4.077619946802217,
+                -4.102426559323781
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                0.005346379973397087,
+                0.8548195420849994,
+                -0.45942792551702877
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                2,
+                98,
+                -0.002825594444091554,
+                0,
+                -0.1412797222045777
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                0,
+                99,
+                0.00042662116040955637,
+                0.042662116040955635,
+                0
+            ],
+            "Number of alloca partition uses rewritten (sroa)": [
+                0,
+                1,
+                99,
+                -0.0001560914696011863,
+                0,
+                -0.01560914696011863
+            ],
+            "Number of instructions deleted (sroa)": [
+                0,
+                1,
+                99,
+                -0.00015603058199407084,
+                0,
+                -0.015603058199407084
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                0.5567195136595073,
+                3.738503189996839,
+                -3.660993731717884
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                0,
+                99,
+                2.3435806396803358e-05,
+                0.0023435806396803357,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.033805249547824656,
+                1.126841651594155,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                3,
+                97,
+                -0.004475137518791961,
+                0,
+                -0.14917125062639872
+            ],
+            "Number of instructions deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.0008620689655172415,
+                0.08620689655172414,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00036911368580599095,
+                0.10112732095490717,
+                -0.13803868953550627
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.00019421763599696717,
+                0.2527957496036677,
+                -0.2722175132033644
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                3,
+                97,
+                -0.32408247748022845,
+                0,
+                -10.802749249340948
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                3,
+                0,
+                97,
+                0.02798456052393131,
+                0.9328186841310436,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0034662045060658577,
+                0.34662045060658575,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured before (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.05386596319326675,
+                0,
+                -2.6932981596633376
+            ],
+            "Number of pointers not captured before (capture-tracking)": [
+                2,
+                0,
+                98,
+                0.05554899645808737,
+                2.7774498229043685,
+                0
+            ],
+            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                3,
+                0,
+                97,
+                0.0936495338375212,
+                3.121651127917373,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                0.46807859131653407,
+                46.84838160136286,
+                -0.04052246970945389
+            ],
+            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
+                0,
+                1,
+                99,
+                -0.1469387755102041,
+                0,
+                -14.69387755102041
+            ],
+            "Number of stores deleted (dse)": [
+                0,
+                1,
+                99,
+                -0.0070921985815602835,
+                0,
+                -0.7092198581560284
+            ],
+            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
+                0,
+                1,
+                99,
+                -0.006993006993006993,
+                0,
+                -0.6993006993006993
+            ],
+            "Number of loads deleted (gvn)": [
+                1,
+                0,
+                99,
+                0.04477611940298507,
+                4.477611940298507,
+                0
+            ],
+            "Number of loads PRE'd (gvn)": [
+                0,
+                1,
+                99,
+                -0.0113314447592068,
+                0,
+                -1.13314447592068
+            ],
+            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
+                0,
+                1,
+                99,
+                -0.2222222222222222,
+                0,
+                -22.22222222222222
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                3,
+                0,
+                97,
+                0.1890494484631081,
+                6.301648282103603,
+                0
+            ],
+            "Number of memcpy instructions deleted (memcpyopt)": [
+                1,
+                0,
+                99,
+                0.14285714285714285,
+                14.285714285714285,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of stack-move optimizations performed (memcpyopt)": [
+                1,
+                0,
+                99,
+                3.0,
+                300.0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                2,
+                97,
+                -0.005023482343472979,
+                0.14297497937860873,
+                -0.3226616068629533
+            ],
+            "Number of arguments marked nocapture (function-attrs)": [
+                3,
+                0,
+                97,
+                0.02861766581077173,
+                0.9539221936923911,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                0,
+                99,
+                0.00021992522542335603,
+                0.021992522542335604,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0003350644999162339,
+                0,
+                -0.03350644999162339
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                2,
+                98,
+                -0.0023666415061519013,
+                0,
+                -0.11833207530759506
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                2,
+                0,
+                98,
+                0.007960385171880456,
+                0.3980192585940228,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
                 6,
                 11,
                 83,
-                0.001986065708838874,
-                0.5926611947414538,
-                -0.30521459977862136
+                -0.017320832137820236,
+                0.38323864917823963,
+                -0.36650137353195106
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -2524,12 +3200,12 @@
                 -0.015603058199407084
             ],
             "compile-time (instructions)": [
-                57,
-                43,
+                50,
+                50,
                 0,
-                1.7363560255600954,
-                5.57755683427143,
-                -3.355468302266557
+                -0.4165226966941474,
+                3.4175487134038867,
+                -4.250594106792179
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -2814,350 +3490,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                9,
-                8,
-                83,
-                -0.013918656382855117,
-                0.39136318684764004,
-                -0.6142667899892841
-            ],
-            "Number of renumberings across all blocks (ir)": [
-                0,
-                2,
-                98,
-                -0.002825594444091554,
-                0,
-                -0.1412797222045777
-            ],
-            "Number of loop exits with predictable exit counts (scalar-evolution)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of blocks simplified (simplifycfg)": [
-                1,
-                0,
-                99,
-                0.00042662116040955637,
-                0.042662116040955635,
-                0
-            ],
-            "Number of alloca partition uses rewritten (sroa)": [
-                0,
-                1,
-                99,
-                -0.0001560914696011863,
-                0,
-                -0.01560914696011863
-            ],
-            "Number of instructions deleted (sroa)": [
-                0,
-                1,
-                99,
-                -0.00015603058199407084,
-                0,
-                -0.015603058199407084
-            ],
-            "compile-time (instructions)": [
-                50,
-                50,
-                0,
-                0.7588662486079913,
-                5.387276516871955,
-                -3.869544019655973
-            ],
-            "bitcode-size (bytes)": [
-                1,
-                0,
-                99,
-                2.3435806396803358e-05,
-                0.0023435806396803357,
-                0
-            ],
-            "Number of NoAlias results (aa)": [
-                3,
-                0,
-                97,
-                0.033805249547824656,
-                1.126841651594155,
-                0
-            ],
-            "Number of times a GEP is decomposed (basicaa)": [
-                0,
-                3,
-                97,
-                -0.004475137518791961,
-                0,
-                -0.14917125062639872
-            ],
-            "Number of instructions deleted (gvn)": [
-                1,
-                0,
-                99,
-                0.0008620689655172415,
-                0.08620689655172414,
-                0
-            ],
-            "Number of fully cached non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.00036911368580599095,
-                0.10112732095490717,
-                -0.13803868953550627
-            ],
-            "Number of uncached non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.00019421763599696717,
-                0.2527957496036677,
-                -0.2722175132033644
-            ],
-            "Number of pointers maybe captured (capture-tracking)": [
-                0,
-                3,
-                97,
-                -0.32408247748022845,
-                0,
-                -10.802749249340948
-            ],
-            "Number of load instructions CSE'd (early-cse)": [
-                3,
-                0,
-                97,
-                0.02798456052393131,
-                0.9328186841310436,
-                0
-            ],
-            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
-                1,
-                0,
-                99,
-                0.0034662045060658577,
-                0.34662045060658575,
-                0
-            ],
-            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of pointers maybe captured before (capture-tracking)": [
-                0,
-                2,
-                98,
-                -0.05386596319326675,
-                0,
-                -2.6932981596633376
-            ],
-            "Number of pointers not captured before (capture-tracking)": [
-                2,
-                0,
-                98,
-                0.05554899645808737,
-                2.7774498229043685,
-                0
-            ],
-            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of MustAlias results (aa)": [
-                3,
-                0,
-                97,
-                0.0936495338375212,
-                3.121651127917373,
-                0
-            ],
-            "Number iterations check for reads in getDomMemoryDef (dse)": [
-                1,
-                1,
-                98,
-                0.46807859131653407,
-                46.84838160136286,
-                -0.04052246970945389
-            ],
-            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
-                0,
-                1,
-                99,
-                -0.1469387755102041,
-                0,
-                -14.69387755102041
-            ],
-            "Number of stores deleted (dse)": [
-                0,
-                1,
-                99,
-                -0.0070921985815602835,
-                0,
-                -0.7092198581560284
-            ],
-            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
-                0,
-                1,
-                99,
-                -0.006993006993006993,
-                0,
-                -0.6993006993006993
-            ],
-            "Number of loads deleted (gvn)": [
-                1,
-                0,
-                99,
-                0.04477611940298507,
-                4.477611940298507,
-                0
-            ],
-            "Number of loads PRE'd (gvn)": [
-                0,
-                1,
-                99,
-                -0.0113314447592068,
-                0,
-                -1.13314447592068
-            ],
-            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
-                0,
-                1,
-                99,
-                -0.2222222222222222,
-                0,
-                -22.22222222222222
-            ],
-            "Number of pointers not captured (capture-tracking)": [
-                3,
-                0,
-                97,
-                0.1890494484631081,
-                6.301648282103603,
-                0
-            ],
-            "Number of memcpy instructions deleted (memcpyopt)": [
-                1,
-                0,
-                99,
-                0.14285714285714285,
-                14.285714285714285,
-                0
-            ],
-            "Number of phis propagated (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of stack-move optimizations performed (memcpyopt)": [
-                1,
-                0,
-                99,
-                3.0,
-                300.0,
-                0
-            ]
-        },
-        {
-            "Number of MayAlias results (aa)": [
-                1,
-                2,
-                97,
-                -0.005023482343472979,
-                0.14297497937860873,
-                -0.3226616068629533
-            ],
-            "Number of arguments marked nocapture (function-attrs)": [
-                3,
-                0,
-                97,
-                0.02861766581077173,
-                0.9539221936923911,
-                0
-            ],
-            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Negator: Number of negations attempted to be sinked (instcombine)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of insts combined (instcombine)": [
-                1,
-                0,
-                99,
-                0.00021992522542335603,
-                0.021992522542335604,
-                0
-            ],
-            "Number of dead inst eliminated (instcombine)": [
-                0,
-                1,
-                99,
-                -0.0003350644999162339,
-                0,
-                -0.03350644999162339
-            ],
-            "Number of functions with one iteration (instcombine)": [
-                0,
-                2,
-                98,
-                -0.0023666415061519013,
-                0,
-                -0.11833207530759506
-            ],
-            "Number of functions with two iterations (instcombine)": [
-                2,
-                0,
-                98,
-                0.007960385171880456,
-                0.3980192585940228,
-                0
-            ],
-            "Number of insts scanned while updating ibt (ipt)": [
-                9,
-                7,
+                5,
+                11,
                 84,
-                -0.008510488724314442,
-                0.41432098883765334,
-                -0.6542768245671892
+                -0.007344795084485194,
+                0.7831389364904874,
+                -0.4227431082637232
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -3200,350 +3538,12 @@
                 -0.015603058199407084
             ],
             "compile-time (instructions)": [
-                43,
-                57,
-                0,
-                -0.009509322140649454,
-                4.54378884864579,
-                -3.4444535562426997
-            ],
-            "bitcode-size (bytes)": [
-                1,
-                0,
-                99,
-                2.3435806396803358e-05,
-                0.0023435806396803357,
-                0
-            ],
-            "Number of NoAlias results (aa)": [
-                3,
-                0,
-                97,
-                0.033805249547824656,
-                1.126841651594155,
-                0
-            ],
-            "Number of times a GEP is decomposed (basicaa)": [
-                0,
-                3,
-                97,
-                -0.004475137518791961,
-                0,
-                -0.14917125062639872
-            ],
-            "Number of instructions deleted (gvn)": [
-                1,
-                0,
-                99,
-                0.0008620689655172415,
-                0.08620689655172414,
-                0
-            ],
-            "Number of fully cached non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.00036911368580599095,
-                0.10112732095490717,
-                -0.13803868953550627
-            ],
-            "Number of uncached non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.00019421763599696717,
-                0.2527957496036677,
-                -0.2722175132033644
-            ],
-            "Number of pointers maybe captured (capture-tracking)": [
-                0,
-                3,
-                97,
-                -0.32408247748022845,
-                0,
-                -10.802749249340948
-            ],
-            "Number of load instructions CSE'd (early-cse)": [
-                3,
-                0,
-                97,
-                0.02798456052393131,
-                0.9328186841310436,
-                0
-            ],
-            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
-                1,
-                0,
-                99,
-                0.0034662045060658577,
-                0.34662045060658575,
-                0
-            ],
-            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of pointers maybe captured before (capture-tracking)": [
-                0,
-                2,
-                98,
-                -0.05386596319326675,
-                0,
-                -2.6932981596633376
-            ],
-            "Number of pointers not captured before (capture-tracking)": [
-                2,
-                0,
-                98,
-                0.05554899645808737,
-                2.7774498229043685,
-                0
-            ],
-            "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of common instructions hoisted up to the begin block (simplifycfg)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of MustAlias results (aa)": [
-                3,
-                0,
-                97,
-                0.0936495338375212,
-                3.121651127917373,
-                0
-            ],
-            "Number iterations check for reads in getDomMemoryDef (dse)": [
-                1,
-                1,
-                98,
-                0.46807859131653407,
-                46.84838160136286,
-                -0.04052246970945389
-            ],
-            "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)": [
-                0,
-                1,
-                99,
-                -0.1469387755102041,
-                0,
-                -14.69387755102041
-            ],
-            "Number of stores deleted (dse)": [
-                0,
-                1,
-                99,
-                -0.0070921985815602835,
-                0,
-                -0.7092198581560284
-            ],
-            "Number of times a valid candidate is returned from getDomMemoryDef (dse)": [
-                0,
-                1,
-                99,
-                -0.006993006993006993,
-                0,
-                -0.6993006993006993
-            ],
-            "Number of loads deleted (gvn)": [
-                1,
-                0,
-                99,
-                0.04477611940298507,
-                4.477611940298507,
-                0
-            ],
-            "Number of loads PRE'd (gvn)": [
-                0,
-                1,
-                99,
-                -0.0113314447592068,
-                0,
-                -1.13314447592068
-            ],
-            "Number of loads moved to predecessor of a critical edge in PRE (gvn)": [
-                0,
-                1,
-                99,
-                -0.2222222222222222,
-                0,
-                -22.22222222222222
-            ],
-            "Number of pointers not captured (capture-tracking)": [
-                3,
-                0,
-                97,
-                0.1890494484631081,
-                6.301648282103603,
-                0
-            ],
-            "Number of memcpy instructions deleted (memcpyopt)": [
-                1,
-                0,
-                99,
-                0.14285714285714285,
-                14.285714285714285,
-                0
-            ],
-            "Number of phis propagated (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of stack-move optimizations performed (memcpyopt)": [
-                1,
-                0,
-                99,
-                3.0,
-                300.0,
-                0
-            ]
-        },
-        {
-            "Number of MayAlias results (aa)": [
-                1,
-                2,
-                97,
-                -0.005023482343472979,
-                0.14297497937860873,
-                -0.3226616068629533
-            ],
-            "Number of arguments marked nocapture (function-attrs)": [
-                3,
-                0,
-                97,
-                0.02861766581077173,
-                0.9539221936923911,
-                0
-            ],
-            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Negator: Number of negations attempted to be sinked (instcombine)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of insts combined (instcombine)": [
-                1,
-                0,
-                99,
-                0.00021992522542335603,
-                0.021992522542335604,
-                0
-            ],
-            "Number of dead inst eliminated (instcombine)": [
-                0,
-                1,
-                99,
-                -0.0003350644999162339,
-                0,
-                -0.03350644999162339
-            ],
-            "Number of functions with one iteration (instcombine)": [
-                0,
-                2,
-                98,
-                -0.0023666415061519013,
-                0,
-                -0.11833207530759506
-            ],
-            "Number of functions with two iterations (instcombine)": [
-                2,
-                0,
-                98,
-                0.007960385171880456,
-                0.3980192585940228,
-                0
-            ],
-            "Number of insts scanned while updating ibt (ipt)": [
-                8,
-                9,
-                83,
-                0.006945526064833363,
-                0.49701002039434533,
-                -0.36461417296349174
-            ],
-            "Number of renumberings across all blocks (ir)": [
-                0,
-                2,
-                98,
-                -0.002825594444091554,
-                0,
-                -0.1412797222045777
-            ],
-            "Number of loop exits with predictable exit counts (scalar-evolution)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of blocks simplified (simplifycfg)": [
-                1,
-                0,
-                99,
-                0.00042662116040955637,
-                0.042662116040955635,
-                0
-            ],
-            "Number of alloca partition uses rewritten (sroa)": [
-                0,
-                1,
-                99,
-                -0.0001560914696011863,
-                0,
-                -0.01560914696011863
-            ],
-            "Number of instructions deleted (sroa)": [
-                0,
-                1,
-                99,
-                -0.00015603058199407084,
-                0,
-                -0.015603058199407084
-            ],
-            "compile-time (instructions)": [
-                46,
-                54,
-                0,
-                -0.23114948302064725,
-                3.9857775263971704,
-                -3.8233465651173075
+                50,
+                50,
+                0,
+                0.372418399461178,
+                4.03380373259606,
+                -3.2889669336737035
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -3828,12 +3828,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                3,
-                11,
-                86,
-                -0.058398302062745044,
-                0.3949547423953293,
-                -0.6386085848600448
+                5,
+                12,
+                83,
+                0.004055347439116832,
+                0.7967739905711363,
+                -0.29819460074533327
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -3876,12 +3876,12 @@
                 -0.015603058199407084
             ],
             "compile-time (instructions)": [
-                49,
-                51,
+                55,
+                45,
                 0,
-                -0.06865230386368523,
-                4.154340035607548,
-                -4.126037100610557
+                1.1507563677360557,
+                5.063626066688202,
+                -3.631639930983238
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -4166,12 +4166,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                8,
+                4,
+                11,
                 85,
-                -0.013914826597617053,
-                0.2520813553063359,
-                -0.39450651836325706
+                -0.028367525160084096,
+                0.38664926188045823,
+                -0.3984863239572947
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -4214,12 +4214,12 @@
                 -0.015603058199407084
             ],
             "compile-time (instructions)": [
-                45,
-                55,
+                53,
+                47,
                 0,
-                -0.3610192021186186,
-                4.154633719569009,
-                -4.05564431986304
+                0.3306075031478229,
+                4.526291860681913,
+                -4.400696134071468
             ],
             "bitcode-size (bytes)": [
                 1,
