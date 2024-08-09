@@ -1,0 +1,6311 @@
+{
+    "knob_name": "unlikely-branch-weight",
+    "original_val": 1,
+    "knob_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        20
+    ],
+    "graph_stats_dict": {
+        "Number of MayAlias results (aa)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0022776795001252723,
+            0.010629171000584605,
+            0.02657292750146151,
+            0.04023900450221315,
+            0.04023900450221315,
+            0.03340596600183733,
+            0.03340596600183733,
+            0.03947977800217139,
+            0.03872055150212963
+        ],
+        "Number of instructions simplified or DCE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.002705261734072772,
+            -0.005410523468145544,
+            -0.005410523468145544,
+            -0.005410523468145544,
+            -0.005410523468145544,
+            -0.008115785202218315,
+            -0.008115785202218315
+        ],
+        "Number of functions inlined (inline)": [
+            0.0,
+            0.0,
+            0.03989786147462496,
+            0.03989786147462496,
+            0.031918289179699966,
+            0.023938716884774974,
+            0.05585700606447494,
+            0.03989786147462496,
+            0.03989786147462496,
+            0.023938716884774974,
+            0.023938716884774974,
+            0.015959144589849983,
+            0.007979572294924991
+        ],
+        "Number of call sites analyzed (inline-cost)": [
+            0.0,
+            0.0,
+            -0.025564986194907456,
+            -0.025564986194907456,
+            -0.020451988955925964,
+            -0.020451988955925964,
+            -0.015338991716944472,
+            -0.010225994477962982,
+            -0.010225994477962982,
+            0.0,
+            0.0,
+            0.005112997238981491,
+            0.005112997238981491
+        ],
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.1457301078402798,
+            -0.2331681725444477,
+            -0.242883513067133,
+            -0.3983289614300981,
+            -0.3983289614300981,
+            -0.6897891771106578,
+            -0.6897891771106578,
+            -0.6995045176333431,
+            -0.7966579228601962
+        ],
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.13891857234451804,
+            -0.22440692455652916,
+            -0.22974994656977987,
+            -0.3740115409275486,
+            -0.3740115409275486,
+            -0.6518486856165847,
+            -0.6518486856165847,
+            -0.6571917076298354,
+            -0.753366103868348
+        ],
+        "Number of insts combined (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.011211855318319195,
+            -0.019498878814468167,
+            -0.025348542458808618,
+            -0.038997757628936335,
+            -0.038997757628936335,
+            -0.061421468265574736,
+            -0.061421468265574736,
+            -0.06385882811738325,
+            -0.0809203470800429
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.017557721007813186,
+            -0.03292072688964972,
+            -0.12509876218066895,
+            -0.23483451847950135,
+            -0.23483451847950135,
+            -0.2699499604951277,
+            -0.2699499604951277,
+            -0.36212799578614696,
+            -0.3687121411640769
+        ],
+        "Number of redundant instructions removed (instsimplify)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.06470397929472663,
+            -0.12940795858945325,
+            -0.12940795858945325,
+            -0.19411193788417988,
+            -0.19411193788417988,
+            -0.3235198964736331,
+            -0.3235198964736331,
+            -0.3235198964736331,
+            -0.46910384988676807
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            -0.04253635374418835,
+            0.0,
+            -0.09644870907112474,
+            0.0491311372704191,
+            -0.14689880304678998,
+            -0.15052593398621691,
+            -0.1035381013618228,
+            -0.23576351106274934,
+            -0.16519932733208034,
+            -0.537639726975962,
+            -0.3590859630032644,
+            -0.41695518844593926,
+            -0.4243743199129488
+        ],
+        "Number of loops analyzed for vectorization (loop-vectorize)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.027770063871146906,
+            -0.05554012774229381,
+            0.0833101916134407,
+            0.05554012774229381,
+            0.05554012774229381,
+            0.0,
+            0.0,
+            0.0,
+            -0.027770063871146906
+        ],
+        "Number of loop exits with predictable exit counts (scalar-evolution)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2086230876216968,
+            0.2086230876216968,
+            0.2086230876216968,
+            0.2086230876216968,
+            0.2086230876216968,
+            0.2086230876216968,
+            0.2086230876216968
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.019082376232900402,
+            -0.032201509893019425,
+            0.06917361384426396,
+            0.039357400980357074,
+            0.039357400980357074,
+            -0.003577945543668825,
+            -0.003577945543668825,
+            -0.0143117821746753,
+            -0.029816212863906878
+        ],
+        "compile-time (instructions)": [
+            9.800273732597024,
+            0.0,
+            -4.2981847522935,
+            -3.201466218001545,
+            -3.5244373774014544,
+            0.47459315564171295,
+            -0.33354301772404776,
+            -2.42610919465154,
+            -3.097796154991401,
+            1.9018013483756855,
+            -2.515111719054939,
+            -3.879448463546565,
+            -0.7513375088009877
+        ],
+        "bitcode-size (bytes)": [
+            0.040604397842994945,
+            0.0,
+            -0.010496374952610937,
+            -0.05855872341982945,
+            -0.06632742198672899,
+            -0.07516647457840137,
+            -0.05893852646087787,
+            -0.0694349014134888,
+            -0.0661893117899841,
+            -0.08863221876102724,
+            -0.1046530015834334,
+            -0.10023347528759721,
+            -0.10517091482122672
+        ],
+        "Number of NoAlias results (aa)": [
+            0.0,
+            0.0,
+            0.019797212338478826,
+            0.019797212338478826,
+            0.01886085770084807,
+            0.01779073811498435,
+            0.028893228818320446,
+            0.022071216458439232,
+            0.022071216458439232,
+            0.01565049894325691,
+            0.01565049894325691,
+            0.012841435030364643,
+            0.008159661842210867
+        ],
+        "Number of instructions deleted (gvn)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.09284189026088571,
+            -0.12997864636523998,
+            -0.13926283539132858,
+            -0.21353634760003715,
+            -0.21353634760003715,
+            -0.4177885061739857,
+            -0.4177885061739857,
+            -0.4177885061739857,
+            -0.5013462074087829
+        ],
+        "Number of instructions simplified (gvn)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.12810248198558846,
+            -0.1921537229783827,
+            -0.1921537229783827,
+            -0.32025620496397117,
+            -0.32025620496397117,
+            -0.5764611689351482,
+            -0.5764611689351482,
+            -0.5764611689351482,
+            -0.7205764611689351
+        ],
+        "Number of fully cached non-local ptr responses (memdep)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.024213894609674623,
+            -0.05545762958989994,
+            -0.01379931628293285,
+            -0.08097334649041729,
+            -0.08097334649041729,
+            -0.13538951824764306,
+            -0.13538951824764306,
+            -0.13591024716398015,
+            -0.15960341285731766
+        ],
+        "Number of uncached non-local ptr responses (memdep)": [
+            0.0,
+            0.0,
+            0.0029933286188407585,
+            0.0029933286188407585,
+            -0.02731412364692192,
+            -0.060240738454170266,
+            0.004864159005616233,
+            -0.04602242751467667,
+            -0.04602242751467667,
+            -0.11037899281975297,
+            -0.11037899281975297,
+            -0.11823648044420998,
+            -0.14442810585906662
+        ],
+        "Number of loops not rotated due to the header size (loop-rotate)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.06293266205160479,
+            0.06293266205160479,
+            0.06293266205160479,
+            0.06293266205160479,
+            0.06293266205160479,
+            0.06293266205160479,
+            0.06293266205160479
+        ],
+        "Number of block queries that were completely cached (memdep)": [
+            0.0,
+            0.0,
+            0.040584415584415584,
+            0.040584415584415584,
+            0.05073051948051947,
+            0.05073051948051947,
+            0.07102272727272728,
+            0.07102272727272728,
+            0.07102272727272728,
+            0.13189935064935066,
+            0.13189935064935066,
+            0.13189935064935066,
+            0.14204545454545456
+        ],
+        "Number of GEP instructions CSE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0206782464846981,
+            -0.0413564929693962,
+            -0.05858836503997794,
+            -0.09649848359525778,
+            -0.09649848359525778,
+            -0.13096222773642127,
+            -0.13096222773642127,
+            -0.14819409980700304,
+            -0.16887234629170114
+        ],
+        "Number of load instructions CSE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.029748624126134167,
+            -0.059497248252268334,
+            -0.08428776835738014,
+            -0.13882691258862612,
+            -0.13882691258862612,
+            -0.18840795279884973,
+            -0.18840795279884973,
+            -0.21319847290396152,
+            -0.23798899300907334
+        ],
+        "Number of instructions hoisted out of loop (licm)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.09288285150354116,
+            0.08127249506559851,
+            0.08127249506559851,
+            0.05805178218971323,
+            0.05805178218971323,
+            0.04644142575177058,
+            0.04644142575177058
+        ],
+        "Number of insts reassociated (reassociate)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.09388068618246992,
+            -0.13655372535631988,
+            -0.17922676453016984,
+            -0.3157804898864897,
+            -0.3157804898864897,
+            -0.48647264658188955,
+            -0.48647264658188955,
+            -0.5291456857557395,
+            -0.5718187249295895
+        ],
+        "Number of loop exits without predictable exit counts (scalar-evolution)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3864830046576157,
+            0.3864830046576157,
+            0.3864830046576157,
+            0.3864830046576157,
+            0.3864830046576157,
+            0.3864830046576157,
+            0.3864830046576157
+        ],
+        "Number of instructions CSE'd (early-cse)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.012577034335303737,
+            -0.025154068670607474,
+            0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.0062885171676518685,
+            -0.03144258583825934
+        ],
+        "Number of instructions sunk (instcombine)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08602150537634409,
+            0.17204301075268819,
+            0.0,
+            -0.021505376344086023,
+            -0.021505376344086023,
+            -0.021505376344086023,
+            -0.021505376344086023,
+            -0.12903225806451613,
+            -0.7526881720430108
+        ],
+        "Number of jumps threaded (jump-threading)": [
+            0.0,
+            0.0,
+            0.1829407729247656,
+            0.1829407729247656,
+            0.1829407729247656,
+            0.1829407729247656,
+            0.27441115938714844,
+            0.27441115938714844,
+            0.27441115938714844,
+            0.27441115938714844,
+            0.27441115938714844,
+            0.27441115938714844,
+            0.27441115938714844
+        ],
+        "Number of loops deleted (loop-delete)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.282051282051282,
+            -2.564102564102564,
+            -2.564102564102564,
+            -2.564102564102564,
+            -2.564102564102564,
+            -3.8461538461538463,
+            -3.8461538461538463
+        ],
+        "Number of blocks merged (gvn)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.2372479240806643,
+            -0.4744958481613286,
+            -0.4744958481613286,
+            -0.4744958481613286,
+            -0.4744958481613286,
+            -0.7117437722419928,
+            -0.7117437722419928
+        ],
+        "Number of MustAlias results (aa)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.002828694274722788,
+            -0.002828694274722788,
+            0.005657388549445576,
+            0.0,
+            0.0,
+            -0.011314777098891152,
+            -0.011314777098891152,
+            -0.014143471373613941,
+            -0.016972165648336725
+        ],
+        "Number of terminators folded (jump-threading)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.1958863858961802,
+            0.1958863858961802,
+            0.1958863858961802,
+            0.1958863858961802,
+            0.1958863858961802,
+            0.1958863858961802,
+            0.1958863858961802
+        ],
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.1049723756906076,
+            -1.1049723756906076,
+            -1.1049723756906076,
+            -1.1049723756906076,
+            -1.1049723756906076,
+            -1.1049723756906076,
+            -1.1049723756906076
+        ],
+        "Number of no-wrap deductions for add (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.7648183556405354,
+            -0.7648183556405354,
+            -0.7648183556405354,
+            -0.7648183556405354,
+            -0.7648183556405354,
+            -0.7648183556405354,
+            -0.7648183556405354
+        ],
+        "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0723860589812333,
+            -1.0723860589812333,
+            -1.0723860589812333,
+            -1.0723860589812333,
+            -1.0723860589812333,
+            -1.0723860589812333,
+            -1.0723860589812333
+        ],
+        "Number of no-wrap deductions (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.7246376811594203,
+            -0.7246376811594203,
+            -0.7246376811594203,
+            -0.7246376811594203,
+            -0.7246376811594203,
+            -0.7246376811594203,
+            -0.7246376811594203
+        ],
+        "Number of phis propagated (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.027570995312930797,
+            -0.055141990625861594,
+            -0.0827129859387924,
+            -0.13785497656465398,
+            -0.13785497656465398,
+            -0.19299696719051557,
+            -0.19299696719051557,
+            -0.22056796250344637,
+            -0.24813895781637718
+        ],
+        "Number of instructions removed (constraint-elimination)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.694915254237288,
+            -3.389830508474576,
+            -3.389830508474576,
+            -5.084745762711865,
+            -5.084745762711865,
+            -5.084745762711865,
+            -5.084745762711865,
+            -5.084745762711865,
+            -5.084745762711865
+        ],
+        "Number of instructions removed (adce)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            17.391304347826086,
+            17.391304347826086,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of branch instructions removed (adce)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0
+        ],
+        "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -7.142857142857142,
+            -14.285714285714285,
+            -14.285714285714285,
+            -21.428571428571427,
+            -21.428571428571427,
+            -21.428571428571427,
+            -21.428571428571427,
+            -21.428571428571427,
+            -21.428571428571427
+        ]
+    },
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of functions inlined (inline)",
+        "Number of call sites analyzed (inline-cost)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of loops analyzed for vectorization (loop-vectorize)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of loops not rotated due to the header size (loop-rotate)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of load instructions CSE'd (early-cse)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of insts reassociated (reassociate)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of instructions sunk (instcombine)",
+        "Number of jumps threaded (jump-threading)",
+        "Number of loops deleted (loop-delete)",
+        "Number of blocks merged (gvn)",
+        "Number of MustAlias results (aa)",
+        "Number of terminators folded (jump-threading)",
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-signed-wrap deductions (correlated-value-propagation)",
+        "Number of no-wrap deductions (correlated-value-propagation)",
+        "Number of phis propagated (correlated-value-propagation)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of instructions removed (adce)",
+        "Number of branch instructions removed (adce)",
+        "Number of terminators folded to unconditional branches (loop-simplifycfg)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of direct abstract call sites created (abstract-call-sites)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of functions inlined (inline)",
+        "Number of call sites analyzed (inline-cost)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of live out of a loop variables (lcssa)",
+        "Number of loops analyzed for vectorization (loop-vectorize)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of loops not rotated due to the header size (loop-rotate)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of load instructions CSE'd (early-cse)",
+        "Number of function pointer arguments marked non-null (correlated-value-propagation)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of insts reassociated (reassociate)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of instructions sunk (instcombine)",
+        "Number of jumps threaded (jump-threading)",
+        "Number of loops deleted (loop-delete)",
+        "Number of Queries into an assume assume bundles (assume-queries)",
+        "Number of blocks merged (gvn)",
+        "Number of MustAlias results (aa)",
+        "Number iterations check for reads in getDomMemoryDef (dse)",
+        "Number of terminators folded (jump-threading)",
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-signed-wrap deductions (correlated-value-propagation)",
+        "Number of no-wrap deductions (correlated-value-propagation)",
+        "Number of phis propagated (correlated-value-propagation)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of instructions removed (adce)",
+        "Number of branch instructions removed (adce)",
+        "Number of terminators folded to unconditional branches (loop-simplifycfg)"
+    ],
+    "stats_per_file": [
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.04221669628154052,
+                0.13384859128431806,
+                -0.502476117585996
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                60,
+                40,
+                0,
+                0.8404995076261124,
+                4.314540541220056,
+                -4.3705620427648055
+            ],
+            "bitcode-size (bytes)": [
+                6,
+                5,
+                89,
+                0.030265671258933296,
+                0.7975530772345976,
+                -0.35175026750285115
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                0,
+                1,
+                99,
+                -0.0004652028284331969,
+                0,
+                -0.04652028284331969
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                0,
+                99,
+                0.0007457121551081282,
+                0.07457121551081282,
+                0
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                0,
+                1,
+                99,
+                -0.0004958841614598829,
+                0,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                9,
+                85,
+                -0.06811880364673158,
+                0.08437013373375819,
+                -0.8131223518973008
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                -0.5092934987169919,
+                3.412458049203892,
+                -4.2772508682880375
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                3,
+                97,
+                -0.008357808619604739,
+                0,
+                -0.2785936206534913
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0006534879921581441,
+                0.06534879921581441,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                0,
+                99,
+                0.00036674032034766983,
+                0.03667403203476698,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                6.520179956966813e-05,
+                0.006520179956966812,
+                0
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.0007521624670928922,
+                0.07521624670928921,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0029314767314034445,
+                0.29314767314034446,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                0.0014588089095403404,
+                0.14588089095403403,
+                0
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                0,
+                1,
+                99,
+                -0.0004652028284331969,
+                0,
+                -0.04652028284331969
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                0,
+                99,
+                0.0007457121551081282,
+                0.07457121551081282,
+                0
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                0,
+                1,
+                99,
+                -0.0004958841614598829,
+                0,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                0.010571307330800934,
+                0.5670864794462446,
+                -0.23453881435973747
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                56,
+                44,
+                0,
+                -0.4902598988033674,
+                2.7113578757851626,
+                -4.565046157370587
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                5,
+                95,
+                -0.018058753583298018,
+                0,
+                -0.36117507166596036
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.0006534879921581441,
+                0.06534879921581441,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                0,
+                99,
+                0.00036674032034766983,
+                0.03667403203476698,
+                0
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                6.520179956966813e-05,
+                0.006520179956966812,
+                0
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                1,
+                0,
+                99,
+                0.0007521624670928922,
+                0.07521624670928921,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0029314767314034445,
+                0.29314767314034446,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                0,
+                99,
+                0.0014588089095403404,
+                0.14588089095403403,
+                0
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.002857142857142857,
+                0.2857142857142857,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.0027195105473629823,
+                0.3184713375796179,
+                -0.04652028284331969
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.002359877907003673,
+                0.07457121551081282,
+                -0.3105590062111801
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.0007763804695833739,
+                0.1272264631043257,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.015455950540958269,
+                0,
+                -1.545595054095827
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.016795865633074936,
+                0,
+                -1.6795865633074936
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.005981794538361509,
+                0,
+                -0.5981794538361509
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.01342281879194631,
+                0,
+                -1.342281879194631
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0163265306122449,
+                0,
+                -1.6326530612244898
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                11,
+                84,
+                -0.06756206466501312,
+                0.23763847375839645,
+                -0.7222180759357539
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.012333965844402278,
+                0,
+                -1.2333965844402277
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.017955112219451373,
+                0,
+                -1.7955112219451372
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                1,
+                99,
+                -0.007462686567164178,
+                0,
+                -0.7462686567164178
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.007718282682103232,
+                0,
+                -0.7718282682103232
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                -0.8149080165537211,
+                2.634362225864408,
+                -4.551617445840029
+            ],
+            "bitcode-size (bytes)": [
+                2,
+                4,
+                94,
+                -0.02354207552007642,
+                0.20504272907561527,
+                -0.6910732525397181
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -6.515779291978441e-06,
+                0.06534879921581441,
+                -0.06600037714501225
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.0015628851053049975,
+                0.03667403203476698,
+                -0.19296254256526674
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.02145922746781116,
+                0,
+                -2.1459227467811157
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.02209944751381215,
+                0,
+                -2.209944751381215
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -0.015233415233415233,
+                0,
+                -1.5233415233415233
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.013217841821289631,
+                0.006520179956966812,
+                -1.3283043620859298
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.008504100451589017,
+                0.4252050225794508,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.017045454545454544,
+                0,
+                -1.7045454545454544
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.02643171806167401,
+                0,
+                -2.643171806167401
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.012373453318335208,
+                0,
+                -1.2373453318335208
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.009433962264150943,
+                0,
+                -0.9433962264150944
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.010666666666666666,
+                1.0666666666666667,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0029314767314034445,
+                0.29314767314034446,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                1,
+                99,
+                -0.0019588638589618022,
+                0,
+                -0.1958863858961802
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.0017301038062283738,
+                0,
+                -0.17301038062283738
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.04,
+                0,
+                -4.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.16666666666666663,
+                0,
+                -16.666666666666664
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.33333333333333326,
+                0,
+                -33.33333333333333
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                1,
+                0,
+                99,
+                0.013333333333333334,
+                1.3333333333333335,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.005904223923159161,
+                0.6369426751592357,
+                -0.04652028284331969
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.0054654679691154735,
+                0.07457121551081282,
+                -0.6211180124223602
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.0007763804695833739,
+                0.1272264631043257,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.02472952086553323,
+                0,
+                -2.472952086553323
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.027131782945736434,
+                0,
+                -2.7131782945736433
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                1,
+                99,
+                -0.010403120936280884,
+                0,
+                -1.0403120936280885
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.025167785234899327,
+                0,
+                -2.5167785234899327
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0034542314335060447,
+                0.3454231433506045,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.003472222222222222,
+                0,
+                -0.3472222222222222
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0326530612244898,
+                0,
+                -3.2653061224489797
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                8,
+                83,
+                -0.04613798814845053,
+                0.24447929244079025,
+                -0.8517640558515205
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                1,
+                99,
+                -0.019924098671726755,
+                0,
+                -1.9924098671726755
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.029925187032418955,
+                0,
+                -2.9925187032418954
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                0,
+                1,
+                99,
+                -0.014925373134328356,
+                0,
+                -1.4925373134328357
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.013024602026049204,
+                0,
+                -1.3024602026049203
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                0.6253121215248623,
+                4.465936928446411,
+                -4.465748669045564
+            ],
+            "bitcode-size (bytes)": [
+                2,
+                4,
+                94,
+                -0.029065695561955773,
+                0.2143801241758172,
+                -0.8338324511368029
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.0007608058038064045,
+                0.06534879921581441,
+                -0.14142937959645485
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.002470944129141547,
+                0.03667403203476698,
+                -0.28376844494892167
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.030042918454935622,
+                0,
+                -3.004291845493562
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.03314917127071823,
+                0,
+                -3.314917127071823
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                0,
+                1,
+                99,
+                -0.03488943488943489,
+                0,
+                -3.488943488943489
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.027648802792099737,
+                0.006520179956966812,
+                -2.7714004591669403
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.008504100451589017,
+                0.4252050225794508,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.03409090909090909,
+                0,
+                -3.4090909090909087
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.05286343612334802,
+                0,
+                -5.286343612334802
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.01799775028121485,
+                0,
+                -1.799775028121485
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.018867924528301886,
+                0,
+                -1.8867924528301887
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                0,
+                99,
+                0.021333333333333333,
+                2.1333333333333333,
+                0
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0029314767314034445,
+                0.29314767314034446,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                1,
+                99,
+                -0.0019588638589618022,
+                0,
+                -0.1958863858961802
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.0017301038062283738,
+                0,
+                -0.17301038062283738
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.08,
+                0,
+                -8.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.33333333333333326,
+                0,
+                -33.33333333333333
+            ],
+            "Number of instructions removed (adce)": [
+                1,
+                0,
+                99,
+                4.0,
+                400.0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.014826094172774891,
+                0.7413047086387445,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.008623734470522141,
+                0.9554140127388535,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.00392156862745098,
+                0,
+                -0.39215686274509803
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.007825345876119147,
+                0.14914243102162564,
+                -0.9316770186335404
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.002048645100626631,
+                0.2544529262086514,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.02575991756826378,
+                0,
+                -2.575991756826378
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.027777777777777776,
+                0,
+                -2.7777777777777777
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.011861721020543932,
+                0,
+                -0.5930860510271966
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.09563758389261745,
+                0,
+                -9.563758389261745
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0034542314335060447,
+                0.3454231433506045,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.003472222222222222,
+                0,
+                -0.3472222222222222
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0326530612244898,
+                0,
+                -3.2653061224489797
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                8,
+                85,
+                -0.0732409598618757,
+                0.42608614158551195,
+                -1.2883373721607692
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.024223289625665383,
+                0.044464206313917294,
+                -2.4667931688804554
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.030922693266832918,
+                0,
+                -3.092269326683292
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.008141112618724557,
+                0.6784260515603799,
+                -1.4925373134328357
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.013143125117799796,
+                0.4223010916932477,
+                -1.7366136034732274
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                0.2485053107004811,
+                3.9368244269580375,
+                -3.747173731911873
+            ],
+            "bitcode-size (bytes)": [
+                4,
+                3,
+                93,
+                -0.021469524849823292,
+                0.2744157949972444,
+                -1.0815385549904353
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.0019221261652521643,
+                0.10950339328055388,
+                -0.3017160098057703
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.003527363349710343,
+                0.14669612813906793,
+                -0.4994324631101022
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.032188841201716736,
+                0,
+                -3.2188841201716736
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.03314917127071823,
+                0,
+                -3.314917127071823
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.03967931095758792,
+                0.1270729992453025,
+                -4.095004095004095
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.029814936913249292,
+                0.16707961139727456,
+                -3.148573302722204
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.024007976420581265,
+                1.2003988210290633,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.048295454545454544,
+                0,
+                -4.829545454545454
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.07488986784140969,
+                0,
+                -7.488986784140969
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                0.0031180061247284892,
+                0.6139154160982265,
+                -0.3021148036253776
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.023622047244094488,
+                0,
+                -2.3622047244094486
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.01775706027591353,
+                0.1110864252388358,
+                -1.8867924528301887
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                1,
+                98,
+                -0.0005959885386819485,
+                0.8,
+                -0.8595988538681949
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.2,
+                0,
+                -20.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.005564271055009575,
+                0,
+                -0.27821355275047877
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.03773584905660377,
+                0,
+                -3.7735849056603774
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.0031761368788440782,
+                0.028407073361266955,
+                -0.34602076124567477
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.12,
+                0,
+                -12.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.33333333333333326,
+                0,
+                -33.33333333333333
+            ],
+            "Number of instructions removed (adce)": [
+                1,
+                0,
+                99,
+                4.0,
+                400.0,
+                0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.03196895131563204,
+                1.5984475657816017,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.0149931612221145,
+                1.5923566878980893,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.00784313725490196,
+                0,
+                -0.7843137254901961
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.01403652600034275,
+                0.14914243102162564,
+                -1.5527950310559007
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.003320909731669888,
+                0.38167938931297707,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0422462648119526,
+                0,
+                -4.22462648119526
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.04521963824289406,
+                0,
+                -4.521963824289406
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.01914390567594055,
+                0,
+                -0.9571952837970275
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17953020134228187,
+                0,
+                -17.953020134228186
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0069084628670120895,
+                0.690846286701209,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006944444444444444,
+                0,
+                -0.6944444444444444
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0489795918367347,
+                0,
+                -4.8979591836734695
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                8,
+                9,
+                83,
+                -0.11190619599661694,
+                0.26480923292863784,
+                -1.478788162565644
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.04319862169397657,
+                0.044464206313917294,
+                -4.364326375711575
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.04987531172069826,
+                0,
+                -4.987531172069826
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.015603799185888736,
+                0.6784260515603799,
+                -2.2388059701492535
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.025202941808586093,
+                0.4223010916932477,
+                -2.942595272551857
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                -0.4507312918923146,
+                2.9249485809980222,
+                -4.107717820856847
+            ],
+            "bitcode-size (bytes)": [
+                5,
+                3,
+                92,
+                -0.027794455884090886,
+                0.22468112791338832,
+                -1.3009504093253432
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.006730725071531628,
+                0.10950339328055388,
+                -0.7825759004337167
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.009656761760607051,
+                0.14669612813906793,
+                -1.112372304199773
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.04935622317596566,
+                0,
+                -4.935622317596566
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.055248618784530384,
+                0,
+                -5.524861878453039
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0819397532180302,
+                0.1270729992453025,
+                -8.321048321048321
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0521173311408649,
+                0.16707961139727456,
+                -5.3788127254837645
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.024007976420581265,
+                1.2003988210290633,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.07954545454545454,
+                0,
+                -7.954545454545454
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.12334801762114538,
+                0,
+                -12.334801762114537
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                9.685808847471277e-05,
+                0.6139154160982265,
+                -0.6042296072507553
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.04161979752530934,
+                0,
+                -4.161979752530934
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.027191022540064474,
+                0.1110864252388358,
+                -2.8301886792452833
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                1,
+                98,
+                -0.003262655205348616,
+                0.5333333333333333,
+                -0.8595988538681949
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.4,
+                0,
+                -40.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.008502566843452278,
+                0,
+                -0.4251283421726139
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.07547169811320754,
+                0,
+                -7.547169811320755
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.006636344491300826,
+                0.028407073361266955,
+                -0.6920415224913495
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.2,
+                0,
+                -20.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.03196895131563204,
+                1.5984475657816017,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.0149931612221145,
+                1.5923566878980893,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.00784313725490196,
+                0,
+                -0.7843137254901961
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.01403652600034275,
+                0.14914243102162564,
+                -1.5527950310559007
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.003320909731669888,
+                0.38167938931297707,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0422462648119526,
+                0,
+                -4.22462648119526
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.04521963824289406,
+                0,
+                -4.521963824289406
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.01914390567594055,
+                0,
+                -0.9571952837970275
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.17953020134228187,
+                0,
+                -17.953020134228186
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0069084628670120895,
+                0.690846286701209,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006944444444444444,
+                0,
+                -0.6944444444444444
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0489795918367347,
+                0,
+                -4.8979591836734695
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                10,
+                83,
+                -0.08212664230451333,
+                0.4418150672333811,
+                -1.1305369701085
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.04319862169397657,
+                0.044464206313917294,
+                -4.364326375711575
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.04987531172069826,
+                0,
+                -4.987531172069826
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.015603799185888736,
+                0.6784260515603799,
+                -2.2388059701492535
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.025202941808586093,
+                0.4223010916932477,
+                -2.942595272551857
+            ],
+            "compile-time (instructions)": [
+                57,
+                43,
+                0,
+                0.14367282488446764,
+                3.6941827447470423,
+                -4.562817068886852
+            ],
+            "bitcode-size (bytes)": [
+                4,
+                3,
+                93,
+                -0.028114664001446483,
+                0.25989481277835436,
+                -1.2836818837526884
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.006730725071531628,
+                0.10950339328055388,
+                -0.7825759004337167
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.009656761760607051,
+                0.14669612813906793,
+                -1.112372304199773
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.04935622317596566,
+                0,
+                -4.935622317596566
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.055248618784530384,
+                0,
+                -5.524861878453039
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0819397532180302,
+                0.1270729992453025,
+                -8.321048321048321
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0521173311408649,
+                0.16707961139727456,
+                -5.3788127254837645
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.024007976420581265,
+                1.2003988210290633,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.07954545454545454,
+                0,
+                -7.954545454545454
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.12334801762114538,
+                0,
+                -12.334801762114537
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                9.685808847471277e-05,
+                0.6139154160982265,
+                -0.6042296072507553
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.04161979752530934,
+                0,
+                -4.161979752530934
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.027191022540064474,
+                0.1110864252388358,
+                -2.8301886792452833
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                1,
+                98,
+                -0.003262655205348616,
+                0.5333333333333333,
+                -0.8595988538681949
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.4,
+                0,
+                -40.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.008502566843452278,
+                0,
+                -0.4251283421726139
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.07547169811320754,
+                0,
+                -7.547169811320755
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.006636344491300826,
+                0.028407073361266955,
+                -0.6920415224913495
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.2,
+                0,
+                -20.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.02339752274420346,
+                1.169876137210173,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.021362587973706854,
+                2.229299363057325,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.00784313725490196,
+                0,
+                -0.7843137254901961
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.020247706124566348,
+                0.14914243102162564,
+                -2.1739130434782608
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.005865438993756401,
+                0.6361323155216284,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07315816589386914,
+                0,
+                -7.315816589386914
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07881136950904392,
+                0,
+                -7.881136950904392
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.031107494752663563,
+                0,
+                -1.5553747376331781
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.2063758389261745,
+                0,
+                -20.63758389261745
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0069084628670120895,
+                0.690846286701209,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006944444444444444,
+                0,
+                -0.6944444444444444
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0816326530612245,
+                0,
+                -8.16326530612245
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                12,
+                83,
+                -0.20148526724052795,
+                0.318828930222219,
+                -1.8118892812636576
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.06312272036570332,
+                0.044464206313917294,
+                -6.35673624288425
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.085785536159601,
+                0,
+                -8.5785536159601
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.030529172320217093,
+                0.6784260515603799,
+                -3.731343283582089
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.04256907784331837,
+                0.4223010916932477,
+                -4.6792088760250845
+            ],
+            "compile-time (instructions)": [
+                51,
+                49,
+                0,
+                0.9063116198436199,
+                5.051158829615401,
+                -3.407713027061702
+            ],
+            "bitcode-size (bytes)": [
+                5,
+                3,
+                92,
+                -0.0399319294563476,
+                0.21353305826621236,
+                -1.6869527456552735
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.011256465218618186,
+                0.10950339328055388,
+                -1.2351499151423724
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.016694219195340306,
+                0.14669612813906793,
+                -1.8161180476730987
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.09656652360515022,
+                0,
+                -9.656652360515022
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.0994475138121547,
+                0,
+                -9.94475138121547
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.11617398745226444,
+                0.1270729992453025,
+                -11.744471744471745
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.08032330031108463,
+                0.16707961139727456,
+                -8.199409642505739
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.07051960432755801,
+                3.5259802163779006,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.10795454545454546,
+                0,
+                -10.795454545454545
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.16740088105726872,
+                0,
+                -16.740088105726873
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0588235294117647,
+                5.88235294117647,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                -0.00594543798403284,
+                0.6139154160982265,
+                -1.2084592145015105
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.06411698537682789,
+                0,
+                -6.411698537682789
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.027191022540064474,
+                0.1110864252388358,
+                -2.8301886792452833
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                1,
+                98,
+                -0.003262655205348616,
+                0.5333333333333333,
+                -0.8595988538681949
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.4,
+                0,
+                -40.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.01829688613826129,
+                0,
+                -0.9148443069130645
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.07547169811320754,
+                0,
+                -7.547169811320755
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.013556759716214322,
+                0.028407073361266955,
+                -1.384083044982699
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.28,
+                0,
+                -28.000000000000004
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.02339752274420346,
+                1.169876137210173,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.021362587973706854,
+                2.229299363057325,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.00784313725490196,
+                0,
+                -0.7843137254901961
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.020247706124566348,
+                0.14914243102162564,
+                -2.1739130434782608
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.005865438993756401,
+                0.6361323155216284,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07315816589386914,
+                0,
+                -7.315816589386914
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07881136950904392,
+                0,
+                -7.881136950904392
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.031107494752663563,
+                0,
+                -1.5553747376331781
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.2063758389261745,
+                0,
+                -20.63758389261745
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.0069084628670120895,
+                0.690846286701209,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.006944444444444444,
+                0,
+                -0.6944444444444444
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0816326530612245,
+                0,
+                -8.16326530612245
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                7,
+                84,
+                -0.1091104534143282,
+                0.676182288652204,
+                -2.428097991328951
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.06312272036570332,
+                0.044464206313917294,
+                -6.35673624288425
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.085785536159601,
+                0,
+                -8.5785536159601
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.030529172320217093,
+                0.6784260515603799,
+                -3.731343283582089
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.04256907784331837,
+                0.4223010916932477,
+                -4.6792088760250845
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                -0.05877994816398875,
+                4.0436055916289995,
+                -4.000287623651369
+            ],
+            "bitcode-size (bytes)": [
+                4,
+                4,
+                92,
+                -0.04031073384533691,
+                0.2475910144200326,
+                -1.2553593605534552
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.011256465218618186,
+                0.10950339328055388,
+                -1.2351499151423724
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.016694219195340306,
+                0.14669612813906793,
+                -1.8161180476730987
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.09656652360515022,
+                0,
+                -9.656652360515022
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.0994475138121547,
+                0,
+                -9.94475138121547
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.11617398745226444,
+                0.1270729992453025,
+                -11.744471744471745
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.08032330031108463,
+                0.16707961139727456,
+                -8.199409642505739
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.07051960432755801,
+                3.5259802163779006,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.10795454545454546,
+                0,
+                -10.795454545454545
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.16740088105726872,
+                0,
+                -16.740088105726873
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0588235294117647,
+                5.88235294117647,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                -0.00594543798403284,
+                0.6139154160982265,
+                -1.2084592145015105
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.06411698537682789,
+                0,
+                -6.411698537682789
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.027191022540064474,
+                0.1110864252388358,
+                -2.8301886792452833
+            ],
+            "Number of instructions sunk (instcombine)": [
+                1,
+                1,
+                98,
+                -0.003262655205348616,
+                0.5333333333333333,
+                -0.8595988538681949
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.4,
+                0,
+                -40.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.01829688613826129,
+                0,
+                -0.9148443069130645
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.07547169811320754,
+                0,
+                -7.547169811320755
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.013556759716214322,
+                0.028407073361266955,
+                -1.384083044982699
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.28,
+                0,
+                -28.000000000000004
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.031016570363251075,
+                1.5508285181625538,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.024547301349503035,
+                2.547770700636943,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.011764705882352941,
+                0,
+                -1.1764705882352942
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.02335329618667815,
+                0.14914243102162564,
+                -2.484472049689441
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.007137703624799659,
+                0.7633587786259541,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07418856259659969,
+                0,
+                -7.418856259659969
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.07945736434108527,
+                0,
+                -7.945736434108527
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.03240788486969868,
+                0,
+                -1.6203942434849339
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.27684563758389263,
+                0,
+                -27.684563758389263
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.010362694300518137,
+                1.0362694300518136,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.010416666666666664,
+                0,
+                -1.0416666666666665
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.0816326530612245,
+                0,
+                -8.16326530612245
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                11,
+                5,
+                84,
+                -0.1331563779895343,
+                0.3168891865333352,
+                -3.360283770164024
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.06881531998619668,
+                0.044464206313917294,
+                -6.925996204933586
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.08678304239401496,
+                0,
+                -8.678304239401497
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.030529172320217093,
+                0.6784260515603799,
+                -3.731343283582089
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.04691061185200143,
+                0.4223010916932477,
+                -5.113362276893391
+            ],
+            "compile-time (instructions)": [
+                52,
+                48,
+                0,
+                -0.1577313659287314,
+                3.571274894901018,
+                -4.197488148494295
+            ],
+            "bitcode-size (bytes)": [
+                5,
+                3,
+                92,
+                -0.03962313967287742,
+                0.20508139697995542,
+                -1.6625736507291728
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.01323647653296855,
+                0.10950339328055388,
+                -1.4331510465774089
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.01907787413291125,
+                0.14669612813906793,
+                -2.054483541430193
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.09656652360515022,
+                0,
+                -9.656652360515022
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.0994475138121547,
+                0,
+                -9.94475138121547
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.11650158777986475,
+                0.1270729992453025,
+                -11.777231777231776
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.08376705236093705,
+                0.16707961139727456,
+                -8.543784847490981
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.07051960432755801,
+                3.5259802163779006,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.12215909090909091,
+                0,
+                -12.215909090909092
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.1894273127753304,
+                0,
+                -18.94273127753304
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0588235294117647,
+                5.88235294117647,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                -0.008966586020286618,
+                0.6139154160982265,
+                -1.5105740181268883
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.06974128233970754,
+                0,
+                -6.974128233970754
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.027191022540064474,
+                0.1110864252388358,
+                -2.8301886792452833
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                2,
+                98,
+                -0.01659598853868195,
+                0,
+                -0.8297994269340975
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.6,
+                0,
+                -60.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.02123518192670399,
+                0,
+                -1.0617590963351995
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.11320754716981134,
+                0,
+                -11.320754716981133
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.015286863522442693,
+                0.028407073361266955,
+                -1.5570934256055362
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.32,
+                0,
+                -32.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                2,
+                0,
+                98,
+                0.030064189410870128,
+                1.5032094705435064,
+                0
+            ],
+            "Number of direct abstract call sites created (abstract-call-sites)": [
+                1,
+                1,
+                98,
+                0.027732014725299212,
+                2.8662420382165608,
+                -0.09304056568663938
+            ],
+            "Number of instructions simplified or DCE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.011764705882352941,
+                0,
+                -1.1764705882352942
+            ],
+            "Number of functions inlined (inline)": [
+                1,
+                1,
+                98,
+                -0.026458886248789955,
+                0.14914243102162564,
+                -2.7950310559006213
+            ],
+            "Number of call sites analyzed (inline-cost)": [
+                1,
+                1,
+                98,
+                0.007137703624799659,
+                0.7633587786259541,
+                -0.049588416145988294
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0844925296239052,
+                0,
+                -8.44925296239052
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.09108527131782945,
+                0,
+                -9.108527131782946
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.04151061568894446,
+                0,
+                -2.075530784447223
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                1,
+                99,
+                -0.28187919463087246,
+                0,
+                -28.187919463087248
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.010362694300518137,
+                1.0362694300518136,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.010416666666666664,
+                0,
+                -1.0416666666666665
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                1,
+                99,
+                -0.11836734693877551,
+                0,
+                -11.83673469387755
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                6,
+                84,
+                -0.11442805557415874,
+                0.5610124904680842,
+                -2.8421550770161192
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                1,
+                98,
+                -0.07545668621010561,
+                0.044464206313917294,
+                -7.590132827324478
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                1,
+                99,
+                -0.11371571072319203,
+                0,
+                -11.371571072319203
+            ],
+            "Number of loops analyzed for vectorization (loop-vectorize)": [
+                1,
+                1,
+                98,
+                -0.03799185888738127,
+                0.6784260515603799,
+                -4.477611940298507
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.008823529411764706,
+                0.8823529411764706,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                1,
+                1,
+                98,
+                -0.053181716531210316,
+                0.4223010916932477,
+                -5.740472744814279
+            ],
+            "compile-time (instructions)": [
+                58,
+                42,
+                0,
+                1.4293276189433741,
+                5.243993060611295,
+                -3.8385437052647107
+            ],
+            "bitcode-size (bytes)": [
+                8,
+                3,
+                89,
+                -0.012847709348441576,
+                0.5443577842555859,
+                -1.879877736296282
+            ],
+            "Number of NoAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.016536495390219164,
+                0.10950339328055388,
+                -1.7631529323024704
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                1,
+                1,
+                98,
+                -0.023618169252094,
+                0.14669612813906793,
+                -2.5085130533484676
+            ],
+            "Number of instructions deleted (gvn)": [
+                0,
+                1,
+                99,
+                -0.11587982832618024,
+                0,
+                -11.587982832618025
+            ],
+            "Number of instructions simplified (gvn)": [
+                0,
+                1,
+                99,
+                -0.12430939226519337,
+                0,
+                -12.430939226519337
+            ],
+            "Number of fully cached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.13140740268567966,
+                0.1270729992453025,
+                -13.267813267813267
+            ],
+            "Number of uncached non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.0952462258604451,
+                0.16707961139727456,
+                -9.691702197441785
+            ],
+            "Number of loops not rotated due to the header size (loop-rotate)": [
+                1,
+                0,
+                99,
+                0.005208333333333332,
+                0.5208333333333333,
+                0
+            ],
+            "Number of block queries that were completely cached (memdep)": [
+                2,
+                0,
+                98,
+                0.07827154231205413,
+                3.9135771156027066,
+                0
+            ],
+            "Number of GEP instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.13920454545454544,
+                0,
+                -13.920454545454545
+            ],
+            "Number of load instructions CSE'd (early-cse)": [
+                0,
+                1,
+                99,
+                -0.21145374449339208,
+                0,
+                -21.145374449339208
+            ],
+            "Number of function pointer arguments marked non-null (correlated-value-propagation)": [
+                1,
+                0,
+                99,
+                0.0588235294117647,
+                5.88235294117647,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                1,
+                1,
+                98,
+                -0.008966586020286618,
+                0.6139154160982265,
+                -1.5105740181268883
+            ],
+            "Number of insts reassociated (reassociate)": [
+                0,
+                1,
+                99,
+                -0.07536557930258718,
+                0,
+                -7.536557930258718
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                1,
+                0,
+                99,
+                0.011917494270435447,
+                1.1917494270435447,
+                0
+            ],
+            "Number of instructions CSE'd (early-cse)": [
+                1,
+                1,
+                98,
+                -0.046058947068366364,
+                0.1110864252388358,
+                -4.716981132075472
+            ],
+            "Number of instructions sunk (instcombine)": [
+                0,
+                2,
+                98,
+                -0.09392932187201528,
+                0,
+                -4.696466093600764
+            ],
+            "Number of jumps threaded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.004397215097105167,
+                0.4397215097105167,
+                0
+            ],
+            "Number of loops deleted (loop-delete)": [
+                0,
+                1,
+                99,
+                -0.6,
+                0,
+                -60.0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                2,
+                98,
+                -0.024173477715146694,
+                0,
+                -1.2086738857573347
+            ],
+            "Number of blocks merged (gvn)": [
+                0,
+                1,
+                99,
+                -0.11320754716981134,
+                0,
+                -11.320754716981133
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                1,
+                98,
+                -0.01701696732867107,
+                0.028407073361266955,
+                -1.7301038062283738
+            ],
+            "Number iterations check for reads in getDomMemoryDef (dse)": [
+                1,
+                1,
+                98,
+                -0.020046567434545682,
+                0.14588089095403403,
+                -2.1505376344086025
+            ],
+            "Number of terminators folded (jump-threading)": [
+                1,
+                0,
+                99,
+                0.0034843205574912896,
+                0.34843205574912894,
+                0
+            ],
+            "Number of no-signed-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01990049751243781,
+                0,
+                -1.9900497512437811
+            ],
+            "Number of no-wrap deductions for add (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01951219512195122,
+                0,
+                -1.951219512195122
+            ],
+            "Number of no-signed-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.01904761904761905,
+                0,
+                -1.9047619047619049
+            ],
+            "Number of no-wrap deductions (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.018691588785046728,
+                0,
+                -1.8691588785046727
+            ],
+            "Number of phis propagated (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -0.36,
+                0,
+                -36.0
+            ],
+            "Number of instructions removed (constraint-elimination)": [
+                0,
+                1,
+                99,
+                -0.5,
+                0,
+                -50.0
+            ],
+            "Number of instructions removed (adce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of terminators folded to unconditional branches (loop-simplifycfg)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of branch instructions removed (adce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            2,
+            -7.676039641937404
+        ],
+        [
+            13,
+            0.0
+        ],
+        [
+            9,
+            -48.727122470496425
+        ],
+        [
+            12,
+            -92.10314112116063
+        ],
+        [
+            9,
+            -51.91471913690295
+        ],
+        [
+            6,
+            -24.59227409114572
+        ],
+        [
+            5,
+            -5.288707572911235
+        ],
+        [
+            6,
+            -30.19041888643661
+        ],
+        [
+            6,
+            -33.27774840766262
+        ],
+        [
+            7,
+            -24.977699688264472
+        ],
+        [
+            7,
+            -22.903544201693173
+        ],
+        [
+            6,
+            -14.535670402918386
+        ],
+        [
+            12,
+            -33.00672980972628
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            92,
+            -1.6458027889781253
+        ],
+        [
+            4,
+            0.0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            2,
+            -0.0784360965122524
+        ],
+        [
+            1,
+            -1.1604966925844262
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            1,
+            -3.4724973335364924
+        ]
+    ],
+    "compile_time_saving_file": -389.193815431256,
+    "bitcode_size_saving_file": -6.3572329116112964
+}

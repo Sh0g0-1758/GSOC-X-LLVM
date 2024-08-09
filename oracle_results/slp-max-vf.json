@@ -1,0 +1,3818 @@
+{
+    "knob_name": "slp-max-vf",
+    "original_val": 0,
+    "knob_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        20,
+        100
+    ],
+    "graph_stats_dict": {
+        "Number of MayAlias results (aa)": [
+            0.0,
+            -1.1919856050655593,
+            -0.06149734650338235,
+            -0.06149734650338235,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            -0.0022776795001252723,
+            0.0,
+            0.0
+        ],
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+            0.0,
+            -0.00485767026134266,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Negator: Number of negations attempted to be sinked (instcombine)": [
+            0.0,
+            -0.005343022013250694,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of insts combined (instcombine)": [
+            0.0,
+            -0.3709661694452569,
+            -0.06775860388027688,
+            -0.07068343570244712,
+            -0.0014624159110851126,
+            -0.019011406844106463,
+            -0.019011406844106463,
+            -0.019011406844106463,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of dead inst eliminated (instcombine)": [
+            0.0,
+            -0.16021420419629534,
+            -0.05267316302343956,
+            -0.05267316302343956,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of redundant instructions removed (instsimplify)": [
+            0.0,
+            1.3911355548366224,
+            0.5338078291814947,
+            0.5338078291814947,
+            0.09705596894208994,
+            0.09705596894208994,
+            0.09705596894208994,
+            0.09705596894208994,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of insts scanned while updating ibt (ipt)": [
+            0.0,
+            0.005768295798208532,
+            0.0492777269618386,
+            -0.049772152315970764,
+            0.00098885070826432,
+            -0.03147841421308085,
+            -0.054551597405914976,
+            -0.009723698631265812,
+            -0.01120697469366229,
+            0.019447397262531623,
+            -0.020930673324928102,
+            -0.06048470165550089,
+            -0.04383904806638485
+        ],
+        "Number of loop exits with predictable exit counts (scalar-evolution)": [
+            0.0,
+            -1.043115438108484,
+            -0.645738128352871,
+            -0.645738128352871,
+            -0.08940989469501291,
+            -0.08940989469501291,
+            -0.08940989469501291,
+            -0.08940989469501291,
+            -0.04967216371945162,
+            -0.04967216371945162,
+            -0.04967216371945162,
+            0.0,
+            0.0
+        ],
+        "Number of blocks simplified (simplifycfg)": [
+            0.0,
+            -0.008348539601893926,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "compile-time (instructions)": [
+            0.0,
+            -9.237475783091595,
+            -11.65402114782131,
+            -10.457372810969206,
+            -11.055021601016525,
+            -7.940312266966081,
+            -9.942748471201925,
+            -9.159961097260542,
+            -9.86576873697366,
+            -9.830051251505578,
+            -10.81806747542706,
+            -11.12631575846951,
+            -11.006878842783989
+        ],
+        "bitcode-size (bytes)": [
+            0.0,
+            0.14905542983691256,
+            0.04136400392509179,
+            0.040535342744622505,
+            -0.009840351518072754,
+            0.0033146447218771386,
+            0.0033146447218771386,
+            0.0033146447218771386,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of NoAlias results (aa)": [
+            0.0,
+            -0.6430081061558629,
+            -0.06193317103186281,
+            -0.06193317103186281,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of arguments with unsolved size and offset (memory-builtins)": [
+            0.0,
+            -1.6833245660178853,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of pointers maybe captured (capture-tracking)": [
+            0.0,
+            0.18763029881862403,
+            -0.020847810979847115,
+            -0.04169562195969423,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of instructions hoisted out of loop (licm)": [
+            0.0,
+            -0.2786485545106235,
+            -0.13932427725531174,
+            -0.13932427725531174,
+            0.0,
+            -0.13932427725531174,
+            -0.13932427725531174,
+            -0.13932427725531174,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+            0.0,
+            -0.2808988764044944,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+            0.0,
+            -0.1400560224089636,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of loop exits without predictable exit counts (scalar-evolution)": [
+            0.0,
+            -0.748191457734615,
+            -0.18828659201268458,
+            -0.3666633633931226,
+            -0.089188385690219,
+            -0.089188385690219,
+            -0.089188385690219,
+            -0.089188385690219,
+            -0.0693687444257259,
+            -0.0693687444257259,
+            -0.0693687444257259,
+            0.0,
+            0.0
+        ],
+        "Number of functions removed (globaldce)": [
+            0.0,
+            -8.823529411764707,
+            -8.823529411764707,
+            -8.823529411764707,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of vector instructions generated (SLP)": [
+            0.0,
+            -100.0,
+            -13.477537437603992,
+            -13.727121464226288,
+            0.0,
+            -3.494176372712146,
+            -3.494176372712146,
+            -3.494176372712146,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of MustAlias results (aa)": [
+            0.0,
+            -0.4356189183073093,
+            -0.1612355736591989,
+            -0.1612355736591989,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of geps reassociated and hoisted out of the loop (licm)": [
+            0.0,
+            -1.4084507042253522,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of pointers not captured (capture-tracking)": [
+            0.0,
+            -0.5243088655862727,
+            -0.3813155386081983,
+            -0.3813155386081983,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of vector binops formed (vector-combine)": [
+            0.0,
+            -100.0,
+            -47.61904761904761,
+            -47.61904761904761,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "Number of vector compares formed (vector-combine)": [
+            0.0,
+            -91.66666666666666,
+            -50.0,
+            -50.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of arguments with unsolved size and offset (memory-builtins)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of functions removed (globaldce)",
+        "Number of vector instructions generated (SLP)",
+        "Number of MustAlias results (aa)",
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of vector binops formed (vector-combine)",
+        "Number of vector compares formed (vector-combine)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of live out of a loop variables (lcssa)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of arguments with unsolved size and offset (memory-builtins)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of Queries into an assume assume bundles (assume-queries)",
+        "Number of functions removed (globaldce)",
+        "Number of vector instructions generated (SLP)",
+        "Number of MustAlias results (aa)",
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of vector binops formed (vector-combine)",
+        "Number of vector compares formed (vector-combine)"
+    ],
+    "stats_per_file": [
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                20,
+                80,
+                -1.2991528895308337,
+                0,
+                -6.495764447654169
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                1,
+                99,
+                -0.0014084507042253522,
+                0,
+                -0.14084507042253522
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                1,
+                99,
+                -0.001597444089456869,
+                0,
+                -0.1597444089456869
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                16,
+                84,
+                -0.5668809040916367,
+                0,
+                -3.5430056505727294
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                5,
+                95,
+                -0.20889324092069747,
+                0,
+                -4.1778648184139495
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                13,
+                0,
+                87,
+                1.24519711902906,
+                9.578439377146616,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                13,
+                87,
+                -1.1095223922754665,
+                0,
+                -8.534787632888204
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                4,
+                1,
+                95,
+                1.1687531340135493,
+                29.40401353552392,
+                -0.7407407407407408
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                13,
+                13,
+                74,
+                0.1232395271285303,
+                1.76085780201745,
+                -0.8128614394902934
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                47,
+                53,
+                -7.791557458480618,
+                0,
+                -16.577781826554506
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                4,
+                1,
+                95,
+                0.3817683728502557,
+                9.606553460907266,
+                -0.24937655860349126
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                11,
+                89,
+                -0.20833056107199577,
+                0,
+                -1.893914191563598
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                2,
+                98,
+                -0.05931014741663088,
+                0,
+                -2.9655073708315443
+            ],
+            "compile-time (instructions)": [
+                39,
+                61,
+                0,
+                -0.7899460847661733,
+                4.795685959316296,
+                -4.361087883441851
+            ],
+            "bitcode-size (bytes)": [
+                15,
+                6,
+                79,
+                0.569963430854709,
+                4.7249150303129,
+                -2.3128970615371034
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                40,
+                60,
+                -1.5868125483212565,
+                0,
+                -3.9670313708031415
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                38,
+                62,
+                -2.0136422490935395,
+                0,
+                -5.299058550246156
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                2,
+                98,
+                -0.36095054592164416,
+                0,
+                -18.047527296082208
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                4,
+                9,
+                87,
+                -0.0655625652443192,
+                2.4572359749156303,
+                -1.820577824899382
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                3,
+                97,
+                -1.2642212260875056,
+                0,
+                -42.14070753625018
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                1,
+                99,
+                -0.013888888888888888,
+                0,
+                -1.3888888888888888
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                1,
+                99,
+                -0.013888888888888888,
+                0,
+                -1.3888888888888888
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                9,
+                91,
+                -0.34320747849763117,
+                0,
+                -3.8134164277514575
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                11,
+                87,
+                -2.5351487723302206,
+                9.767844832404837,
+                -24.822778808893794
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                11,
+                89,
+                -0.3751571342779609,
+                0,
+                -3.410519402526917
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                1,
+                99,
+                -0.07692307692307693,
+                0,
+                -7.6923076923076925
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.02362783218625025,
+                0,
+                -1.1813916093125125
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                2,
+                98,
+                -2.0,
+                0,
+                -100.0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                25,
+                75,
+                -25.0,
+                0,
+                -100.0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                3,
+                97,
+                -3.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                4,
+                96,
+                -0.07005523525523469,
+                0,
+                -1.7513808813808673
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                2,
+                6,
+                92,
+                -0.0771125635669281,
+                1.5422442978229176,
+                -1.7992908253897741
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                2,
+                98,
+                -0.12724387233292186,
+                0,
+                -6.362193616646094
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                3,
+                0,
+                97,
+                0.09238959238959239,
+                3.0796530796530797,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                3,
+                97,
+                -0.09550859333964415,
+                0,
+                -3.183619777988138
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                2,
+                0,
+                98,
+                0.5132060138155221,
+                25.660300690776104,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                14,
+                7,
+                79,
+                0.06424119272098144,
+                0.8657261941212318,
+                -0.8137210636570144
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                20,
+                79,
+                -0.7658325757110592,
+                5.9405940594059405,
+                -4.1261925815255935
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                2,
+                0,
+                98,
+                0.14416475972540044,
+                7.2082379862700225,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                7,
+                93,
+                -0.15018382127271396,
+                0,
+                -2.145483161038771
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                50,
+                50,
+                0,
+                0.14050866302063192,
+                4.235231773082075,
+                -3.9542144470408123
+            ],
+            "bitcode-size (bytes)": [
+                7,
+                1,
+                92,
+                0.23460211168311623,
+                3.6044288411045544,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                9,
+                89,
+                0.004409521042298073,
+                4.3265639589169,
+                -0.9124639792893324
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                7,
+                91,
+                -0.06273700560540295,
+                1.2214617768595042,
+                -1.2452320163227577
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.010452961672473868,
+                0,
+                -1.0452961672473868
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.2553191489361702,
+                0,
+                -25.53191489361702
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                4,
+                96,
+                -0.05644437783798937,
+                0,
+                -1.4111094459497342
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                5,
+                93,
+                -1.3607038986811277,
+                9.767844832404837,
+                -31.12121590658449
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                2,
+                7,
+                91,
+                -3.513157894736842,
+                75.0,
+                -71.61654135338345
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                3,
+                96,
+                2.913887656036437,
+                300.0,
+                -2.87041146545211
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.01932367149758454,
+                0,
+                -1.932367149758454
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                4,
+                96,
+                -0.07005523525523469,
+                0,
+                -1.7513808813808673
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                6,
+                93,
+                -0.0917467099083915,
+                1.6210739614994936,
+                -1.7992908253897741
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                2,
+                98,
+                -0.12724387233292186,
+                0,
+                -6.362193616646094
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                3,
+                0,
+                97,
+                0.09238959238959239,
+                3.0796530796530797,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                3,
+                97,
+                -0.09550859333964415,
+                0,
+                -3.183619777988138
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                2,
+                0,
+                98,
+                0.5132060138155221,
+                25.660300690776104,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                10,
+                12,
+                78,
+                0.021501881443783847,
+                1.0626534352847385,
+                -0.7063621840390834
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                23,
+                77,
+                -1.104610828594264,
+                0,
+                -4.8026557764968
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                2,
+                0,
+                98,
+                0.14416475972540044,
+                7.2082379862700225,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                7,
+                93,
+                -0.15018382127271396,
+                0,
+                -2.145483161038771
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                46,
+                54,
+                0,
+                0.010144387510677456,
+                4.900067619239381,
+                -4.1553457728508105
+            ],
+            "bitcode-size (bytes)": [
+                6,
+                1,
+                93,
+                0.23148360856461317,
+                4.1531919293135955,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                2,
+                9,
+                89,
+                0.004409521042298073,
+                4.3265639589169,
+                -0.9124639792893324
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                2,
+                7,
+                91,
+                -0.06273700560540295,
+                1.2214617768595042,
+                -1.2452320163227577
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                2,
+                98,
+                -0.013426202504981301,
+                0,
+                -0.6713101252490651
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.2553191489361702,
+                0,
+                -25.53191489361702
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                5,
+                95,
+                -0.223111044504656,
+                0,
+                -4.4622208900931195
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                5,
+                93,
+                -1.4970675350447642,
+                9.767844832404837,
+                -33.84848863385722
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                1,
+                7,
+                92,
+                -4.0131578947368425,
+                100.0,
+                -71.61654135338345
+            ],
+            "Number of MustAlias results (aa)": [
+                1,
+                3,
+                96,
+                2.913887656036437,
+                300.0,
+                -2.87041146545211
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                1,
+                99,
+                -0.01932367149758454,
+                0,
+                -1.932367149758454
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                1,
+                1,
+                98,
+                -4.9797110421727634e-05,
+                0.28169014084507044,
+                -0.2866698518872432
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                1,
+                0,
+                99,
+                0.01048951048951049,
+                1.048951048951049,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                1,
+                99,
+                -0.025210084033613446,
+                0,
+                -2.5210084033613445
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                1,
+                0,
+                99,
+                0.2608695652173913,
+                26.08695652173913,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                11,
+                7,
+                82,
+                -0.011233352263693366,
+                0.3950776260412308,
+                -0.7813127304032678
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                2,
+                4,
+                94,
+                0.05586660217991219,
+                6.527722034287025,
+                -1.8671959626457075
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                1,
+                0,
+                99,
+                0.07894736842105263,
+                7.894736842105263,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.025443995015453975,
+                0,
+                -0.8481331671817992
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                45,
+                55,
+                0,
+                0.1085878508374212,
+                5.55282005449193,
+                -4.34578395215263
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                -0.01349639572953246,
+                0.42115114646700985,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.034020050475839156,
+                0,
+                -1.134001682527972
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                0,
+                98,
+                0.10111605895176166,
+                5.0558029475880835,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                1,
+                1,
+                98,
+                0.0,
+                100.0,
+                -100.0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.03385261401183018,
+                0,
+                -1.6926307005915089
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                0,
+                98,
+                0.09157059157059157,
+                4.5785295785295785,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                2,
+                98,
+                -0.09497752589407855,
+                0,
+                -4.748876294703928
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                1,
+                0,
+                99,
+                0.2608695652173913,
+                26.08695652173913,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                10,
+                81,
+                0.0042637784864407455,
+                0.713767807249981,
+                -0.5997532416605755
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                6,
+                94,
+                -0.2511076803462309,
+                0,
+                -4.1851280057705145
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                1,
+                0,
+                99,
+                0.07894736842105263,
+                7.894736842105263,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.025443995015453975,
+                0,
+                -0.8481331671817992
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                54,
+                46,
+                0,
+                0.9020897975256601,
+                5.538323226244877,
+                -4.540445097057769
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                0.07564726360598463,
+                9.335517080018718,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.2553191489361702,
+                0,
+                -25.53191489361702
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.034020050475839156,
+                0,
+                -1.134001682527972
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                0,
+                98,
+                0.19535689664809675,
+                9.767844832404837,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                2,
+                98,
+                -2.0,
+                0,
+                -100.0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.03385261401183018,
+                0,
+                -1.6926307005915089
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                0,
+                98,
+                0.09157059157059157,
+                4.5785295785295785,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                2,
+                98,
+                -0.09497752589407855,
+                0,
+                -4.748876294703928
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                1,
+                0,
+                99,
+                0.2608695652173913,
+                26.08695652173913,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                9,
+                9,
+                82,
+                -0.015545180136897905,
+                0.6719867646540792,
+                -0.8447109883973893
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                6,
+                94,
+                -0.2511076803462309,
+                0,
+                -4.1851280057705145
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                1,
+                0,
+                99,
+                0.07894736842105263,
+                7.894736842105263,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.025443995015453975,
+                0,
+                -0.8481331671817992
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                44,
+                56,
+                0,
+                0.17801099073681326,
+                5.212398864753621,
+                -3.777579481704964
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                0.07564726360598463,
+                9.335517080018718,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.2553191489361702,
+                0,
+                -25.53191489361702
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.034020050475839156,
+                0,
+                -1.134001682527972
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                0,
+                98,
+                0.19535689664809675,
+                9.767844832404837,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                2,
+                98,
+                -2.0,
+                0,
+                -100.0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                2,
+                98,
+                -0.03385261401183018,
+                0,
+                -1.6926307005915089
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                2,
+                0,
+                98,
+                0.09157059157059157,
+                4.5785295785295785,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                2,
+                98,
+                -0.09497752589407855,
+                0,
+                -4.748876294703928
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                1,
+                0,
+                99,
+                0.2608695652173913,
+                26.08695652173913,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                11,
+                83,
+                -0.0007555132580530177,
+                1.2216367788452323,
+                -0.6732156362615178
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                6,
+                94,
+                -0.2511076803462309,
+                0,
+                -4.1851280057705145
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                1,
+                0,
+                99,
+                0.07894736842105263,
+                7.894736842105263,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.025443995015453975,
+                0,
+                -0.8481331671817992
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                49,
+                51,
+                0,
+                0.4359790332032681,
+                5.795860538444545,
+                -4.713711040459921
+            ],
+            "bitcode-size (bytes)": [
+                1,
+                1,
+                98,
+                0.07564726360598463,
+                9.335517080018718,
+                -1.770790719420256
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                1,
+                99,
+                -0.2553191489361702,
+                0,
+                -25.53191489361702
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                3,
+                97,
+                -0.034020050475839156,
+                0,
+                -1.134001682527972
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                2,
+                0,
+                98,
+                0.19535689664809675,
+                9.767844832404837,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                2,
+                98,
+                -2.0,
+                0,
+                -100.0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                8,
+                85,
+                -0.030200193983484246,
+                0.451960811683248,
+                -0.772968135016395
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                1,
+                3,
+                96,
+                -0.0017374759849136288,
+                1.8404907975460123,
+                -0.6714127986791251
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.00736901558191302,
+                0,
+                -0.368450779095651
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                0.2553510983731575,
+                5.284569928761118,
+                -4.204522204046354
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.024589025615610625,
+                0,
+                -1.2294512807805313
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.012825784675399035,
+                0.419058110580626,
+                -0.3796927131023661
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                3,
+                97,
+                -0.020142383960373753,
+                0,
+                -0.6714127986791251
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.00736901558191302,
+                0,
+                -0.368450779095651
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                42,
+                58,
+                0,
+                0.3063843345424599,
+                6.233899672783271,
+                -3.985954358666402
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.024589025615610625,
+                0,
+                -1.2294512807805313
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                1,
+                99,
+                -0.00016497113005224087,
+                0,
+                -0.016497113005224086
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                6,
+                10,
+                84,
+                -0.030283143327465227,
+                0.5293199714230181,
+                -0.6204234161284632
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                3,
+                97,
+                -0.020142383960373753,
+                0,
+                -0.6714127986791251
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.00736901558191302,
+                0,
+                -0.368450779095651
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                0.05247926772487539,
+                5.342354957803571,
+                -4.638542570646798
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                1,
+                99,
+                -0.00014276876219483176,
+                0,
+                -0.014276876219483176
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                2,
+                98,
+                -0.024589025615610625,
+                0,
+                -1.2294512807805313
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                5,
+                11,
+                84,
+                -0.056770052464447524,
+                0.21172391893779957,
+                -0.612329531012159
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                39,
+                61,
+                0,
+                -0.55131518180455,
+                4.397180415316954,
+                -3.715107448816659
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        },
+        {
+            "Number of MayAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Total number of values visited during attempts to sink negation (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Negator: Number of negations attempted to be sinked (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts combined (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of dead inst eliminated (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with one iteration (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions with two iterations (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of redundant instructions removed (instsimplify)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of insts scanned while updating ibt (ipt)": [
+                7,
+                9,
+                84,
+                -0.025656633305734807,
+                0.3933274236003727,
+                -0.5909950328640101
+            ],
+            "Number of renumberings across all blocks (ir)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of live out of a loop variables (lcssa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits with predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of blocks simplified (simplifycfg)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "compile-time (instructions)": [
+                47,
+                53,
+                0,
+                -0.08933296693797028,
+                5.062126414944149,
+                -4.657608267852302
+            ],
+            "bitcode-size (bytes)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of NoAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of times a GEP is decomposed (basicaa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of arguments with unsolved size and offset (memory-builtins)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers maybe captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of instructions hoisted out of loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled with run-time trip counts (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops unrolled (completely or otherwise) (loop-unroll)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loop exits without predictable exit counts (scalar-evolution)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of Queries into an assume assume bundles (assume-queries)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of functions removed (globaldce)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector instructions generated (SLP)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of MustAlias results (aa)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of geps reassociated and hoisted out of the loop (licm)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of pointers not captured (capture-tracking)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector binops formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of vector compares formed (vector-combine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ]
+        }
+    ],
+    "compile_time_knobs_file": [
+        [
+            5,
+            0.0
+        ],
+        [
+            22,
+            -97.01145152353276
+        ],
+        [
+            6,
+            -30.80834971312174
+        ],
+        [
+            12,
+            -85.02900723964818
+        ],
+        [
+            8,
+            -22.386601206562602
+        ],
+        [
+            8,
+            -25.25428818710875
+        ],
+        [
+            8,
+            -31.722935718498775
+        ],
+        [
+            7,
+            -34.734032627220095
+        ],
+        [
+            2,
+            -13.913964185199077
+        ],
+        [
+            8,
+            -16.293206200311765
+        ],
+        [
+            6,
+            -26.090415507964558
+        ],
+        [
+            3,
+            -7.048467219179056
+        ],
+        [
+            5,
+            -15.353433790008747
+        ]
+    ],
+    "bitcode_size_knobs_file": [
+        [
+            94,
+            0.0
+        ],
+        [
+            6,
+            -13.87738236922262
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ],
+        [
+            0,
+            0
+        ]
+    ],
+    "compile_time_saving_file": -405.646153118356,
+    "bitcode_size_saving_file": -13.87738236922262
+}
