@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             jsonData = data;
             
             const knobValues = jsonData.knob_values;
-            let stats = jsonData.stats;
-            const graphStats = jsonData.graph_stats;
+            let stats = jsonData.graph_stats;
+            const graphStats = jsonData.graph_stats_dict;
             
             // Calculate and display correlation coefficients
             const correlations = stats.map(stat => {
@@ -330,6 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             
             stat_files_info = jsonData.stats_per_file
+            let table_stats = jsonData.table_stats
 
             table_stats.forEach(stat => {
                 const tr = document.createElement('tr');

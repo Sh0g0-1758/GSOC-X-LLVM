@@ -16,7 +16,7 @@
         20,
         100
     ],
-    "graph_stats": {
+    "graph_stats_dict": {
         "Number of MayAlias results (aa)": [
             0.0,
             -0.009110718000501089,
@@ -484,18 +484,18 @@
         ],
         "Number of insts scanned while updating ibt (ipt)": [
             0.0,
-            -0.11496812397423525,
-            -0.4851094011595781,
-            -1.0906301803696463,
-            -1.62439897402908,
-            -1.7329341613677411,
-            -3.2065714921938793,
-            -3.4812084024049286,
-            -4.548910936817016,
-            -4.8547228476466175,
-            -5.353852751729883,
-            -9.57237466082754,
-            -17.25758962812678
+            -0.16186110602891413,
+            -0.6184346943182137,
+            -1.1861023614909023,
+            -1.7239361588150846,
+            -1.850359242648259,
+            -3.206234454658287,
+            -3.68407085626503,
+            -4.566724850954272,
+            -4.930170613473371,
+            -5.399106302528627,
+            -9.67820627566166,
+            -17.431715876069116
         ],
         "Number of loops rotated (loop-rotate)": [
             0.0,
@@ -694,18 +694,18 @@
         ],
         "compile-time (instructions)": [
             0.0,
-            -0.8086133352425368,
-            -9.57508172398118,
-            -10.27794748054814,
-            -11.775116172042111,
-            -9.226870597179095,
-            -9.513134792799907,
-            -10.344423697006768,
-            -9.279964472895532,
-            -9.785214519089598,
-            -10.550455281690244,
-            -14.275101897458919,
-            -20.175613144601186
+            -3.036968017140943,
+            -7.257002589750843,
+            -7.677164781908997,
+            -7.902837821804089,
+            -8.805198754289492,
+            -8.87620538546419,
+            -8.278756086643519,
+            -5.854640972555683,
+            -8.731156504193466,
+            -8.87618727473529,
+            -13.775659807895222,
+            -19.02612792998271
         ],
         "bitcode-size (bytes)": [
             0.0,
@@ -2282,81 +2282,6 @@
             -21.428571428571427,
             -21.428571428571427
         ],
-        "Number of IV comparisons eliminated (indvars)": [
-            0.0,
-            -8.823529411764707,
-            -8.823529411764707,
-            -11.76470588235294,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -20.588235294117645,
-            -26.47058823529412
-        ],
-        "Number of loops for which we managed to break the backedge (loop-delete)": [
-            0.0,
-            -12.0,
-            -16.0,
-            -20.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -36.0,
-            -52.0
-        ],
-        "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-            0.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0,
-            -20.0
-        ],
-        "Number of ands removed (correlated-value-propagation)": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            -14.285714285714285
-        ],
-        "Number of cached, but dirty, non-local ptr responses (memdep)": [
-            0.0,
-            3.1746031746031744,
-            3.1746031746031744,
-            3.1746031746031744,
-            3.1746031746031744,
-            3.1746031746031744,
-            0.0,
-            38.095238095238095,
-            -3.1746031746031744,
-            -3.1746031746031744,
-            -3.1746031746031744,
-            14.285714285714285,
-            -6.349206349206349
-        ],
         "Number of unread args replaced with poison (deadargelim)": [
             0.0,
             0.0,
@@ -2416,6 +2341,81 @@
             -9.278350515463918,
             -16.49484536082474,
             -16.49484536082474
+        ],
+        "Number of cached, but dirty, non-local ptr responses (memdep)": [
+            0.0,
+            3.1746031746031744,
+            3.1746031746031744,
+            3.1746031746031744,
+            3.1746031746031744,
+            3.1746031746031744,
+            0.0,
+            38.095238095238095,
+            -3.1746031746031744,
+            -3.1746031746031744,
+            -3.1746031746031744,
+            14.285714285714285,
+            -6.349206349206349
+        ],
+        "Number of IV comparisons eliminated (indvars)": [
+            0.0,
+            -8.823529411764707,
+            -8.823529411764707,
+            -11.76470588235294,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -20.588235294117645,
+            -26.47058823529412
+        ],
+        "Number of loops for which we managed to break the backedge (loop-delete)": [
+            0.0,
+            -12.0,
+            -16.0,
+            -20.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -36.0,
+            -52.0
+        ],
+        "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+            0.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0,
+            -20.0
+        ],
+        "Number of ands removed (correlated-value-propagation)": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -14.285714285714285
         ],
         "Number of unread args removed (deadargelim)": [
             0.0,
@@ -2553,191 +2553,362 @@
             500.0
         ]
     },
-    "stats": [
-        "Number of no-wrap deductions for shl (correlated-value-propagation)",
-        "Number of vectorized aggregates (sroa)",
-        "Number of global vars without address taken (globalsmodref-aa)",
-        "Number of sext converted to zext (correlated-value-propagation)",
-        "Number of geps reassociated and hoisted out of the loop (licm)",
-        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
-        "Number of insts reassociated (reassociate)",
-        "Number of loop loads PRE'd (gvn)",
-        "Number of branch instructions removed (adce)",
-        "Number of functions with two iterations (instcombine)",
-        "Number of unread args replaced with poison (deadargelim)",
-        "Number of NoAlias results (aa)",
-        "Number of common instructions hoisted up to the begin block (simplifycfg)",
-        "Number of load instructions CSE'd (early-cse)",
-        "Negator: How many negations did we retrieve/reuse from cache (instcombine)",
-        "Number of loops deleted (loop-delete)",
-        "Number of library calls simplified (instcombine)",
-        "Number of vector instructions generated (SLP)",
-        "Number of vector compares formed (vector-combine)",
-        "Number of functions with one iteration (instcombine)",
-        "Number of terminators folded to unconditional branches (loop-simplifycfg)",
-        "Number of loads moved to predecessor of a critical edge in PRE (gvn)",
-        "Number of instructions cloned into loop preheader (loop-rotate)",
-        "Negator: Number of negations attempted to be sinked (instcombine)",
-        "Number of times a valid candidate is returned from getDomMemoryDef (dse)",
-        "Number of IV comparisons eliminated (indvars)",
-        "Number of instructions sunk out of loop (licm)",
+    "graph_stats": [
+        "Number of MayAlias results (aa)",
+        "Max number of times we visited a function (count-visits)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of functions with improved memory attribute (function-attrs)",
         "Number of arguments marked nocapture (function-attrs)",
-        "Number of equalities propagated (gvn)",
-        "Number of loads PRE'd (gvn)",
-        "Number of cached, but dirty, non-local ptr responses (memdep)",
-        "Number of unread args removed (deadargelim)",
-        "Number of loops completely unrolled (loop-unroll)",
-        "Number of uncached non-local ptr responses (memdep)",
-        "Number of no-signed-wrap deductions for shl (correlated-value-propagation)",
-        "Number of global uses devirtualized (globalopt)",
-        "Number of no-unsigned-wrap deductions (correlated-value-propagation)",
-        "Number of congruent IVs eliminated (indvars)",
-        "Number of loop exits without predictable exit counts (scalar-evolution)",
-        "Number of functions without address taken (globalsmodref-aa)",
-        "bitcode-size (bytes)",
-        "Number of branches unswitched (simple-loop-unswitch)",
-        "Number of branches folded into predecessor basic block (simplifycfg)",
+        "Number of functions marked as nofree (function-attrs)",
+        "Number of functions marked as norecurse (function-attrs)",
+        "Number of functions marked as nosync (function-attrs)",
+        "Number of function returns marked noundef (function-attrs)",
+        "Number of arguments marked readonly (function-attrs)",
         "Number of functions marked as willreturn (function-attrs)",
+        "Number of arguments marked writeonly (function-attrs)",
+        "Number of globals deleted (globalopt)",
+        "Number of functions converted to fastcc (globalopt)",
+        "Number of internal functions (globalopt)",
+        "Number of globals marked unnamed_addr (globalopt)",
+        "Number of functions that do not access memory (globalsmodref-aa)",
+        "Number of functions without address taken (globalsmodref-aa)",
+        "Number of functions that only read memory (globalsmodref-aa)",
+        "Number of functions deleted because all callers found (inline)",
+        "Number of functions inlined (inline)",
+        "Number of call sites analyzed (inline-cost)",
+        "Negator: Maximal traversal depth ever reached while attempting to sink negation (instcombine)",
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of instruction combining iterations performed (instcombine)",
+        "Number of reassociations (instsimplify)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of loops rotated (loop-rotate)",
+        "Number of loops analyzed for vectorization (loop-vectorize)",
+        "Number of PHI nodes inserted (mem2reg)",
+        "Number of alloca's promoted with a single store (mem2reg)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "Maximum number of partitions per alloca (sroa)",
+        "Number of alloca partition uses rewritten (sroa)",
+        "Number of alloca partitions formed (sroa)",
+        "Number of allocas analyzed for replacement (sroa)",
+        "Number of instructions deleted (sroa)",
+        "Number of new, smaller allocas introduced (sroa)",
+        "Number of allocas promoted to SSA values (sroa)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
         "Number of loops vectorized (loop-vectorize)",
         "Number of fully cached non-local ptr responses (memdep)",
-        "Number of functions removed (globaldce)",
-        "Number of speculative executed instructions (simplifycfg)",
-        "Number of instructions simplified (gvn)",
-        "Number of functions inlined (inline)",
-        "Number of GEP instructions CSE'd (early-cse)",
-        "Number of block queries that were completely cached (memdep)",
-        "Number of fully cached non-local responses (memdep)",
-        "Number of no-signed-wrap deductions (correlated-value-propagation)",
-        "Number of function pointer arguments marked non-null (correlated-value-propagation)",
-        "Number of functions that do not access memory (globalsmodref-aa)",
-        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
-        "Number of functions marked as nofree (function-attrs)",
-        "Number of vector binops formed (vector-combine)",
-        "Number of reassociations (instcombine)",
-        "Number of global variables removed (globaldce)",
-        "Number of load instructions with unsolved size and offset (memory-builtins)",
-        "Number of loads deleted (gvn)",
-        "Number of uncached non-local responses (memdep)",
-        "Number of redundant instructions removed (instsimplify)",
-        "Maximum number of partitions per alloca (sroa)",
-        "Number of no-unsigned-wrap deductions for add (correlated-value-propagation)",
-        "Negator: Number of new negated instructions created in successful negation sinking attempts (instcombine)",
-        "Number of insts scanned while updating ibt (ipt)",
-        "Number of signed icmp preds simplified to unsigned (correlated-value-propagation)",
-        "Number of trivial dead stores removed (early-cse)",
-        "Number of unused return values removed (deadargelim)",
-        "Number of new, smaller allocas introduced (sroa)",
-        "Number of instruction combining iterations performed (instcombine)",
-        "Number of pointers maybe captured before (capture-tracking)",
-        "Number of instructions hoisted out of loop (licm)",
-        "Number of loop exit tests replaced (indvars)",
-        "Number of selects propagated (correlated-value-propagation)",
-        "Number of exit values replaced (indvars)",
-        "Number of invalid abstract call sites created (no callback) (abstract-call-sites)",
-        "Number of phis propagated (correlated-value-propagation)",
-        "Number iterations check for reads in getDomMemoryDef (dse)",
-        "Number of blocks simplified (simplifycfg)",
-        "Number of live out of a loop variables (lcssa)",
-        "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)",
-        "Number of functions converted to fastcc (globalopt)",
-        "Number of functions deleted because all callers found (inline)",
-        "Number of load and store promotions (licm)",
-        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)",
-        "Number of promotion candidates (licm)",
-        "Number of alloca's promoted with a single store (mem2reg)",
-        "Number of stores remaining after DSE (dse)",
-        "Number of comparisons propagated (correlated-value-propagation)",
-        "Number of dead alloca's removed (mem2reg)",
-        "Number of functions marked as norecurse (function-attrs)",
-        "Negator: Maximal traversal depth ever reached while attempting to sink negation (instcombine)",
-        "compile-time (instructions)",
-        "Number of MayAlias results (aa)",
-        "Number of no-wrap deductions for add (correlated-value-propagation)",
-        "Number of PHI's that got CSE'd (local)",
-        "Number of unreachable basic blocks removed (local)",
-        "Number of loops rotated (loop-rotate)",
-        "Number of common instructions sunk down to the end block (simplifycfg)",
-        "Negator: Number of new negated instructions created, total (instcombine)",
-        "Number of allocas analyzed for replacement (sroa)",
-        "Number of load insts hoisted or sunk (licm)",
-        "Number of IV sign/zero extends eliminated (indvars)",
-        "Number of loop exits with predictable exit counts (scalar-evolution)",
-        "Number of instructions simplified or DCE'd (early-cse)",
-        "Number of globals deleted (globalopt)",
-        "Number of redundant instructions simplified (loop-instsimplify)",
-        "Number of call insts hoisted or sunk (licm)",
-        "Number of internal functions (globalopt)",
-        "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)",
-        "Number of pointers not captured before (capture-tracking)",
-        "Number of globals marked unnamed_addr (globalopt)",
-        "Number of functions with improved memory attribute (function-attrs)",
-        "Number of reassociations (instsimplify)",
-        "Number of call instructions CSE'd (early-cse)",
-        "Number of no-wrap deductions (correlated-value-propagation)",
-        "Number of instructions removed (sccp)",
-        "Number of terminators folded (jump-threading)",
-        "Number of dead stores eliminated (instcombine)",
-        "Number of unswitch candidates that had their cost multiplier skipped (simple-loop-unswitch)",
-        "Number of common instruction 'blocks' sunk down to the end block (simplifycfg)",
-        "Number of times a GEP is decomposed (basicaa)",
-        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
-        "Number of pointers maybe captured (capture-tracking)",
-        "Number of functions removed (elim-avail-extern)",
-        "Number of functions that only read memory (globalsmodref-aa)",
-        "Number of pointer arguments promoted (argpromotion)",
-        "Number of instructions deleted (sroa)",
-        "Number of renumberings across all blocks (ir)",
-        "Number of arguments marked writeonly (function-attrs)",
-        "Number of other instrs removed (dse)",
-        "Number of function returns marked noalias (function-attrs)",
-        "Number of no-unsigned-wrap deductions for shl (correlated-value-propagation)",
-        "Number of compare instructions CVP'd (early-cse)",
-        "Number of constant folds (instcombine)",
-        "Number of functions marked as nosync (function-attrs)",
-        "Number of instructions sunk (instcombine)",
-        "Number of instructions CSE'd (early-cse)",
-        "Number of arguments marked readonly (function-attrs)",
-        "Number of function returns marked noundef (function-attrs)",
-        "Number of basic blocks unreachable (sccp)",
-        "Number of branch blocks duplicated to eliminate phi (jump-threading)",
-        "Number of PHI nodes inserted (mem2reg)",
-        "Number of alloca partitions formed (sroa)",
-        "Number of memcpy instructions deleted (memcpyopt)",
-        "Number of instructions removed (constraint-elimination)",
-        "Number of ands removed (correlated-value-propagation)",
-        "Negator: Number of negations successfully sinked (instcombine)",
-        "Number of phis deleted via common incoming value (correlated-value-propagation)",
-        "Number of instructions deleted (gvn)",
-        "Number of insts combined (instcombine)",
-        "Number of MustAlias results (aa)",
-        "Number of indvars widened (indvars)",
-        "Number of loops unrolled with run-time trip counts (loop-unroll)",
-        "Number of loops for which we managed to break the backedge (loop-delete)",
-        "Number of allocas promoted to SSA values (sroa)",
-        "Number of loops not rotated due to the header size (loop-rotate)",
-        "Number of pointers not captured (capture-tracking)",
-        "Number of direct abstract call sites created (abstract-call-sites)",
-        "Number of instructions hoisted into loop preheader (loop-rotate)",
-        "Number of Queries into an assume assume bundles (assume-queries)",
-        "Number of return duplicated (tailcallelim)",
+        "Number of uncached non-local ptr responses (memdep)",
         "Number of arguments with unsolved size and offset (memory-builtins)",
-        "Number of dead inst eliminated (instcombine)",
-        "Number of stores deleted (dse)",
-        "Number of instructions removed (unused) (bdce)",
-        "Number of instructions removed (adce)",
-        "Number of alloca partition uses rewritten (sroa)",
-        "Number of loops analyzed for vectorization (loop-vectorize)",
-        "Number of call sites analyzed (inline-cost)",
+        "Number of loops not rotated due to the header size (loop-rotate)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of load instructions CSE'd (early-cse)",
+        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of insts reassociated (reassociate)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of vectorized aggregates (sroa)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of reassociations (instcombine)",
+        "Number of instructions sunk (instcombine)",
+        "Number of load insts hoisted or sunk (licm)",
+        "Number of instructions removed (sccp)",
+        "Number of speculative executed instructions (simplifycfg)",
+        "Number of pointers maybe captured before (capture-tracking)",
+        "Number of pointers not captured before (capture-tracking)",
         "Number of jumps threaded (jump-threading)",
-        "Max number of times we visited a function (count-visits)",
-        "Number of memsets inferred (memcpyopt)",
-        "Number of nested loops split out (loop-simplify)",
-        "Number of PHI's that got CSE'd (instcombine)",
-        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
-        "Number of stores modified (dse)",
-        "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)",
+        "Number of redundant instructions simplified (loop-instsimplify)",
+        "Number of branches unswitched (simple-loop-unswitch)",
+        "Number of IV sign/zero extends eliminated (indvars)",
+        "Number of congruent IVs eliminated (indvars)",
+        "Number of loop exit tests replaced (indvars)",
+        "Number of indvars widened (indvars)",
+        "Number of loops deleted (loop-delete)",
+        "Number of dead alloca's removed (mem2reg)",
+        "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)",
+        "Number of common instructions hoisted up to the begin block (simplifycfg)",
+        "Number of common instruction 'blocks' sunk down to the end block (simplifycfg)",
+        "Number of common instructions sunk down to the end block (simplifycfg)",
+        "Number of functions removed (globaldce)",
         "Number of blocks merged (gvn)",
-        "Number of instructions PRE'd (gvn)"
+        "Number of equalities propagated (gvn)",
+        "Number of function returns marked noalias (function-attrs)",
+        "Number of branches folded into predecessor basic block (simplifycfg)",
+        "Number of vector instructions generated (SLP)",
+        "Number of load instructions with unsolved size and offset (memory-builtins)",
+        "Number of MustAlias results (aa)",
+        "Number of instructions PRE'd (gvn)",
+        "Number of branch blocks duplicated to eliminate phi (jump-threading)",
+        "Number of terminators folded (jump-threading)",
+        "Number of instructions removed (unused) (bdce)",
+        "Number of nested loops split out (loop-simplify)",
+        "Number of global vars without address taken (globalsmodref-aa)",
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of load and store promotions (licm)",
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-wrap deductions for add (correlated-value-propagation)",
+        "Number of comparisons propagated (correlated-value-propagation)",
+        "Number of no-signed-wrap deductions (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions (correlated-value-propagation)",
+        "Number of no-wrap deductions (correlated-value-propagation)",
+        "Number of signed icmp preds simplified to unsigned (correlated-value-propagation)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)",
+        "Number of loads deleted (gvn)",
+        "Number of loads PRE'd (gvn)",
+        "Number of loads moved to predecessor of a critical edge in PRE (gvn)",
+        "Number of PHI's that got CSE'd (local)",
+        "Number of loop loads PRE'd (gvn)",
+        "Negator: Number of new negated instructions created, total (instcombine)",
+        "Negator: Number of new negated instructions created in successful negation sinking attempts (instcombine)",
+        "Negator: Number of negations successfully sinked (instcombine)",
+        "Number of return duplicated (tailcallelim)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of memcpy instructions deleted (memcpyopt)",
+        "Number of library calls simplified (instcombine)",
+        "Number of phis propagated (correlated-value-propagation)",
+        "Number of basic blocks unreachable (sccp)",
+        "Number of instructions sunk out of loop (licm)",
+        "Number of unreachable basic blocks removed (local)",
+        "Number of vector binops formed (vector-combine)",
+        "Number of vector compares formed (vector-combine)",
+        "Number of exit values replaced (indvars)",
+        "Number of trivial dead stores removed (early-cse)",
+        "Number of loops completely unrolled (loop-unroll)",
+        "Number of memsets inferred (memcpyopt)",
+        "Number of phis deleted via common incoming value (correlated-value-propagation)",
+        "Number of sext converted to zext (correlated-value-propagation)",
+        "Number of unswitch candidates that had their cost multiplier skipped (simple-loop-unswitch)",
+        "Number of pointer arguments promoted (argpromotion)",
+        "Negator: How many negations did we retrieve/reuse from cache (instcombine)",
+        "Number of global variables removed (globaldce)",
+        "Number of constant folds (instcombine)",
+        "Number of no-unsigned-wrap deductions for shl (correlated-value-propagation)",
+        "Number of no-wrap deductions for shl (correlated-value-propagation)",
+        "Number of stores modified (dse)",
+        "Number of compare instructions CVP'd (early-cse)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of uncached non-local responses (memdep)",
+        "Number of branch instructions removed (adce)",
+        "Number of terminators folded to unconditional branches (loop-simplifycfg)",
+        "Number of unread args replaced with poison (deadargelim)",
+        "Number of instructions removed (adce)",
+        "Number of invalid abstract call sites created (no callback) (abstract-call-sites)",
+        "Number of PHI's that got CSE'd (instcombine)",
+        "Number of cached, but dirty, non-local ptr responses (memdep)",
+        "Number of IV comparisons eliminated (indvars)",
+        "Number of loops for which we managed to break the backedge (loop-delete)",
+        "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)",
+        "Number of ands removed (correlated-value-propagation)",
+        "Number of unread args removed (deadargelim)",
+        "Number of call insts hoisted or sunk (licm)",
+        "Number of instructions hoisted into loop preheader (loop-rotate)",
+        "Number of no-signed-wrap deductions for shl (correlated-value-propagation)",
+        "Number of fully cached non-local responses (memdep)",
+        "Number of unused return values removed (deadargelim)",
+        "Number of global uses devirtualized (globalopt)",
+        "Number of dead stores eliminated (instcombine)",
+        "Number of functions removed (elim-avail-extern)"
+    ],
+    "table_stats": [
+        "Number of MayAlias results (aa)",
+        "Number of direct abstract call sites created (abstract-call-sites)",
+        "Max number of times we visited a function (count-visits)",
+        "Number of instructions simplified or DCE'd (early-cse)",
+        "Number of functions with improved memory attribute (function-attrs)",
+        "Number of arguments marked nocapture (function-attrs)",
+        "Number of functions marked as nofree (function-attrs)",
+        "Number of functions marked as norecurse (function-attrs)",
+        "Number of functions marked as nosync (function-attrs)",
+        "Number of function returns marked noundef (function-attrs)",
+        "Number of arguments marked readonly (function-attrs)",
+        "Number of functions marked as willreturn (function-attrs)",
+        "Number of arguments marked writeonly (function-attrs)",
+        "Number of globals deleted (globalopt)",
+        "Number of functions converted to fastcc (globalopt)",
+        "Number of internal functions (globalopt)",
+        "Number of globals marked unnamed_addr (globalopt)",
+        "Number of functions that do not access memory (globalsmodref-aa)",
+        "Number of functions without address taken (globalsmodref-aa)",
+        "Number of functions that only read memory (globalsmodref-aa)",
+        "Number of functions deleted because all callers found (inline)",
+        "Number of functions inlined (inline)",
+        "Number of call sites analyzed (inline-cost)",
+        "Negator: Maximal traversal depth ever reached while attempting to sink negation (instcombine)",
+        "Negator: Maximal number of values ever visited while attempting to sink negation (instcombine)",
+        "Negator: Total number of values visited during attempts to sink negation (instcombine)",
+        "Negator: Number of negations attempted to be sinked (instcombine)",
+        "Number of insts combined (instcombine)",
+        "Number of dead inst eliminated (instcombine)",
+        "Number of functions with one iteration (instcombine)",
+        "Number of functions with two iterations (instcombine)",
+        "Number of instruction combining iterations performed (instcombine)",
+        "Number of reassociations (instsimplify)",
+        "Number of redundant instructions removed (instsimplify)",
+        "Number of insts scanned while updating ibt (ipt)",
+        "Number of renumberings across all blocks (ir)",
+        "Number of live out of a loop variables (lcssa)",
+        "Number of instructions cloned into loop preheader (loop-rotate)",
+        "Number of loops rotated (loop-rotate)",
+        "Number of loops analyzed for vectorization (loop-vectorize)",
+        "Number of PHI nodes inserted (mem2reg)",
+        "Number of alloca's promoted with a single store (mem2reg)",
+        "Number of loop exits with predictable exit counts (scalar-evolution)",
+        "Number of blocks simplified (simplifycfg)",
+        "Maximum number of partitions per alloca (sroa)",
+        "Number of alloca partition uses rewritten (sroa)",
+        "Number of alloca partitions formed (sroa)",
+        "Number of allocas analyzed for replacement (sroa)",
+        "Number of instructions deleted (sroa)",
+        "Number of new, smaller allocas introduced (sroa)",
+        "Number of allocas promoted to SSA values (sroa)",
+        "compile-time (instructions)",
+        "bitcode-size (bytes)",
+        "Number of NoAlias results (aa)",
+        "Number of times a GEP is decomposed (basicaa)",
+        "Number of stores remaining after DSE (dse)",
+        "Number of instructions deleted (gvn)",
+        "Number of instructions simplified (gvn)",
+        "Number of loops vectorized (loop-vectorize)",
+        "Number of fully cached non-local ptr responses (memdep)",
+        "Number of uncached non-local ptr responses (memdep)",
+        "Number of arguments with unsolved size and offset (memory-builtins)",
+        "Number of loops not rotated due to the header size (loop-rotate)",
+        "Number of block queries that were completely cached (memdep)",
+        "Number of pointers maybe captured (capture-tracking)",
+        "Number of GEP instructions CSE'd (early-cse)",
+        "Number of load instructions CSE'd (early-cse)",
+        "Number of value comparisons folded into predecessor basic blocks (simplifycfg)",
+        "Number of function pointer arguments marked non-null (correlated-value-propagation)",
+        "Number of instructions hoisted out of loop (licm)",
+        "Number of loops unrolled with run-time trip counts (loop-unroll)",
+        "Number of loops unrolled (completely or otherwise) (loop-unroll)",
+        "Number of insts reassociated (reassociate)",
+        "Number of loop exits without predictable exit counts (scalar-evolution)",
+        "Number of vectorized aggregates (sroa)",
+        "Number of instructions CSE'd (early-cse)",
+        "Number of reassociations (instcombine)",
+        "Number of instructions sunk (instcombine)",
+        "Number of load insts hoisted or sunk (licm)",
+        "Number of instructions removed (sccp)",
+        "Number of speculative executed instructions (simplifycfg)",
+        "Number of pointers maybe captured before (capture-tracking)",
+        "Number of pointers not captured before (capture-tracking)",
+        "Number of jumps threaded (jump-threading)",
+        "Number of redundant instructions simplified (loop-instsimplify)",
+        "Number of branches unswitched (simple-loop-unswitch)",
+        "Number of IV sign/zero extends eliminated (indvars)",
+        "Number of congruent IVs eliminated (indvars)",
+        "Number of loop exit tests replaced (indvars)",
+        "Number of indvars widened (indvars)",
+        "Number of loops deleted (loop-delete)",
+        "Number of dead alloca's removed (mem2reg)",
+        "Number of common instruction 'blocks' hoisted up to the begin block (simplifycfg)",
+        "Number of common instructions hoisted up to the begin block (simplifycfg)",
+        "Number of common instruction 'blocks' sunk down to the end block (simplifycfg)",
+        "Number of common instructions sunk down to the end block (simplifycfg)",
+        "Number of Queries into an assume assume bundles (assume-queries)",
+        "Number of functions removed (globaldce)",
+        "Number of blocks merged (gvn)",
+        "Number of equalities propagated (gvn)",
+        "Number of function returns marked noalias (function-attrs)",
+        "Number of branches folded into predecessor basic block (simplifycfg)",
+        "Number of vector instructions generated (SLP)",
+        "Number of load instructions with unsolved size and offset (memory-builtins)",
+        "Number of MustAlias results (aa)",
+        "Number iterations check for reads in getDomMemoryDef (dse)",
+        "Number of blocks speculated as available in IsValueFullyAvailableInBlock(), max (gvn)",
+        "Number of instructions PRE'd (gvn)",
+        "Number of branch blocks duplicated to eliminate phi (jump-threading)",
+        "Number of terminators folded (jump-threading)",
+        "Number of instructions removed (unused) (bdce)",
+        "Number of nested loops split out (loop-simplify)",
+        "Number of global vars without address taken (globalsmodref-aa)",
+        "Number of geps reassociated and hoisted out of the loop (licm)",
+        "Number of load and store promotions (licm)",
+        "Number of promotion candidates (licm)",
+        "Number of no-signed-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions for add (correlated-value-propagation)",
+        "Number of no-wrap deductions for add (correlated-value-propagation)",
+        "Number of comparisons propagated (correlated-value-propagation)",
+        "Number of no-signed-wrap deductions (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions (correlated-value-propagation)",
+        "Number of no-wrap deductions (correlated-value-propagation)",
+        "Number of signed icmp preds simplified to unsigned (correlated-value-propagation)",
+        "Number of other instrs removed (dse)",
+        "Number of stores deleted (dse)",
+        "Number of times a valid candidate is returned from getDomMemoryDef (dse)",
+        "Number of loads deleted (gvn)",
+        "Number of loads PRE'd (gvn)",
+        "Number of loads moved to predecessor of a critical edge in PRE (gvn)",
+        "Number of PHI's that got CSE'd (local)",
+        "Number of loop loads PRE'd (gvn)",
+        "Negator: Number of new negated instructions created, total (instcombine)",
+        "Negator: Number of new negated instructions created in successful negation sinking attempts (instcombine)",
+        "Negator: Number of negations successfully sinked (instcombine)",
+        "Number of return duplicated (tailcallelim)",
+        "Number of pointers not captured (capture-tracking)",
+        "Number of memcpy instructions deleted (memcpyopt)",
+        "Number of library calls simplified (instcombine)",
+        "Number of phis propagated (correlated-value-propagation)",
+        "Number of basic blocks unreachable (sccp)",
+        "Number of instructions sunk out of loop (licm)",
+        "Number of unreachable basic blocks removed (local)",
+        "Number of vector binops formed (vector-combine)",
+        "Number of vector compares formed (vector-combine)",
+        "Number of exit values replaced (indvars)",
+        "Number of trivial dead stores removed (early-cse)",
+        "Number of loops completely unrolled (loop-unroll)",
+        "Number of memsets inferred (memcpyopt)",
+        "Number of phis deleted via common incoming value (correlated-value-propagation)",
+        "Number of sext converted to zext (correlated-value-propagation)",
+        "Number of unswitch candidates that had their cost multiplier skipped (simple-loop-unswitch)",
+        "Number of pointer arguments promoted (argpromotion)",
+        "Negator: How many negations did we retrieve/reuse from cache (instcombine)",
+        "Number of global variables removed (globaldce)",
+        "Number of constant folds (instcombine)",
+        "Number of selects propagated (correlated-value-propagation)",
+        "Number of no-unsigned-wrap deductions for shl (correlated-value-propagation)",
+        "Number of no-wrap deductions for shl (correlated-value-propagation)",
+        "Number of stores modified (dse)",
+        "Number of compare instructions CVP'd (early-cse)",
+        "Number of instructions removed (constraint-elimination)",
+        "Number of uncached non-local responses (memdep)",
+        "Number of branch instructions removed (adce)",
+        "Number of terminators folded to unconditional branches (loop-simplifycfg)",
+        "Number of unread args replaced with poison (deadargelim)",
+        "Number of instructions removed (adce)",
+        "Number of invalid abstract call sites created (no callback) (abstract-call-sites)",
+        "Number of PHI's that got CSE'd (instcombine)",
+        "Number of cached, but dirty, non-local ptr responses (memdep)",
+        "Number of IV comparisons eliminated (indvars)",
+        "Number of loops for which we managed to break the backedge (loop-delete)",
+        "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)",
+        "Number of ands removed (correlated-value-propagation)",
+        "Number of unread args removed (deadargelim)",
+        "Number of call insts hoisted or sunk (licm)",
+        "Number of instructions hoisted into loop preheader (loop-rotate)",
+        "Number of no-signed-wrap deductions for shl (correlated-value-propagation)",
+        "Number of call instructions CSE'd (early-cse)",
+        "Number of fully cached non-local responses (memdep)",
+        "Number of unused return values removed (deadargelim)",
+        "Number of global uses devirtualized (globalopt)",
+        "Number of dead stores eliminated (instcombine)",
+        "Number of functions removed (elim-avail-extern)"
     ],
     "stats_per_file": [
         {
@@ -4061,46 +4232,6 @@
                 0,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -4126,6 +4257,46 @@
                 0
             ],
             "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
                 0,
                 0,
                 100,
@@ -4488,12 +4659,12 @@
                 0
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                2,
-                14,
+                5,
+                11,
                 84,
-                -0.045195509720343585,
-                0.3615505101206634,
-                -0.3744751423054061
+                -0.06595082627261312,
+                0.27596311719581273,
+                -0.724990746658216
             ],
             "Number of renumberings across all blocks (ir)": [
                 0,
@@ -4624,12 +4795,12 @@
                 -0.11596123581545598
             ],
             "compile-time (instructions)": [
-                48,
-                52,
+                35,
+                65,
                 0,
-                -0.6671625700843261,
-                3.7256113194567972,
-                -4.722030775814594
+                -1.6683242285714635,
+                2.4730384447003373,
+                -3.8982887449485863
             ],
             "bitcode-size (bytes)": [
                 0,
@@ -5535,46 +5706,6 @@
                 0,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                1,
-                99,
-                -1.0,
-                0,
-                -100.0
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                1,
-                99,
-                -1.0,
-                0,
-                -100.0
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                0,
-                99,
-                0.33333333333333326,
-                33.33333333333333,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -5600,6 +5731,46 @@
                 0
             ],
             "Number of PHI's that got CSE'd (instcombine)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.33333333333333326,
+                33.33333333333333,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
                 0,
                 0,
                 100,
@@ -5962,12 +6133,12 @@
                 -7.410714285714286
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                9,
-                9,
-                82,
-                -0.14153574947789163,
-                0.44406161916532627,
-                -2.016681057808567
+                4,
+                13,
+                83,
+                -0.20486656902413167,
+                0.2840443516304878,
+                -1.6632949468411626
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -6098,12 +6269,12 @@
                 -0.06984582910848736
             ],
             "compile-time (instructions)": [
-                46,
-                54,
+                47,
+                53,
                 0,
-                -0.21389289940954936,
-                5.057444533947828,
-                -4.704291453751017
+                -0.5811759260373907,
+                3.5386173676802786,
+                -4.234577526126644
             ],
             "bitcode-size (bytes)": [
                 2,
@@ -7009,46 +7180,6 @@
                 0,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                1,
-                99,
-                -1.0,
-                0,
-                -100.0
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                2,
-                98,
-                -1.5,
-                0,
-                -75.0
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                0,
-                99,
-                0.33333333333333326,
-                33.33333333333333,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -7080,6 +7211,46 @@
                 -0.125,
                 0,
                 -12.5
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.33333333333333326,
+                33.33333333333333,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                2,
+                98,
+                -1.5,
+                0,
+                -75.0
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -7436,12 +7607,12 @@
                 -7.028814968146579
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                10,
-                10,
-                80,
-                -0.3605306981668447,
-                0.45202964019665137,
-                -4.057336621865099
+                8,
+                13,
+                79,
+                -0.4216763462812023,
+                0.16218507577392283,
+                -3.3434704026393547
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -7572,12 +7743,12 @@
                 -0.08171104030924674
             ],
             "compile-time (instructions)": [
-                46,
-                54,
+                40,
+                60,
                 0,
-                -1.330431760869604,
-                3.8490098481131874,
-                -5.742548687040131
+                -1.1226553463092068,
+                3.403644034141293,
+                -4.14018826660954
             ],
             "bitcode-size (bytes)": [
                 1,
@@ -8467,46 +8638,6 @@
                 0,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.1666666666666665,
-                0,
-                -58.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -1.625,
-                0,
-                -54.166666666666664
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                0,
-                99,
-                0.33333333333333326,
-                33.33333333333333,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -8538,6 +8669,46 @@
                 -0.125,
                 0,
                 -12.5
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.33333333333333326,
+                33.33333333333333,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.1666666666666665,
+                0,
+                -58.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -1.625,
+                0,
+                -54.166666666666664
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -8910,12 +9081,12 @@
                 -10.234847157747218
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                14,
+                4,
+                17,
                 79,
-                -0.4825221457618317,
-                0.40656201838798955,
-                -3.6498677646356503
+                -0.529516253605518,
+                0.2684350702155595,
+                -3.177962684789061
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -9046,12 +9217,12 @@
                 -0.15844564702011935
             ],
             "compile-time (instructions)": [
-                42,
-                58,
+                43,
+                57,
                 0,
-                -1.515733459017217,
-                3.8073830085447598,
-                -5.370404004493132
+                -0.9979925322570783,
+                4.060368771750979,
+                -4.81394930545614
             ],
             "bitcode-size (bytes)": [
                 2,
@@ -9941,46 +10112,6 @@
                 50.0,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                0,
-                99,
-                0.33333333333333326,
-                33.33333333333333,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -10012,6 +10143,46 @@
                 -0.25,
                 0,
                 -25.0
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.33333333333333326,
+                33.33333333333333,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -10384,12 +10555,12 @@
                 -8.458197116606229
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                12,
-                81,
-                -0.5596846965544762,
-                0.3733543989287633,
-                -4.881829203995747
+                5,
+                16,
+                79,
+                -0.6188086095922645,
+                0.49294491606309726,
+                -4.021599096221371
             ],
             "Number of renumberings across all blocks (ir)": [
                 2,
@@ -10520,12 +10691,12 @@
                 -0.18876430519515947
             ],
             "compile-time (instructions)": [
-                45,
-                55,
+                46,
+                54,
                 0,
-                -0.5111663600343493,
-                5.556297275783603,
-                -5.475454789339946
+                -1.6529982823004599,
+                2.680760227380955,
+                -5.344718494251301
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -11415,46 +11586,6 @@
                 43.75,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                0,
-                99,
-                0.33333333333333326,
-                33.33333333333333,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -11486,6 +11617,46 @@
                 -0.25,
                 0,
                 -25.0
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                0,
+                99,
+                0.33333333333333326,
+                33.33333333333333,
+                0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -11859,11 +12030,11 @@
             ],
             "Number of insts scanned while updating ibt (ipt)": [
                 5,
-                15,
-                80,
-                -0.9143306766010469,
-                0.22638711985648957,
-                -6.171000217292476
+                17,
+                78,
+                -0.9254674240702776,
+                0.20674602782619506,
+                -5.504733679185808
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -11994,12 +12165,12 @@
                 -0.2608104147052459
             ],
             "compile-time (instructions)": [
-                50,
-                50,
+                38,
+                62,
                 0,
-                -0.6663686032825504,
-                4.877733226555312,
-                -6.210470433120413
+                -1.4179592442214553,
+                4.316305137776695,
+                -4.932508381575158
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -12889,46 +13060,6 @@
                 43.75,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                0.08333333333333329,
-                33.33333333333333,
-                -25.0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -12960,6 +13091,46 @@
                 -0.3125,
                 0,
                 -15.625
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                0.08333333333333329,
+                33.33333333333333,
+                -25.0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -13332,12 +13503,12 @@
                 -10.401819361681474
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                8,
-                14,
+                4,
+                18,
                 78,
-                -0.9600031785222397,
-                0.36164412269241886,
-                -7.06381934526881
+                -1.0582084270698793,
+                0.4138384713103981,
+                -5.970899810679416
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -13468,12 +13639,12 @@
                 -0.25581814308495143
             ],
             "compile-time (instructions)": [
-                45,
-                55,
+                37,
+                63,
                 0,
-                -1.4529562469027508,
-                4.525192504545624,
-                -6.344168861724148
+                -1.3934982353815306,
+                4.4409212000066836,
+                -4.820062030768258
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -14371,38 +14542,6 @@
                 68.75,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -14434,6 +14573,38 @@
                 -0.3125,
                 0,
                 -15.625
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -14806,12 +14977,12 @@
                 -13.466094910526477
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                5,
-                16,
-                79,
-                -1.1814728311476914,
-                0.7536317902763862,
-                -7.619715129134443
+                7,
+                15,
+                78,
+                -1.176719022054498,
+                0.5534823681019759,
+                -8.103085252144243
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -14942,12 +15113,12 @@
                 -0.2574747321680294
             ],
             "compile-time (instructions)": [
-                44,
-                56,
+                47,
+                53,
                 0,
-                -0.08534517280367535,
-                7.380692881689011,
-                -5.951517929905075
+                0.2081629705692231,
+                5.818583985409535,
+                -4.767116042591052
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -15837,46 +16008,6 @@
                 68.75,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.1666666666666667,
-                33.33333333333333,
-                -50.0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -15908,6 +16039,46 @@
                 -0.375,
                 0,
                 -18.75
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.1666666666666667,
+                33.33333333333333,
+                -50.0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 0,
@@ -16280,12 +16451,12 @@
                 -16.693660299286922
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                16,
-                77,
-                -1.5690451167393602,
-                0.5899536060417735,
-                -10.064636682264275
+                4,
+                18,
+                78,
+                -1.6205749548812818,
+                0.49466998542994134,
+                -9.113120857213774
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -16416,12 +16587,12 @@
                 -0.3909347447170898
             ],
             "compile-time (instructions)": [
-                47,
-                53,
+                43,
+                57,
                 0,
-                -0.3528649890721913,
-                5.917291049236623,
-                -5.913192041912082
+                -0.7925898757671836,
+                5.538677244298577,
+                -5.568808931255389
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -17311,46 +17482,6 @@
                 68.75,
                 0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.1666666666666667,
-                33.33333333333333,
-                -50.0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -17382,6 +17513,46 @@
                 -0.4903846153846154,
                 0,
                 -16.346153846153847
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.1666666666666667,
+                33.33333333333333,
+                -50.0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 1,
@@ -17754,12 +17925,12 @@
                 -16.407202486538257
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                16,
-                77,
-                -1.6097966860142472,
-                0.709103344379798,
-                -10.371462000755207
+                5,
+                17,
+                78,
+                -1.6580174020884582,
+                0.7018365582613082,
+                -9.95946605883249
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -17890,12 +18061,12 @@
                 -0.9435614261747336
             ],
             "compile-time (instructions)": [
-                44,
-                56,
+                43,
+                57,
                 0,
-                -1.05594645668412,
-                4.872869622580927,
-                -5.714301947535228
+                -0.968282919836432,
+                5.701810883226466,
+                -6.000108069515463
             ],
             "bitcode-size (bytes)": [
                 3,
@@ -18785,46 +18956,6 @@
                 112.5,
                 -50.0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                1,
-                98,
-                -0.1666666666666667,
-                33.33333333333333,
-                -50.0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 0,
@@ -18856,6 +18987,46 @@
                 -0.4903846153846154,
                 0,
                 -16.346153846153847
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                1,
+                98,
+                -0.1666666666666667,
+                33.33333333333333,
+                -50.0
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 1,
@@ -19228,12 +19399,12 @@
                 -19.62204299694185
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                6,
-                19,
+                5,
+                20,
                 75,
-                -2.52646670586861,
-                0.16945783326941388,
-                -13.350706188761974
+                -2.552868402850935,
+                0.31761145287419296,
+                -12.843744877473222
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -19364,12 +19535,12 @@
                 -1.875831150499182
             ],
             "compile-time (instructions)": [
-                41,
-                59,
+                32,
+                68,
                 0,
-                -1.0746849061043708,
-                5.703504871500576,
-                -5.784952378677301
+                -2.1061400567818263,
+                6.0463463935711665,
+                -5.942604268712648
             ],
             "bitcode-size (bytes)": [
                 2,
@@ -20259,38 +20430,6 @@
                 616.6666666666666,
                 -33.33333333333333
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -1.6666666666666665,
-                0,
-                -83.33333333333333
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -2.5,
-                0,
-                -83.33333333333333
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                0,
-                100,
-                0.0,
-                0,
-                0
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 0,
                 2,
@@ -20322,6 +20461,38 @@
                 -0.7307692307692308,
                 0,
                 -24.35897435897436
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -1.6666666666666665,
+                0,
+                -83.33333333333333
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -2.5,
+                0,
+                -83.33333333333333
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                0,
+                100,
+                0.0,
+                0,
+                0
             ],
             "Number of unread args removed (deadargelim)": [
                 2,
@@ -20702,12 +20873,12 @@
                 -22.35068761868394
             ],
             "Number of insts scanned while updating ibt (ipt)": [
-                7,
-                19,
+                4,
+                22,
                 74,
-                -5.038935988258533,
-                0.8818962643934973,
-                -26.845624877716197
+                -5.117129451007234,
+                1.3352310028107546,
+                -23.502448595998473
             ],
             "Number of renumberings across all blocks (ir)": [
                 1,
@@ -20838,12 +21009,12 @@
                 -2.4913826266194588
             ],
             "compile-time (instructions)": [
-                36,
-                64,
+                34,
+                66,
                 0,
-                -2.9759173227968905,
-                5.709056787652908,
-                -7.861215259924902
+                -3.2879328166481248,
+                4.951620011783317,
+                -7.532550940385532
             ],
             "bitcode-size (bytes)": [
                 6,
@@ -21725,46 +21896,6 @@
                 1000.0,
                 -100.0
             ],
-            "Number of IV comparisons eliminated (indvars)": [
-                0,
-                2,
-                98,
-                -2.0,
-                0,
-                -100.0
-            ],
-            "Number of loops for which we managed to break the backedge (loop-delete)": [
-                0,
-                3,
-                97,
-                -3.0,
-                0,
-                -100.0
-            ],
-            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
-                0,
-                1,
-                99,
-                -0.6666666666666665,
-                0,
-                -66.66666666666666
-            ],
-            "Number of ands removed (correlated-value-propagation)": [
-                0,
-                1,
-                99,
-                -1.0,
-                0,
-                -100.0
-            ],
-            "Number of cached, but dirty, non-local ptr responses (memdep)": [
-                1,
-                2,
-                97,
-                -0.5,
-                33.33333333333333,
-                -41.666666666666664
-            ],
             "Number of unread args replaced with poison (deadargelim)": [
                 1,
                 1,
@@ -21804,6 +21935,46 @@
                 -0.7307692307692308,
                 0,
                 -24.35897435897436
+            ],
+            "Number of cached, but dirty, non-local ptr responses (memdep)": [
+                1,
+                2,
+                97,
+                -0.5,
+                33.33333333333333,
+                -41.666666666666664
+            ],
+            "Number of IV comparisons eliminated (indvars)": [
+                0,
+                2,
+                98,
+                -2.0,
+                0,
+                -100.0
+            ],
+            "Number of loops for which we managed to break the backedge (loop-delete)": [
+                0,
+                3,
+                97,
+                -3.0,
+                0,
+                -100.0
+            ],
+            "Number of 'is.constant' intrinsic calls handled (lower-is-constant-intrinsic)": [
+                0,
+                1,
+                99,
+                -0.6666666666666665,
+                0,
+                -66.66666666666666
+            ],
+            "Number of ands removed (correlated-value-propagation)": [
+                0,
+                1,
+                99,
+                -1.0,
+                0,
+                -100.0
             ],
             "Number of unread args removed (deadargelim)": [
                 5,
@@ -21905,56 +22076,56 @@
     ],
     "compile_time_knobs_file": [
         [
-            6,
+            3,
             0.0
         ],
         [
-            8,
-            -24.437276922200606
+            7,
+            -18.739557651608656
+        ],
+        [
+            3,
+            -8.101955526005646
+        ],
+        [
+            7,
+            -28.91176495854267
+        ],
+        [
+            12,
+            -72.16817059692407
         ],
         [
             4,
-            -5.437770297675602
-        ],
-        [
-            9,
-            -59.522414749968654
-        ],
-        [
-            6,
-            -19.113209405607464
-        ],
-        [
-            5,
-            -15.061333772296727
+            -17.939225211736044
         ],
         [
             4,
-            -35.45009806373224
+            -15.507270919795237
         ],
         [
-            8,
-            -57.89341972862053
-        ],
-        [
-            5,
-            -20.934131446434556
+            10,
+            -29.871509351606075
         ],
         [
             6,
-            -52.3392131225864
+            -41.042575491985346
+        ],
+        [
+            4,
+            -21.62460266378148
         ],
         [
             6,
-            -30.404450037000142
+            -21.266178537947024
         ],
         [
-            6,
-            -12.084571265363671
+            15,
+            -70.66403713730286
         ],
         [
-            27,
-            -309.53500583590676
+            19,
+            -304.412567379074
         ]
     ],
     "bitcode_size_knobs_file": [
@@ -22011,6 +22182,6 @@
             -129.44843904885613
         ]
     ],
-    "compile_time_saving_file": -642.2128946473931,
+    "compile_time_saving_file": -650.2494154263088,
     "bitcode_size_saving_file": -156.2194823524328
 }
