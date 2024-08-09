@@ -459,10 +459,47 @@ def convert_to_percentage(stat_values, iter, range):
     return stat_values
 
 
-def generate_step_function_graph(knob_name, final_results_arr, all_stats):
+def generate_step_function_graph(knob_name, final_results_arr, all_stats, compile_time_knobs, bitcode_size_knobs, compile_time_saving, bitcode_size_saving, knob_val, final_graph_all_stats_dict):
+    x = generate_values(knob, knob_val)
+
+    iter = 0
+    for i, val in enumerate(x):
+        if val == knob_val:
+            iter = i
+            break
+
+    keys = []
+    # To store the min and max values across the y axis
+    # First represents the min value and second represents the max value
+    range = [0,0]
+
+    for key, value in final_graph_all_stats_dict.items():
+        y = convert_to_percentage(value, iter,range)
+        # To remove redundant statistics
+        if key == 'compile-time (instructions)' or key == 'bitcode-size (bytes)':
+            keys.append(key)
+            final_graph_all_stats_dict[key] = y
+            continue
+        if len(set(y)) == 1:
+            continue
+        keys.append(key)
+        final_graph_all_stats_dict[key] = y
+
+    keys = list(keys)
+
     json_data = {
+        "knob_name": knob_name,
+        "original_val": knob_val,
+        "y_min_graph": range[0],
+        "y_max_graph": range[1],
+        "knob_values": x,
+        "graph_stats": final_graph_all_stats_dict,
         "stats": all_stats,
-        "stats_per_knob_val": final_results_arr,
+        "stats_per_file": final_results_arr,
+        "compile_time_knobs_file": compile_time_knobs,
+        "bitcode_size_knobs_file": bitcode_size_knobs,
+        "compile_time_saving_file": compile_time_saving,
+        "bitcode_size_saving_file": bitcode_size_saving
     }
 
     with open(f'./num_files_results/{knob_name}.json', 'w') as file:
@@ -487,8 +524,8 @@ def sum_stats_for_same_file(arr):
 
 
 if __name__ == "__main__":
-    if not os.path.exists("num_files_results"):
-        os.mkdir("num_files_results")
+    if not os.path.exists("oracle"):
+        os.mkdir("oracle")
 
     to_process_stats_dict = {}
 
@@ -518,8 +555,8 @@ if __name__ == "__main__":
 
     for knob, knob_val in to_process_stats_dict.items():
         # These Figures need to be changed according to the number of bitcode files
-        chunk_size = 500
-        total_files = 10000
+        chunk_size = 5
+        total_files = 100
         data_chunks = divide_into_chunks(total_files, chunk_size)
 
         corrected_value = convert_to_appropriate_type(knob, knob_val)
@@ -560,6 +597,63 @@ if __name__ == "__main__":
         for i, stats_dict in enumerate(stats_dict_array):
             for key, value in stats_dict.items():
                 stats_dict[key] = sum_stats_for_same_file(value)
+
+
+        ################################################ GRAPH STUDY ################################################
+        graph_stats_dict_array = []
+        for _ in range(len(values)):
+            graph_stats_dict_array.append({})
+        
+        for i, stats_dict in enumerate(stats_dict_array):
+            for key, val in stats_dict:
+                graph_stats_dict_array[i][key] = sum(val)
+        # Here we merge the results obtained over all the threads
+        graph_all_stats_dict = {}
+        for idx, stats_dict in enumerate(graph_stats_dict_array):
+            for key, value in stats_dict.items():
+                if key in graph_all_stats_dict:
+                    while len(graph_all_stats_dict[key]) < idx:
+                        graph_all_stats_dict[key].append(0)
+                    graph_all_stats_dict[key].append(value)
+                else:
+                    graph_all_stats_dict[key] = []
+                    for _ in range(idx):
+                        graph_all_stats_dict[key].append(0)
+                    graph_all_stats_dict[key].append(value)
+
+        # Taking care of the case where some stats are not present in some files
+        for key in graph_all_stats_dict.keys():
+            while len(graph_all_stats_dict[key]) < len(values):
+                graph_all_stats_dict[key].append(0)
+        
+        # Filter the dict and remove the stats that have the same value for all the files
+        filtered_graph_all_stats_dict = {key: all_stats_values for key, all_stats_values in graph_all_stats_dict.items() if len(set(all_stats_values)) > 1}
+
+        # If compile-time is not present in the stats, then add it
+        # Though this is not necessary since compile-time is most likely to change across 
+        # changes in knob value
+        time_key = 'compile-time (instructions)'
+        if time_key not in filtered_graph_all_stats_dict:
+            filtered_graph_all_stats_dict[time_key] = graph_all_stats_dict[time_key]
+        
+        # Same for bitcode-size
+        bitcode_key = 'bitcode-size (bytes)'
+        if bitcode_key not in filtered_graph_all_stats_dict:
+            filtered_graph_all_stats_dict[bitcode_key] = graph_all_stats_dict[bitcode_key]
+
+        # Same for execution-time
+        # exec_key = 'execution-time (seconds)'
+        # if exec_key not in filtered_graph_all_stats_dict:
+        #     filtered_graph_all_stats_dict[exec_key] = graph_all_stats_dict[exec_key]
+
+        final_graph_all_stats_dict = {}
+        for key, filtered_all_stats_values in filtered_graph_all_stats_dict.items():
+            if (key in ignore_stats_dict):
+                continue
+            else:
+                final_graph_all_stats_dict[key] = filtered_all_stats_values
+
+        #############################################################################################################
 
         all_stats = {}
 
@@ -606,11 +700,54 @@ if __name__ == "__main__":
                     if (base_val[j] == 0):
                         value[j] = (val) * 100
                     else:
-                        value[j] = (val - base_val[j]) / base_val[j] * 100
+                        value[j] = ((((val * 1.0) - (base_val[j] * 1.0)) / (base_val[j] * 1.0)) * 100.0)
 
         final_results_arr = []
         for i in range(len(values)):
             final_results_arr.append({})
+
+        
+        # Here we try to check how much cumulative increase we can get if we were to choose the oracle value each time. 
+        compile_time_and_bitcode_size_arr = [{}, {}]
+        for i, stats_dict in enumerate(stats_dict_array):
+            for key, val in stats_dict:
+                if key == 'compile-time (instructions)':
+                    compile_time_and_bitcode_size_arr[0][values[i]] = val
+                elif key == 'bitcode-size (bytes)':
+                    compile_time_and_bitcode_size_arr[1][values[i]] = val
+        
+        compile_time_knobs = []
+        bitcode_size_knobs = []
+        
+        for i in range(len(values)):
+            compile_time_knobs.append([0,0])
+            bitcode_size_knobs.append([0,0])
+
+        compile_time_saving = 0
+        bitcode_size_saving = 0
+
+        for k, performance_dicts in enumerate(compile_time_and_bitcode_size_arr):
+            for i in range(total_files):
+                if k == 0:
+                    min_compile_time_val = 10000
+                    min_compile_time_knob = corrected_value
+                    for j in range(len(values)):
+                        if performance_dicts[values[j]][i] < min_compile_time_val:
+                            min_compile_time_val = performance_dicts[values[j]][i]
+                            min_compile_time_knob = values[j]
+                    compile_time_knobs[min_compile_time_knob][0] += 1
+                    compile_time_knobs[min_compile_time_knob][1] += min_compile_time_val
+                    compile_time_saving += min_compile_time_val
+                else:
+                    min_bitcode_size_val = 10000
+                    min_bitcode_size_knob = corrected_value
+                    for j in range(len(values)):
+                        if performance_dicts[values[j]][i] < min_bitcode_size_val:
+                            min_bitcode_size_val = performance_dicts[values[j]][i]
+                            min_bitcode_size_knob = values[j]
+                    bitcode_size_knobs[min_bitcode_size_knob][0] += 1
+                    bitcode_size_knobs[min_bitcode_size_knob][1] += min_bitcode_size_val
+                    bitcode_size_saving += min_bitcode_size_val
 
         # Now we calculate the number of files for which the stat increases, decreases or remains the same
         for i, stats_dict in enumerate(stats_dict_array):
@@ -664,7 +801,7 @@ if __name__ == "__main__":
 
         # # Converting into appropriate format for plotting the graph
         generate_step_function_graph(
-            knob, final_filtered_results_arr, list(filtered_stats.keys()))
+            knob, final_filtered_results_arr, list(filtered_stats.keys()), compile_time_knobs, bitcode_size_knobs, compile_time_saving, bitcode_size_saving, corrected_value, final_graph_all_stats_dict)
 
         print(Fore.GREEN +
               f"##  Successfully collected all stats for {knob}" + Fore.RESET)
