@@ -494,7 +494,7 @@ def generate_step_function_graph(knob_name, final_results_arr, all_stats, compil
         "y_max_graph": range[1],
         "knob_values": x,
         "graph_stats": final_graph_all_stats_dict,
-        "stats": all_stats,
+        "stats": list(set(keys + all_stats)),
         "stats_per_file": final_results_arr,
         "compile_time_knobs_file": compile_time_knobs,
         "bitcode_size_knobs_file": bitcode_size_knobs,
@@ -502,7 +502,7 @@ def generate_step_function_graph(knob_name, final_results_arr, all_stats, compil
         "bitcode_size_saving_file": bitcode_size_saving
     }
 
-    with open(f'./num_files_results/{knob_name}.json', 'w') as file:
+    with open(f'./oracle/{knob_name}.json', 'w') as file:
         json.dump(json_data, file, indent=4)
 
 def sum_stats_for_same_file(arr):
@@ -600,12 +600,13 @@ if __name__ == "__main__":
 
 
         ################################################ GRAPH STUDY ################################################
-        graph_stats_dict_array = []
-        for _ in range(len(values)):
-            graph_stats_dict_array.append({})
+        graph_stats_dict_array = copy.deepcopy(stats_dict_array)
+        for _, stats_dict in enumerate(graph_stats_dict_array):
+            for key, value in stats_dict.items():
+                stats_dict[key] = [pair[0] for pair in value]
         
-        for i, stats_dict in enumerate(stats_dict_array):
-            for key, val in stats_dict:
+        for i, stats_dict in enumerate(graph_stats_dict_array):
+            for key, val in stats_dict.items():
                 graph_stats_dict_array[i][key] = sum(val)
         # Here we merge the results obtained over all the threads
         graph_all_stats_dict = {}
@@ -710,7 +711,7 @@ if __name__ == "__main__":
         # Here we try to check how much cumulative increase we can get if we were to choose the oracle value each time. 
         compile_time_and_bitcode_size_arr = [{}, {}]
         for i, stats_dict in enumerate(stats_dict_array):
-            for key, val in stats_dict:
+            for key, val in stats_dict.items():
                 if key == 'compile-time (instructions)':
                     compile_time_and_bitcode_size_arr[0][values[i]] = val
                 elif key == 'bitcode-size (bytes)':
@@ -730,21 +731,27 @@ if __name__ == "__main__":
             for i in range(total_files):
                 if k == 0:
                     min_compile_time_val = 10000
-                    min_compile_time_knob = corrected_value
+                    min_compile_time_knob = 0
+                    for j in range(len(values)):
+                        if values[j] == corrected_value:
+                            min_compile_time_knob = corrected_value
                     for j in range(len(values)):
                         if performance_dicts[values[j]][i] < min_compile_time_val:
                             min_compile_time_val = performance_dicts[values[j]][i]
-                            min_compile_time_knob = values[j]
+                            min_compile_time_knob = j
                     compile_time_knobs[min_compile_time_knob][0] += 1
                     compile_time_knobs[min_compile_time_knob][1] += min_compile_time_val
                     compile_time_saving += min_compile_time_val
                 else:
                     min_bitcode_size_val = 10000
-                    min_bitcode_size_knob = corrected_value
+                    min_bitcode_size_knob = 0
+                    for j in range(len(values)):
+                        if values[j] == corrected_value:
+                            min_bitcode_size_knob = corrected_value
                     for j in range(len(values)):
                         if performance_dicts[values[j]][i] < min_bitcode_size_val:
                             min_bitcode_size_val = performance_dicts[values[j]][i]
-                            min_bitcode_size_knob = values[j]
+                            min_bitcode_size_knob = j
                     bitcode_size_knobs[min_bitcode_size_knob][0] += 1
                     bitcode_size_knobs[min_bitcode_size_knob][1] += min_bitcode_size_val
                     bitcode_size_saving += min_bitcode_size_val
