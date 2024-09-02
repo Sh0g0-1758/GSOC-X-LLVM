@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 1001 Thresholds in LLVM</title>
+    <title>GSoC 2024: The 1001 thresholds in LLVM</title>
     <style>
         /* Basic reset and box sizing */
         * {
@@ -15,73 +15,188 @@
         /* Body styles */
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            margin: 0;
         }
 
-        /* Heading styles */
-        h1 {
+        /* Container for content */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 80px; /* Space for fixed header */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
             position: fixed;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             width: 100%;
-            text-align: center;
-            padding: 10px;
-            margin: 0;
-            border-bottom: 2px solid black;
-            color: black; /* Text color for the heading */
             z-index: 1000;
         }
 
-        /* Subheading styles */
-        h3 {
-            margin: 40px 20px 20px 20px; /* Reduced top margin to bring closer to the heading */
-            padding: 10px;
-            text-align: center;
-            color: black; /* Text color for the subheading */
-            width: calc(100% - 40px); /* Width adjusted for margin */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        /* Button container styles */
-        .button-container {
-            margin-top: 20px; /* Space above the buttons */
-            text-align: center;
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 30px;
         }
 
         /* Button styles */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
             margin: 10px;
-            border: 2px solid black;
+            border: none;
             border-radius: 5px;
-            color: black; /* Button text color */
+            color: white;
             font-size: 16px;
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
+            background-color: #3498db;
         }
 
         .button:hover {
-            background-color: #f0f0f0;
+            background-color: #2980b9;
             transform: scale(1.05);
+        }
+
+        /* Image styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Metadata styles */
+        .metadata {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        /* Tag styles */
+        .tags {
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Link styles */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>The 1001 Thresholds in LLVM</h1>
-    <h3>LLVM has lots of thresholds and flags to avoid costly cases. However, it is unclear if these thresholds are useful, their
-        value is reasonable, and what impact they really have. This work explores these thresholds, when they are hit,
-        what it means if they are hit, how we should select their values, and if we need different profiles.</h3>
-    <div class="button-container">
-        <a href="100.html" class="button">Study with 100 bitcode files</a>
-        <a href="10000.html" class="button">Study with 10000 bitcode files</a>
-        <a href="oracle.html" class="button">Integrated Study (per knob, per file, oracle)</a>
+    <header>
+        <h1>The 1001 Thresholds in LLVM</h1>
+    </header>
+
+    <div class="container">
+        <div class="button-container">
+            <a href="100.html" class="button">Study with 100 bitcode files</a>
+            <a href="10000.html" class="button">Study with 10000 bitcode files</a>
+            <a href="oracle.html" class="button">Integrated Study (per knob, per file, oracle)</a>
+        </div>
+
+        <h2>GSoC 2024: The 1001 thresholds in LLVM</h2>
+        <div class="metadata">
+            <p>Author: Shourya Goel</p>
+            <p>Date: August 31, 2024</p>
+            <div class="tags">
+                <span class="tag">GSoC</span>
+                <span class="tag">Optimizations</span>
+                <span class="tag">Performance</span>
+            </div>
+        </div>
+
+        <p>Hey everyone! My name is Shourya and I worked on LLVM this summer through GSoC. My project is called <a href="https://summerofcode.withgoogle.com/programs/2024/projects/MnheN07A">The 1001 thresholds in LLVM</a>. The main objective of this project was to study how varying different thresholds in llvm affect performance parameters like compile-time, bitcode-size, execution-time and llvm stats.</p>
+
+        <h2>Background</h2>
+        <p>LLVM has lots of thresholds and flags to avoid "costly cases". However, it is unclear if these thresholds are useful, their value is reasonable, and what impact they really have. Since there are a lot, one cannot do a simple exhaustive search. An example of work in this direction includes the introduction of a C++ class that can replace hardcoded values which offers control over the threshold, e.g., one can increase the recursion limit via a command line flag from the hardcoded "6" to a different number.</p>
+
+        <h2>What We Did</h2>
+        <p>This work explores these knobs, when they are hit, what it means if they are hit, how we should select their values, and if we need more than one value to maximise an object function, e.g., metrics like compile time, size of the generated program, or any statistic that LLVM emits like "Number of loops vectorized". (Note that execution-time is currently not evaluated because input-gen does not work on optimized IR and is thus part of future work.)</p>
+
+        <p>We built a clang matcher for which we looked for the following patterns:</p>
+        <ol>
+            <li>Const knob_name = knob_val</li>
+            <li>Cl::init</li>
+            <li>Enum {knob_name = knob_val}</li>
+        </ol>
+
+        <p>to first identify the knobs in the codebase and then use a custom python tool (optimised to deal with I/O and cache bottlenecks) to collect the different stat values in parallel and store them in a json file. After manual selection of interesting knobs, we have so far conducted three studies in which we measure compile-time and bitcode-size along with various other statistics, and present them in the form of interactive graphs. Two of them (on 10,000 and 100 bitcode files) look at average statistics for each knob value while the third one (on 10,000 bitcode files) studies how each file is affected individually by changing knob values. We see some very interesting patterns in these graphs, for instance in the following two graphs, representing the jump-threading-threshold, we can observe improved statistics (top graph) and decreased average compile time (bottom graph) if the knob value is increased.</p>
+
+        <img src="img/the-1001-thresholds-in-llvm-2024-08-31-figure1.png" alt="Graph 1: Jump Threading Threshold Statistics">
+        <img src="img/the-1001-thresholds-in-llvm-2024-08-31-figure2.png" alt="Graph 2: Jump Threading Threshold Compile Time">
+
+        <h2>Results</h2>
+        <p>The per file study proves that there is no one single magic knob value and the optimum, with regards to compile time or code size, depends on the file that is currently being compiled. For instance here we can see that different knob values (for the knob licm-mssa-optimization-cap) give good cumulative compile time improvements for different files. In detail, most files benefit from a knob value of 300 while 60 is the best knob value for the second most files.</p>
+
+        <img src="img/the-1001-thresholds-in-llvm-2024-08-31-figure3.png" alt="Graph 3: LICM-MSSA Optimization Cap">
+
+        <p>We further show that the presence of an oracle that can tell the best knob value for each file can significantly improve the cumulative compile time.</p>
+
+        <img src="img/the-1001-thresholds-in-llvm-2024-08-31-figure4.png" alt="Graph 4: Oracle Improvement">
+
+        <p>In this project, we explored various thresholds in LLVM—specifically, 93 thresholds using the Clang matcher—and observed that these thresholds are largely file-specific. This indicates that there is no universally optimal value, or even a set of values, that can be applied across different scenarios. Instead, what is needed is an adaptive mechanism within LLVM, an oracle, that can dynamically determine the appropriate threshold values during compilation.</p>
+
+        <p>We also experimented with varying thresholds cumulatively by leveraging file-specific information through an LLVM pass. However, after discussions with the mentors, this approach was set aside due to the significant changes it would necessitate across other parts of the LLVM codebase.</p>
+
+        <p>As a result, we have not yet categorized different thresholds, such as identifying optimal threshold values for specific file types (e.g., I/O-intensive files). Nonetheless, we provide substantial <a href="https://sh0g0-1758.github.io/GSOC-X-LLVM/">statistical evidence</a> in the form of LLVM statistics, bitcode size, and compile-time graphs, as well as histograms that examine these variations on a per-file basis. Additionally, a correlation table between knob values and performance metrics further illustrates the significant impact this study could have on improving LLVM's overall performance.</p>
+
+        <h2>Future Work</h2>
+        <p>The early results show that we need a better understanding of knob values to maximise various objectives. Our results will provide the community with the first step in developing a guided compilation model attune to the file that is being compiled. We further intend to show how these knobs interact with each other and whether modifying multiple knobs together compounds the benefits or not. One more area of work could be on <a href="https://llvm.org/devmtg/2024-04/slides/LightningTalks/Ivanov-AutomaticProxyAppGeneration.pdf">input-gen</a> that would enable us to collect and study execution-time in our performance parameters.</p>
+
+        <h2>Acknowledgements</h2>
+        <p>This project would not have been possible without my amazing mentors, Jan Hückelheim, Johannes Doerfert, the LLVM Foundation admins, and the GSoC admins.</p>
+
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://github.com/Sh0g0-1758/GSOC-X-LLVM/tree/oracle">Code</a></li>
+            <li><a href="https://summerofcode.withgoogle.com/programs/2024/projects/MnheN07A">GSoC Project Page</a></li>
+        </ul>
     </div>
 </body>
 </html>
